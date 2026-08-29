@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国象棋 · 人机对弈</title>
+<style>
+  :root {
+    --bg: #2b2620; --panel: #3a332a; --panel2: #453c30;
+    --wood1: #e8c98f; --wood2: #d9b476; --line: #4a3418;
+    --red: #c0392b; --blk: #222; --gold: #f1c40f;
+    --text: #f5efe0; --dim: #b8ad97;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: radial-gradient(ellipse at top, #3d362c 0%, var(--bg) 70%);
+    color: var(--text);
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+    padding: 14px;
+  }
+  h1 { font-size: 22px; letter-spacing: 6px; margin-bottom: 10px; color: var(--gold); text-shadow: 0 2px 8px #0008; }
+  .layout { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+  .board-wrap { position: relative; background: linear-gradient(160deg, var(--wood1), var(--wood2)); border-radius: 10px; padding: 14px; box-shadow: 0 10px 30px #000a, inset 0 0 60px #a9803f55; }
+  canvas { display: block; cursor: pointer; border-radius: 4px; }
+  .panel { width: 300px; background: var(--panel); border-radius: 12px; padding: 16px; box-shadow: 0 8px 24px #0007; display: flex; flex-direction: column; gap: 12px; }
+  .panel h3 { font-size: 14px; color: var(--gold); letter-spacing: 2px; border-bottom: 1px solid #ffffff22; padding-bottom: 6px; }
+  label.fld { display: block; font-size: 12px; color: var(--dim); margin: 8px 0 4px; }
+  select, button { width: 100%; padding: 9px 10px; border-radius: 8px; border: 1px solid #ffffff22; background: var(--panel2); color: var(--text); font-size: 14px; outline: none; }
+  select:focus { border-color: var(--gold); }
+  .btnrow { display: flex; gap: 8px; }
+  .btnrow button { flex: 1; cursor: pointer; transition: transform .08s, filter .15s; }
+  button:hover { filter: brightness(1.2); }
+  button:active { transform: scale(.96); }
+  button.primary { background: linear-gradient(160deg, #d4a017, #b07d10); border-color: #f1c40f66; font-weight: bold; }
+  .status { text-align: center; font-size: 15px; padding: 10px; background: #00000033; border-radius: 8px; min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+  .status .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .log { background: #00000040; border-radius: 8px; padding: 8px 10px; height: 190px; overflow-y: auto; font-size: 13px; line-height: 1.7; }
+  .log .mv { display: flex; gap: 6px; }
+  .log .no { color: var(--dim); width: 26px; text-align: right; flex-shrink: 0; }
+  .log .r { color: #ff9d8a; } .log .b { color: #cfd8dc; }
+  .hint { font-size: 11.5px; color: var(--dim); line-height: 1.6; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; background: #ffffff18; margin-left: 4px; }
+</style>
+</head>
+<body>
+<h1>中 国 象 棋</h1>
+<div class="layout">
+  <div class="board-wrap"><canvas id="cv" width="560" height="620"></canvas></div>
+  <div class="panel">
+    <div class="status" id="status"><span class="dot" style="background:#e74c3c"></span> 红方行棋（你）</div>
+
+    <div>
+      <h3>对局设置</h3>
+      <label class="fld">执子颜色</label>
+      <select id="sideSel">
+        <option value="1" selected>我执红（先手）</option>
+        <option value="-1">我执黑（后手）</option>
+      </select>
+      <label class="fld">AI 难度</label>
+      <select id="levelSel"></select>
+      <label class="fld">让子设置（从 AI 方移除棋子）</label>
+      <select id="handicapSel"></select>
+      <div class="btnrow" style="margin-top:10px">
+        <button class="primary" id="newBtn">新对局</button>
+        <button id="undoBtn">悔棋</button>
+      </div>
+    </div>
+
+    <div>
+      <h3>对局记录</h3>
+      <div class="log" id="log"></div>
+    </div>
+
+    <div class="hint">
+      点击棋子选中，再点高亮处落子；同色圆环为可走位置。<br>
+      「让子」会在开局时从 AI 一方移除对应棋子（如让双炮=AI 没有炮）。<br>
+      认负规则：无子可动且被将 = 输；无子可动未被将 = 和棋。
+    </div>
+  </div>
+</div>
+
+<script src="engine.js"></script>
+<script>
+'use strict';
+const XQ = window.XQ;
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+const SQ = 56, PAD = 30; // square size & padding (px)
+
+let game = null;
+let humanSide = 1;
+let sel = null;            // selected index
+let legalCache = [];      // legal moves of selected piece
+let lastMove = null;
+let over = false;
+let thinking = false;
+let levelIdx = 2, handicapKey = 'none';
+
+// ---- UI setup ----
+const levelSel = document.getElementById('levelSel');
+XQ.LEVELS.forEach((L, i) => {
+  const o = document.createElement('option');
+  o.value = i; o.textContent = L.name + (i === 0 ? '（随机走子）' : '');
+  levelSel.appendChild(o);
+});
+const handSel = document.getElementById('handicapSel');
+for (const k of Object.keys(XQ.HANDICAPS)) {
+  const o = document.createElement('option');
+  o.value = k; o.textContent = XQ.HANDICAPS[k].label;
+  handSel.appendChild(o);
+}
+levelSel.value = levelIdx;
+
+function newGame() {
+  game = new XQ.Game(handicapKey, -1); // handicap removed from AI side (black when human=red)
+  sel = null; legalCache = []; lastMove = null; over = false; thinking = false;
+  renderLog(); draw();
+  if (humanSide === -1) aiTurn();
+}
+
+document.getElementById('newBtn').onclick = () => {
+  humanSide = parseInt(document.getElementById('sideSel').value);
+  levelIdx = parseInt(levelSel.value);
+  handicapKey = handSel.value;
+  newGame();
+};
+document.getElementById('undoBtn').onclick = () => {
+  if (thinking || !game || game.history.length === 0) return;
+  // undo until it's the human's turn again AND the human's last move is removed
+  let guard = 0;
+  do { game.undo(); } while (game.history.length > 0 && game.side !== humanSide && ++guard < 4);
+  lastMove = game.history.length ? game.history[game.history.length - 1].move : null;
+  sel = null; legalCache = []; over = false;
+  renderLog(); draw();
+  if (game.side !== humanSide) aiTurn(); // e.g. human plays black, undid back to start
+};
+
+// ---- drawing ----
+function pos(i) { return [PAD + (i % 9) * SQ, PAD + ((i / 9) | 0) * SQ]; }
+function draw() {
+  const W = cv.width, H = cv.height;
+  ctx.clearRect(0, 0, W, H);
+  // grid
+  ctx.strokeStyle = '#4a3418'; ctx.lineWidth = 1.5;
+  for (let r = 0; r < 10; r++) { const [x1, y] = pos(r * 9), x2 = PAD + 8 * SQ; line(x1, y, x2, y); }
+  for (let c = 0; c < 9; c++) { const [x, y1] = pos(c), y2 = PAD + 9 * SQ; line(x, y1, x, y2); }
+  // outer border
+  ctx.lineWidth = 3; ctx.strokeRect(PAD, PAD, 8 * SQ, 9 * SQ);
+  // river text
+  ctx.fillStyle = '#4a341899'; ctx.font = '26px "KaiTi","STKaiti",serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('楚 河', PAD + 2 * SQ, PAD + 4.5 * SQ);
+  ctx.fillText('汉 界', PAD + 6 * SQ, PAD + 4.5 * SQ);
+  // palace diagonals
+  line(PAD + 3 * SQ, PAD, PAD + 5 * SQ, PAD + 2 * SQ);
+  line(PAD + 5 * SQ, PAD, PAD + 3 * SQ, PAD + 2 * SQ);
+  line(PAD + 3 * SQ, PAD + 9 * SQ, PAD + 5 * SQ, PAD + 7 * SQ);
+  line(PAD + 5 * SQ, PAD + 9 * SQ, PAD + 3 * SQ, PAD + 7 * SQ);
+  // cannon / pawn positions
+  const marks = [[2,1],[2,7],[7,1],[7,7],[0,0],[0,2],[0,4],[0,6],[0,8],[9,0],[9,2],[9,4],[9,6],[9,8]];
+  for (const [r, c] of marks) drawPosMark(r, c);
+  // last move
+  if (lastMove) {
+    const [x1, y1] = pos(lastMove.f), [x2, y2] = pos(lastMove.t);
+    ctx.strokeStyle = '#f1c40faa'; ctx.lineWidth = 3;
+    circle(x1, y1, 25); ctx.stroke(); circle(x2, y2, 25); ctx.stroke();
+  }
+  // legal move hints
+  if (sel !== null) {
+    for (const m of legalCache) {
+      const [x, y] = pos(m.t);
+      ctx.fillStyle = game.board[m.t] === 0 ? '#2e7d32cc' : '#c62828dd';
+      circle(x, y, game.board[m.t] === 0 ? 9 : 25); ctx.fill();
+    }
+    const [sx, sy] = pos(sel);
+    ctx.strokeStyle = '#f1c40f'; ctx.lineWidth = 3; circle(sx, sy, 26); ctx.stroke();
+  }
+  // pieces
+  for (let i = 0; i < 90; i++) {
+    const c = game.board[i];
+    if (c === 0) continue;
+    drawPiece(i, c);
+  }
+}
+function line(x1, y1, x2, y2) { ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke(); }
+function circle(x, y, r) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); }
+function drawPosMark(r, c) {
+  const [x, y] = pos(r * 9 + c);
+  const d = 6, g = 5;
+  ctx.lineWidth = 1.4;
+  for (const [sx, sy] of [[-1,-1],[1,-1],[-1,1],[1,1]]) {
+    line(x + sx*g, y + sy*(g+d), x + sx*(g+d), y + sy*(g+d));
+    line(x + sx*(g+d), y + sy*(g+d), x + sx*(g+2*d), y + sy*(g+2*d));
+  }
+}
+function drawPiece(i, c) {
+  const [x, y] = pos(i);
+  const red = c > 0;
+  const grad = ctx.createRadialGradient(x - 8, y - 10, 4, x, y, 26);
+  grad.addColorStop(0, '#fdf6e3'); grad.addColorStop(1, '#e0cfa5');
+  ctx.fillStyle = grad; circle(x, y, 24); ctx.fill();
+  ctx.strokeStyle = red ? '#b03a2e' : '#1c1c1c'; ctx.lineWidth = 2.5; ctx.stroke();
+  ctx.strokeStyle = red ? '#d98880' : '#555'; ctx.lineWidth = 1; circle(x, y, 20); ctx.stroke();
+  ctx.fillStyle = red ? '#b03a2e' : '#1c1c1c';
+  ctx.font = 'bold 26px "KaiTi","STKaiti","Microsoft YaHei",serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(XQ.pieceName(c), x, y + 1);
+}
+
+// ---- interaction ----
+cv.addEventListener('click', (e) => {
+  if (thinking || over || game.side !== humanSide) return;
+  const rect = cv.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) * (cv.width / rect.width);
+  const my = (e.clientY - rect.top) * (cv.height / rect.height);
+  let best = -1, bd = 24;
+  for (let i = 0; i < 90; i++) {
+    const [x, y] = pos(i);
+    const d = Math.hypot(mx - x, my - y);
+    if (d < bd) { bd = d; best = i; }
+  }
+  if (best < 0) return;
+  const c = game.board[best];
+  if (sel !== null) {
+    const mv = legalCache.find(m => m.t === best);
+    if (mv) {
+      const res = game.move({ f: sel, t: best });
+      if (res) { lastMove = { f: sel, t: best }; sel = null; legalCache = []; afterHuman(); return; }
+    }
+  }
+  if (c !== 0 && XQ.sideOf(c) === humanSide) {
+    sel = best;
+    legalCache = game.legalMoves().filter(m => m.f === best);
+  } else { sel = null; legalCache = []; }
+  draw();
+});
+
+function afterHuman() {
+  renderLog();
+  checkEnd();
+  if (!over) { draw(); setTimeout(aiTurn, 60); }
+}
+
+function aiTurn() {
+  thinking = true; draw(); setStatus('thinking');
+  setTimeout(() => {
+    const L = XQ.LEVELS[levelIdx];
+    const res = game.aiMove(L.depth, L.qDepth, L.maxNodes, L.randomness);
+    if (res) lastMove = game.history[game.history.length - 1].move;
+    thinking = false;
+    renderLog(); checkEnd(); draw();
+    if (!over && game.side === humanSide) { /* human's turn */ }
+    else if (!over) aiTurn(); // human plays black and it's still AI? shouldn't happen; safety
+  }, 50);
+}
+
+function checkEnd() {
+  const lm = game.legalMoves().length;
+  if (lm === 0) {
+    over = true;
+    if (game.inCheck()) {
+      setStatus('over', humanSide === 1 ? '黑方绝杀，你赢了！🎉' : '红方绝杀，AI 获胜');
+    } else {
+      setStatus('over', '无子可动 —— 和棋 🤝');
+    }
+  } else if (game.inCheck()) {
+    setStatus('check', game.side === humanSide ? '你被将军了！' : 'AI 被将军');
+  } else {
+    setStatus('normal');
+  }
+}
+
+function setStatus(mode, text) {
+  const el = document.getElementById('status');
+  if (mode === 'thinking') { el.innerHTML = '<span class="dot" style="background:#f1c40f"></span> AI 思考中…'; return; }
+  if (text) { el.innerHTML = text; return; }
+  const isHuman = game.side === humanSide;
+  const who = game.side === 1 ? '红方' : '黑方';
+  el.innerHTML = `<span class="dot" style="background:${game.side === 1 ? '#e74c3c' : '#222'}"></span> ${who}行棋${isHuman ? '（你）' : ''}`;
+}
+
+function renderLog() {
+  const log = document.getElementById('log');
+  let html = '';
+  for (let i = 0; i < game.history.length; i++) {
+    const h = game.history[i];
+    if (i % 2 === 0) html += `<div class="mv"><span class="no">${i / 2 + 1}.</span><span class="r">${h.notation}</span>`;
+    else { html += `<span class="b">${h.notation}</span></div>`; }
+  }
+  if (game.history.length % 2 === 1) html += '</div>';
+  log.innerHTML = html || '<span style="color:#8d8470">暂无着法</span>';
+  log.scrollTop = log.scrollHeight;
+}
+
+newGame();
+</script>
+</body>
+</html>

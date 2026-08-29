@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国象棋 · 人机对弈</title>
+<style>
+  :root {
+    --bg: #2b2620; --panel: #3a332a; --panel2: #453c30;
+    --wood1: #e8c98f; --wood2: #d9b476; --line: #4a3418;
+    --red: #c0392b; --blk: #222; --gold: #f1c40f;
+    --text: #f5efe0; --dim: #b8ad97;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: radial-gradient(ellipse at top, #3d362c 0%, var(--bg) 70%);
+    color: var(--text);
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+    padding: 14px;
+  }
+  h1 { font-size: 22px; letter-spacing: 6px; margin-bottom: 10px; color: var(--gold); text-shadow: 0 2px 8px #0008; }
+  .layout { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+  .board-wrap { position: relative; background: linear-gradient(160deg, var(--wood1), var(--wood2)); border-radius: 10px; padding: 14px; box-shadow: 0 10px 30px #000a, inset 0 0 60px #a9803f55; }
+  canvas { display: block; cursor: pointer; border-radius: 4px; }
+  .panel { width: 300px; background: var(--panel); border-radius: 12px; padding: 16px; box-shadow: 0 8px 24px #0007; display: flex; flex-direction: column; gap: 12px; }
+  .panel h3 { font-size: 14px; color: var(--gold); letter-spacing: 2px; border-bottom: 1px solid #ffffff22; padding-bottom: 6px; }
+  label.fld { display: block; font-size: 12px; color: var(--dim); margin: 8px 0 4px; }
+  select, button { width: 100%; padding: 9px 10px; border-radius: 8px; border: 1px solid #ffffff22; background: var(--panel2); color: var(--text); font-size: 14px; outline: none; }
+  select:focus { border-color: var(--gold); }
+  .btnrow { display: flex; gap: 8px; }
+  .btnrow button { flex: 1; cursor: pointer; transition: transform .08s, filter .15s; }
+  button:hover { filter: brightness(1.2); }
+  button:active { transform: scale(.96); }
+  button.primary { background: linear-gradient(160deg, #d4a017, #b07d10); border-color: #f1c40f66; font-weight: bold; }
+  .status { text-align: center; font-size: 15px; padding: 10px; background: #00000033; border-radius: 8px; min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+  .status .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .log { background: #00000040; border-radius: 8px; padding: 8px 10px; height: 190px; overflow-y: auto; font-size: 13px; line-height: 1.7; }
+  .log .mv { display: flex; gap: 6px; }
+  .log .no { color: var(--dim); width: 26px; text-align: right; flex-shrink: 0; }
+  .log .r { color: #ff9d8a; } .log .b { color: #cfd8dc; }
+  .hint { font-size: 11.5px; color: var(--dim); line-height: 1.6; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; background: #ffffff18; margin-left: 4px; }
+</style>
+</head>
+<body>
+<h1>中 国 象 棋</h1>
+<div class="layout">
+  <div class="board-wrap"><canvas id="cv" width="560" height="620"></canvas></div>
+  <div class="panel">
+    <div class="status" id="status"><span class="dot" style="background:#e74c3c"></span> 红方行棋（你）</div>
+
+    <div>
+      <h3>对局设置</h3>
+      <label class="fld">执子颜色</label>
+      <select id="sideSel">
+        <option value="1" selected>我执红（先手）</option>
+        <option value="-1">我执黑（后手）</option>
+      </select>
+      <label class="fld">AI 难度</label>
+      <select id="levelSel"></select>
+      <label class="fld">让子设置（从 AI 方移除棋子）</label>
+      <select id="handicapSel"></select>
+      <div class="btnrow" style="margin-top:10px">
+        <button class="primary" id="newBtn">新对局</button>
+        <button id="undoBtn">悔棋</button>
+      </div>
+    </div>
+
+    <div>
+      <h3>对局记录</h3>
+      <div class="log" id="log"></div>
+    </div>
+
+    <div class="hint">
+      点击棋子选中，再点高亮处落子；同色圆环为可走位置。<br>
+      「让子」会在开局时从 AI 一方移除对应棋子（如让双炮=AI 没有炮）。<br>
+      认负规则：无子可动且被将 = 输；无子可动未被将 = 和棋。
+    </div>
+  </div>
+</div>
+
+<script>
+/* Xiangqi (Chinese Chess) engine — zero dependencies, works in browser & Node */
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory();
+  else root.XQ = factory();
+})(this, function () {
+  'use strict';
+
+  // piece codes: positive = red, negative = black
+  const P = { K: 1, A: 2, B: 3, N: 4, R: 5, C: 6, P: 7 };
+  const NAME_RED = { 1: '帅', 2: '仕', 3: '相', 4: '马', 5: '车', 6: '炮', 7: '兵' };
+  const NAME_BLK = { '-1': '将', '-2': '士', '-3': '象', '-4': '马', '-5': '车', '-6': '砲', '-7': '卒' };
+  const pieceName = (c) => (c > 0 ? NAME_RED[c] : NAME_BLK['-' + Math.abs(c)]);
+  const sideOf = (c) => (c > 0 ? 1 : -1);
+
+  function initialBoard() {
+    const b = new Array(90).fill(0);
+    const back = [P.R, P.N, P.B, P.A, P.K, P.A, P.B, P.N, P.R];
+    for (let i = 0; i < 9; i++) {
+      b[0 * 9 + i] = -back[i];
+      b[9 * 9 + i] = back[i];
+    }
+    b[2 * 9 + 1] = -P.C; b[2 * 9 + 7] = -P.C;
+    b[7 * 9 + 1] = P.C; b[7 * 9 + 7] = P.C;
+    for (let i = 0; i < 9; i += 2) { b[3 * 9 + i] = -P.P; b[6 * 9 + i] = P.P; }
+    return b;
+  }
+
+  const inBoard = (r, c) => r >= 0 && r < 10 && c >= 0 && c < 9;
+  const inPalace = (r, c, red) => c >= 3 && c <= 5 && (red ? (r >= 7 && r <= 9) : (r >= 0 && r <= 2));
+
+  // ---------- move generation ----------
+  function genPseudo(b, side) {
+    const ms = [];
+    for (let i = 0; i < 90; i++) {
+      const c = b[i];
+      if (sideOf(c) !== side) continue;
+      const r = (i / 9) | 0, col = i % 9;
+      const red = side === 1;
+      switch (Math.abs(c)) {
+        case P.K: {
+          for (const [dr, dc] of [[-1, 0], [1, 0], [0, -1], [0, 1]]) {
+            const nr = r + dr, nc = col + dc;
+            if (!inPalace(nr, nc, red)) continue;
+            const t = b[nr * 9 + nc];
+            if (t === 0 || sideOf(t) !== side) ms.push({ f: i, t: nr * 9 + nc });
+          }
+          for (let j = r - 1; j >= 0; j--) {           // flying general up
+            const p = b[j * 9 + col];
+            if (p !== 0) { if (Math.abs(p) === P.K && sideOf(p) !== side) ms.push({ f: i, t: j * 9 + col }); break; }
+          }
+          for (let j = r + 1; j < 10; j++) {           // flying general down
+            const p = b[j * 9 + col];
+            if (p !== 0) { if (Math.abs(p) === P.K && sideOf(p) !== side) ms.push({ f: i, t: j * 9 + col }); break; }
+          }
+          break;
+        }
+        case P.A: {
+          for (const [dr, dc] of [[-1, -1], [-1, 1], [1, -1], [1, 1]]) {
+            const nr = r + dr, nc = col + dc;
+            if (!inPalace(nr, nc, red)) continue;
+            const t = b[nr * 9 + nc];
+            if (t === 0 || sideOf(t) !== side) ms.push({ f: i, t: nr * 9 + nc });
+          }
+          break;
+        }
+        case P.B: {
+          for (const [dr, dc] of [[-2, -2], [-2, 2], [2, -2], [2, 2]]) {
+            const nr = r + dr, nc = col + dc;
+            if (!inBoard(nr, nc) || !((red ? nr >= 5 : nr <= 4))) continue;
+            const t = b[nr * 9 + nc];
+            if (t === 0 || sideOf(t) !== side) {
+              if (b[(r + dr / 2) * 9 + (col + dc / 2)] === 0) ms.push({ f: i, t: nr * 9 + nc });
+            }
+          }
+          break;
+        }
+        case P.N: {
+          for (const [dr, dc] of [[-2, -1], [-2, 1], [2, -1], [2, 1], [-1, -2], [-1, 2], [1, -2], [1, 2]]) {
+            const nr = r + dr, nc = col + dc;
+            if (!inBoard(nr, nc)) continue;
+            const lr = Math.abs(dr) === 2 ? r + (dr > 0 ? 1 : -1) : r;   // horse leg
+            const lc = Math.abs(dc) === 2 ? col + (dc > 0 ? 1 : -1) : col;
+            if (b[lr * 9 + lc] !== 0) continue;
+            const t = b[nr * 9 + nc];
+            if (t === 0 || sideOf(t) !== side) ms.push({ f: i, t: nr * 9 + nc });
+          }
+          break;
+        }
+        case P.R: {
+          for (const [dr, dc] of [[-1, 0], [1, 0], [0, -1], [0, 1]]) {
+            let nr = r + dr, nc = col + dc;
+            while (inBoard(nr, nc)) {
+              const t = b[nr * 9 + nc];
+              if (t === 0) ms.push({ f: i, t: nr * 9 + nc });
+              else { if (sideOf(t) !== side) ms.push({ f: i, t: nr * 9 + nc }); break; }
+              nr += dr; nc += dc;
+            }
+          }
+          break;
+        }
+        case P.C: {
+          for (const [dr, dc] of [[-1, 0], [1, 0], [0, -1], [0, 1]]) {
+            let nr = r + dr, nc = col + dc;
+            // moving: like a rook, empty squares until the first piece
+            while (inBoard(nr, nc) && b[nr * 9 + nc] === 0) { ms.push({ f: i, t: nr * 9 + nc }); nr += dr; nc += dc; }
+            if (!inBoard(nr, nc)) continue; // first piece = platform; capture = next piece beyond it
+            let tr = nr + dr, tc = nc + dc;
+            while (inBoard(tr, tc)) {
+              const t = b[tr * 9 + tc];
+              if (t !== 0) { if (sideOf(t) !== side) ms.push({ f: i, t: tr * 9 + tc }); break; }
+              tr += dr; tc += dc;
+            }
+          }
+          break;
+        }
+        case P.P: {
+          const fwd = red ? -1 : 1;
+          const crossed = red ? r <= 4 : r >= 5;
+          if (inBoard(r + fwd, col)) {
+            const t = b[(r + fwd) * 9 + col];
+            if (t === 0 || sideOf(t) !== side) ms.push({ f: i, t: (r + fwd) * 9 + col });
+          }
+          if (crossed) for (const dc of [-1, 1]) {
+            const nc = col + dc;
+            if (!inBoard(r, nc)) continue;
+            const t = b[r * 9 + nc];
+            if (t === 0 || sideOf(t) !== side) ms.push({ f: i, t: r * 9 + nc });
+          }
+          break;
+        }
+      }
+    }
+    return ms;
+  }
+
+  function isAttacked(b, idx, bySide) {
+    const r = (idx / 9) | 0, c = idx % 9;
+    for (let i = 0; i < 90; i++) {
+      if (i === idx) continue;
+      const p = b[i];
+      if (sideOf(p) !== bySide) continue;
+      const pr = (i / 9) | 0, pc = i % 9;
+      switch (Math.abs(p)) {
+        case P.P: {
+          const fwd = p > 0 ? -1 : 1;
+          if (pr + fwd === r && pc === c) return true;                       // forward bite
+          if (pr === r && Math.abs(pc - c) === 1) {                          // sideways (crossed only)
+            const crossed = p > 0 ? pr <= 4 : pr >= 5;
+            if (crossed) return true;
+          }
+          break;
+        }
+        case P.N: {
+          const dr = r - pr, dc = c - pc;
+          if ((Math.abs(dr) === 2 && Math.abs(dc) === 1) || (Math.abs(dr) === 1 && Math.abs(dc) === 2)) {
+            const lr = Math.abs(dr) === 2 ? pr + (dr > 0 ? 1 : -1) : pr;
+            const lc = Math.abs(dc) === 2 ? pc + (dc > 0 ? 1 : -1) : pc;
+            if (b[lr * 9 + lc] === 0) return true;
+          }
+          break;
+        }
+        case P.R: {
+          if (r === pr && c !== pc) {
+            const step = c > pc ? 1 : -1;
+            let clear = true;
+            for (let x = pc + step; x !== c; x += step) if (b[r * 9 + x] !== 0) { clear = false; break; }
+            if (clear) return true;
+          } else if (c === pc && r !== pr) {
+            const step = r > pr ? 1 : -1;
+            let clear = true;
+            for (let y = pr + step; y !== r; y += step) if (b[y * 9 + c] !== 0) { clear = false; break; }
+            if (clear) return true;
+          }
+          break;
+        }
+        case P.C: {
+          let onRow = r === pr && c !== pc, onCol = c === pc && r !== pr;
+          if (!onRow && !onCol) break;
+          let pieces = 0, found = false;
+          if (onRow) {
+            const step = c > pc ? 1 : -1;
+            for (let x = pc + step; x !== c; x += step) if (b[r * 9 + x] !== 0) pieces++;
+          } else {
+            const step = r > pr ? 1 : -1;
+            for (let y = pr + step; y !== r; y += step) if (b[y * 9 + c] !== 0) pieces++;
+          }
+          if (pieces === 1) return true;
+          break;
+        }
+        case P.K: {
+          if (Math.abs(r - pr) + Math.abs(c - pc) === 1) return true;
+          if (c === pc && r !== pr) { // flying general
+            const step = r > pr ? 1 : -1;
+            let empty = true;
+            for (let y = pr + step; y !== r; y += step) if (b[y * 9 + c] !== 0) { empty = false; break; }
+            if (empty) return true;
+          }
+          break;
+        }
+      }
+    }
+    return false;
+  }
+
+  function findKing(b, side) {
+    for (let i = 0; i < 90; i++) if (b[i] === side * P.K) return i;
+    return -1;
+  }
+
+  function legalMoves(b, side) {
+    const out = [];
+    for (const m of genPseudo(b, side)) {
+      const nb = b.slice();
+      nb[m.t] = nb[m.f]; nb[m.f] = 0;
+      const k = findKing(nb, side);
+      if (k < 0 || !isAttacked(nb, k, -side)) out.push(m);
+    }
+    return out;
+  }
+
+  function inCheck(b, side) {
+    const k = findKing(b, side);
+    return k >= 0 && isAttacked(b, k, -side);
+  }
+
+  // ---------- evaluation (red positive) ----------
+  const VAL = [0, 10000, 25, 45, 80, 350, 110, 10];
+  function evaluate(b) {
+    let s = 0;
+    for (let i = 0; i < 90; i++) {
+      const c = b[i];
+      if (c === 0) continue;
+      const r = (i / 9) | 0, col = i % 9;
+      let v = VAL[Math.abs(c)];
+      switch (Math.abs(c)) {
+        case P.P: {
+          const crossed = c > 0 ? r <= 4 : r >= 5;
+          if (crossed) v += Math.min((c > 0 ? 9 - r : r) * 3, 15) + [2, 1, 1, 0, 0, 0, 1, 1, 2][col];
+          break;
+        }
+        case P.R: v += c > 0 ? (r <= 2 ? 8 : 0) : (r >= 7 ? 8 : 0); break;
+        case P.N: v += [1, 0, 0, 0, 0, 0, 0, 0, 1][col] * 2 + (c > 0 ? (r <= 3 ? 4 : 0) : (r >= 6 ? 4 : 0)); break;
+        case P.C: v += (c > 0 ? (r <= 1 ? 6 : 0) : (r >= 8 ? 6 : 0)) + ([2, 7].includes(col) ? 3 : 0); break;
+        case P.K: v += c > 0 ? (r === 9 ? 4 : r === 8 ? 2 : 0) : (r === 0 ? 4 : r === 1 ? 2 : 0); break;
+      }
+      s += c > 0 ? v : -v;
+    }
+    return s;
+  }
+
+  // ---------- search ----------
+  function moveScore(b, m) {
+    let s = VAL[Math.abs(b[m.t])] * 10;
+    const pf = Math.abs(b[m.f]);
+    if (pf === P.R || pf === P.N || pf === P.C) {
+      const fr = (m.f / 9) | 0, fc = m.f % 9, tr = (m.t / 9) | 0, tc = m.t % 9;
+      s += Math.abs(tr - fr) + Math.abs(tc - fc);
+    }
+    return s;
+  }
+  function orderMoves(b, ms) {
+    return ms.map(m => ({ m, s: moveScore(b, m) })).sort((a, z) => z.s - a.s).map(x => x.m);
+  }
+
+  function quiesce(b, side, qd, nodes) {
+    nodes.n++;
+    const stand = evaluate(b);
+    if (qd <= 0) return stand;
+    let best = side === 1 ? -Infinity : Infinity;
+    let any = false;
+    for (const m of legalMoves(b, side)) {
+      if (b[m.t] === 0) continue; // captures only
+      any = true;
+      const nb = b.slice();
+      nb[m.t] = nb[m.f]; nb[m.f] = 0;
+      const v = quiesce(nb, -side, qd - 1, nodes);
+      if (side === 1 ? v > best : v < best) best = v;
+    }
+    if (!any) return stand;
+    return side === 1 ? Math.max(best, stand) : Math.min(best, stand);
+  }
+
+  function search(b, side, depth, alpha, beta, qDepth, nodes) {
+    nodes.n++;
+    if (nodes.n > nodes.max) return evaluate(b);
+    if (depth <= 0) return quiesce(b, side, qDepth, nodes);
+    const legal = legalMoves(b, side);
+    if (legal.length === 0) return inCheck(b, side) ? (side === 1 ? -99999 + depth : 99999 - depth) : 0;
+    let best = side === 1 ? -Infinity : Infinity;
+    for (const m of orderMoves(b, legal)) {
+      const nb = b.slice();
+      nb[m.t] = nb[m.f]; nb[m.f] = 0;
+      const v = search(nb, -side, depth - 1, alpha, beta, qDepth, nodes);
+      if (side === 1) { if (v > best) best = v; if (best > alpha) alpha = best; }
+      else { if (v < best) best = v; if (best < beta) beta = best; }
+      if (beta <= alpha) break;
+    }
+    return best;
+  }
+
+  function think(b, side, depth, qDepth, maxNodes, randomness) {
+    const nodes = { n: 0, max: maxNodes };
+    const legal = legalMoves(b, side);
+    if (legal.length === 0) return null;
+    let alpha = -Infinity, beta = Infinity;
+    let bestV = side === 1 ? -Infinity : Infinity;
+    const cands = [];
+    for (const m of orderMoves(b, legal)) {
+      const nb = b.slice();
+      nb[m.t] = nb[m.f]; nb[m.f] = 0;
+      const v = search(nb, -side, depth - 1, alpha, beta, qDepth, nodes);
+      cands.push({ m, v });
+      if (side === 1) { if (v > bestV) bestV = v; if (bestV > alpha) alpha = bestV; }
+      else { if (v < bestV) bestV = v; if (bestV < beta) beta = bestV; }
+    }
+    let pick;
+    if (randomness > 0) {
+      const near = cands.filter(x => Math.abs(x.v - bestV) <= randomness);
+      pick = near[(Math.random() * near.length) | 0];
+    } else {
+      pick = cands.reduce((a, x) => (side === 1 ? (x.v > a.v ? x : a) : (x.v < a.v ? x : a)), cands[0]);
+    }
+    return { move: pick.m, score: bestV, nodes: nodes.n };
+  }
+
+  // ---------- handicap (let pieces — removed from the AI's side at start) ----------
+  const HANDICAPS = {
+    none:   { label: '不让子', remove: [] },
+    pao2:   { label: '让双炮', remove: [P.C, P.C] },
+    ma2:    { label: '让双马', remove: [P.N, P.N] },
+    che1:   { label: '让单车', remove: [P.R] },
+    chepao: { label: '让车+炮', remove: [P.R, P.C] },
+  };
+
+  function applyHandicap(b, key, aiSide) {
+    const nb = b.slice();
+    const spec = HANDICAPS[key];
+    if (!spec || key === 'none') return nb;
+    for (const p of spec.remove) {
+      let removed = 0;
+      for (let i = 0; i < 90 && removed < 2; i++) {
+        if (nb[i] === aiSide * p) { nb[i] = 0; removed++; }
+      }
+    }
+    return nb;
+  }
+
+  function removeAt(b, idxs) {
+    const nb = b.slice();
+    for (const i of idxs) nb[i] = 0;
+    return nb;
+  }
+
+  // ---------- notation (Chinese standard: 炮二平五 / 马8进7) ----------
+  // file numbering: each side numbers files from its OWN right to left.
+  //   red sits at bottom: col8=一 ... col0=九  => fileNo(c)=CN[8-c]
+  //   black sits at top:  col0=1 ... col8=9    => fileNo(c)=c+1
+  function toNotation(b, m, side) {
+    const fr = (m.f / 9) | 0, fc = m.f % 9;
+    const tr = (m.t / 9) | 0, tc = m.t % 9;
+    const red = side === 1;
+    const CN = ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
+    const fileNo = (c) => (red ? CN[8 - c] : String(c + 1));
+    // advance/retreat word: red advancing = moving up-board, black advancing = down-board
+    const dirWord = () => ((tr - fr) * (red ? -1 : 1) > 0 ? '进' : '退');
+    // disambiguation 前/后 when another same-type piece shares the file
+    let prefix = '';
+    for (let i = 0; i < 90; i++) {
+      if (i === m.f) continue;
+      const p = b[i];
+      if (p !== 0 && sideOf(p) === side && Math.abs(p) === Math.abs(b[m.f]) && i % 9 === fc) {
+        prefix = ((i / 9) | 0) < fr ? '前' : '后'; // our piece is ahead of it => 前
+        break;
+      }
+    }
+    const piece = pieceName(b[m.f]);
+    if (fc === tc) {
+      // vertical move — straight-line pieces: 进/退 + number of squares
+      const n = Math.abs(tr - fr);
+      return prefix + piece + fileNo(fc) + dirWord() + (red ? CN[n - 1] : String(n));
+    } else if (tr === fr) {
+      // purely lateral: 平 + target file
+      return prefix + piece + fileNo(fc) + '平' + fileNo(tc);
+    } else {
+      // diagonal / L-shape (horse, elephant, advisor): 进/退 + target file
+      return prefix + piece + fileNo(fc) + dirWord() + fileNo(tc);
+    }
+  }
+
+  // ---------- game state ----------
+  class Game {
+    constructor(handicap = 'none', aiSide = -1) {
+      this.board = initialBoard();
+      if (handicap && handicap !== 'none') this.board = applyHandicap(this.board, handicap, aiSide);
+      this.side = 1; // red always moves first
+      this.history = [];
+    }
+    static fromBoard(board) { const g = new Game(); g.board = board.slice(); return g; }
+    legalMoves() { return legalMoves(this.board, this.side); }
+    inCheck() { return inCheck(this.board, this.side); }
+    checkmate() { return this.legalMoves().length === 0 && this.inCheck(); }
+    stalemate() { return this.legalMoves().length === 0 && !this.inCheck(); }
+    move(m) {
+      const mv = this.legalMoves().find(x => x.f === m.f && x.t === m.t);
+      if (!mv) return null;
+      const notation = toNotation(this.board, mv, this.side);
+      const captured = this.board[mv.t];
+      const nb = this.board.slice();
+      nb[mv.t] = nb[mv.f]; nb[mv.f] = 0;
+      this.history.push({ board: this.board, side: this.side, move: mv, notation });
+      this.board = nb;
+      this.side = -this.side;
+      return { ok: true, notation, captured };
+    }
+    undo() {
+      const h = this.history.pop();
+      if (!h) return null;
+      this.board = h.board;
+      this.side = h.side;
+      return h;
+    }
+    aiMove(depth, qDepth, maxNodes, randomness) {
+      const t = think(this.board, this.side, depth, qDepth, maxNodes, randomness);
+      if (!t) return null;
+      const notation = toNotation(this.board, t.move, this.side);
+      const captured = this.board[t.move.t];
+      const nb = this.board.slice();
+      nb[t.move.t] = nb[t.move.f]; nb[t.move.f] = 0;
+      this.history.push({ board: this.board, side: this.side, move: t.move, notation });
+      this.board = nb;
+      this.side = -this.side;
+      return { notation, score: t.score, nodes: t.nodes };
+    }
+  }
+
+  const LEVELS = [
+    { name: '入门', depth: 1, qDepth: 0, maxNodes: 500,   randomness: 40 },
+    { name: '业余', depth: 2, qDepth: 0, maxNodes: 3000,  randomness: 15 },
+    { name: '进阶', depth: 3, qDepth: 1, maxNodes: 8000,  randomness: 0 },
+    { name: '高手', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0 },
+    { name: '大师', depth: 5, qDepth: 2, maxNodes: 60000, randomness: 0 },
+  ];
+
+  return { P, NAME_RED, NAME_BLK, initialBoard, genPseudo, legalMoves, inCheck, isAttacked, findKing, evaluate, think, Game, LEVELS, HANDICAPS, pieceName, toNotation, applyHandicap, removeAt, sideOf };
+});
+
+</script>
+<script>
+'use strict';
+const XQ = window.XQ;
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+const SQ = 56, PAD = 30; // square size & padding (px)
+
+let game = null;
+let humanSide = 1;
+let sel = null;            // selected index
+let legalCache = [];      // legal moves of selected piece
+let lastMove = null;
+let over = false;
+let thinking = false;
+let levelIdx = 2, handicapKey = 'none';
+
+// ---- UI setup ----
+const levelSel = document.getElementById('levelSel');
+XQ.LEVELS.forEach((L, i) => {
+  const o = document.createElement('option');
+  o.value = i; o.textContent = L.name + (i === 0 ? '（随机走子）' : '');
+  levelSel.appendChild(o);
+});
+const handSel = document.getElementById('handicapSel');
+for (const k of Object.keys(XQ.HANDICAPS)) {
+  const o = document.createElement('option');
+  o.value = k; o.textContent = XQ.HANDICAPS[k].label;
+  handSel.appendChild(o);
+}
+levelSel.value = levelIdx;
+
+function newGame() {
+  game = new XQ.Game(handicapKey, -1); // handicap removed from AI side (black when human=red)
+  sel = null; legalCache = []; lastMove = null; over = false; thinking = false;
+  renderLog(); draw();
+  if (humanSide === -1) aiTurn();
+}
+
+document.getElementById('newBtn').onclick = () => {
+  humanSide = parseInt(document.getElementById('sideSel').value);
+  levelIdx = parseInt(levelSel.value);
+  handicapKey = handSel.value;
+  newGame();
+};
+document.getElementById('undoBtn').onclick = () => {
+  if (thinking || !game || game.history.length === 0) return;
+  // undo until it's the human's turn again AND the human's last move is removed
+  let guard = 0;
+  do { game.undo(); } while (game.history.length > 0 && game.side !== humanSide && ++guard < 4);
+  lastMove = game.history.length ? game.history[game.history.length - 1].move : null;
+  sel = null; legalCache = []; over = false;
+  renderLog(); draw();
+  if (game.side !== humanSide) aiTurn(); // e.g. human plays black, undid back to start
+};
+
+// ---- drawing ----
+function pos(i) { return [PAD + (i % 9) * SQ, PAD + ((i / 9) | 0) * SQ]; }
+function draw() {
+  const W = cv.width, H = cv.height;
+  ctx.clearRect(0, 0, W, H);
+  // grid
+  ctx.strokeStyle = '#4a3418'; ctx.lineWidth = 1.5;
+  for (let r = 0; r < 10; r++) { const [x1, y] = pos(r * 9), x2 = PAD + 8 * SQ; line(x1, y, x2, y); }
+  for (let c = 0; c < 9; c++) { const [x, y1] = pos(c), y2 = PAD + 9 * SQ; line(x, y1, x, y2); }
+  // outer border
+  ctx.lineWidth = 3; ctx.strokeRect(PAD, PAD, 8 * SQ, 9 * SQ);
+  // river text
+  ctx.fillStyle = '#4a341899'; ctx.font = '26px "KaiTi","STKaiti",serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('楚 河', PAD + 2 * SQ, PAD + 4.5 * SQ);
+  ctx.fillText('汉 界', PAD + 6 * SQ, PAD + 4.5 * SQ);
+  // palace diagonals
+  line(PAD + 3 * SQ, PAD, PAD + 5 * SQ, PAD + 2 * SQ);
+  line(PAD + 5 * SQ, PAD, PAD + 3 * SQ, PAD + 2 * SQ);
+  line(PAD + 3 * SQ, PAD + 9 * SQ, PAD + 5 * SQ, PAD + 7 * SQ);
+  line(PAD + 5 * SQ, PAD + 9 * SQ, PAD + 3 * SQ, PAD + 7 * SQ);
+  // cannon / pawn positions
+  const marks = [[2,1],[2,7],[7,1],[7,7],[0,0],[0,2],[0,4],[0,6],[0,8],[9,0],[9,2],[9,4],[9,6],[9,8]];
+  for (const [r, c] of marks) drawPosMark(r, c);
+  // last move
+  if (lastMove) {
+    const [x1, y1] = pos(lastMove.f), [x2, y2] = pos(lastMove.t);
+    ctx.strokeStyle = '#f1c40faa'; ctx.lineWidth = 3;
+    circle(x1, y1, 25); ctx.stroke(); circle(x2, y2, 25); ctx.stroke();
+  }
+  // legal move hints
+  if (sel !== null) {
+    for (const m of legalCache) {
+      const [x, y] = pos(m.t);
+      ctx.fillStyle = game.board[m.t] === 0 ? '#2e7d32cc' : '#c62828dd';
+      circle(x, y, game.board[m.t] === 0 ? 9 : 25); ctx.fill();
+    }
+    const [sx, sy] = pos(sel);
+    ctx.strokeStyle = '#f1c40f'; ctx.lineWidth = 3; circle(sx, sy, 26); ctx.stroke();
+  }
+  // pieces
+  for (let i = 0; i < 90; i++) {
+    const c = game.board[i];
+    if (c === 0) continue;
+    drawPiece(i, c);
+  }
+}
+function line(x1, y1, x2, y2) { ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke(); }
+function circle(x, y, r) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); }
+function drawPosMark(r, c) {
+  const [x, y] = pos(r * 9 + c);
+  const d = 6, g = 5;
+  ctx.lineWidth = 1.4;
+  for (const [sx, sy] of [[-1,-1],[1,-1],[-1,1],[1,1]]) {
+    line(x + sx*g, y + sy*(g+d), x + sx*(g+d), y + sy*(g+d));
+    line(x + sx*(g+d), y + sy*(g+d), x + sx*(g+2*d), y + sy*(g+2*d));
+  }
+}
+function drawPiece(i, c) {
+  const [x, y] = pos(i);
+  const red = c > 0;
+  const grad = ctx.createRadialGradient(x - 8, y - 10, 4, x, y, 26);
+  grad.addColorStop(0, '#fdf6e3'); grad.addColorStop(1, '#e0cfa5');
+  ctx.fillStyle = grad; circle(x, y, 24); ctx.fill();
+  ctx.strokeStyle = red ? '#b03a2e' : '#1c1c1c'; ctx.lineWidth = 2.5; ctx.stroke();
+  ctx.strokeStyle = red ? '#d98880' : '#555'; ctx.lineWidth = 1; circle(x, y, 20); ctx.stroke();
+  ctx.fillStyle = red ? '#b03a2e' : '#1c1c1c';
+  ctx.font = 'bold 26px "KaiTi","STKaiti","Microsoft YaHei",serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(XQ.pieceName(c), x, y + 1);
+}
+
+// ---- interaction ----
+cv.addEventListener('click', (e) => {
+  if (thinking || over || game.side !== humanSide) return;
+  const rect = cv.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) * (cv.width / rect.width);
+  const my = (e.clientY - rect.top) * (cv.height / rect.height);
+  let best = -1, bd = 24;
+  for (let i = 0; i < 90; i++) {
+    const [x, y] = pos(i);
+    const d = Math.hypot(mx - x, my - y);
+    if (d < bd) { bd = d; best = i; }
+  }
+  if (best < 0) return;
+  const c = game.board[best];
+  if (sel !== null) {
+    const mv = legalCache.find(m => m.t === best);
+    if (mv) {
+      const res = game.move({ f: sel, t: best });
+      if (res) { lastMove = { f: sel, t: best }; sel = null; legalCache = []; afterHuman(); return; }
+    }
+  }
+  if (c !== 0 && XQ.sideOf(c) === humanSide) {
+    sel = best;
+    legalCache = game.legalMoves().filter(m => m.f === best);
+  } else { sel = null; legalCache = []; }
+  draw();
+});
+
+function afterHuman() {
+  renderLog();
+  checkEnd();
+  if (!over) { draw(); setTimeout(aiTurn, 60); }
+}
+
+function aiTurn() {
+  thinking = true; draw(); setStatus('thinking');
+  setTimeout(() => {
+    const L = XQ.LEVELS[levelIdx];
+    const res = game.aiMove(L.depth, L.qDepth, L.maxNodes, L.randomness);
+    if (res) lastMove = game.history[game.history.length - 1].move;
+    thinking = false;
+    renderLog(); checkEnd(); draw();
+    if (!over && game.side === humanSide) { /* human's turn */ }
+    else if (!over) aiTurn(); // human plays black and it's still AI? shouldn't happen; safety
+  }, 50);
+}
+
+function checkEnd() {
+  const lm = game.legalMoves().length;
+  if (lm === 0) {
+    over = true;
+    if (game.inCheck()) {
+      setStatus('over', humanSide === 1 ? '黑方绝杀，你赢了！🎉' : '红方绝杀，AI 获胜');
+    } else {
+      setStatus('over', '无子可动 —— 和棋 🤝');
+    }
+  } else if (game.inCheck()) {
+    setStatus('check', game.side === humanSide ? '你被将军了！' : 'AI 被将军');
+  } else {
+    setStatus('normal');
+  }
+}
+
+function setStatus(mode, text) {
+  const el = document.getElementById('status');
+  if (mode === 'thinking') { el.innerHTML = '<span class="dot" style="background:#f1c40f"></span> AI 思考中…'; return; }
+  if (text) { el.innerHTML = text; return; }
+  const isHuman = game.side === humanSide;
+  const who = game.side === 1 ? '红方' : '黑方';
+  el.innerHTML = `<span class="dot" style="background:${game.side === 1 ? '#e74c3c' : '#222'}"></span> ${who}行棋${isHuman ? '（你）' : ''}`;
+}
+
+function renderLog() {
+  const log = document.getElementById('log');
+  let html = '';
+  for (let i = 0; i < game.history.length; i++) {
+    const h = game.history[i];
+    if (i % 2 === 0) html += `<div class="mv"><span class="no">${i / 2 + 1}.</span><span class="r">${h.notation}</span>`;
+    else { html += `<span class="b">${h.notation}</span></div>`; }
+  }
+  if (game.history.length % 2 === 1) html += '</div>';
+  log.innerHTML = html || '<span style="color:#8d8470">暂无着法</span>';
+  log.scrollTop = log.scrollHeight;
+}
+
+newGame();
+</script>
+</body>
+</html>
