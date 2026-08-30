@@ -307,31 +307,65 @@
   }
 
   // ---------- evaluation (red positive) ----------
-  const VAL = [0, 10000, 25, 45, 80, 350, 110, 10];
+  const VAL = [0, 10000, 30, 45, 85, 400, 100, 10];
+  const CENTER = [0, 1, 2, 3, 4, 3, 2, 1, 0]; // file centrality (mid-file highest)
+  function pst(type, r, c, red) {
+    const adv = red ? (9 - r) : r;            // advancement into enemy camp (0..9)
+    switch (type) {
+      case P.P: {                             // pawn
+        if (adv < 5) return [0, 0, 1, 1, 2, 2, 1, 1, 0][c] * 0; // pre-river ≈ 0
+        let v = 4 + adv * 2;                  // crossed river: deeper is better
+        v += [3, 2, 1, 1, 0, 1, 1, 2, 3][c];  // central files preferred
+        if (adv >= 8) v += 5;                 // near enemy palace
+        return v;
+      }
+      case P.N: {                             // horse
+        let v = CENTER[c] + Math.min(adv, 6);
+        if ((c === 0 || c === 8) && adv <= 2) v -= 3;   // cornered at home rank
+        return v;
+      }
+      case P.R: {                             // rook
+        let v = adv * 2 + Math.floor(CENTER[c] / 2);
+        if (adv >= 5) v += 6;                 // deep in enemy camp
+        if (adv <= 1) v -= 4;                 // still on home rank (undeveloped)
+        return v;
+      }
+      case P.C: {                             // cannon
+        let v = (c === 4 ? 6 : (c === 3 || c === 5 ? 3 : 0)) + Math.min(adv, 4);
+        if (adv >= 7) v -= 2;                 // too deep is awkward for a cannon
+        return v;
+      }
+      case P.B: return CENTER[c] * 0.5;       // elephant stays central-ish
+      case P.A: return c === 4 ? 2 : 0;       // advisor near king
+      case P.K: return (c === 4 && adv <= 1) ? 3 : 0; // king safe at home center
+      default: return 0;
+    }
+  }
   function evaluate(b) {
     let s = 0;
     for (let i = 0; i < 90; i++) {
       const c = b[i];
       if (c === 0) continue;
       const r = (i / 9) | 0, col = i % 9;
-      let v = VAL[Math.abs(c)];
-      switch (Math.abs(c)) {
-        case P.P: {
-          const crossed = c > 0 ? r <= 4 : r >= 5;
-          if (crossed) v += Math.min((c > 0 ? 9 - r : r) * 3, 15) + [2, 1, 1, 0, 0, 0, 1, 1, 2][col];
-          break;
-        }
-        case P.R: v += c > 0 ? (r <= 2 ? 8 : 0) : (r >= 7 ? 8 : 0); break;
-        case P.N: v += [1, 0, 0, 0, 0, 0, 0, 0, 1][col] * 2 + (c > 0 ? (r <= 3 ? 4 : 0) : (r >= 6 ? 4 : 0)); break;
-        case P.C: v += (c > 0 ? (r <= 1 ? 6 : 0) : (r >= 8 ? 6 : 0)) + ([2, 7].includes(col) ? 3 : 0); break;
-        case P.K: v += c > 0 ? (r === 9 ? 4 : r === 8 ? 2 : 0) : (r === 0 ? 4 : r === 1 ? 2 : 0); break;
-      }
-      s += c > 0 ? v : -v;
+      const red = c > 0;
+      const v = VAL[Math.abs(c)] + pst(Math.abs(c), r, col, red);
+      s += red ? v : -v;
     }
     return s;
   }
 
   // ---------- search ----------
+  const REP_PEN = 30;   // per extra occurrence beyond 2, charged to the repeating side
+
+  function boardKey(b) { return b.join(''); }
+  function makeRepMap(histBoards) {
+    const m = new Map();
+    for (const bb of histBoards) { const k = boardKey(bb); m.set(k, (m.get(k) || 0) + 1); }
+    return m;
+  }
+  function setRep(b, rep) { if (!rep) return; const k = boardKey(b); rep.set(k, (rep.get(k) || 0) + 1); }
+  function unsetRep(b, rep) { if (!rep) return; const k = boardKey(b); const c = rep.get(k); if (c <= 1) rep.delete(k); else rep.set(k, c - 1); }
+
   function moveScore(b, m) {
     let s = VAL[Math.abs(b[m.t])] * 10;
     const pf = Math.abs(b[m.f]);
@@ -345,10 +379,10 @@
     return ms.map(m => ({ m, s: moveScore(b, m) })).sort((a, z) => z.s - a.s).map(x => x.m);
   }
 
-  function quiesce(b, side, qd, nodes) {
+  function quiesce(b, side, qd, nodes, rep) {
     nodes.n++;
     const stand = evaluate(b);
-    if (qd <= 0) return stand;
+    if (qd <= 0 || nodes.n > nodes.max) return stand;
     let best = side === 1 ? -Infinity : Infinity;
     let any = false;
     for (const m of legalMoves(b, side)) {
@@ -356,46 +390,75 @@
       any = true;
       const nb = b.slice();
       nb[m.t] = nb[m.f]; nb[m.f] = 0;
-      const v = quiesce(nb, -side, qd - 1, nodes);
+      setRep(nb, rep);
+      const v = quiesce(nb, -side, qd - 1, nodes, rep);
+      unsetRep(nb, rep);
       if (side === 1 ? v > best : v < best) best = v;
     }
     if (!any) return stand;
     return side === 1 ? Math.max(best, stand) : Math.min(best, stand);
   }
 
-  function search(b, side, depth, alpha, beta, qDepth, nodes) {
+  function search(b, side, depth, alpha, beta, qDepth, nodes, rep) {
     nodes.n++;
     if (nodes.n > nodes.max) return evaluate(b);
-    if (depth <= 0) return quiesce(b, side, qDepth, nodes);
+    if (depth <= 0) return quiesce(b, side, qDepth, nodes, rep);
     const legal = legalMoves(b, side);
     if (legal.length === 0) return inCheck(b, side) ? (side === 1 ? -99999 + depth : 99999 - depth) : 0;
     let best = side === 1 ? -Infinity : Infinity;
     for (const m of orderMoves(b, legal)) {
       const nb = b.slice();
       nb[m.t] = nb[m.f]; nb[m.f] = 0;
-      const v = search(nb, -side, depth - 1, alpha, beta, qDepth, nodes);
-      if (side === 1) { if (v > best) best = v; if (best > alpha) alpha = best; }
-      else { if (v < best) best = v; if (best < beta) beta = best; }
+      setRep(nb, rep);
+      const v = search(nb, -side, depth - 1, alpha, beta, qDepth, nodes, rep);
+      const cnt = rep ? (rep.get(boardKey(nb)) || 0) : 2;
+      unsetRep(nb, rep);
+      let adj = v;
+      if (cnt >= 3) {                       // this move recreates a known position: charge the mover
+        const pen = REP_PEN * (cnt - 2);
+        adj = side === 1 ? v - pen : v + pen;
+      }
+      if (side === 1) { if (adj > best) best = adj; if (best > alpha) alpha = best; }
+      else { if (adj < best) best = adj; if (best < beta) beta = best; }
       if (beta <= alpha) break;
     }
     return best;
   }
 
-  function think(b, side, depth, qDepth, maxNodes, randomness) {
-    const nodes = { n: 0, max: maxNodes };
+  // Iterative deepening: each depth gets a fresh node budget; only the DEEPEST
+  // fully-completed iteration is trusted. Deeper levels therefore always play at
+  // least as well as shallower ones (no more "harder level hits its node cap and
+  // degrades to static-eval noise").
+  function think(b, side, depth, qDepth, maxNodes, randomness, repMap) {
     const legal = legalMoves(b, side);
     if (legal.length === 0) return null;
-    let alpha = -Infinity, beta = Infinity;
-    let bestV = side === 1 ? -Infinity : Infinity;
-    const cands = [];
-    for (const m of orderMoves(b, legal)) {
-      const nb = b.slice();
-      nb[m.t] = nb[m.f]; nb[m.f] = 0;
-      const v = search(nb, -side, depth - 1, alpha, beta, qDepth, nodes);
-      cands.push({ m, v });
-      if (side === 1) { if (v > bestV) bestV = v; if (bestV > alpha) alpha = bestV; }
-      else { if (v < bestV) bestV = v; if (bestV < beta) beta = bestV; }
+    const ordered = orderMoves(b, legal);
+    let bestCands = null, totalNodes = 0;
+    for (let d = 1; d <= depth; d++) {
+      const nodes = { n: 0, max: maxNodes };
+      const cands = [];
+      let aborted = false;
+      for (const m of ordered) {
+        if (nodes.n > nodes.max) { aborted = true; break; }
+        const nb = b.slice();
+        nb[m.t] = nb[m.f]; nb[m.f] = 0;
+        setRep(nb, repMap);
+        const v = search(nb, -side, d - 1, -Infinity, Infinity, qDepth, nodes, repMap);
+        unsetRep(nb, repMap);
+        cands.push({ m, v });
+      }
+      totalNodes = nodes.n;
+      if (aborted) break;                  // keep previous completed iteration
+      bestCands = cands;
     }
+    let cands = bestCands;
+    if (!cands) {                          // even depth 1 didn't complete: fall back to static eval
+      cands = ordered.map(m => {
+        const nb = b.slice(); nb[m.t] = nb[m.f]; nb[m.f] = 0;
+        return { m, v: evaluate(nb) };
+      });
+    }
+    const bestV = side === 1 ? Math.max(...cands.map(x => x.v)) : Math.min(...cands.map(x => x.v));
     let pick;
     if (randomness > 0) {
       const near = cands.filter(x => Math.abs(x.v - bestV) <= randomness);
@@ -403,7 +466,7 @@
     } else {
       pick = cands.reduce((a, x) => (side === 1 ? (x.v > a.v ? x : a) : (x.v < a.v ? x : a)), cands[0]);
     }
-    return { move: pick.m, score: bestV, nodes: nodes.n };
+    return { move: pick.m, score: bestV, nodes: totalNodes };
   }
 
   // ---------- handicap (let pieces — removed from the AI's side at start) ----------
@@ -503,7 +566,8 @@
       return h;
     }
     aiMove(depth, qDepth, maxNodes, randomness) {
-      const t = think(this.board, this.side, depth, qDepth, maxNodes, randomness);
+      const repMap = makeRepMap(this.history.map(h => h.board));
+      const t = think(this.board, this.side, depth, qDepth, maxNodes, randomness, repMap);
       if (!t) return null;
       const notation = toNotation(this.board, t.move, this.side);
       const captured = this.board[t.move.t];
@@ -517,11 +581,11 @@
   }
 
   const LEVELS = [
-    { name: '入门', depth: 1, qDepth: 0, maxNodes: 500,   randomness: 40 },
-    { name: '业余', depth: 2, qDepth: 0, maxNodes: 3000,  randomness: 15 },
-    { name: '进阶', depth: 3, qDepth: 1, maxNodes: 8000,  randomness: 0 },
-    { name: '高手', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0 },
-    { name: '大师', depth: 5, qDepth: 2, maxNodes: 60000, randomness: 0 },
+    { name: '入门', depth: 2, qDepth: 0, maxNodes: 1500,  randomness: 45 },
+    { name: '业余', depth: 3, qDepth: 1, maxNodes: 6000,  randomness: 18 },
+    { name: '进阶', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0 },
+    { name: '高手', depth: 5, qDepth: 2, maxNodes: 90000, randomness: 0 },
+    { name: '大师', depth: 6, qDepth: 3, maxNodes: 300000, randomness: 0 },
   ];
 
   return { P, NAME_RED, NAME_BLK, initialBoard, genPseudo, legalMoves, inCheck, isAttacked, findKing, evaluate, think, Game, LEVELS, HANDICAPS, pieceName, toNotation, applyHandicap, removeAt, sideOf };
