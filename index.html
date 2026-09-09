@@ -22,7 +22,7 @@
   h1 { font-size: 22px; letter-spacing: 6px; margin-bottom: 10px; color: var(--gold); text-shadow: 0 2px 8px #0008; }
   .layout { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
   .board-wrap { position: relative; background: linear-gradient(160deg, var(--wood1), var(--wood2)); border-radius: 10px; padding: 14px; box-shadow: 0 10px 30px #000a, inset 0 0 60px #a9803f55; }
-  canvas { display: block; cursor: pointer; border-radius: 4px; }
+  canvas { display: block; cursor: pointer; border-radius: 4px; touch-action: manipulation; }
   .panel { width: 300px; background: var(--panel); border-radius: 12px; padding: 16px; box-shadow: 0 8px 24px #0007; display: flex; flex-direction: column; gap: 12px; }
   .panel h3 { font-size: 14px; color: var(--gold); letter-spacing: 2px; border-bottom: 1px solid #ffffff22; padding-bottom: 6px; }
   label.fld { display: block; font-size: 12px; color: var(--dim); margin: 8px 0 4px; }
@@ -41,12 +41,23 @@
   .log .r { color: #ff9d8a; } .log .b { color: #cfd8dc; }
   .hint { font-size: 11.5px; color: var(--dim); line-height: 1.6; }
   .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; background: #ffffff18; margin-left: 4px; }
+  /* ---- mobile: board scales to fit, panel goes full-width below ---- */
+  @media (max-width: 760px) {
+    body { padding: 8px; }
+    h1 { font-size: 18px; letter-spacing: 4px; margin-bottom: 6px; }
+    .layout { gap: 10px; }
+    .board-wrap { padding: 8px; width: 100%; display: flex; justify-content: center; }
+    canvas { width: 100%; height: auto; }
+    .panel { width: 100%; padding: 12px; }
+    .log { height: 140px; }
+    select, button { padding: 11px 10px; font-size: 15px; }
+  }
 </style>
 </head>
 <body>
 <h1>中 国 象 棋</h1>
 <div class="layout">
-  <div class="board-wrap"><canvas id="cv" width="560" height="620"></canvas></div>
+  <div class="board-wrap"><canvas id="cv" width="508" height="564"></canvas></div>
   <div class="panel">
     <div class="status" id="status"><span class="dot" style="background:#e74c3c"></span> 红方行棋（你）</div>
 
@@ -86,7 +97,6 @@
 const XQ = window.XQ;
 const cv = document.getElementById('cv');
 const ctx = cv.getContext('2d');
-const SQ = 56, PAD = 30; // square size & padding (px)
 
 let game = null;
 let humanSide = 1;
@@ -137,18 +147,35 @@ document.getElementById('undoBtn').onclick = () => {
 };
 
 // ---- drawing ----
+let SQ = 56, PAD = 30; // square size & padding (canvas px); SQ is rescaled to fit the screen
+function layout() {
+  const isMobile = window.matchMedia('(max-width: 760px)').matches;
+  // available width for the board
+  let availW = window.innerWidth - 16; // body padding
+  if (!isMobile) availW = Math.min(availW - 316, 560); // side panel(300)+gap(16) on desktop
+  const bw = Math.max(270, Math.min(508, availW - 28)); // board-wrap padding 2x14
+  // available height for the board (reserve ~60px for title + margins)
+  const availH = window.innerHeight - 60;
+  // SQ constrained by BOTH width and height so the whole board is always visible
+  const sqW = Math.floor((bw - 60) / 8);    // 60 = 2x PAD
+  const sqH = Math.floor((availH - 60) / 9);
+  SQ = Math.max(30, Math.min(sqW, sqH));
+  cv.width = 60 + 8 * SQ;
+  cv.height = 60 + 9 * SQ;
+}
 function pos(i) { return [PAD + (i % 9) * SQ, PAD + ((i / 9) | 0) * SQ]; }
+const sc = (v) => v * SQ / 56; // scale a design-time px value (designed at SQ=56) to current size
 function draw() {
   const W = cv.width, H = cv.height;
   ctx.clearRect(0, 0, W, H);
   // grid
-  ctx.strokeStyle = '#4a3418'; ctx.lineWidth = 1.5;
+  ctx.strokeStyle = '#4a3418'; ctx.lineWidth = sc(1.5);
   for (let r = 0; r < 10; r++) { const [x1, y] = pos(r * 9), x2 = PAD + 8 * SQ; line(x1, y, x2, y); }
   for (let c = 0; c < 9; c++) { const [x, y1] = pos(c), y2 = PAD + 9 * SQ; line(x, y1, x, y2); }
   // outer border
-  ctx.lineWidth = 3; ctx.strokeRect(PAD, PAD, 8 * SQ, 9 * SQ);
+  ctx.lineWidth = sc(3); ctx.strokeRect(PAD, PAD, 8 * SQ, 9 * SQ);
   // river text
-  ctx.fillStyle = '#4a341899'; ctx.font = '26px "KaiTi","STKaiti",serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillStyle = '#4a341899'; ctx.font = sc(26) + 'px "KaiTi","STKaiti",serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   ctx.fillText('楚 河', PAD + 2 * SQ, PAD + 4.5 * SQ);
   ctx.fillText('汉 界', PAD + 6 * SQ, PAD + 4.5 * SQ);
   // palace diagonals
@@ -162,18 +189,18 @@ function draw() {
   // last move
   if (lastMove) {
     const [x1, y1] = pos(lastMove.f), [x2, y2] = pos(lastMove.t);
-    ctx.strokeStyle = '#f1c40faa'; ctx.lineWidth = 3;
-    circle(x1, y1, 25); ctx.stroke(); circle(x2, y2, 25); ctx.stroke();
+    ctx.strokeStyle = '#f1c40faa'; ctx.lineWidth = sc(3);
+    circle(x1, y1, sc(25)); ctx.stroke(); circle(x2, y2, sc(25)); ctx.stroke();
   }
   // legal move hints
   if (sel !== null) {
     for (const m of legalCache) {
       const [x, y] = pos(m.t);
       ctx.fillStyle = game.board[m.t] === 0 ? '#2e7d32cc' : '#c62828dd';
-      circle(x, y, game.board[m.t] === 0 ? 9 : 25); ctx.fill();
+      circle(x, y, game.board[m.t] === 0 ? sc(9) : sc(25)); ctx.fill();
     }
     const [sx, sy] = pos(sel);
-    ctx.strokeStyle = '#f1c40f'; ctx.lineWidth = 3; circle(sx, sy, 26); ctx.stroke();
+    ctx.strokeStyle = '#f1c40f'; ctx.lineWidth = sc(3); circle(sx, sy, sc(26)); ctx.stroke();
   }
   // pieces
   for (let i = 0; i < 90; i++) {
@@ -186,8 +213,8 @@ function line(x1, y1, x2, y2) { ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(
 function circle(x, y, r) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); }
 function drawPosMark(r, c) {
   const [x, y] = pos(r * 9 + c);
-  const d = 6, g = 5;
-  ctx.lineWidth = 1.4;
+  const d = sc(6), g = sc(5);
+  ctx.lineWidth = sc(1.4);
   for (const [sx, sy] of [[-1,-1],[1,-1],[-1,1],[1,1]]) {
     line(x + sx*g, y + sy*(g+d), x + sx*(g+d), y + sy*(g+d));
     line(x + sx*(g+d), y + sy*(g+d), x + sx*(g+2*d), y + sy*(g+2*d));
@@ -196,15 +223,15 @@ function drawPosMark(r, c) {
 function drawPiece(i, c) {
   const [x, y] = pos(i);
   const red = c > 0;
-  const grad = ctx.createRadialGradient(x - 8, y - 10, 4, x, y, 26);
+  const grad = ctx.createRadialGradient(x - sc(8), y - sc(10), sc(4), x, y, sc(26));
   grad.addColorStop(0, '#fdf6e3'); grad.addColorStop(1, '#e0cfa5');
-  ctx.fillStyle = grad; circle(x, y, 24); ctx.fill();
-  ctx.strokeStyle = red ? '#b03a2e' : '#1c1c1c'; ctx.lineWidth = 2.5; ctx.stroke();
-  ctx.strokeStyle = red ? '#d98880' : '#555'; ctx.lineWidth = 1; circle(x, y, 20); ctx.stroke();
+  ctx.fillStyle = grad; circle(x, y, sc(24)); ctx.fill();
+  ctx.strokeStyle = red ? '#b03a2e' : '#1c1c1c'; ctx.lineWidth = sc(2.5); ctx.stroke();
+  ctx.strokeStyle = red ? '#d98880' : '#555'; ctx.lineWidth = sc(1); circle(x, y, sc(20)); ctx.stroke();
   ctx.fillStyle = red ? '#b03a2e' : '#1c1c1c';
-  ctx.font = 'bold 26px "KaiTi","STKaiti","Microsoft YaHei",serif';
+  ctx.font = 'bold ' + sc(26) + 'px "KaiTi","STKaiti","Microsoft YaHei",serif';
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  ctx.fillText(XQ.pieceName(c), x, y + 1);
+  ctx.fillText(XQ.pieceName(c), x, y + sc(1));
 }
 
 // ---- interaction ----
@@ -213,7 +240,8 @@ cv.addEventListener('click', (e) => {
   const rect = cv.getBoundingClientRect();
   const mx = (e.clientX - rect.left) * (cv.width / rect.width);
   const my = (e.clientY - rect.top) * (cv.height / rect.height);
-  let best = -1, bd = 24;
+  // hit radius constant in ON-SCREEN px (24) => grows in canvas px when scaled down
+  let best = -1, bd = 24 * (cv.width / rect.width);
   for (let i = 0; i < 90; i++) {
     const [x, y] = pos(i);
     const d = Math.hypot(mx - x, my - y);
@@ -292,6 +320,16 @@ function renderLog() {
   log.scrollTop = log.scrollHeight;
 }
 
+let resizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => { layout(); if (game) draw(); }, 120);
+});
+window.addEventListener('orientationchange', () => {
+  setTimeout(() => { layout(); if (game) draw(); }, 250);
+});
+
+layout();
 newGame();
 </script>
 </body>
