@@ -352,6 +352,7 @@
       default: return 0;
     }
   }
+  const CHECK_PEN = 45; // being in check (discourages leaving the king exposed)
   function evaluate(b) {
     let s = 0;
     for (let i = 0; i < 90; i++) {
@@ -362,6 +363,8 @@
       const v = VAL[Math.abs(c)] + pst(Math.abs(c), r, col, red);
       s += red ? v : -v;
     }
+    if (inCheck(b, 1)) s -= CHECK_PEN;
+    if (inCheck(b, -1)) s += CHECK_PEN;
     return s;
   }
 
@@ -394,10 +397,12 @@
     nodes.n++;
     const stand = evaluate(b);
     if (qd <= 0 || nodes.n > nodes.max) return stand;
+    const chk = inCheck(b, side);
     let best = side === 1 ? -Infinity : Infinity;
     let any = false;
     for (const m of legalMoves(b, side)) {
-      if (b[m.t] === 0) continue; // captures only
+      const cap = b[m.t] !== 0;
+      if (!cap && !chk) continue; // extend captures, and checks (when in check)
       any = true;
       const nb = b.slice();
       nb[m.t] = nb[m.f]; nb[m.f] = 0;
@@ -470,13 +475,12 @@
       });
     }
     const bestV = side === 1 ? Math.max(...cands.map(x => x.v)) : Math.min(...cands.map(x => x.v));
-    let pick;
-    if (randomness > 0) {
-      const near = cands.filter(x => Math.abs(x.v - bestV) <= randomness);
-      pick = near[(Math.random() * near.length) | 0];
-    } else {
-      pick = cands.reduce((a, x) => (side === 1 ? (x.v > a.v ? x : a) : (x.v < a.v ? x : a)), cands[0]);
-    }
+    // pick among near-best moves: randomness=0 still breaks ties randomly so the
+    // same position never yields the same move twice (kills the "AI plays identically
+    // every game" predictability). Higher randomness widens the pool.
+    const tol = Math.max(randomness, 3);
+    const near = cands.filter(x => Math.abs(x.v - bestV) <= tol);
+    const pick = near[(Math.random() * near.length) | 0];
     return { move: pick.m, score: bestV, nodes: totalNodes };
   }
 
@@ -595,8 +599,8 @@
     { name: '入门', depth: 2, qDepth: 0, maxNodes: 1500,  randomness: 45 },
     { name: '业余', depth: 3, qDepth: 1, maxNodes: 6000,  randomness: 18 },
     { name: '进阶', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0 },
-    { name: '高手', depth: 5, qDepth: 2, maxNodes: 90000, randomness: 0 },
-    { name: '大师', depth: 6, qDepth: 3, maxNodes: 300000, randomness: 0 },
+    { name: '高手', depth: 6, qDepth: 3, maxNodes: 120000, randomness: 0 },
+    { name: '大师', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0 },
   ];
 
   return { P, NAME_RED, NAME_BLK, initialBoard, genPseudo, legalMoves, inCheck, isAttacked, findKing, evaluate, think, Game, LEVELS, HANDICAPS, pieceName, toNotation, applyHandicap, removeAt, sideOf };
