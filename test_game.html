@@ -1,0 +1,50 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"></head><body><div id="log">start</div>
+<script src="engine.js"></script>
+<script src="js/pikafish_bridge.js"></script>
+<script>
+const el=document.getElementById('log'); const add=(m)=>{el.textContent+='\n'+m; console.log(m);};
+window.__result=null;
+// 用户那局红方（中炮开局）9手，硬编码坐标 {f,t}
+const RED_MOVES = [
+  {f:70,t:67}, // 1.炮二平五
+  {f:67,t:31}, // 2.炮五进四
+  {f:31,t:49}, // 3.炮五退二
+  {f:64,t:65}, // 4.炮八平七
+  {f:82,t:63}, // 5.马八进九
+  {f:88,t:69}, // 6.马二进三
+  {f:81,t:82}, // 7.车九平八
+  {f:65,t:29}, // 8.炮七进四
+  {f:29,t:31}, // 9.炮七平五
+];
+(async ()=>{
+  const g = new XQ.Game('none', -1); // 黑方=AI=Pikafish
+  const ok = await PF.whenReady();
+  add('ready='+ok);
+  if(!ok){window.__result='NOT_READY';return;}
+  const lines=[];
+  for(let i=0;i<RED_MOVES.length;i++){
+    // 红方（用户）走
+    const rm = RED_MOVES[i];
+    const legalR = g.legalMoves().some(m=>m.f===rm.f&&m.t===rm.t);
+    if(!legalR){ add('RED ILLEGAL at ply '+(i+1)); window.__result='RED_ILLEGAL_'+(i+1); return; }
+    const rr = g.move(rm);
+    lines.push(rr.notation);
+    add('红: '+rr.notation);
+    if(g.legalMoves().length===0) break; // 红走完就轮到黑，但若红已胜则停
+    // 黑方（Pikafish 大师档 2500ms）走
+    const fen = PF.boardToFen(g.board, g.side);
+    const t0=Date.now();
+    const mvStr = await PF.search(fen, 2500);
+    const mv = PF.parseMove(mvStr);
+    const legalB = mv && g.legalMoves().some(m=>m.f===mv.f&&m.t===mv.t);
+    if(!legalB){ add('PF ILLEGAL: '+mvStr); window.__result='PF_ILLEGAL_'+(i+1); return; }
+    const br = g.move(mv);
+    lines.push(br.notation);
+    add('黑(Pikafish): '+br.notation+' ('+(Date.now()-t0)+'ms)');
+  }
+  add('--- 完整棋谱 ---');
+  add(lines.join(' '));
+  window.__result='DONE';
+})().catch(e=>{add('ERR '+e);window.__result='ERR:'+e;});
+setTimeout(()=>{if(window.__result!=='DONE')add('TIMEOUT');}, 60000);
+</script></body></html>

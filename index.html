@@ -92,6 +92,7 @@
 </div>
 
 <script src="engine.js"></script>
+<script src="js/pikafish_bridge.js"></script>
 <script>
 'use strict';
 const XQ = window.XQ;
@@ -122,6 +123,9 @@ for (const k of Object.keys(XQ.HANDICAPS)) {
 }
 levelSel.value = levelIdx;
 
+// 预热皮卡鱼引擎（高手/大师档首步不必白等）；入门~进阶档不受影响
+if (typeof PF !== 'undefined') PF.load().catch(() => {});
+
 function newGame() {
   game = new XQ.Game(handicapKey, -1); // handicap removed from AI side (black when human=red)
   sel = null; legalCache = []; lastMove = null; over = false; thinking = false;
@@ -130,6 +134,7 @@ function newGame() {
 }
 
 document.getElementById('newBtn').onclick = () => {
+  if (typeof PF !== 'undefined') PF.stop();
   humanSide = parseInt(document.getElementById('sideSel').value);
   levelIdx = parseInt(levelSel.value);
   handicapKey = handSel.value;
@@ -271,14 +276,37 @@ function afterHuman() {
 
 function aiTurn() {
   thinking = true; draw(); setStatus('thinking');
+  const g = game; // capture current game to guard against undo/new-game racing the async result
+  if (PF.isHeavyLevel(levelIdx)) {
+    PF.whenReady().then((ok) => {
+      if (!(g === game && thinking)) return; // stale: board changed meanwhile
+      if (!ok) { builtInAiTurn(g); return; } // engine not ready -> fall back
+      const fen = PF.boardToFen(g.board, g.side);
+      PF.search(fen, PF.MILLIS[levelIdx]).then((mvStr) => {
+        if (!(g === game && thinking)) return;
+        let mv = (mvStr && mvStr !== '__timeout__') ? PF.parseMove(mvStr) : null;
+        if (!mv || !g.legalMoves().some(m => m.f === mv.f && m.t === mv.t)) {
+          builtInAiTurn(g); return; // illegal / timeout -> fall back
+        }
+        const res = g.move(mv);
+        if (res) lastMove = g.history[g.history.length - 1].move;
+        thinking = false;
+        renderLog(); checkEnd(); draw();
+      }).catch(() => { if (g === game && thinking) builtInAiTurn(g); });
+    });
+    return;
+  }
+  builtInAiTurn(g);
+}
+
+function builtInAiTurn(g) {
   setTimeout(() => {
+    if (!(g === game && thinking)) return;
     const L = XQ.LEVELS[levelIdx];
-    const res = game.aiMove(L.depth, L.qDepth, L.maxNodes, L.randomness);
-    if (res) lastMove = game.history[game.history.length - 1].move;
+    const res = g.aiMove(L.depth, L.qDepth, L.maxNodes, L.randomness);
+    if (res) lastMove = g.history[g.history.length - 1].move;
     thinking = false;
     renderLog(); checkEnd(); draw();
-    if (!over && game.side === humanSide) { /* human's turn */ }
-    else if (!over) aiTurn(); // human plays black and it's still AI? shouldn't happen; safety
   }, 50);
 }
 

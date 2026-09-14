@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"></head><body><div id="log">start</div>
+<script src="engine.js"></script>
+<script src="js/pikafish_bridge.js"></script>
+<script>
+const el=document.getElementById('log'); const add=(m)=>{el.textContent+='\n'+m; console.log(m);};
+window.__result=null;
+(async ()=>{
+  // 1) 用内置引擎走几步，制造一个中局
+  const g = new XQ.Game('none', -1);
+  const seq = [['炮二平五'],['马8进7'],['马二进三'],['車9平8'],['车一平二'],['马2进3']];
+  // 用 aiMove 走 6 步形成中局
+  for(let i=0;i<6;i++){ g.aiMove(3,1,3000,0); }
+  add('midgame side='+g.side+' hist='+g.history.length);
+  const fen = PF.boardToFen(g.board, g.side);
+  add('FEN='+fen);
+  // 校验 FEN 形状
+  const parts = fen.split(' ');
+  add('fen-parts='+parts.length+' ranks='+parts[0].split('/').length);
+
+  // 2) 等引擎就绪
+  const ok = await PF.whenReady();
+  add('whenReady='+ok);
+  if(!ok){ window.__result='NOT_READY'; return; }
+
+  // 3) 让 Pikafish 出招
+  const t0=Date.now();
+  const mvStr = await PF.search(fen, 1200);
+  add('move='+mvStr+' ('+(Date.now()-t0)+'ms)');
+  const mv = PF.parseMove(mvStr);
+  add('parsed='+JSON.stringify(mv));
+  const legal = g.legalMoves().some(m=>m.f===mv.f && m.t===mv.t);
+  add('legal='+legal);
+  window.__result = (legal ? 'OK':'ILLEGAL')+' '+mvStr;
+})().catch(e=>{ add('ERR '+e); window.__result='ERR:'+e; });
+setTimeout(()=>{ if(!window.__result) add('TIMEOUT'); }, 15000);
+</script></body></html>
