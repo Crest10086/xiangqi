@@ -63,7 +63,7 @@
       "function postErr(m){self.postMessage({type:'ERROR',message:m});}",
       "function runSearch(d){if(!engine||!d||!d.fen)return;engineSearching=true;lastSeq=d.seq||lastSeq;",
       " try{var fen=(d.fen.indexOf(' - ')<0)?d.fen+' - - 0 1':d.fen;",
-      "  engine.sendCommand('setoption name Repetition Rule value AllowChase');",
+      "  engine.sendCommand('setoption name Repetition Rule value AsianRule');",
       "  engine.sendCommand('setoption name Draw Rule value None');",
       "  engine.sendCommand('setoption name Sixty Move Rule value false');",
       "  engine.sendCommand('position fen '+fen);engine.sendCommand('go movetime '+(d.movetime||500));}",
@@ -146,7 +146,7 @@
       if (!worker || !ready) { reject(new Error('not-ready')); return; }
       seq++;
       curCb = resolve; curReject = reject;
-      worker.postMessage({ type: 'SEARCH', fen: fen, movetime: movetime, seq: seq });
+      worker.postMessage({ type: 'SEARCH', fen: fen, movetime: movetime, seq: seq, allowChase: false });
       setTimeout(function () {
         if (curCb) { var cb = curCb; curCb = null; curReject = null; cb('__timeout__'); }
       }, (movetime || 500) + 15000);

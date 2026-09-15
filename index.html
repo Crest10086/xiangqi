@@ -106,6 +106,7 @@ let legalCache = [];      // legal moves of selected piece
 let lastMove = null;
 let over = false;
 let thinking = false;
+let seenPos = {};          // 局面计数：长将/长捉同一局面三次判和
 let levelIdx = 2, handicapKey = 'none';
 
 // ---- UI setup ----
@@ -126,9 +127,15 @@ levelSel.value = levelIdx;
 // 预热皮卡鱼引擎（高手/大师档首步不必白等）；入门~进阶档不受影响
 if (typeof PF !== 'undefined') PF.load().catch(() => {});
 
+function rebuildSeen() {
+  seenPos = {};
+  const inc = (b, side) => { const s = b.join('') + '#' + side; seenPos[s] = (seenPos[s] || 0) + 1; };
+  for (const h of game.history) inc(h.board, h.side); // 仅历史局面；当前局面由 checkEnd 计入
+}
 function newGame() {
   game = new XQ.Game(handicapKey, -1); // handicap removed from AI side (black when human=red)
   sel = null; legalCache = []; lastMove = null; over = false; thinking = false;
+  rebuildSeen();
   renderLog(); draw();
   if (humanSide === -1) aiTurn();
 }
@@ -147,6 +154,7 @@ document.getElementById('undoBtn').onclick = () => {
   do { game.undo(); } while (game.history.length > 0 && game.side !== humanSide && ++guard < 4);
   lastMove = game.history.length ? game.history[game.history.length - 1].move : null;
   sel = null; legalCache = []; over = false;
+  rebuildSeen();
   renderLog(); draw();
   if (game.side !== humanSide) aiTurn(); // e.g. human plays black, undid back to start
 };
@@ -311,6 +319,14 @@ function builtInAiTurn(g) {
 }
 
 function checkEnd() {
+  // 长将/长捉：同一局面第三次出现判和，杜绝 AI 无限循环将军
+  const s = game.board.join('') + '#' + game.side;
+  seenPos[s] = (seenPos[s] || 0) + 1;
+  if (seenPos[s] >= 3) {
+    over = true;
+    setStatus('over', '同一局面反复出现三次，判和 🤝');
+    return;
+  }
   const lm = game.legalMoves().length;
   if (lm === 0) {
     over = true;

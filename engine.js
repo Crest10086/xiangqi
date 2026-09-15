@@ -503,10 +503,10 @@
 
   const LEVELS = [
     { name: '入门', depth: 2, qDepth: 0, maxNodes: 1500,  randomness: 45 },
-    { name: '业余', depth: 3, qDepth: 1, maxNodes: 6000,  randomness: 18 },
-    { name: '进阶', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0 },
-    { name: '高手', depth: 6, qDepth: 3, maxNodes: 120000, randomness: 0 },
-    { name: '大师', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0 },
+    { name: '业余', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0 },   // 强度=原进阶
+    { name: '进阶', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0 },  // 强度=原大师
+    { name: '高手', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0 },  // 皮卡鱼 800ms（回退内置 depth7）
+    { name: '大师', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0 },  // 皮卡鱼 2500ms
   ];
 
   return { P, NAME_RED, NAME_BLK, initialBoard, genPseudo, legalMoves, inCheck, isAttacked, findKing, evaluate, think, Game, LEVELS, HANDICAPS, pieceName, toNotation, applyHandicap, removeAt, sideOf };
