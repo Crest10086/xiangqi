@@ -474,7 +474,7 @@
       const captured = this.board[mv.t];
       const nb = this.board.slice();
       nb[mv.t] = nb[mv.f]; nb[mv.f] = 0;
-      this.history.push({ board: this.board, side: this.side, move: mv, notation });
+      this.history.push({ board: this.board, side: this.side, move: mv, notation, gaveCheck: inCheck(nb, -this.side) });
       this.board = nb;
       this.side = -this.side;
       return { ok: true, notation, captured };
@@ -494,7 +494,7 @@
       const captured = this.board[t.move.t];
       const nb = this.board.slice();
       nb[t.move.t] = nb[t.move.f]; nb[t.move.f] = 0;
-      this.history.push({ board: this.board, side: this.side, move: t.move, notation });
+      this.history.push({ board: this.board, side: this.side, move: t.move, notation, gaveCheck: inCheck(nb, -this.side) });
       this.board = nb;
       this.side = -this.side;
       return { notation, score: t.score, nodes: t.nodes };

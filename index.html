@@ -127,10 +127,18 @@ levelSel.value = levelIdx;
 // 预热皮卡鱼引擎（高手/大师档首步不必白等）；入门~进阶档不受影响
 if (typeof PF !== 'undefined') PF.load().catch(() => {});
 
+function applyMove(m) {
+  const res = game.move(m);
+  if (res) lastMove = game.history[game.history.length - 1].move;
+  return res;
+}
 function rebuildSeen() {
   seenPos = {};
   const inc = (b, side) => { const s = b.join('') + '#' + side; seenPos[s] = (seenPos[s] || 0) + 1; };
-  for (const h of game.history) inc(h.board, h.side); // 仅历史局面；当前局面由 checkEnd 计入
+  for (const h of game.history) {
+    inc(h.board, h.side);
+    if (h.gaveCheck === undefined) h.gaveCheck = XQ.inCheck(h.board, -h.side); // 兼容旧历史
+  }
 }
 function newGame() {
   game = new XQ.Game(handicapKey, -1); // handicap removed from AI side (black when human=red)
@@ -265,7 +273,7 @@ cv.addEventListener('click', (e) => {
   if (sel !== null) {
     const mv = legalCache.find(m => m.t === best);
     if (mv) {
-      const res = game.move({ f: sel, t: best });
+      const res = applyMove({ f: sel, t: best });
       if (res) { lastMove = { f: sel, t: best }; sel = null; legalCache = []; afterHuman(); return; }
     }
   }
@@ -279,7 +287,8 @@ cv.addEventListener('click', (e) => {
 function afterHuman() {
   renderLog();
   checkEnd();
-  if (!over) { draw(); setTimeout(aiTurn, 60); }
+  draw();
+  if (!over) setTimeout(aiTurn, 60);
 }
 
 function aiTurn() {
@@ -324,7 +333,16 @@ function checkEnd() {
   seenPos[s] = (seenPos[s] || 0) + 1;
   if (seenPos[s] >= 3) {
     over = true;
-    setStatus('over', '同一局面反复出现三次，判和 🤝');
+    // 严格判罚：回溯最近 4 步（2 个来回），双方都全是将军=循环将军判和；
+    // 只有一方全是将军=长将，长将方判负；其余重复=判和
+    const last4 = game.history.slice(-4);
+    const allCheck = (arr) => arr.length > 0 && arr.every(h => h.gaveCheck);
+    const redAll = allCheck(last4.filter(h => h.side === 1));
+    const blkAll = allCheck(last4.filter(h => h.side === -1));
+    if (redAll && blkAll) setStatus('over', '双方循环将军，判和 🤝');
+    else if (redAll) setStatus('over', '红方长将，红方负 🏁');
+    else if (blkAll) setStatus('over', '黑方长将，黑方负 🏁');
+    else setStatus('over', '同一局面反复出现三次，判和 🤝');
     return;
   }
   const lm = game.legalMoves().length;
