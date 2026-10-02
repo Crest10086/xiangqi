@@ -92,6 +92,8 @@
 </div>
 
 <script src="engine.js"></script>
+<script src="js/book.js"></script>
+<script src="js/xqbook.js"></script>
 <script src="js/pikafish_bridge.js"></script>
 <script>
 'use strict';
@@ -294,6 +296,15 @@ function afterHuman() {
 function aiTurn() {
   thinking = true; draw(); setStatus('thinking');
   const g = game; // capture current game to guard against undo/new-game racing the async result
+  // 开局库优先（所有档位）：命中谱招则同步走子，否则交给引擎
+  if (typeof XQBook !== 'undefined') {
+    const legal = g.legalMoves();
+    const bm = XQBook.pick(g.board, g.side, legal);
+    if (bm && legal.some(m => m.f === bm.f && m.t === bm.t)) {
+      const res = applyMove(bm);
+      if (res) { thinking = false; renderLog(); checkEnd(); draw(); return; }
+    }
+  }
   if (PF.isHeavyLevel(levelIdx)) {
     PF.whenReady().then((ok) => {
       if (!(g === game && thinking)) return; // stale: board changed meanwhile

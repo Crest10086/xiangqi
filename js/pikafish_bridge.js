@@ -8,12 +8,12 @@
  */
 (function (root) {
   'use strict';
-  // 高手(idx3)/大师(idx4) 用 Pikafish；movetime 越大越强（WASM 单线程约 20 万 nps）
-  var HEAVY = [3, 4];
-  var MILLIS = { 3: 800, 4: 2500 };
+  // 业余/进阶/高手/大师(idx1-4) 用 Pikafish（入门 idx0 用内置引擎），movetime 越大越强
+  var HEAVY = [1, 2, 3, 4];
+  var MILLIS = { 1: 200, 2: 600, 3: 1800, 4: 6000 };
   var WORKER_PATH = 'js/engines/pikafish/pikafish.worker.js';
 
-  var worker = null, ready = false, seq = 0, curCb = null, curReject = null, loadPromise = null;
+  var worker = null, ready = false, seq = 0, curSeq = 0, curCb = null, curReject = null, loadPromise = null;
 
   // ---- board[] -> XQWLight FEN（row0=黑底线在上，大写=红/小写=黑）----
   function boardToFen(board, side) {
@@ -98,10 +98,20 @@
     w.onmessage = function (ev) {
       var d = ev.data || {};
       if (d.type === 'READY') { ready = true; }
-      else if (d.type === 'ERROR') {
-        if (curReject) { var r = curReject; curReject = null; curCb = null; r(new Error(d.message)); }
+      else if (d.type === 'INFO') {
+        // 捕获搜索 INFO 行：depth / score cp|mate（供基准测试读取）
+        var s = String(d.info || '');
+        if (s.indexOf('depth ') >= 0) {
+          var md = /depth (\d+)/.exec(s);
+          var ms = /score (cp|mate) (-?\d+)/.exec(s);
+          var mn = /nodes (\d+)/.exec(s);
+          if (md) { root.PF.lastInfo = { depth: +md[1], score: ms ? (ms[1] === 'cp' ? (+ms[2]) + 'cp' : '#' + ms[2]) : '', nodes: mn ? +mn[1] : 0 }; }
+        }
+      } else if (d.type === 'ERROR') {
+        if (curReject && curSeq) { var r = curReject; curReject = null; curCb = null; r(new Error(d.message)); }
       } else if (d.type === 'BEST_MOVE') {
-        if (curCb) { var cb = curCb; curCb = null; curReject = null; cb(d.move); }
+        // seq 校验：丢弃过期着法（防止旧搜索的迟到响应劫持新搜索）
+        if (curCb && (d.seq === undefined || d.seq === curSeq)) { var cb = curCb; curCb = null; curReject = null; cb(d.move); }
       }
     };
     w.onerror = function (ev) {
@@ -144,17 +154,24 @@
   function search(fen, movetime) {
     return new Promise(function (resolve, reject) {
       if (!worker || !ready) { reject(new Error('not-ready')); return; }
-      seq++;
-      curCb = resolve; curReject = reject;
-      worker.postMessage({ type: 'SEARCH', fen: fen, movetime: movetime, seq: seq, allowChase: false });
+      var mySeq = ++seq;
+      curSeq = mySeq;
+      var done = false; // 每次搜索独立的完成标志（修复：残留超时误杀后续搜索）
+      curCb = function (val) { if (!done) { done = true; resolve(val); } };
+      curReject = null;
+      worker.postMessage({ type: 'SEARCH', fen: fen, movetime: movetime, seq: mySeq, allowChase: false });
       setTimeout(function () {
-        if (curCb) { var cb = curCb; curCb = null; curReject = null; cb('__timeout__'); }
+        if (done) return;
+        done = true;
+        if (curSeq === mySeq) { curCb = null; curReject = null; }
+        resolve('__timeout__');
       }, (movetime || 500) + 15000);
     });
   }
 
   function stop() {
     if (worker) { try { worker.postMessage({ type: 'STOP' }); } catch (e) {} }
+    curSeq = 0;
     curCb = null; curReject = null;
   }
 
@@ -168,6 +185,7 @@
     whenReady: whenReady,
     search: search,
     stop: stop,
+    lastInfo: null,
     ready: function () { return ready; }
   };
 })(typeof window !== 'undefined' ? window : this);

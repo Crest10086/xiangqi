@@ -10,6 +10,8 @@ def rb(p):
 html = rd('index.html')
 engine = rd('engine.js')
 bridge = rd('js/pikafish_bridge.js')
+book_js = rd('js/book.js')
+xqbook_js = rd('js/xqbook.js')
 pf_js = rd('js/engines/pikafish/pikafish.js')
 pf_wasm_b64 = base64.b64encode(rb('js/engines/pikafish/pikafish.wasm')).decode('ascii')
 pf_data_b64 = base64.b64encode(rb('js/engines/pikafish/pikafish.data')).decode('ascii')
@@ -26,8 +28,12 @@ payload = (
 
 # 替换外部引用为内联
 assert '<script src="engine.js"></script>' in html
+assert '<script src="js/book.js"></script>' in html
+assert '<script src="js/xqbook.js"></script>' in html
 assert '<script src="js/pikafish_bridge.js"></script>' in html
 html = html.replace('<script src="engine.js"></script>', '<script>\n' + engine + '\n</script>')
+html = html.replace('<script src="js/book.js"></script>', '<script>\n' + book_js + '\n</script>')
+html = html.replace('<script src="js/xqbook.js"></script>', '<script>\n' + xqbook_js + '\n</script>')
 html = html.replace('<script src="js/pikafish_bridge.js"></script>', payload + '\n<script>\n' + bridge + '\n</script>')
 
 with open('xiangqi.html', 'w', encoding='utf-8') as f:
