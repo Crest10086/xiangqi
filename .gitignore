@@ -1,0 +1,6 @@
+# 构建产物 / 本地测试（不进仓库）
+xiangqi.zip
+test_*.html
+*.probe.js
+pf_*.html
+cdp_*.js
