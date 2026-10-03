@@ -15,3 +15,5 @@ bench/diverge_out/
 bench/gradient_out/
 bench/lowgrad_out/
 bench/lowgrad2_out/
+bench/lowgrad3_out/
+bench/g3_out/
