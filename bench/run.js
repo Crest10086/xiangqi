@@ -13,7 +13,7 @@ const PARALLEL = arg('--parallel', 5);
 const ONLY = args.includes('--only') ? arg('--only', -1) : -1;
 
 // ---- 档位配置: 对照生产 vs 基线 bad6bc5 ----
-// 生产(定案): 入门内置d2无库 / 业余50ms+Elo1400 / 进阶150ms+Elo1800 / 高手200ms+开局库+Elo2400 / 大师6000ms满强度无库
+// 生产(定案): 入门内置d2无库 / 业余50ms+Elo1400 / 进阶150ms+Elo1800 / 高手500ms满强度+开局库 / 大师6000ms满强度无库
 // 基线 bad6bc5: 业余内置d4 / 进阶内置d7 / 高手pf800ms / 大师pf2500ms, 无开局库
 const LEVELS = [
   {
@@ -33,7 +33,7 @@ const LEVELS = [
   },
   {
     name: '高手',
-    neu: { kind: 'pf', movetime: 200, book: true, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 2400 }] },
+    neu: { kind: 'pf', movetime: 500, book: true },
     old: { kind: 'pf', movetime: 800, book: false },
   },
   {

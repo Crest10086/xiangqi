@@ -12,7 +12,7 @@ const LEVELS = [
   { name: '入门', neu: { kind: 'builtin', depth: 2, qDepth: 0, maxNodes: 1500, randomness: 45, book: false }, old: { kind: 'builtin', depth: 2, qDepth: 0, maxNodes: 1500, randomness: 45, book: false } },
   { name: '业余', neu: { kind: 'pf', movetime: 50, book: false, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1400 }] }, old: { kind: 'builtin', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0, book: false } },
   { name: '进阶', neu: { kind: 'pf', movetime: 150, book: false, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1800 }] }, old: { kind: 'builtin', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0, book: false } },
-  { name: '高手', neu: { kind: 'pf', movetime: 200, book: true, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 2400 }] }, old: { kind: 'pf', movetime: 800, book: false } },
+  { name: '高手', neu: { kind: 'pf', movetime: 500, book: true }, old: { kind: 'pf', movetime: 800, book: false } },
   { name: '大师', neu: { kind: 'pf', movetime: 6000, book: false }, old: { kind: 'pf', movetime: 2500, book: false } },
 ];
 

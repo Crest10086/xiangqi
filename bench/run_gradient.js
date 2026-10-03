@@ -7,12 +7,12 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 
-// 分级(用户定案): 大师=无库满强度长考; 高手=开局库+200ms+UCI_Elo2400; 进阶150ms+Elo1800; 业余50ms+Elo1400; 入门内置d2
+// 分级(用户定案): 大师=无库满强度长考; 高手=开局库+500ms满强度(不叠加Elo); 进阶150ms+Elo1800; 业余50ms+Elo1400; 入门内置d2
 const CFG = [
   { name: '入门', kind: 'builtin', depth: 2, qDepth: 0, maxNodes: 1500, randomness: 45, book: false },
   { name: '业余', kind: 'pf', movetime: 50, book: false, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1400 }] },
   { name: '进阶', kind: 'pf', movetime: 150, book: false, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1800 }] },
-  { name: '高手', kind: 'pf', movetime: 200, book: true, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 2400 }] },
+  { name: '高手', kind: 'pf', movetime: 500, book: true },
   { name: '大师', kind: 'pf', movetime: 6000, book: false },
 ];
 function estSec(c) { return c.kind === 'builtin' ? (c.maxNodes / 1500) * 2 : c.movetime * 0.30; }
@@ -99,7 +99,7 @@ function runTask(task) {
   const lines = [];
   lines.push('# 可区分性验证: 相邻档位互弈（高档 vs 低档, 同一固定局面集, 交换先后手）');
   lines.push('');
-  lines.push('- 配置 = 生产参数(入门内置d2无库 / 业余50ms+Elo1400 / 进阶150ms+Elo1800 / 高手200ms+开局库+Elo2400 / 大师6000ms满强度无库); 判罚=index.html 严格复刻, 250步上限判和');
+  lines.push('- 配置 = 生产参数(入门内置d2无库 / 业余50ms+Elo1400 / 进阶150ms+Elo1800 / 高手500ms满强度+开局库 / 大师6000ms满强度无库); 判罚=index.html 严格复刻, 250步上限判和');
   lines.push('- 高档得分 = (胜+0.5和)/局数; 明显高于50% = 两档可区分');
   lines.push('');
   lines.push('| 对局 | 局数 | 高档胜 | 和 | 低档胜 | 高档得分 | 判定 |');
