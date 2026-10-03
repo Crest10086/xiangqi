@@ -85,7 +85,10 @@ async function main() {
         if (!ok) { ans.push({ loss: 99999, score: 0 }); continue; }
         via = 'builtin';
       } else if (!mv) {
-        const r = await pf.search(boardToFen(g.board, side), cfg.movetime, cfg.uciOptions ? { options: cfg.uciOptions } : undefined);
+        const co = {};
+        if (cfg.uciOptions) co.options = cfg.uciOptions;
+        if (cfg.nodes) co.nodes = cfg.nodes;
+        const r = await pf.search(boardToFen(g.board, side), cfg.movetime, Object.keys(co).length ? co : undefined);
         const pm = parseMove(typeof r === 'string' ? r : r.move);
         if (!pm || !legal.some(m => m.f === pm.f && m.t === pm.t)) { ans.push({ loss: 99999, score: 0 }); continue; }
         mv = pm; via = 'pf';
