@@ -1,0 +1,2932 @@
+[
+ {
+  "level": 0,
+  "levelName": "入门",
+  "neu": {
+   "n": 40,
+   "score": 0.8175000000000004,
+   "hitRate": 0.125,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 93.75,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T02",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T03",
+     "hit": false,
+     "gain": -100,
+     "score": 0.5,
+     "via": "builtin"
+    },
+    {
+     "testId": "T04",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T05",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T06",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T07",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T08",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T09",
+     "hit": false,
+     "gain": 350,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T10",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T12",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T13",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T14",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T15",
+     "hit": false,
+     "gain": 200,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T16",
+     "hit": false,
+     "gain": 200,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T18",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T20",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T21",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T22",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T23",
+     "hit": false,
+     "gain": 200,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T24",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T25",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T26",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T27",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T28",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T29",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T30",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T31",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T32",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T34",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T35",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T36",
+     "hit": false,
+     "gain": 350,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T37",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T38",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T39",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    }
+   ]
+  },
+  "old": {
+   "n": 40,
+   "score": 0.8200000000000003,
+   "hitRate": 0.175,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 77.5,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T02",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T03",
+     "hit": false,
+     "gain": -100,
+     "score": 0.5,
+     "via": "builtin"
+    },
+    {
+     "testId": "T04",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T05",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T06",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T07",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T08",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T09",
+     "hit": false,
+     "gain": 350,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T10",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T12",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T13",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T14",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T15",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T16",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T18",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T20",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T21",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T22",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T23",
+     "hit": false,
+     "gain": 200,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T24",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T25",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T26",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T27",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T28",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T29",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T30",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T31",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T32",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T34",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T35",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T36",
+     "hit": false,
+     "gain": -100,
+     "score": 0.5,
+     "via": "builtin"
+    },
+    {
+     "testId": "T37",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T38",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T39",
+     "hit": false,
+     "gain": 200,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    }
+   ]
+  }
+ },
+ {
+  "level": 1,
+  "levelName": "业余",
+  "neu": {
+   "n": 40,
+   "score": 0.96,
+   "hitRate": 0.8,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 91.25,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T02",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T03",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T04",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T05",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T06",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T07",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T08",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T09",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T10",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T12",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T13",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T14",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T15",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T16",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T18",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 450,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T20",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T21",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T22",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T23",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T24",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T25",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T26",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T27",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T28",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T29",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T30",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T31",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T32",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T34",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T35",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T36",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T37",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T38",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T39",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    }
+   ]
+  },
+  "old": {
+   "n": 40,
+   "score": 0.875,
+   "hitRate": 0.375,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 30,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T02",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T03",
+     "hit": true,
+     "gain": -100,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T04",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T05",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T06",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T07",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T08",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T09",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T10",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T12",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T13",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T14",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T15",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T16",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T18",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T20",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T21",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T22",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T23",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T24",
+     "hit": true,
+     "gain": -100,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T25",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T26",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T27",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T28",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T29",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T30",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T31",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T32",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T34",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T35",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T36",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T37",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T38",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T39",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    }
+   ]
+  }
+ },
+ {
+  "level": 2,
+  "levelName": "进阶",
+  "neu": {
+   "n": 40,
+   "score": 0.96,
+   "hitRate": 0.8,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 91.25,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T02",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T03",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T04",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T05",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T06",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T07",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T08",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T09",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T10",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T12",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T13",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T14",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T15",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T16",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T18",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 450,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T20",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T21",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T22",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T23",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T24",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T25",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T26",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T27",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T28",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T29",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T30",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T31",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T32",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T34",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T35",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T36",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T37",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T38",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T39",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    }
+   ]
+  },
+  "old": {
+   "n": 40,
+   "score": 0.8674999999999999,
+   "hitRate": 0.375,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 0,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T02",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T03",
+     "hit": true,
+     "gain": -100,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T04",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T05",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T06",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T07",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T08",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T09",
+     "hit": false,
+     "gain": -100,
+     "score": 0.5,
+     "via": "builtin"
+    },
+    {
+     "testId": "T10",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T12",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T13",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T14",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T15",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T16",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T18",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T20",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T21",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T22",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T23",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T24",
+     "hit": true,
+     "gain": -100,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T25",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T26",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T27",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T28",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T29",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T30",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T31",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T32",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T34",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "T35",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T36",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T37",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T38",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T39",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "builtin"
+    }
+   ]
+  }
+ },
+ {
+  "level": 3,
+  "levelName": "高手",
+  "neu": {
+   "n": 40,
+   "score": 0.97,
+   "hitRate": 0.85,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 88.75,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T02",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T03",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T04",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T05",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T06",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T07",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T08",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T09",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T10",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T12",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T13",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T14",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T15",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T16",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T18",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 450,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T20",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T21",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T22",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T23",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T24",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T25",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T26",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T27",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T28",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T29",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T30",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T31",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T32",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T34",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T35",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T36",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T37",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T38",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T39",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    }
+   ]
+  },
+  "old": {
+   "n": 40,
+   "score": 0.985,
+   "hitRate": 0.925,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 88.75,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T02",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T03",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T04",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T05",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T06",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T07",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T08",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T09",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T10",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T12",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T13",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T14",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T15",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T16",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T18",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 450,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T20",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T21",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T22",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T23",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T24",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T25",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T26",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T27",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T28",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T29",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T30",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T31",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T32",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T34",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T35",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T36",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T37",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T38",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T39",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    }
+   ]
+  }
+ },
+ {
+  "level": 4,
+  "levelName": "大师",
+  "neu": {
+   "n": 40,
+   "score": 0.9850000000000001,
+   "hitRate": 0.925,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 86.25,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T02",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T03",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T04",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T05",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T06",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T07",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T08",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T09",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T10",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T12",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T13",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T14",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T15",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T16",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T18",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 450,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T20",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T21",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T22",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T23",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T24",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T25",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T26",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T27",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T28",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T29",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T30",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T31",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T32",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T34",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T35",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T36",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T37",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T38",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T39",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T40",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    }
+   ]
+  },
+  "old": {
+   "n": 40,
+   "score": 0.9800000000000001,
+   "hitRate": 0.9,
+   "tacticalN": 4,
+   "tacticalHitRate": 1,
+   "avgGain": 88.75,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "T01",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T02",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T03",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T04",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T05",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T06",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T07",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T08",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T09",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T10",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T11",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T12",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T13",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T14",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T15",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T16",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T18",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T19",
+     "hit": true,
+     "gain": 450,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T20",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T21",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T22",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T23",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T24",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T25",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T26",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T27",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T28",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "T29",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T30",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T31",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T32",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T33",
+     "hit": true,
+     "gain": 900,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T34",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T35",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T36",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T37",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T38",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T39",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "T40",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    }
+   ]
+  }
+ }
+]

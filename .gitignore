@@ -8,3 +8,7 @@ node_pf_test.js
 # 基准中间产物（report.md / report.json / fixtures.json 进仓库作为验收证据）
 bench/results/
 bench/diag.js
+bench/hard_out/
+bench/hard2_out/
+bench/quality_out/
+bench/diverge_out/

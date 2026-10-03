@@ -1,0 +1,516 @@
+[
+ {
+  "level": 3,
+  "levelName": "高手",
+  "neu": {
+   "n": 15,
+   "score": 0.8400000000000002,
+   "hitRate": 0.2,
+   "tacticalN": 0,
+   "tacticalHitRate": null,
+   "avgGain": 43.333333333333336,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "B3",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B5",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "A3",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B6",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "A5",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "A6",
+     "hit": true,
+     "gain": 450,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "A7",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B7",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B8",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B9",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B11",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "A12",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B14",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B16",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "A15",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "pf"
+    }
+   ]
+  },
+  "old": {
+   "n": 15,
+   "score": 0.8933333333333333,
+   "hitRate": 0.4666666666666667,
+   "tacticalN": 0,
+   "tacticalHitRate": null,
+   "avgGain": 50,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "B3",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B5",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "A3",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B6",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "A5",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "A6",
+     "hit": false,
+     "gain": 450,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "A7",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B7",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B8",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B9",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B11",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "A12",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B14",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B16",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "A15",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "pf"
+    }
+   ]
+  }
+ },
+ {
+  "level": 4,
+  "levelName": "大师",
+  "neu": {
+   "n": 18,
+   "score": 0.8888888888888891,
+   "hitRate": 0.4444444444444444,
+   "tacticalN": 0,
+   "tacticalHitRate": null,
+   "avgGain": 27.77777777777778,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "B1",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B2",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B3",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B4",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B5",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B6",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B7",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B8",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B9",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B10",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B11",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B12",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B13",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B14",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B15",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B16",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B17",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B18",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    }
+   ]
+  },
+  "old": {
+   "n": 18,
+   "score": 0.8777777777777779,
+   "hitRate": 0.3888888888888889,
+   "tacticalN": 0,
+   "tacticalHitRate": null,
+   "avgGain": 22.22222222222222,
+   "viaBook": 0,
+   "answers": [
+    {
+     "testId": "B1",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B2",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B3",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B4",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B5",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B6",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B7",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B8",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B9",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B10",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B11",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B12",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B13",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B14",
+     "hit": false,
+     "gain": 0,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B15",
+     "hit": false,
+     "gain": 100,
+     "score": 0.8,
+     "via": "pf"
+    },
+    {
+     "testId": "B16",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B17",
+     "hit": true,
+     "gain": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "B18",
+     "hit": true,
+     "gain": 100,
+     "score": 1,
+     "via": "pf"
+    }
+   ]
+  }
+ }
+]
