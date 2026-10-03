@@ -13,8 +13,8 @@ const PARALLEL = arg('--parallel', 5);
 const ONLY = args.includes('--only') ? arg('--only', -1) : -1;
 
 // ---- 档位配置: 对照生产 vs 基线 bad6bc5 ----
-// 生产: LEVELS + bridge MILLIS={1:200,2:600,3:1800,4:6000} HEAVY=[1,2,3,4] + 全档开局库
-// 基线: 同 LEVELS + MILLIS={3:800,4:2500} HEAVY=[3,4] + 无开局库
+// 生产(定案): 入门内置d2无库 / 业余50ms+Elo1400 / 进阶150ms+Elo1800 / 高手200ms+开局库+Elo2400 / 大师6000ms满强度无库
+// 基线 bad6bc5: 业余内置d4 / 进阶内置d7 / 高手pf800ms / 大师pf2500ms, 无开局库
 const LEVELS = [
   {
     name: '入门',
@@ -23,22 +23,22 @@ const LEVELS = [
   },
   {
     name: '业余',
-    neu: { kind: 'pf', movetime: 200, book: true },
+    neu: { kind: 'pf', movetime: 50, book: false, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1400 }] },
     old: { kind: 'builtin', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0, book: false },
   },
   {
     name: '进阶',
-    neu: { kind: 'pf', movetime: 600, book: true },
+    neu: { kind: 'pf', movetime: 150, book: false, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1800 }] },
     old: { kind: 'builtin', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0, book: false },
   },
   {
     name: '高手',
-    neu: { kind: 'pf', movetime: 1800, book: true },
+    neu: { kind: 'pf', movetime: 200, book: true, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 2400 }] },
     old: { kind: 'pf', movetime: 800, book: false },
   },
   {
     name: '大师',
-    neu: { kind: 'pf', movetime: 6000, book: true },
+    neu: { kind: 'pf', movetime: 6000, book: false },
     old: { kind: 'pf', movetime: 2500, book: false },
   },
 ];
