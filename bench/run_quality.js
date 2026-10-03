@@ -1,7 +1,7 @@
 /* bench/run_quality.js — 质量评估版全 5 档测验
  * 题集: tactics.json + hard.json + hard800.json + hard2500.json 合并去重
  * 测量: 着法质量损失(参考引擎3000ms评估), 不要求与特定着法相同
- * 输出: bench/quality_report.md + quality_report.json
+ * 输出: bench/quality2_report.md + quality2_report.json
  */
 const fs = require('fs');
 const path = require('path');
@@ -9,10 +9,10 @@ const { spawn } = require('child_process');
 const XQ = require(path.join(__dirname, '..', 'engine.js'));
 
 const LEVELS = [
-  { name: '入门', neu: { kind: 'builtin', depth: 2, qDepth: 0, maxNodes: 1500, randomness: 45, book: true }, old: { kind: 'builtin', depth: 2, qDepth: 0, maxNodes: 1500, randomness: 45, book: false } },
-  { name: '业余', neu: { kind: 'pf', movetime: 200, book: true }, old: { kind: 'builtin', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0, book: false } },
-  { name: '进阶', neu: { kind: 'pf', movetime: 600, book: true }, old: { kind: 'builtin', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0, book: false } },
-  { name: '高手', neu: { kind: 'pf', movetime: 1800, book: true }, old: { kind: 'pf', movetime: 800, book: false } },
+  { name: '入门', neu: { kind: 'builtin', depth: 2, qDepth: 0, maxNodes: 1500, randomness: 45, book: false }, old: { kind: 'builtin', depth: 2, qDepth: 0, maxNodes: 1500, randomness: 45, book: false } },
+  { name: '业余', neu: { kind: 'pf', movetime: 50, book: false, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1400 }] }, old: { kind: 'builtin', depth: 4, qDepth: 2, maxNodes: 25000, randomness: 0, book: false } },
+  { name: '进阶', neu: { kind: 'pf', movetime: 150, book: false, uciOptions: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1800 }] }, old: { kind: 'builtin', depth: 7, qDepth: 3, maxNodes: 400000, randomness: 0, book: false } },
+  { name: '高手', neu: { kind: 'pf', movetime: 500, book: false }, old: { kind: 'pf', movetime: 800, book: false } },
   { name: '大师', neu: { kind: 'pf', movetime: 6000, book: true }, old: { kind: 'pf', movetime: 2500, book: false } },
 ];
 
@@ -69,7 +69,7 @@ function runLevel(li) {
   }
   await Promise.all(workers);
   results.sort((a, b) => a.level - b.level);
-  fs.writeFileSync(path.join(__dirname, 'quality_report.json'), JSON.stringify(results, null, 1));
+  fs.writeFileSync(path.join(__dirname, 'quality2_report.json'), JSON.stringify(results, null, 1));
   const lines = [];
   lines.push('# 着法质量基准（测质量损失，不要求与特定参考着法相同）');
   lines.push('');
@@ -88,6 +88,6 @@ function runLevel(li) {
       ' | ' + r.neu.bigMistakes + ' | ' + r.old.bigMistakes + ' | ' + verdict + ' |');
   }
   const report = lines.join('\n');
-  fs.writeFileSync(path.join(__dirname, 'quality_report.md'), report);
+  fs.writeFileSync(path.join(__dirname, 'quality2_report.md'), report);
   console.log('\n' + report);
 })().catch((e) => { console.error('RUN_FAIL', e); process.exit(1); });

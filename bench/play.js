@@ -125,7 +125,7 @@ async function main() {
       }
       // pikafish
       const fen = boardToFen(game.board, game.side);
-      const r = await pf.search(fen, cfg.movetime);
+      const r = await pf.search(fen, cfg.movetime, cfg.uciOptions ? { options: cfg.uciOptions } : undefined);
       const raw = typeof r === 'string' ? r : r.move;
       if (typeof r === 'object' && r.depth) pfStats[which].push(r.depth);
       const pm = parseMove(raw);

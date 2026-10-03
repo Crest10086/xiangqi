@@ -50,14 +50,20 @@ function createEngine() {
       onUciOk = () => {
         clearTimeout(kill);
         resolve({
-          search: (fen, ms, timeoutMs) => new Promise((res, rej) => {
+          search: (fen, ms, a, b) => new Promise((res, rej) => {
             if (onBest) { rej(new Error('previous search still running')); return; }
+            // 第3参数: 数字=超时(旧用法) 或 {timeoutMs, options:[{name,value}]}(强度旋钮)
+            const timeoutMs = (typeof a === 'number') ? a : ((a && a.timeoutMs) || (b && typeof b === 'number' ? b : 0));
+            const optList = (a && typeof a === 'object' && a.options) ? a.options : null;
             const to = setTimeout(() => { onBest = null; rej(new Error('search timeout')); }, timeoutMs || (ms + 20000));
             onBest = (mv) => { clearTimeout(to); res(mv); };
             // 生产 bridge 每次搜索下发的选项（allowChase:false 路径）
             mod.sendCommand('setoption name Repetition Rule value AsianRule');
             mod.sendCommand('setoption name Draw Rule value None');
             mod.sendCommand('setoption name Sixty Move Rule value true');
+            if (optList) { for (const o of optList) mod.sendCommand('setoption name ' + o.name + ' value ' + o.value); }
+            // 必须显式复位: 同一引擎实例在一局里被两个配置交替使用, 否则上一次的强度限制会泄漏到下一次搜索
+            else { mod.sendCommand('setoption name UCI_LimitStrength value false'); mod.sendCommand('setoption name Skill Level value 20'); }
             mod.sendCommand('position fen ' + (String(fen).indexOf(' - ') >= 0 ? fen : fen + ' - - 0 1'));
             mod.sendCommand('go movetime ' + ms);
           }),

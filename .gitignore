@@ -12,3 +12,6 @@ bench/hard_out/
 bench/hard2_out/
 bench/quality_out/
 bench/diverge_out/
+bench/gradient_out/
+bench/lowgrad_out/
+bench/lowgrad2_out/

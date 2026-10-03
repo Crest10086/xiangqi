@@ -98,7 +98,7 @@ async function main() {
         void prevBoard;
         via = 'builtin';
       } else if (!mv) {
-        const r = await pf.search(boardToFen(g.board, side), cfg.movetime);
+        const r = await pf.search(boardToFen(g.board, side), cfg.movetime, cfg.uciOptions ? { options: cfg.uciOptions } : undefined);
         const pm = parseMove(typeof r === 'string' ? r : r.move);
         if (!pm || !legal.some(m => m.f === pm.f && m.t === pm.t)) { answers.push({ testId: t.id, loss: 99999, score: 0, via: 'fail' }); continue; }
         mv = pm; via = 'pf';

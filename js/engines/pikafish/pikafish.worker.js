@@ -31,6 +31,11 @@ function runSearchNow(d) {
     engineModule.sendCommand("setoption name Repetition Rule value " + (chase ? "AllowChase" : "AsianRule"));
     engineModule.sendCommand("setoption name Draw Rule value None");
     engineModule.sendCommand("setoption name Sixty Move Rule value " + (chase ? "false" : "true"));
+    engineModule.sendCommand("setoption name MultiPV value " + (d.multipv > 1 ? d.multipv : 1));
+    // 强度限制随每次搜索下发；未配置的档位显式解除（同一 worker 跨档位共享引擎状态）
+    if (d.extra && d.extra.length) { for (var oi = 0; oi < d.extra.length; oi++) engineModule.sendCommand("setoption name " + d.extra[oi].name + " value " + d.extra[oi].value); }
+    else engineModule.sendCommand("setoption name UCI_LimitStrength value false");
+    self.postMessage({ type: "CMD", cmds: (d.extra && d.extra.length) ? d.extra.map(function (o) { return o.name + "=" + o.value; }) : ["UCI_LimitStrength=false"] });
     if (d.fen) {
       // 补齐成标准 7 段式 FEN, 兼容 UCI/UCCI 协议
       var fen = d.fen.indexOf(" - ") >= 0 ? d.fen : d.fen + " - - 0 1";
@@ -111,7 +116,7 @@ self.onmessage = function (e) {
       self.postMessage({ type: "ERROR", message: "皮卡鱼加载失败: " + err });
     }
   } else if (type === "SEARCH") {
-    var req = { fen: data.fen, movetime: data.movetime || 500, seq: data.seq, allowChase: data.allowChase };
+    var req = { fen: data.fen, movetime: data.movetime || 500, seq: data.seq, allowChase: data.allowChase, multipv: data.multipv, extra: data.extra };
     if (!engineModule) {
       // 引擎还没就绪：把搜索排队，等 uciok/READY 后补执行。
       // 原先直接 return 会丢掉这次搜索，主线程永远等不到 BEST_MOVE，

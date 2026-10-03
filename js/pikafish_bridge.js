@@ -10,10 +10,17 @@
   'use strict';
   // 业余/进阶/高手/大师(idx1-4) 用 Pikafish（入门 idx0 用内置引擎），movetime 越大越强
   var HEAVY = [1, 2, 3, 4];
-  var MILLIS = { 1: 200, 2: 600, 3: 1800, 4: 6000 };
+  // 强度梯度靠"思考时间 + 候选随机"两旋钮；开局库只给大师档（见 index.html）
+  var MILLIS = { 1: 50, 2: 150, 3: 500, 4: 6000 };
+  // MultiPV 在这个 WASM 构建里只产出 1 条 PV(实测), 拿不到候选池 -> 失误率改用引擎原生 UCI_Elo 限制
+  var MULTIPV = {};
+  var UCI_EXTRA = {
+    1: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1400 }],
+    2: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1800 }]
+  };
   var WORKER_PATH = 'js/engines/pikafish/pikafish.worker.js';
 
-  var worker = null, ready = false, seq = 0, curSeq = 0, curCb = null, curReject = null, loadPromise = null;
+  var worker = null, ready = false, seq = 0, curSeq = 0, curCb = null, curReject = null, loadPromise = null, curCandidates = null;
 
   // ---- board[] -> XQWLight FEN（row0=黑底线在上，大写=红/小写=黑）----
   function boardToFen(board, side) {
@@ -66,6 +73,8 @@
       "  engine.sendCommand('setoption name Repetition Rule value AsianRule');",
       "  engine.sendCommand('setoption name Draw Rule value None');",
       "  engine.sendCommand('setoption name Sixty Move Rule value false');",
+      "  engine.sendCommand('setoption name MultiPV value ' + (d.multipv > 1 ? d.multipv : 1));",
+      "  if(d.extra&&d.extra.length){for(var oi=0;oi<d.extra.length;oi++)engine.sendCommand('setoption name '+d.extra[oi].name+' value '+d.extra[oi].value);}else engine.sendCommand('setoption name UCI_LimitStrength value false');",
       "  engine.sendCommand('position fen '+fen);engine.sendCommand('go movetime '+(d.movetime||500));}",
       " catch(err){engineSearching=false;postErr('皮卡鱼搜索失败: '+err);}}",
       "function drainPending(){if(pendingSearch&&engine&&!engineSearching){var q=pendingSearch;pendingSearch=null;runSearch(q);}}",
@@ -76,7 +85,7 @@
       "  var p=line.split(/\\s+/);self.postMessage({type:'BEST_MOVE',move:(p.length>1?p[1]:''),seq:lastSeq});drainPending();}}",
       "self.onmessage=function(e){var d=e.data||{};",
       " if(d.type==='STOP'){pendingSearch=null;if(engineSearching){stopPending=true;}try{if(engine){engine.sendCommand('stop');}}catch(e0){}return;}",
-      " if(d.type==='SEARCH'){var req={fen:d.fen,movetime:d.movetime||500,seq:d.seq};",
+      " if(d.type==='SEARCH'){var req={fen:d.fen,movetime:d.movetime||500,seq:d.seq,multipv:d.multipv,extra:d.extra};",
       "  if(!engine){pendingSearch=req;return;}",
       "  if(engineSearching){pendingSearch=req;stopPending=true;try{engine.sendCommand('stop');}catch(e1){}return;}",
       "  runSearch(req);}}",
@@ -101,17 +110,34 @@
       else if (d.type === 'INFO') {
         // 捕获搜索 INFO 行：depth / score cp|mate（供基准测试读取）
         var s = String(d.info || '');
+        root.PF.lastRawLine = s; // 诊断用: 最近一条 UCI info 原文
         if (s.indexOf('depth ') >= 0) {
           var md = /depth (\d+)/.exec(s);
           var ms = /score (cp|mate) (-?\d+)/.exec(s);
           var mn = /nodes (\d+)/.exec(s);
           if (md) { root.PF.lastInfo = { depth: +md[1], score: ms ? (ms[1] === 'cp' ? (+ms[2]) + 'cp' : '#' + ms[2]) : '', nodes: mn ? +mn[1] : 0 }; }
         }
+        if (curCandidates) {
+          // MultiPV 候选收集: multipv K + 该层最新 score/pv
+          var mp = /multipv (\d+)/.exec(s), pv = / pv (\S+)/.exec(s), dp = /depth (\d+)/.exec(s), sc = /score (cp|mate) (-?\d+)/.exec(s);
+          if (mp && pv) {
+            var kk = +mp[1], scv = sc ? (sc[1] === 'mate' ? (sc[2] > 0 ? 99999 : -99999) : +sc[2]) : 0, dpv = dp ? +dp[1] : 0;
+            if (!curCandidates[kk] || curCandidates[kk].depth <= dpv) curCandidates[kk] = { move: pv[1], score: scv, depth: dpv };
+          }
+        }
+      } else if (d.type === 'CMD') {
+        root.PF.lastCommands = d.cmds; // 诊断: 本次搜索实际下发的强度选项
       } else if (d.type === 'ERROR') {
         if (curReject && curSeq) { var r = curReject; curReject = null; curCb = null; r(new Error(d.message)); }
       } else if (d.type === 'BEST_MOVE') {
         // seq 校验：丢弃过期着法（防止旧搜索的迟到响应劫持新搜索）
-        if (curCb && (d.seq === undefined || d.seq === curSeq)) { var cb = curCb; curCb = null; curReject = null; cb(d.move); }
+        if (curCb && (d.seq === undefined || d.seq === curSeq)) {
+          var cb = curCb; curCb = null; curReject = null;
+          var cands = null;
+          if (curCandidates) { cands = []; for (var k = 1; k <= 64; k++) { if (curCandidates[k]) cands.push(curCandidates[k]); } }
+          curCandidates = null;
+          cb({ move: d.move, candidates: cands });
+        }
       }
     };
     w.onerror = function (ev) {
@@ -151,20 +177,21 @@
     return load().then(function () { return true; }).catch(function () { return false; });
   }
 
-  function search(fen, movetime) {
+  function search(fen, movetime, multipv, extra) {
     return new Promise(function (resolve, reject) {
-      if (!worker || !ready) { reject(new Error('not-ready')); return; }
+      if (!worker || !ready) { reject(new Error("not-ready")); return; }
       var mySeq = ++seq;
       curSeq = mySeq;
       var done = false; // 每次搜索独立的完成标志（修复：残留超时误杀后续搜索）
+      curCandidates = multipv > 1 ? {} : null;
       curCb = function (val) { if (!done) { done = true; resolve(val); } };
       curReject = null;
-      worker.postMessage({ type: 'SEARCH', fen: fen, movetime: movetime, seq: mySeq, allowChase: false });
+      worker.postMessage({ type: "SEARCH", fen: fen, movetime: movetime, seq: mySeq, allowChase: false, multipv: multipv || 1, extra: extra || null });
       setTimeout(function () {
         if (done) return;
         done = true;
         if (curSeq === mySeq) { curCb = null; curReject = null; }
-        resolve('__timeout__');
+        resolve({ move: '__timeout__', candidates: null });
       }, (movetime || 500) + 15000);
     });
   }
@@ -178,6 +205,8 @@
   root.PF = {
     HEAVY_LEVELS: HEAVY,
     MILLIS: MILLIS,
+    MULTIPV: MULTIPV,
+    UCI_EXTRA: UCI_EXTRA,
     isHeavyLevel: function (i) { return HEAVY.indexOf(i) >= 0; },
     boardToFen: boardToFen,
     parseMove: parseMove,

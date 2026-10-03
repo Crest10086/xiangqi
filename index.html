@@ -296,8 +296,8 @@ function afterHuman() {
 function aiTurn() {
   thinking = true; draw(); setStatus('thinking');
   const g = game; // capture current game to guard against undo/new-game racing the async result
-  // 开局库优先（所有档位）：命中谱招则同步走子，否则交给引擎
-  if (typeof XQBook !== 'undefined') {
+  // 开局谱招只给大师档：其余档位靠引擎本身分级，保证五档可区分
+  if (levelIdx === 4 && typeof XQBook !== 'undefined') {
     const legal = g.legalMoves();
     const bm = XQBook.pick(g.board, g.side, legal);
     if (bm && legal.some(m => m.f === bm.f && m.t === bm.t)) {
@@ -310,9 +310,11 @@ function aiTurn() {
       if (!(g === game && thinking)) return; // stale: board changed meanwhile
       if (!ok) { builtInAiTurn(g); return; } // engine not ready -> fall back
       const fen = PF.boardToFen(g.board, g.side);
-      PF.search(fen, PF.MILLIS[levelIdx]).then((mvStr) => {
+      const mpv = PF.MULTIPV[levelIdx] || 1;
+      PF.search(fen, PF.MILLIS[levelIdx], mpv, PF.UCI_EXTRA[levelIdx] || null).then((out) => {
         if (!(g === game && thinking)) return;
-        let mv = (mvStr && mvStr !== '__timeout__') ? PF.parseMove(mvStr) : null;
+        const r = (typeof out === 'string') ? { move: out, candidates: null } : (out || { move: '', candidates: null });
+        let mv = pickCandidate(r, mpv, g);
         if (!mv || !g.legalMoves().some(m => m.f === mv.f && m.t === mv.t)) {
           builtInAiTurn(g); return; // illegal / timeout -> fall back
         }
@@ -325,6 +327,29 @@ function aiTurn() {
     return;
   }
   builtInAiTurn(g);
+}
+
+// 多候选加权随机（进阶档）: 名次越靠后权重越低 1/(k+1)^1.2，只接受合法着法
+function pickCandidate(r, mpv, g) {
+  const legal = g.legalMoves();
+  const ok = (m) => m && legal.some(x => x.f === m.f && x.t === m.t);
+  if (mpv > 1 && r.candidates && r.candidates.length > 1) {
+    const pool = [];
+    const cs = r.candidates.slice(0, mpv);
+    for (let i = 0; i < cs.length; i++) {
+      const m = PF.parseMove(cs[i].move);
+      if (m && ok(m) && !pool.some(p => p.f === m.f && p.t === m.t)) pool.push(m);
+    }
+    if (pool.length > 1) {
+      let sum = 0;
+      const w = pool.map((m, i) => { const v = 1 / Math.pow(i + 1, 1.2); sum += v; return v; });
+      let x = Math.random() * sum;
+      for (let i = 0; i < pool.length; i++) { x -= w[i]; if (x <= 0) return pool[i]; }
+      return pool[pool.length - 1];
+    }
+    if (pool.length === 1) return pool[0];
+  }
+  return PF.parseMove(r.move);
 }
 
 function builtInAiTurn(g) {
