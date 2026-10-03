@@ -296,8 +296,8 @@ function afterHuman() {
 function aiTurn() {
   thinking = true; draw(); setStatus('thinking');
   const g = game; // capture current game to guard against undo/new-game racing the async result
-  // 开局谱招只给大师档：其余档位靠引擎本身分级，保证五档可区分
-  if (levelIdx === 4 && typeof XQBook !== 'undefined') {
+  // 开局谱招只给高手档（大师纯靠满强度长考）：低档靠引擎强度阶梯，保证五档可区分
+  if (levelIdx === 3 && typeof XQBook !== 'undefined') {
     const legal = g.legalMoves();
     const bm = XQBook.pick(g.board, g.side, legal);
     if (bm && legal.some(m => m.f === bm.f && m.t === bm.t)) {

@@ -4,205 +4,205 @@
   "levelName": "入门",
   "neu": {
    "n": 66,
-   "score": 0.5340909090909087,
-   "avgLoss": 173.12307692307692,
+   "score": 0.5219696969696965,
+   "avgLoss": 174.66153846153847,
    "bigMistakes": 23,
    "answers": [
     {
      "testId": "QT01",
-     "loss": 2,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT02",
-     "loss": 32,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT03",
      "loss": 0,
      "score": 1,
      "via": "builtin"
     },
     {
-     "testId": "QT04",
-     "loss": 101,
-     "score": 0.4,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT05",
-     "loss": 47,
+     "testId": "QT02",
+     "loss": 21,
      "score": 0.9,
      "via": "builtin"
     },
     {
-     "testId": "QT06",
-     "loss": 125,
-     "score": 0.4,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT07",
-     "loss": 29,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT08",
-     "loss": 99,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT09",
-     "loss": 337,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT10",
-     "loss": 376,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT11",
-     "loss": -9,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT12",
-     "loss": 20,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT13",
-     "loss": 16,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT14",
-     "loss": 81,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT15",
-     "loss": 99972,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT16",
-     "loss": 62,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT17",
-     "loss": -5,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT18",
-     "loss": 281,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT19",
+     "testId": "QT03",
      "loss": -4,
      "score": 1,
      "via": "builtin"
     },
     {
+     "testId": "QT04",
+     "loss": 106,
+     "score": 0.4,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT05",
+     "loss": 43,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT06",
+     "loss": 119,
+     "score": 0.4,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT07",
+     "loss": 39,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT08",
+     "loss": 101,
+     "score": 0.4,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT09",
+     "loss": 370,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT10",
+     "loss": 380,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT11",
+     "loss": -5,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT12",
+     "loss": 36,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT13",
+     "loss": 17,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT14",
+     "loss": 79,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT15",
+     "loss": 99973,
+     "score": 0,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT16",
+     "loss": 55,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT17",
+     "loss": -2,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT18",
+     "loss": 270,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT19",
+     "loss": 2,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
      "testId": "QT20",
-     "loss": 53,
+     "loss": 52,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QT21",
-     "loss": 327,
+     "loss": 321,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT22",
-     "loss": 74,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT23",
-     "loss": 343,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT24",
-     "loss": 344,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT25",
-     "loss": 27,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT26",
-     "loss": 41,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT27",
-     "loss": 14,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT28",
-     "loss": 19,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT29",
-     "loss": -3,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT30",
-     "loss": 41,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT31",
      "loss": 57,
      "score": 0.7,
      "via": "builtin"
     },
     {
+     "testId": "QT23",
+     "loss": 323,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT24",
+     "loss": 335,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT25",
+     "loss": 31,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT26",
+     "loss": 31,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT27",
+     "loss": 22,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT28",
+     "loss": 14,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT29",
+     "loss": -9,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT30",
+     "loss": 35,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT31",
+     "loss": 95,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
      "testId": "QT32",
-     "loss": 476,
+     "loss": 528,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QT33",
-     "loss": -3,
+     "loss": 3,
      "score": 1,
      "via": "builtin"
     },
@@ -214,73 +214,73 @@
     },
     {
      "testId": "QT35",
-     "loss": 395,
+     "loss": 397,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT36",
-     "loss": 501,
+     "loss": 522,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QT37",
-     "loss": 384,
+     "loss": 397,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT38",
-     "loss": 499,
+     "loss": 515,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QT39",
-     "loss": 342,
+     "loss": 344,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT40",
-     "loss": 390,
+     "loss": 391,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QH01",
-     "loss": 89,
+     "loss": 67,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QH02",
-     "loss": 132,
+     "loss": 131,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB3",
-     "loss": 196,
+     "loss": 194,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB5",
-     "loss": 62,
+     "loss": 67,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QA3",
-     "loss": 656,
+     "loss": 661,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QB6",
-     "loss": 254,
+     "loss": 265,
      "score": 0.15,
      "via": "builtin"
     },
@@ -292,92 +292,92 @@
     },
     {
      "testId": "QA6",
-     "loss": -5,
+     "loss": -12,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QA7",
-     "loss": 269,
+     "loss": 253,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QB7",
-     "loss": 11,
+     "loss": 25,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB8",
-     "loss": 36,
+     "loss": 20,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB9",
-     "loss": 110,
+     "loss": 104,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB11",
-     "loss": 80,
-     "score": 0.7,
+     "loss": 109,
+     "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QA12",
-     "loss": 451,
+     "loss": 440,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QB14",
-     "loss": 1,
-     "score": 1,
+     "loss": 12,
+     "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB16",
-     "loss": 474,
+     "loss": 464,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QA15",
-     "loss": 490,
+     "loss": 496,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QB1",
-     "loss": 37,
+     "loss": 43,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB2",
-     "loss": 89,
-     "score": 0.7,
+     "loss": 103,
+     "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB4",
-     "loss": 340,
+     "loss": 350,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QB10",
-     "loss": 3,
+     "loss": -15,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QB12",
-     "loss": 61,
-     "score": 0.7,
+     "loss": 40,
+     "score": 0.9,
      "via": "builtin"
     },
     {
@@ -388,19 +388,19 @@
     },
     {
      "testId": "QB15",
-     "loss": 123,
+     "loss": 140,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB17",
-     "loss": 491,
+     "loss": 470,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QB18",
-     "loss": 61,
+     "loss": 64,
      "score": 0.7,
      "via": "builtin"
     }
@@ -408,284 +408,284 @@
   },
   "old": {
    "n": 66,
-   "score": 0.43712121212121174,
-   "avgLoss": 209.72307692307692,
+   "score": 0.44242424242424205,
+   "avgLoss": 208.95384615384614,
    "bigMistakes": 29,
    "answers": [
     {
      "testId": "QT01",
-     "loss": 0,
+     "loss": 1,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT02",
-     "loss": -4,
+     "loss": 3,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT03",
-     "loss": 375,
+     "loss": 360,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT04",
-     "loss": 297,
+     "loss": 288,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT05",
-     "loss": 114,
+     "loss": 111,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QT06",
-     "loss": 127,
+     "loss": 116,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QT07",
-     "loss": 26,
+     "loss": 41,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT08",
-     "loss": 83,
-     "score": 0.7,
+     "loss": 106,
+     "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QT09",
-     "loss": 359,
+     "loss": 362,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT10",
-     "loss": 374,
+     "loss": 369,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT11",
-     "loss": -7,
+     "loss": 4,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT12",
-     "loss": 27,
+     "loss": 37,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT13",
-     "loss": 55,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT14",
-     "loss": 277,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT15",
-     "loss": 99972,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT16",
-     "loss": 81,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT17",
-     "loss": -1,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT18",
-     "loss": 384,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT19",
-     "loss": -3,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT20",
-     "loss": 67,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT21",
-     "loss": 328,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT22",
      "loss": 68,
      "score": 0.7,
      "via": "builtin"
     },
     {
+     "testId": "QT14",
+     "loss": 295,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT15",
+     "loss": 99973,
+     "score": 0,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT16",
+     "loss": 68,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT17",
+     "loss": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT18",
+     "loss": 390,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT19",
+     "loss": 1,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT20",
+     "loss": 56,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT21",
+     "loss": 322,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT22",
+     "loss": 50,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
      "testId": "QT23",
-     "loss": 340,
+     "loss": 333,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT24",
-     "loss": 343,
+     "loss": 333,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT25",
-     "loss": 386,
+     "loss": 376,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT26",
-     "loss": 130,
+     "loss": 140,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QT27",
-     "loss": 65,
+     "loss": 74,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QT28",
-     "loss": 285,
+     "loss": 283,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QT29",
-     "loss": 53,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT30",
-     "loss": 367,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT31",
-     "loss": 144,
-     "score": 0.4,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT32",
-     "loss": 492,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT33",
-     "loss": -4,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT34",
-     "loss": 542,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT35",
-     "loss": 413,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT36",
-     "loss": 523,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT37",
-     "loss": 486,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT38",
-     "loss": 514,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT39",
-     "loss": 499,
-     "score": 0,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT40",
-     "loss": 395,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QH01",
-     "loss": 109,
-     "score": 0.4,
-     "via": "builtin"
-    },
-    {
-     "testId": "QH02",
      "loss": 62,
      "score": 0.7,
      "via": "builtin"
     },
     {
+     "testId": "QT30",
+     "loss": 371,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT31",
+     "loss": 133,
+     "score": 0.4,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT32",
+     "loss": 471,
+     "score": 0,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT33",
+     "loss": 3,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT34",
+     "loss": 539,
+     "score": 0,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT35",
+     "loss": 393,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT36",
+     "loss": 524,
+     "score": 0,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT37",
+     "loss": 478,
+     "score": 0,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT38",
+     "loss": 504,
+     "score": 0,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT39",
+     "loss": 519,
+     "score": 0,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT40",
+     "loss": 391,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QH01",
+     "loss": 100,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QH02",
+     "loss": 55,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
      "testId": "QB3",
-     "loss": 195,
+     "loss": 189,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB5",
-     "loss": 281,
+     "loss": 280,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QA3",
-     "loss": 656,
+     "loss": 669,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QB6",
-     "loss": 50,
-     "score": 0.9,
+     "loss": 72,
+     "score": 0.7,
      "via": "builtin"
     },
     {
@@ -696,115 +696,115 @@
     },
     {
      "testId": "QA6",
-     "loss": 9,
+     "loss": -6,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QA7",
-     "loss": 263,
+     "loss": 255,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QB7",
-     "loss": 109,
-     "score": 0.4,
+     "loss": 76,
+     "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QB8",
-     "loss": 71,
+     "loss": 90,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QB9",
-     "loss": 95,
+     "loss": 92,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QB11",
-     "loss": 10,
-     "score": 1,
+     "loss": 11,
+     "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QA12",
-     "loss": 452,
+     "loss": 445,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QB14",
-     "loss": 160,
+     "loss": 143,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB16",
-     "loss": 477,
+     "loss": 474,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QA15",
-     "loss": -17,
+     "loss": 4,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QB1",
-     "loss": 286,
+     "loss": 301,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QB2",
-     "loss": 35,
+     "loss": 25,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB4",
-     "loss": 342,
+     "loss": 352,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QB10",
-     "loss": 117,
+     "loss": 113,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB12",
-     "loss": 30,
+     "loss": 17,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB13",
-     "loss": 110,
+     "loss": 105,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB15",
-     "loss": 121,
+     "loss": 139,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QB17",
-     "loss": 484,
+     "loss": 483,
      "score": 0,
      "via": "builtin"
     },
     {
      "testId": "QB18",
-     "loss": 6,
+     "loss": 4,
      "score": 1,
      "via": "builtin"
     }
@@ -816,199 +816,199 @@
   "levelName": "业余",
   "neu": {
    "n": 66,
-   "score": 0.8939393939393936,
-   "avgLoss": 26.307692307692307,
-   "bigMistakes": 3,
+   "score": 0.8969696969696966,
+   "avgLoss": 28.606060606060606,
+   "bigMistakes": 4,
    "answers": [
     {
      "testId": "QT01",
-     "loss": 368,
+     "loss": 376,
      "score": 0.15,
      "via": "pf"
     },
     {
      "testId": "QT02",
-     "loss": 6,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT03",
-     "loss": 22,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT04",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT05",
-     "loss": 16,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT06",
-     "loss": 59,
-     "score": 0.7,
-     "via": "pf"
-    },
-    {
-     "testId": "QT07",
-     "loss": 19,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT08",
-     "loss": 72,
-     "score": 0.7,
-     "via": "pf"
-    },
-    {
-     "testId": "QT09",
-     "loss": -4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT10",
-     "loss": 53,
-     "score": 0.7,
-     "via": "pf"
-    },
-    {
-     "testId": "QT11",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT12",
-     "loss": -2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT13",
-     "loss": -15,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT14",
-     "loss": 48,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT15",
-     "loss": 99962,
-     "score": 0,
-     "via": "pf"
-    },
-    {
-     "testId": "QT16",
-     "loss": 34,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT17",
-     "loss": -4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT18",
-     "loss": 275,
-     "score": 0.15,
-     "via": "pf"
-    },
-    {
-     "testId": "QT19",
-     "loss": -2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT20",
-     "loss": 9,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT21",
-     "loss": 44,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT22",
-     "loss": 3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT23",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT24",
-     "loss": 12,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT25",
-     "loss": 8,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT26",
-     "loss": 24,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT27",
-     "loss": 12,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT28",
-     "loss": 5,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT29",
      "loss": 20,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QT30",
-     "loss": 60,
-     "score": 0.7,
+     "testId": "QT03",
+     "loss": 20,
+     "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QT31",
+     "testId": "QT04",
+     "loss": 6,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT05",
+     "loss": 31,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT06",
+     "loss": 2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT07",
+     "loss": 20,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT08",
+     "loss": 2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT09",
+     "loss": 34,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT10",
+     "loss": 28,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT11",
+     "loss": -7,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT12",
+     "loss": -5,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT13",
+     "loss": -14,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT14",
+     "loss": -1,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT15",
+     "loss": 6,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT16",
+     "loss": 21,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT17",
+     "loss": -10,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT18",
+     "loss": 268,
+     "score": 0.15,
+     "via": "pf"
+    },
+    {
+     "testId": "QT19",
+     "loss": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT20",
+     "loss": 15,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT21",
      "loss": 40,
      "score": 0.9,
      "via": "pf"
     },
     {
+     "testId": "QT22",
+     "loss": 18,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT23",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT24",
+     "loss": 13,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT25",
+     "loss": 6,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT26",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT27",
+     "loss": -15,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT28",
+     "loss": -7,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT29",
+     "loss": -15,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT30",
+     "loss": 51,
+     "score": 0.7,
+     "via": "pf"
+    },
+    {
+     "testId": "QT31",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QT32",
-     "loss": 29,
+     "loss": 22,
      "score": 0.9,
      "via": "pf"
     },
@@ -1020,116 +1020,116 @@
     },
     {
      "testId": "QT34",
-     "loss": 35,
+     "loss": 40,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT35",
-     "loss": 32,
+     "loss": 39,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT36",
-     "loss": 10,
-     "score": 1,
+     "loss": 281,
+     "score": 0.15,
      "via": "pf"
     },
     {
      "testId": "QT37",
-     "loss": -6,
-     "score": 1,
+     "loss": 29,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT38",
-     "loss": -8,
+     "loss": -5,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT39",
-     "loss": 7,
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT40",
-     "loss": 11,
-     "score": 0.9,
+     "loss": 302,
+     "score": 0.15,
      "via": "pf"
     },
     {
      "testId": "QH01",
-     "loss": 36,
+     "loss": 11,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QH02",
-     "loss": 59,
-     "score": 0.7,
+     "loss": 15,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB3",
-     "loss": 68,
-     "score": 0.7,
-     "via": "pf"
-    },
-    {
-     "testId": "QB5",
-     "loss": 6,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA3",
-     "loss": 20,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QB6",
-     "loss": 11,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA5",
-     "loss": 20,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA6",
-     "loss": 41,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA7",
      "loss": 5,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB7",
-     "loss": 31,
+     "testId": "QB5",
+     "loss": 18,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QB8",
+     "testId": "QA3",
      "loss": -16,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB9",
-     "loss": 49,
+     "testId": "QB6",
+     "loss": 42,
      "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QA5",
+     "loss": -9,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA6",
+     "loss": -8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA7",
+     "loss": 13,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB7",
+     "loss": 12,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB8",
+     "loss": -5,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB9",
+     "loss": -11,
+     "score": 1,
      "via": "pf"
     },
     {
@@ -1140,79 +1140,79 @@
     },
     {
      "testId": "QA12",
-     "loss": -2,
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB14",
-     "loss": -16,
+     "loss": -6,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB16",
-     "loss": 5,
-     "score": 1,
+     "loss": 69,
+     "score": 0.7,
      "via": "pf"
     },
     {
      "testId": "QA15",
-     "loss": -17,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB1",
-     "loss": 2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB2",
-     "loss": 42,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QB4",
-     "loss": 7,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB10",
-     "loss": 25,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QB12",
-     "loss": 36,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QB13",
-     "loss": 9,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB15",
-     "loss": 8,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB17",
      "loss": -2,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QB1",
+     "loss": 16,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB2",
+     "loss": 24,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB4",
+     "loss": 38,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB10",
+     "loss": -13,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB12",
+     "loss": 16,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB13",
+     "loss": 93,
+     "score": 0.7,
+     "via": "pf"
+    },
+    {
+     "testId": "QB15",
+     "loss": -1,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB17",
+     "loss": -1,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QB18",
-     "loss": 2,
+     "loss": -5,
      "score": 1,
      "via": "pf"
     }
@@ -1220,98 +1220,98 @@
   },
   "old": {
    "n": 66,
-   "score": 0.8613636363636362,
-   "avgLoss": 37.333333333333336,
-   "bigMistakes": 3,
+   "score": 0.8499999999999996,
+   "avgLoss": 37.60606060606061,
+   "bigMistakes": 4,
    "answers": [
     {
      "testId": "QT01",
-     "loss": 5,
+     "loss": -3,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT02",
-     "loss": 2,
+     "loss": -2,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT03",
-     "loss": 2,
+     "loss": 1,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT04",
-     "loss": 53,
+     "loss": 63,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QT05",
-     "loss": 73,
+     "loss": 69,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QT06",
-     "loss": 39,
-     "score": 0.9,
+     "loss": 59,
+     "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QT07",
-     "loss": 29,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT08",
-     "loss": 93,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT09",
-     "loss": 54,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT10",
-     "loss": 32,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT11",
-     "loss": -9,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT12",
      "loss": 28,
      "score": 0.9,
      "via": "builtin"
     },
     {
+     "testId": "QT08",
+     "loss": 80,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT09",
+     "loss": 52,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT10",
+     "loss": 38,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT11",
+     "loss": -5,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT12",
+     "loss": 16,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
      "testId": "QT13",
-     "loss": 5,
+     "loss": 7,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT14",
-     "loss": 27,
+     "loss": 34,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT15",
-     "loss": 43,
-     "score": 0.9,
+     "loss": 63,
+     "score": 0.7,
      "via": "builtin"
     },
     {
@@ -1322,115 +1322,115 @@
     },
     {
      "testId": "QT17",
-     "loss": -4,
+     "loss": -9,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT18",
-     "loss": -1,
+     "loss": 7,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT19",
-     "loss": -4,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT20",
-     "loss": 14,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT21",
-     "loss": 0,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT22",
-     "loss": 60,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT23",
-     "loss": -1,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT24",
      "loss": 1,
      "score": 1,
      "via": "builtin"
     },
     {
+     "testId": "QT20",
+     "loss": 15,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT21",
+     "loss": -1,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT22",
+     "loss": 55,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT23",
+     "loss": -3,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT24",
+     "loss": 0,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
      "testId": "QT25",
-     "loss": 30,
+     "loss": 27,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT26",
-     "loss": -6,
+     "loss": -7,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT27",
-     "loss": 16,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT28",
-     "loss": 16,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT29",
-     "loss": -18,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT30",
-     "loss": 8,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT31",
      "loss": 11,
      "score": 0.9,
      "via": "builtin"
     },
     {
+     "testId": "QT28",
+     "loss": 14,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT29",
+     "loss": -7,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT30",
+     "loss": 5,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT31",
+     "loss": 24,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
      "testId": "QT32",
-     "loss": 173,
+     "loss": 156,
      "score": 0.4,
      "via": "builtin"
     },
     {
      "testId": "QT33",
-     "loss": -2,
+     "loss": -9,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT34",
-     "loss": 42,
+     "loss": 29,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT35",
-     "loss": -6,
+     "loss": -5,
      "score": 1,
      "via": "builtin"
     },
@@ -1448,7 +1448,7 @@
     },
     {
      "testId": "QT38",
-     "loss": 94,
+     "loss": 91,
      "score": 0.7,
      "via": "builtin"
     },
@@ -1460,26 +1460,26 @@
     },
     {
      "testId": "QT40",
-     "loss": 22,
+     "loss": 20,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QH01",
-     "loss": 32,
+     "loss": 50,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QH02",
-     "loss": 79,
+     "loss": 92,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QB3",
-     "loss": 183,
-     "score": 0.4,
+     "loss": 232,
+     "score": 0.15,
      "via": "builtin"
     },
     {
@@ -1490,133 +1490,133 @@
     },
     {
      "testId": "QA3",
-     "loss": 11,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB6",
-     "loss": 20,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QA5",
-     "loss": 1,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QA6",
      "loss": -4,
      "score": 1,
      "via": "builtin"
     },
     {
-     "testId": "QA7",
-     "loss": 114,
-     "score": 0.4,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB7",
-     "loss": -2,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB8",
-     "loss": 221,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB9",
-     "loss": 0,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB11",
-     "loss": 0,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QA12",
-     "loss": -5,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB14",
-     "loss": -2,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB16",
-     "loss": 2,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QA15",
-     "loss": 11,
+     "testId": "QB6",
+     "loss": 12,
      "score": 0.9,
      "via": "builtin"
     },
     {
-     "testId": "QB1",
-     "loss": 19,
-     "score": 0.9,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB2",
-     "loss": 353,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB4",
-     "loss": 6,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB10",
-     "loss": 247,
-     "score": 0.15,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB12",
-     "loss": 97,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB13",
+     "testId": "QA5",
      "loss": -10,
      "score": 1,
      "via": "builtin"
     },
     {
+     "testId": "QA6",
+     "loss": -8,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QA7",
+     "loss": 105,
+     "score": 0.4,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB7",
+     "loss": 3,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB8",
+     "loss": 240,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB9",
+     "loss": -32,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB11",
+     "loss": 12,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QA12",
+     "loss": -9,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB14",
+     "loss": -3,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB16",
+     "loss": -15,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QA15",
+     "loss": 2,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB1",
+     "loss": 40,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB2",
+     "loss": 343,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB4",
+     "loss": 19,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB10",
+     "loss": 258,
+     "score": 0.15,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB12",
+     "loss": 91,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB13",
+     "loss": 11,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
      "testId": "QB15",
-     "loss": 4,
+     "loss": -1,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QB17",
-     "loss": 10,
+     "loss": -1,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QB18",
-     "loss": 8,
+     "loss": -7,
      "score": 1,
      "via": "builtin"
     }
@@ -1628,224 +1628,224 @@
   "levelName": "进阶",
   "neu": {
    "n": 66,
-   "score": 0.9196969696969695,
-   "avgLoss": 22.803030303030305,
+   "score": 0.9007575757575755,
+   "avgLoss": 22.651515151515152,
    "bigMistakes": 1,
    "answers": [
     {
      "testId": "QT01",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT02",
-     "loss": 4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT03",
-     "loss": 34,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT04",
-     "loss": 13,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT05",
-     "loss": 13,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT06",
-     "loss": 7,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT07",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT08",
-     "loss": -5,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT09",
-     "loss": -10,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT10",
-     "loss": 35,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT11",
-     "loss": 502,
-     "score": 0,
-     "via": "pf"
-    },
-    {
-     "testId": "QT12",
-     "loss": 1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT13",
-     "loss": 31,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT14",
-     "loss": 29,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT15",
-     "loss": 15,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT16",
      "loss": -2,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT17",
-     "loss": 0,
+     "testId": "QT02",
+     "loss": 1,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT18",
-     "loss": 0,
+     "testId": "QT03",
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT19",
-     "loss": 2,
+     "testId": "QT04",
+     "loss": 4,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT20",
-     "loss": 12,
+     "testId": "QT05",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT06",
+     "loss": 42,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QT21",
+     "testId": "QT07",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT08",
      "loss": -1,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT22",
-     "loss": 15,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT23",
-     "loss": 2,
+     "testId": "QT09",
+     "loss": -4,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT24",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT25",
+     "testId": "QT10",
      "loss": 31,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QT26",
-     "loss": 1,
+     "testId": "QT11",
+     "loss": -7,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT27",
-     "loss": 1,
+     "testId": "QT12",
+     "loss": -13,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT28",
-     "loss": -3,
-     "score": 1,
+     "testId": "QT13",
+     "loss": 50,
+     "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QT29",
-     "loss": -11,
-     "score": 1,
+     "testId": "QT14",
+     "loss": 33,
+     "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QT30",
+     "testId": "QT15",
      "loss": 14,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QT31",
-     "loss": 48,
+     "testId": "QT16",
+     "loss": 24,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QT32",
-     "loss": 53,
-     "score": 0.7,
+     "testId": "QT17",
+     "loss": -5,
+     "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT33",
+     "testId": "QT18",
      "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QT19",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT20",
+     "loss": 8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT21",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT22",
+     "loss": 23,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT23",
+     "loss": 110,
+     "score": 0.4,
+     "via": "pf"
+    },
+    {
+     "testId": "QT24",
+     "loss": 4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT25",
+     "loss": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT26",
+     "loss": 32,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT27",
+     "loss": 21,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT28",
+     "loss": 4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT29",
+     "loss": 15,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT30",
+     "loss": -6,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT31",
+     "loss": 32,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT32",
+     "loss": -8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT33",
+     "loss": -6,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QT34",
-     "loss": 82,
-     "score": 0.7,
+     "loss": 23,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT35",
-     "loss": 2,
-     "score": 1,
+     "loss": 134,
+     "score": 0.4,
      "via": "pf"
     },
     {
      "testId": "QT36",
-     "loss": 3,
-     "score": 1,
+     "loss": 281,
+     "score": 0.15,
      "via": "pf"
     },
     {
@@ -1856,175 +1856,175 @@
     },
     {
      "testId": "QT38",
-     "loss": 27,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT39",
-     "loss": 1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT40",
-     "loss": 11,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QH01",
-     "loss": 24,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QH02",
-     "loss": 6,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB3",
-     "loss": -9,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB5",
-     "loss": 11,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA3",
-     "loss": 1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB6",
-     "loss": -10,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA5",
-     "loss": -2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA6",
-     "loss": -4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA7",
-     "loss": 10,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB7",
      "loss": 30,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QB8",
-     "loss": 55,
+     "testId": "QT39",
+     "loss": 15,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT40",
+     "loss": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QH01",
+     "loss": 63,
      "score": 0.7,
      "via": "pf"
     },
     {
+     "testId": "QH02",
+     "loss": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB3",
+     "loss": 51,
+     "score": 0.7,
+     "via": "pf"
+    },
+    {
+     "testId": "QB5",
+     "loss": 17,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QA3",
+     "loss": -4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB6",
+     "loss": 45,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QA5",
+     "loss": 18,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QA6",
+     "loss": -1,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA7",
+     "loss": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB7",
+     "loss": 54,
+     "score": 0.7,
+     "via": "pf"
+    },
+    {
+     "testId": "QB8",
+     "loss": 14,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
      "testId": "QB9",
-     "loss": 21,
+     "loss": 17,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB11",
-     "loss": 27,
+     "loss": 15,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QA12",
-     "loss": -5,
+     "loss": 3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB14",
-     "loss": 43,
-     "score": 0.9,
+     "loss": 10,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB16",
-     "loss": -9,
+     "loss": -2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QA15",
-     "loss": -14,
+     "loss": -29,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB1",
-     "loss": 11,
-     "score": 0.9,
+     "loss": 9,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB2",
-     "loss": 49,
+     "loss": 18,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB4",
-     "loss": 22,
+     "loss": 28,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB10",
-     "loss": 20,
-     "score": 0.9,
+     "loss": -8,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB12",
-     "loss": 66,
+     "loss": 79,
      "score": 0.7,
      "via": "pf"
     },
     {
      "testId": "QB13",
-     "loss": 95,
+     "loss": 71,
      "score": 0.7,
      "via": "pf"
     },
     {
      "testId": "QB15",
-     "loss": 1,
-     "score": 1,
+     "loss": 16,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB17",
-     "loss": 94,
-     "score": 0.7,
+     "loss": 117,
+     "score": 0.4,
      "via": "pf"
     },
     {
      "testId": "QB18",
-     "loss": 16,
+     "loss": 27,
      "score": 0.9,
      "via": "pf"
     }
@@ -2032,67 +2032,67 @@
   },
   "old": {
    "n": 66,
-   "score": 0.9007575757575755,
-   "avgLoss": 23.28787878787879,
+   "score": 0.8977272727272725,
+   "avgLoss": 24.045454545454547,
    "bigMistakes": 1,
    "answers": [
     {
      "testId": "QT01",
-     "loss": 0,
+     "loss": 2,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT02",
-     "loss": 10,
+     "loss": 8,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT03",
-     "loss": 3,
+     "loss": -5,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT04",
-     "loss": -1,
+     "loss": -7,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT05",
-     "loss": 24,
+     "loss": 31,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT06",
-     "loss": 25,
+     "loss": 24,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT07",
+     "loss": 11,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT08",
+     "loss": 17,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QT09",
      "loss": 7,
      "score": 1,
      "via": "builtin"
     },
     {
-     "testId": "QT08",
-     "loss": 0,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QT09",
-     "loss": -2,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
      "testId": "QT10",
-     "loss": -3,
+     "loss": -1,
      "score": 1,
      "via": "builtin"
     },
@@ -2110,121 +2110,121 @@
     },
     {
      "testId": "QT13",
-     "loss": 22,
+     "loss": 32,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT14",
-     "loss": 36,
+     "loss": 27,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT15",
-     "loss": 70,
+     "loss": 62,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QT16",
-     "loss": 78,
+     "loss": 77,
      "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QT17",
-     "loss": 1,
+     "loss": -5,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT18",
-     "loss": 12,
-     "score": 0.9,
+     "loss": -2,
+     "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT19",
-     "loss": 1,
+     "loss": -4,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT20",
-     "loss": 25,
+     "loss": 21,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT21",
-     "loss": 0,
+     "loss": -3,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT22",
-     "loss": -1,
+     "loss": -2,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT23",
-     "loss": 3,
+     "loss": 2,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT24",
-     "loss": 0,
+     "loss": 1,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT25",
-     "loss": 26,
+     "loss": 28,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT26",
-     "loss": 7,
+     "loss": 1,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT27",
-     "loss": 19,
+     "loss": 16,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT28",
-     "loss": 11,
+     "loss": 14,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT29",
-     "loss": 13,
-     "score": 0.9,
+     "loss": 6,
+     "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT30",
-     "loss": -11,
+     "loss": -8,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT31",
-     "loss": 11,
+     "loss": 16,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT32",
-     "loss": 174,
+     "loss": 151,
      "score": 0.4,
      "via": "builtin"
     },
@@ -2236,25 +2236,25 @@
     },
     {
      "testId": "QT34",
-     "loss": -7,
+     "loss": 6,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT35",
-     "loss": 5,
+     "loss": 0,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QT36",
-     "loss": 24,
+     "loss": 12,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QT37",
-     "loss": 10,
+     "loss": 9,
      "score": 1,
      "via": "builtin"
     },
@@ -2266,7 +2266,7 @@
     },
     {
      "testId": "QT39",
-     "loss": 51,
+     "loss": 54,
      "score": 0.7,
      "via": "builtin"
     },
@@ -2278,20 +2278,20 @@
     },
     {
      "testId": "QH01",
-     "loss": 35,
-     "score": 0.9,
+     "loss": 59,
+     "score": 0.7,
      "via": "builtin"
     },
     {
      "testId": "QH02",
-     "loss": 38,
+     "loss": 44,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB3",
-     "loss": 3,
-     "score": 1,
+     "loss": 42,
+     "score": 0.9,
      "via": "builtin"
     },
     {
@@ -2302,61 +2302,61 @@
     },
     {
      "testId": "QA3",
-     "loss": -16,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB6",
-     "loss": 1,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QA5",
-     "loss": -5,
-     "score": 1,
-     "via": "builtin"
-    },
-    {
-     "testId": "QA6",
-     "loss": 52,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QA7",
-     "loss": 64,
-     "score": 0.7,
-     "via": "builtin"
-    },
-    {
-     "testId": "QB7",
      "loss": 10,
      "score": 1,
      "via": "builtin"
     },
     {
-     "testId": "QB8",
-     "loss": 48,
+     "testId": "QB6",
+     "loss": 23,
      "score": 0.9,
      "via": "builtin"
     },
     {
+     "testId": "QA5",
+     "loss": 6,
+     "score": 1,
+     "via": "builtin"
+    },
+    {
+     "testId": "QA6",
+     "loss": 51,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
+     "testId": "QA7",
+     "loss": 49,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB7",
+     "loss": 15,
+     "score": 0.9,
+     "via": "builtin"
+    },
+    {
+     "testId": "QB8",
+     "loss": 55,
+     "score": 0.7,
+     "via": "builtin"
+    },
+    {
      "testId": "QB9",
-     "loss": 21,
+     "loss": 41,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB11",
-     "loss": 29,
+     "loss": 20,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QA12",
-     "loss": -9,
+     "loss": 4,
      "score": 1,
      "via": "builtin"
     },
@@ -2368,44 +2368,44 @@
     },
     {
      "testId": "QB16",
-     "loss": -6,
+     "loss": 1,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QA15",
-     "loss": -16,
+     "loss": -31,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QB1",
-     "loss": 24,
+     "loss": 34,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB2",
-     "loss": 23,
+     "loss": 11,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB4",
-     "loss": 12,
-     "score": 0.9,
+     "loss": 9,
+     "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QB10",
-     "loss": 50,
+     "loss": 46,
      "score": 0.9,
      "via": "builtin"
     },
     {
      "testId": "QB12",
-     "loss": 67,
-     "score": 0.7,
+     "loss": 46,
+     "score": 0.9,
      "via": "builtin"
     },
     {
@@ -2416,19 +2416,19 @@
     },
     {
      "testId": "QB15",
-     "loss": 1,
+     "loss": -3,
      "score": 1,
      "via": "builtin"
     },
     {
      "testId": "QB17",
-     "loss": 247,
+     "loss": 239,
      "score": 0.15,
      "via": "builtin"
     },
     {
      "testId": "QB18",
-     "loss": 3,
+     "loss": 0,
      "score": 1,
      "via": "builtin"
     }
@@ -2440,85 +2440,85 @@
   "levelName": "高手",
   "neu": {
    "n": 66,
-   "score": 0.990909090909091,
-   "avgLoss": -2.5757575757575757,
+   "score": 0.9560606060606057,
+   "avgLoss": 9.181818181818182,
    "bigMistakes": 0,
    "answers": [
     {
      "testId": "QT01",
-     "loss": -1,
+     "loss": 5,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT02",
-     "loss": -4,
+     "loss": -5,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT03",
-     "loss": 3,
+     "loss": 1,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT04",
-     "loss": -6,
+     "loss": 2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT05",
-     "loss": -6,
+     "loss": -7,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT06",
-     "loss": 4,
-     "score": 1,
+     "loss": 15,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT07",
-     "loss": -13,
-     "score": 1,
+     "loss": 18,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT08",
-     "loss": -9,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT09",
      "loss": -6,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QT09",
+     "loss": 34,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
      "testId": "QT10",
-     "loss": -10,
+     "loss": -6,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT11",
-     "loss": -9,
+     "loss": -6,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT12",
-     "loss": -11,
+     "loss": 4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT13",
-     "loss": -10,
+     "loss": -2,
      "score": 1,
      "via": "pf"
     },
@@ -2530,405 +2530,405 @@
     },
     {
      "testId": "QT15",
-     "loss": -4,
+     "loss": 9,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT16",
-     "loss": -3,
+     "loss": -1,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT17",
-     "loss": -3,
+     "loss": 1,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT18",
-     "loss": -1,
+     "loss": -5,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT19",
-     "loss": 0,
+     "loss": 4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT20",
-     "loss": 1,
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT21",
-     "loss": 0,
-     "score": 1,
+     "loss": 85,
+     "score": 0.7,
      "via": "pf"
     },
     {
      "testId": "QT22",
-     "loss": 1,
-     "score": 1,
+     "loss": 18,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT23",
-     "loss": -2,
+     "loss": 8,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT24",
-     "loss": -2,
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT25",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT26",
-     "loss": -4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT27",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT28",
-     "loss": 14,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QT29",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT30",
-     "loss": -29,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT31",
-     "loss": -13,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT32",
-     "loss": -14,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT33",
-     "loss": -11,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT34",
-     "loss": -12,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT35",
-     "loss": -11,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT36",
-     "loss": -2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT37",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT38",
-     "loss": 4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT39",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT40",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QH01",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QH02",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB3",
-     "loss": -11,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB5",
-     "loss": -8,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA3",
-     "loss": 4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB6",
-     "loss": 13,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA5",
-     "loss": 3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA6",
-     "loss": 1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA7",
-     "loss": -10,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB7",
      "loss": 31,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QB8",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB9",
-     "loss": -35,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB11",
-     "loss": 19,
+     "testId": "QT26",
+     "loss": 20,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QA12",
-     "loss": 2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB14",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB16",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA15",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB1",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB2",
-     "loss": 2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB4",
-     "loss": 14,
+     "testId": "QT27",
+     "loss": 12,
      "score": 0.9,
      "via": "pf"
     },
     {
-     "testId": "QB10",
-     "loss": -8,
+     "testId": "QT28",
+     "loss": 8,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB12",
+     "testId": "QT29",
+     "loss": 31,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT30",
+     "loss": 9,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT31",
      "loss": -20,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB13",
-     "loss": 1,
+     "testId": "QT32",
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB15",
+     "testId": "QT33",
      "loss": -1,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB17",
-     "loss": 6,
+     "testId": "QT34",
+     "loss": -9,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB18",
-     "loss": 15,
+     "testId": "QT35",
+     "loss": 20,
      "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT36",
+     "loss": -4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT37",
+     "loss": 18,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT38",
+     "loss": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT39",
+     "loss": 24,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QT40",
+     "loss": 2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QH01",
+     "loss": 23,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QH02",
+     "loss": 9,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB3",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB5",
+     "loss": -4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA3",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB6",
+     "loss": 17,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QA5",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA6",
+     "loss": 53,
+     "score": 0.7,
+     "via": "pf"
+    },
+    {
+     "testId": "QA7",
+     "loss": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB7",
+     "loss": 43,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB8",
+     "loss": 21,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB9",
+     "loss": 25,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB11",
+     "loss": 8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA12",
+     "loss": 5,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB14",
+     "loss": 10,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB16",
+     "loss": 7,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA15",
+     "loss": -7,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB1",
+     "loss": 10,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB2",
+     "loss": 0,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB4",
+     "loss": 26,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB10",
+     "loss": -16,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB12",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB13",
+     "loss": -11,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB15",
+     "loss": -4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB17",
+     "loss": 103,
+     "score": 0.4,
+     "via": "pf"
+    },
+    {
+     "testId": "QB18",
+     "loss": 1,
+     "score": 1,
      "via": "pf"
     }
    ]
   },
   "old": {
    "n": 66,
-   "score": 0.9878787878787877,
-   "avgLoss": -2.4242424242424243,
+   "score": 0.9893939393939394,
+   "avgLoss": -1.5454545454545454,
    "bigMistakes": 0,
    "answers": [
     {
      "testId": "QT01",
-     "loss": 2,
+     "loss": -2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT02",
-     "loss": 1,
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT03",
-     "loss": 1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT04",
-     "loss": -10,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT05",
      "loss": 5,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QT04",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT05",
+     "loss": 3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QT06",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT07",
-     "loss": -19,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT08",
-     "loss": -16,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT09",
      "loss": -7,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT10",
-     "loss": -10,
+     "testId": "QT07",
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT11",
+     "testId": "QT08",
+     "loss": -5,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT09",
+     "loss": -11,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT10",
      "loss": -8,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QT11",
+     "loss": -11,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QT12",
-     "loss": -10,
+     "loss": -11,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT13",
-     "loss": -4,
+     "loss": -15,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT14",
-     "loss": -6,
+     "loss": -5,
      "score": 1,
      "via": "pf"
     },
@@ -2940,13 +2940,13 @@
     },
     {
      "testId": "QT16",
-     "loss": -5,
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT17",
-     "loss": -6,
+     "loss": -2,
      "score": 1,
      "via": "pf"
     },
@@ -2958,25 +2958,25 @@
     },
     {
      "testId": "QT19",
-     "loss": 1,
+     "loss": 2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT20",
-     "loss": -3,
+     "loss": -1,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT21",
-     "loss": 0,
+     "loss": -2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT22",
-     "loss": -2,
+     "loss": -1,
      "score": 1,
      "via": "pf"
     },
@@ -2994,13 +2994,13 @@
     },
     {
      "testId": "QT25",
-     "loss": -1,
+     "loss": 2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT26",
-     "loss": 1,
+     "loss": -2,
      "score": 1,
      "via": "pf"
     },
@@ -3012,67 +3012,67 @@
     },
     {
      "testId": "QT28",
-     "loss": 4,
+     "loss": 7,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT29",
-     "loss": 17,
-     "score": 0.9,
+     "loss": 9,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT30",
-     "loss": -16,
+     "loss": -15,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT31",
-     "loss": -25,
+     "loss": -17,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT32",
-     "loss": -21,
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT33",
-     "loss": -11,
+     "loss": -6,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT34",
-     "loss": -11,
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT35",
-     "loss": -11,
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT36",
-     "loss": 0,
+     "loss": -9,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT37",
-     "loss": 0,
+     "loss": 3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT38",
-     "loss": 6,
+     "loss": 2,
      "score": 1,
      "via": "pf"
     },
@@ -3084,127 +3084,127 @@
     },
     {
      "testId": "QT40",
-     "loss": 0,
+     "loss": 2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QH01",
-     "loss": 11,
+     "loss": 35,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QH02",
-     "loss": 1,
-     "score": 1,
+     "loss": 13,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB3",
-     "loss": -19,
+     "loss": -39,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB5",
-     "loss": -11,
+     "loss": 2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QA3",
-     "loss": 4,
+     "loss": -8,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB6",
-     "loss": 21,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA5",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA6",
      "loss": 4,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QA7",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB7",
-     "loss": 32,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QB8",
-     "loss": -12,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB9",
-     "loss": -29,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB11",
-     "loss": 11,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA12",
-     "loss": -12,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB14",
-     "loss": 7,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB16",
+     "testId": "QA5",
      "loss": -7,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QA6",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA7",
+     "loss": -8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB7",
+     "loss": 29,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB8",
+     "loss": 16,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB9",
+     "loss": 14,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB11",
+     "loss": -17,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA12",
+     "loss": 7,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB14",
+     "loss": -4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB16",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QA15",
-     "loss": -5,
+     "loss": -17,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB1",
-     "loss": 21,
-     "score": 0.9,
+     "loss": 8,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB2",
-     "loss": 24,
-     "score": 0.9,
+     "loss": -9,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB4",
-     "loss": -8,
+     "loss": 3,
      "score": 1,
      "via": "pf"
     },
@@ -3216,31 +3216,31 @@
     },
     {
      "testId": "QB12",
-     "loss": -11,
+     "loss": -12,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB13",
-     "loss": -5,
+     "loss": 4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB15",
-     "loss": 2,
+     "loss": -4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB17",
-     "loss": 5,
-     "score": 1,
+     "loss": 15,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB18",
-     "loss": 16,
+     "loss": 13,
      "score": 0.9,
      "via": "pf"
     }
@@ -3252,121 +3252,121 @@
   "levelName": "大师",
   "neu": {
    "n": 66,
-   "score": 0.9878787878787879,
-   "avgLoss": -2.712121212121212,
+   "score": 0.9939393939393939,
+   "avgLoss": -3.772727272727273,
    "bigMistakes": 0,
    "answers": [
     {
      "testId": "QT01",
-     "loss": -3,
+     "loss": 7,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT02",
-     "loss": -2,
+     "loss": -4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT03",
-     "loss": -2,
+     "loss": -4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT04",
-     "loss": -3,
+     "loss": -11,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT05",
-     "loss": -9,
+     "loss": 1,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT06",
-     "loss": -6,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT07",
-     "loss": -2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT08",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT09",
-     "loss": -8,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT10",
      "loss": -7,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT11",
+     "testId": "QT07",
+     "loss": -13,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT08",
+     "loss": -8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT09",
+     "loss": -13,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT10",
      "loss": -14,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT12",
-     "loss": -20,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT13",
+     "testId": "QT11",
      "loss": -17,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QT12",
+     "loss": -19,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT13",
+     "loss": -15,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QT14",
-     "loss": -9,
+     "loss": -8,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT15",
-     "loss": -5,
+     "loss": -1,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT16",
-     "loss": -10,
+     "loss": -8,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT17",
-     "loss": -10,
+     "loss": -2,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT18",
-     "loss": -5,
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT19",
-     "loss": 0,
+     "loss": 1,
      "score": 1,
      "via": "pf"
     },
@@ -3378,13 +3378,13 @@
     },
     {
      "testId": "QT21",
-     "loss": 1,
+     "loss": -4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT22",
-     "loss": -1,
+     "loss": -10,
      "score": 1,
      "via": "pf"
     },
@@ -3396,55 +3396,55 @@
     },
     {
      "testId": "QT24",
-     "loss": 3,
+     "loss": -4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT25",
-     "loss": 0,
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT26",
-     "loss": -5,
+     "loss": -3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT27",
-     "loss": -9,
+     "loss": 8,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT28",
-     "loss": 2,
+     "loss": 3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT29",
-     "loss": -20,
+     "loss": -18,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT30",
-     "loss": -11,
+     "loss": -18,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT31",
-     "loss": -11,
+     "loss": -8,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT32",
-     "loss": -13,
+     "loss": -11,
      "score": 1,
      "via": "pf"
     },
@@ -3456,37 +3456,37 @@
     },
     {
      "testId": "QT34",
-     "loss": -6,
+     "loss": -9,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT35",
-     "loss": 9,
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT36",
-     "loss": -11,
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT37",
-     "loss": 0,
+     "loss": 3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT38",
-     "loss": -1,
-     "score": 1,
+     "loss": 13,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT39",
-     "loss": 0,
+     "loss": 3,
      "score": 1,
      "via": "pf"
     },
@@ -3498,79 +3498,79 @@
     },
     {
      "testId": "QH01",
-     "loss": 24,
+     "loss": 31,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QH02",
-     "loss": 2,
+     "loss": 8,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB3",
-     "loss": -17,
+     "loss": 3,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB5",
-     "loss": -3,
+     "loss": -16,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QA3",
-     "loss": -1,
+     "loss": -9,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB6",
-     "loss": 20,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA5",
-     "loss": -12,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA6",
      "loss": -4,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QA5",
+     "loss": -4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA6",
+     "loss": -8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QA7",
-     "loss": -2,
+     "loss": -7,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB7",
-     "loss": 27,
+     "loss": 19,
      "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB8",
-     "loss": -23,
+     "loss": -14,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB9",
-     "loss": -26,
+     "loss": -10,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB11",
-     "loss": 2,
+     "loss": -5,
      "score": 1,
      "via": "pf"
     },
@@ -3582,13 +3582,13 @@
     },
     {
      "testId": "QB14",
-     "loss": 12,
-     "score": 0.9,
+     "loss": -8,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB16",
-     "loss": 4,
+     "loss": -13,
      "score": 1,
      "via": "pf"
     },
@@ -3600,111 +3600,111 @@
     },
     {
      "testId": "QB1",
-     "loss": -1,
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB2",
-     "loss": -8,
+     "loss": -9,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB4",
-     "loss": 17,
-     "score": 0.9,
+     "loss": 6,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB10",
-     "loss": 9,
+     "loss": -1,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB12",
-     "loss": 2,
-     "score": 1,
+     "loss": 50,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QB13",
-     "loss": -4,
+     "loss": -17,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB15",
-     "loss": 12,
-     "score": 0.9,
+     "loss": -7,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB17",
-     "loss": 20,
-     "score": 0.9,
+     "loss": -3,
+     "score": 1,
      "via": "pf"
     },
     {
      "testId": "QB18",
-     "loss": 11,
-     "score": 0.9,
+     "loss": -3,
+     "score": 1,
      "via": "pf"
     }
    ]
   },
   "old": {
    "n": 66,
-   "score": 0.9924242424242424,
-   "avgLoss": -2.484848484848485,
+   "score": 0.9909090909090907,
+   "avgLoss": -2.9545454545454546,
    "bigMistakes": 0,
    "answers": [
     {
      "testId": "QT01",
-     "loss": 1,
+     "loss": 4,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT02",
-     "loss": 5,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT03",
-     "loss": 2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT04",
-     "loss": -2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT05",
-     "loss": -6,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT06",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT07",
      "loss": -4,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QT03",
+     "loss": -12,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT04",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT05",
+     "loss": 9,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT06",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT07",
+     "loss": -11,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QT08",
-     "loss": 1,
+     "loss": -2,
      "score": 1,
      "via": "pf"
     },
@@ -3716,127 +3716,127 @@
     },
     {
      "testId": "QT10",
-     "loss": 1,
+     "loss": -14,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT11",
-     "loss": -1,
+     "loss": -21,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT12",
-     "loss": -7,
+     "loss": -20,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT13",
-     "loss": -11,
+     "loss": -10,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT14",
-     "loss": -7,
+     "loss": -8,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT15",
-     "loss": -4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT16",
-     "loss": -9,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT17",
-     "loss": -10,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT18",
-     "loss": -9,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT19",
      "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT20",
+     "testId": "QT16",
      "loss": -5,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT21",
-     "loss": 4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT22",
-     "loss": 1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT23",
-     "loss": -2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT24",
-     "loss": -2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT25",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT26",
+     "testId": "QT17",
      "loss": -6,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT27",
-     "loss": 3,
+     "testId": "QT18",
+     "loss": -5,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QT28",
+     "testId": "QT19",
+     "loss": 2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT20",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT21",
+     "loss": -2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT22",
+     "loss": -8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT23",
+     "loss": -5,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT24",
+     "loss": -6,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT25",
      "loss": -1,
      "score": 1,
      "via": "pf"
     },
     {
+     "testId": "QT26",
+     "loss": 3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT27",
+     "loss": 6,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QT28",
+     "loss": 11,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
      "testId": "QT29",
-     "loss": -10,
+     "loss": -14,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT30",
-     "loss": -19,
+     "loss": -20,
      "score": 1,
      "via": "pf"
     },
@@ -3848,19 +3848,19 @@
     },
     {
      "testId": "QT32",
-     "loss": -12,
+     "loss": -11,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT33",
-     "loss": -13,
+     "loss": -9,
      "score": 1,
      "via": "pf"
     },
     {
      "testId": "QT34",
-     "loss": -13,
+     "loss": -9,
      "score": 1,
      "via": "pf"
     },
@@ -3872,7 +3872,7 @@
     },
     {
      "testId": "QT36",
-     "loss": -11,
+     "loss": 1,
      "score": 1,
      "via": "pf"
     },
@@ -3884,175 +3884,175 @@
     },
     {
      "testId": "QT38",
-     "loss": 7,
-     "score": 1,
+     "loss": 12,
+     "score": 0.9,
      "via": "pf"
     },
     {
      "testId": "QT39",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QT40",
-     "loss": 1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QH01",
-     "loss": 33,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QH02",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB3",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB5",
-     "loss": -9,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA3",
-     "loss": -12,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB6",
-     "loss": 14,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QA5",
-     "loss": -4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA6",
-     "loss": -1,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA7",
-     "loss": 6,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB7",
-     "loss": 23,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QB8",
-     "loss": -29,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB9",
-     "loss": -18,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB11",
-     "loss": 2,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA12",
-     "loss": 4,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB14",
-     "loss": 15,
-     "score": 0.9,
-     "via": "pf"
-    },
-    {
-     "testId": "QB16",
-     "loss": -9,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QA15",
-     "loss": -20,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB1",
-     "loss": -3,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB2",
-     "loss": 7,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB4",
-     "loss": -6,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB10",
-     "loss": -17,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB12",
-     "loss": 0,
-     "score": 1,
-     "via": "pf"
-    },
-    {
-     "testId": "QB13",
      "loss": 3,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB15",
-     "loss": 1,
+     "testId": "QT40",
+     "loss": 0,
      "score": 1,
      "via": "pf"
     },
     {
-     "testId": "QB17",
+     "testId": "QH01",
+     "loss": 10,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QH02",
+     "loss": 7,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB3",
+     "loss": -10,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB5",
+     "loss": -12,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA3",
+     "loss": -7,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB6",
+     "loss": 12,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QA5",
+     "loss": 3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA6",
+     "loss": -6,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA7",
+     "loss": -4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB7",
      "loss": 17,
      "score": 0.9,
      "via": "pf"
     },
     {
+     "testId": "QB8",
+     "loss": -14,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB9",
+     "loss": -3,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB11",
+     "loss": 11,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QA12",
+     "loss": 2,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB14",
+     "loss": -8,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB16",
+     "loss": -13,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QA15",
+     "loss": -15,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB1",
+     "loss": -1,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB2",
+     "loss": 4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB4",
+     "loss": 11,
+     "score": 0.9,
+     "via": "pf"
+    },
+    {
+     "testId": "QB10",
+     "loss": -1,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB12",
+     "loss": 7,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB13",
+     "loss": -18,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB15",
+     "loss": -5,
+     "score": 1,
+     "via": "pf"
+    },
+    {
+     "testId": "QB17",
+     "loss": -4,
+     "score": 1,
+     "via": "pf"
+    },
+    {
      "testId": "QB18",
-     "loss": -7,
+     "loss": 10,
      "score": 1,
      "via": "pf"
     }

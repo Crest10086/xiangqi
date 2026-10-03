@@ -11,12 +11,13 @@
   // 业余/进阶/高手/大师(idx1-4) 用 Pikafish（入门 idx0 用内置引擎），movetime 越大越强
   var HEAVY = [1, 2, 3, 4];
   // 强度梯度靠"思考时间 + 候选随机"两旋钮；开局库只给大师档（见 index.html）
-  var MILLIS = { 1: 50, 2: 150, 3: 500, 4: 6000 };
+  var MILLIS = { 1: 50, 2: 150, 3: 200, 4: 6000 };
   // MultiPV 在这个 WASM 构建里只产出 1 条 PV(实测), 拿不到候选池 -> 失误率改用引擎原生 UCI_Elo 限制
   var MULTIPV = {};
   var UCI_EXTRA = {
     1: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1400 }],
-    2: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1800 }]
+    2: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 1800 }],
+    3: [{ name: 'UCI_LimitStrength', value: 'true' }, { name: 'UCI_Elo', value: 2400 }]
   };
   var WORKER_PATH = 'js/engines/pikafish/pikafish.worker.js';
 
