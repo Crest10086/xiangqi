@@ -4,3 +4,7 @@ test_*.html
 *.probe.js
 pf_*.html
 cdp_*.js
+node_pf_test.js
+# 基准中间产物（report.md / report.json / fixtures.json 进仓库作为验收证据）
+bench/results/
+bench/diag.js
