@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="font:14px/1.7 system-ui;padding:16px;max-width:640px;margin:0 auto">
+<h3>设备搜索性能自检</h3>
+<p>本页用与线上 AI 相同的引擎，在不同思考时间下实测本机能搜索多少节点、到达多深。用于判断手机上的实际棋力相对桌面测试的差距。</p>
+<button id="go" style="padding:10px 16px;font-size:16px">开始自检</button>
+<pre id="log">未运行</pre>
+<p id="verdict"></p>
+<script src="js/pikafish_bridge.js"></script>
+<script>
+const el=document.getElementById('log'); const add=(m)=>{el.textContent+='\n'+m;};
+const FEN='rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1';
+// 桌面基准（本机 Chrome 实测, 2026-10-03）
+const DESKTOP={500:{nodes:96000,depth:15},6000:{nodes:1080000,depth:20}};
+document.getElementById('go').onclick=async()=>{
+  el.textContent='加载中…';
+  const ok=await PF.whenReady();
+  if(!ok){add('引擎加载失败');return;}
+  let ratio=null;
+  for(const ms of [500,2000,6000]){
+    PF.lastInfo=null;
+    const t0=Date.now();
+    await PF.search(FEN, ms, 1, null);
+    const info=PF.lastInfo||{};
+    const nodes=info.nodes||0, real=Date.now()-t0;
+    add(ms+'ms -> depth '+(info.depth||'?')+' 节点 '+nodes+' ('+Math.round(nodes/Math.max(real,1)/1000)+'k 节点/秒)');
+    if(DESKTOP[ms]&&DESKTOP[ms].nodes) ratio=Math.min(ratio===null?1e9:ratio, nodes/DESKTOP[ms].nodes);
+  }
+  if(ratio!==null){
+    const pct=Math.round(ratio*100);
+    const v=document.getElementById('verdict');
+    v.textContent='本机在固定思考时间内的搜索量约为桌面基准的 '+pct+'%。'
+      + (pct>=80?' 棋力与桌面测试基本一致。'
+         : pct>=40?' 中高档棋力会低于桌面测试值，但五档之间的相对差距仍然保持。'
+         : ' 建议把高档的思考时间参数放大（例如高手 500ms→1500ms、大师 6000ms→15000ms），或改用固定节点数上限，才能在本机达到报告中的棋力。');
+  }
+};
+</script></body></html>
