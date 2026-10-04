@@ -1,0 +1,1357 @@
+DRV: not isolated, registering SW (try 0)
+DRV: not isolated, registering SW (try 1)
+DRV: isolated ok, task=task_rule10.json
+DRV: engine ready
+S|SW_A_rook_a5_110|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 110 1
+S|SW_A_rook_a5_110|CMD|go depth 2
+S|SW_A_rook_a5_110|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_110|OUT|info string Using 4 threads
+S|SW_A_rook_a5_110|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_110|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_110|OUT|info depth 1 seldepth 3 multipv 1 score cp 510 nodes 184 nps 30666 hashfull 0 tbhits 0 time 6 pv a5i5
+S|SW_A_rook_a5_110|OUT|info depth 2 seldepth 5 multipv 1 score cp 566 nodes 1157 nps 165285 hashfull 0 tbhits 0 time 7 pv a5i5 e9e8
+S|SW_A_rook_a5_110|OUT|bestmove a5i5 ponder e9e8
+S|SW_A_rook_a5_110|TIMEOUT
+S|SW_A_rook_a5_110|END|lines=7
+S|SW_A_rook_a5_115|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 115 1
+S|SW_A_rook_a5_115|CMD|go depth 2
+S|SW_A_rook_a5_115|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_115|OUT|info string Using 4 threads
+S|SW_A_rook_a5_115|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_115|OUT|info depth 1 seldepth 4 multipv 1 score cp 549 nodes 49 nps 49000 hashfull 0 tbhits 0 time 1 pv a5e5 e9f9
+S|SW_A_rook_a5_115|OUT|info depth 2 seldepth 4 multipv 1 score mate 2 nodes 493 nps 493000 hashfull 0 tbhits 0 time 1 pv a5e5 e9f9 e5e8
+S|SW_A_rook_a5_115|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_115|OUT|bestmove a5e5 ponder e9f9
+S|SW_A_rook_a5_115|TIMEOUT
+S|SW_A_rook_a5_115|END|lines=7
+S|SW_A_rook_a5_118|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 118 1
+S|SW_A_rook_a5_118|CMD|go depth 2
+S|SW_A_rook_a5_118|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_118|OUT|info string Using 4 threads
+S|SW_A_rook_a5_118|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_118|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_118|OUT|info depth 1 seldepth 2 multipv 1 score cp 507 nodes 79 nps 79000 hashfull 0 tbhits 0 time 1 pv a5i5
+S|SW_A_rook_a5_118|OUT|info depth 2 seldepth 3 multipv 1 score cp 12 nodes 743 nps 743000 hashfull 0 tbhits 0 time 1 pv a5i5 e9e8
+S|SW_A_rook_a5_118|OUT|info depth 2 seldepth 3 multipv 1 score cp 12 nodes 546 nps 546000 hashfull 0 tbhits 0 time 1 pv a5i5
+S|SW_A_rook_a5_118|OUT|bestmove a5i5 ponder e9e8
+S|SW_A_rook_a5_118|TIMEOUT
+S|SW_A_rook_a5_118|END|lines=8
+S|SW_A_rook_a5_119|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 119 1
+S|SW_A_rook_a5_119|CMD|go depth 2
+S|SW_A_rook_a5_119|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_119|OUT|info string Using 4 threads
+S|SW_A_rook_a5_119|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_119|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_119|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 58 nps 58000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_119|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 540 nps 540000 hashfull 0 tbhits 0 time 1 pv a5e5
+S|SW_A_rook_a5_119|OUT|bestmove a5e5
+S|SW_A_rook_a5_119|TIMEOUT
+S|SW_A_rook_a5_119|END|lines=7
+S|SW_A_rook_a5_120|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 120 1
+S|SW_A_rook_a5_120|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 120 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_120|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_120|CMD|go depth 2
+S|SW_A_rook_a5_120|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_120|OUT|info string Using 4 threads
+S|SW_A_rook_a5_120|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_120|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_120|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 19 nps 19000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_120|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 333 nps 333000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_120|OUT|bestmove a5a0
+S|SW_A_rook_a5_120|TIMEOUT
+S|SW_A_rook_a5_120|END|lines=9
+S|SW_A_rook_a5_121|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 121 1
+S|SW_A_rook_a5_121|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 121 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_121|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_121|CMD|go depth 2
+S|SW_A_rook_a5_121|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_121|OUT|info string Using 4 threads
+S|SW_A_rook_a5_121|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_121|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_121|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 34 nps 34000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_121|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 427 nps 427000 hashfull 0 tbhits 0 time 1 pv a5a1
+S|SW_A_rook_a5_121|OUT|bestmove a5a1
+S|SW_A_rook_a5_121|TIMEOUT
+S|SW_A_rook_a5_121|END|lines=9
+S|SW_A_rook_a5_122|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 122 1
+S|SW_A_rook_a5_122|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 122 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_122|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_122|CMD|go depth 2
+S|SW_A_rook_a5_122|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_122|OUT|info string Using 4 threads
+S|SW_A_rook_a5_122|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_122|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_122|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 139 nps 139000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_122|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 631 nps 631000 hashfull 0 tbhits 0 time 1 pv a5a2
+S|SW_A_rook_a5_122|OUT|bestmove a5a2
+S|SW_A_rook_a5_122|TIMEOUT
+S|SW_A_rook_a5_122|END|lines=9
+S|SW_A_rook_a5_125|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 125 1
+S|SW_A_rook_a5_125|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 125 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_125|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_125|CMD|go depth 2
+S|SW_A_rook_a5_125|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_125|OUT|info string Using 4 threads
+S|SW_A_rook_a5_125|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_125|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_125|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 139 nps 139000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_125|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 520 nps 520000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_125|OUT|bestmove a5a0
+S|SW_A_rook_a5_125|TIMEOUT
+S|SW_A_rook_a5_125|END|lines=9
+S|SW_A_rook_a5_130|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 130 1
+S|SW_A_rook_a5_130|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 130 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_130|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_130|CMD|go depth 2
+S|SW_A_rook_a5_130|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_130|OUT|info string Using 4 threads
+S|SW_A_rook_a5_130|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_130|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_130|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 86 nps 86000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_130|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 686 nps 686000 hashfull 0 tbhits 0 time 1 pv a5a1
+S|SW_A_rook_a5_130|OUT|bestmove a5a1
+S|SW_A_rook_a5_130|TIMEOUT
+S|SW_A_rook_a5_130|END|lines=9
+S|SW_A_rook_a5_135|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 135 1
+S|SW_A_rook_a5_135|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 135 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_135|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_135|CMD|go depth 2
+S|SW_A_rook_a5_135|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_135|OUT|info string Using 4 threads
+S|SW_A_rook_a5_135|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_135|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_135|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 39 nps 39000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_135|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 517 nps 517000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_135|OUT|bestmove a5a0
+S|SW_A_rook_a5_135|TIMEOUT
+S|SW_A_rook_a5_135|END|lines=9
+S|SW_A_rook_a5_140|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 140 1
+S|SW_A_rook_a5_140|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 140 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_140|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_140|CMD|go depth 2
+S|SW_A_rook_a5_140|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_140|OUT|info string Using 4 threads
+S|SW_A_rook_a5_140|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_140|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_140|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 70 nps 70000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_140|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 581 nps 581000 hashfull 0 tbhits 0 time 1 pv a5a1
+S|SW_A_rook_a5_140|OUT|bestmove a5a1
+S|SW_A_rook_a5_140|TIMEOUT
+S|SW_A_rook_a5_140|END|lines=9
+S|SW_A_rook_a5_150|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 150 1
+S|SW_A_rook_a5_150|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 150 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_150|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_150|CMD|go depth 2
+S|SW_A_rook_a5_150|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_150|OUT|info string Using 4 threads
+S|SW_A_rook_a5_150|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_150|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_150|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 19 nps 19000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_150|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 399 nps 399000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_150|OUT|bestmove a5a0
+S|SW_A_rook_a5_150|TIMEOUT
+S|SW_A_rook_a5_150|END|lines=9
+S|SW_A_rook_a5_160|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 160 1
+S|SW_A_rook_a5_160|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 160 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_160|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_160|CMD|go depth 2
+S|SW_A_rook_a5_160|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_160|OUT|info string Using 4 threads
+S|SW_A_rook_a5_160|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_160|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_160|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 39 nps 39000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_160|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 482 nps 482000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_160|OUT|bestmove a5a0
+S|SW_A_rook_a5_160|TIMEOUT
+S|SW_A_rook_a5_160|END|lines=9
+S|SW_A_rook_a5_170|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 170 1
+S|SW_A_rook_a5_170|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 170 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_170|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_170|CMD|go depth 2
+S|SW_A_rook_a5_170|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_170|OUT|info string Using 4 threads
+S|SW_A_rook_a5_170|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_170|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_170|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 77 nps 77000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_170|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 711 nps 711000 hashfull 0 tbhits 0 time 1 pv a5a1
+S|SW_A_rook_a5_170|OUT|bestmove a5a1
+S|SW_A_rook_a5_170|TIMEOUT
+S|SW_A_rook_a5_170|END|lines=9
+S|SW_A_rook_a5_180|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 180 1
+S|SW_A_rook_a5_180|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 180 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_180|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_180|CMD|go depth 2
+S|SW_A_rook_a5_180|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_180|OUT|info string Using 4 threads
+S|SW_A_rook_a5_180|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_180|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_180|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_180|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 530 nps 530000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_180|OUT|bestmove a5a0
+S|SW_A_rook_a5_180|TIMEOUT
+S|SW_A_rook_a5_180|END|lines=9
+S|SW_A_rook_a5_190|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 190 1
+S|SW_A_rook_a5_190|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 190 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_190|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_190|CMD|go depth 2
+S|SW_A_rook_a5_190|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_190|OUT|info string Using 4 threads
+S|SW_A_rook_a5_190|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_190|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_190|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 37 nps 37000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_190|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 535 nps 535000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_190|OUT|bestmove a5a0
+S|SW_A_rook_a5_190|TIMEOUT
+S|SW_A_rook_a5_190|END|lines=9
+S|SW_A_rook_a5_200|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 200 1
+S|SW_A_rook_a5_200|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 200 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_200|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_200|CMD|go depth 2
+S|SW_A_rook_a5_200|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_200|OUT|info string Using 4 threads
+S|SW_A_rook_a5_200|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_200|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_200|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 86 nps 86000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_200|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 574 nps 574000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_200|OUT|bestmove a5a0
+S|SW_A_rook_a5_200|TIMEOUT
+S|SW_A_rook_a5_200|END|lines=9
+S|SW_A_rook_a5_210|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 210 1
+S|SW_A_rook_a5_210|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 210 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_210|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_210|CMD|go depth 2
+S|SW_A_rook_a5_210|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_210|OUT|info string Using 4 threads
+S|SW_A_rook_a5_210|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_210|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_210|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 134 nps 134000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_210|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 849 nps 849000 hashfull 0 tbhits 0 time 1 pv a5a1
+S|SW_A_rook_a5_210|OUT|bestmove a5a1
+S|SW_A_rook_a5_210|TIMEOUT
+S|SW_A_rook_a5_210|END|lines=9
+S|SW_A_rook_a5_220|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 220 1
+S|SW_A_rook_a5_220|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 220 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_220|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_220|CMD|go depth 2
+S|SW_A_rook_a5_220|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_220|OUT|info string Using 4 threads
+S|SW_A_rook_a5_220|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_220|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_220|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 50 nps 50000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_220|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 602 nps 602000 hashfull 0 tbhits 0 time 1 pv a5a1
+S|SW_A_rook_a5_220|OUT|bestmove a5a1
+S|SW_A_rook_a5_220|TIMEOUT
+S|SW_A_rook_a5_220|END|lines=9
+S|SW_A_rook_a5_230|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 230 1
+S|SW_A_rook_a5_230|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 230 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_230|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_230|CMD|go depth 2
+S|SW_A_rook_a5_230|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_230|OUT|info string Using 4 threads
+S|SW_A_rook_a5_230|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_230|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_230|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 37 nps 37000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_230|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 358 nps 358000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_230|OUT|bestmove a5a0
+S|SW_A_rook_a5_230|TIMEOUT
+S|SW_A_rook_a5_230|END|lines=9
+S|SW_A_rook_a5_239|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 239 1
+S|SW_A_rook_a5_239|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 239 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_239|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_239|CMD|go depth 2
+S|SW_A_rook_a5_239|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_239|OUT|info string Using 4 threads
+S|SW_A_rook_a5_239|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_239|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_239|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 39 nps 39000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_239|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 579 nps 579000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_239|OUT|bestmove a5a0
+S|SW_A_rook_a5_239|TIMEOUT
+S|SW_A_rook_a5_239|END|lines=9
+S|SW_A_rook_a5_240|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 240 1
+S|SW_A_rook_a5_240|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 240 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_240|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_240|CMD|go depth 2
+S|SW_A_rook_a5_240|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_240|OUT|info string Using 4 threads
+S|SW_A_rook_a5_240|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_240|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_240|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 72 nps 72000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_240|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 1251 nps 1251000 hashfull 0 tbhits 0 time 1 pv a5a2
+S|SW_A_rook_a5_240|OUT|bestmove a5a2
+S|SW_A_rook_a5_240|TIMEOUT
+S|SW_A_rook_a5_240|END|lines=9
+S|SW_A_rook_a5_241|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 241 1
+S|SW_A_rook_a5_241|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 241 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_241|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_241|CMD|go depth 2
+S|SW_A_rook_a5_241|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_241|OUT|info string Using 4 threads
+S|SW_A_rook_a5_241|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_241|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_241|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 55 nps 55000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_241|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 631 nps 631000 hashfull 0 tbhits 0 time 1 pv a5a2
+S|SW_A_rook_a5_241|OUT|bestmove a5a2
+S|SW_A_rook_a5_241|TIMEOUT
+S|SW_A_rook_a5_241|END|lines=9
+S|SW_A_rook_a5_250|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 250 1
+S|SW_A_rook_a5_250|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 250 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_250|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_250|CMD|go depth 2
+S|SW_A_rook_a5_250|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_250|OUT|info string Using 4 threads
+S|SW_A_rook_a5_250|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_250|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_250|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 28 nps 28000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_250|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 468 nps 468000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_250|OUT|bestmove a5a0
+S|SW_A_rook_a5_250|TIMEOUT
+S|SW_A_rook_a5_250|END|lines=9
+S|SW_A_rook_a5_300|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 300 1
+S|SW_A_rook_a5_300|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 300 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_300|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_300|CMD|go depth 2
+S|SW_A_rook_a5_300|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_300|OUT|info string Using 4 threads
+S|SW_A_rook_a5_300|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_300|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_300|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 40 nps 40000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_300|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 498 nps 498000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_300|OUT|bestmove a5a0
+S|SW_A_rook_a5_300|TIMEOUT
+S|SW_A_rook_a5_300|END|lines=9
+S|SW_A_rook_a5_400|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 400 1
+S|SW_A_rook_a5_400|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 400 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_400|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_400|CMD|go depth 2
+S|SW_A_rook_a5_400|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_400|OUT|info string Using 4 threads
+S|SW_A_rook_a5_400|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_400|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_400|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 58 nps 58000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_400|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 809 nps 809000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_400|OUT|bestmove a5a0
+S|SW_A_rook_a5_400|TIMEOUT
+S|SW_A_rook_a5_400|END|lines=9
+S|SW_A_rook_a5_500|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 500 1
+S|SW_A_rook_a5_500|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 500 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_500|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_500|CMD|go depth 2
+S|SW_A_rook_a5_500|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_500|OUT|info string Using 4 threads
+S|SW_A_rook_a5_500|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_500|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_500|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 56 nps 56000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_500|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 662 nps 662000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_500|OUT|bestmove a5a0
+S|SW_A_rook_a5_500|TIMEOUT
+S|SW_A_rook_a5_500|END|lines=9
+S|SW_A_rook_a5_900|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 900 1
+S|SW_A_rook_a5_900|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 900 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_900|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_900|CMD|go depth 2
+S|SW_A_rook_a5_900|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_900|OUT|info string Using 4 threads
+S|SW_A_rook_a5_900|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_900|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_900|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 44 nps 44000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_900|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 581 nps 581000 hashfull 0 tbhits 0 time 1 pv a5a1
+S|SW_A_rook_a5_900|OUT|bestmove a5a1
+S|SW_A_rook_a5_900|TIMEOUT
+S|SW_A_rook_a5_900|END|lines=9
+S|SW_A_rook_a5_999|CMD|position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 999 1
+S|SW_A_rook_a5_999|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 999 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_A_rook_a5_999|OUT|
+DRV error unhandled: [object Object]
+S|SW_A_rook_a5_999|CMD|go depth 2
+S|SW_A_rook_a5_999|OUT|info string Available processors: 0-15
+S|SW_A_rook_a5_999|OUT|info string Using 4 threads
+S|SW_A_rook_a5_999|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_A_rook_a5_999|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_A_rook_a5_999|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 20 nps 20000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_999|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 574 nps 574000 hashfull 0 tbhits 0 time 1 pv a5a0
+S|SW_A_rook_a5_999|OUT|bestmove a5a0
+S|SW_A_rook_a5_999|TIMEOUT
+S|SW_A_rook_a5_999|END|lines=9
+S|SW_B_rook_d8_110|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 110 1
+S|SW_B_rook_d8_110|CMD|go depth 2
+S|SW_B_rook_d8_110|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_110|OUT|info string Using 4 threads
+S|SW_B_rook_d8_110|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_110|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_110|OUT|info depth 1 seldepth 3 multipv 1 score cp 487 nodes 81 nps 81000 hashfull 0 tbhits 0 time 1 pv d8d9 e9e8
+S|SW_B_rook_d8_110|OUT|info depth 2 seldepth 3 multipv 1 score cp 592 nodes 505 nps 505000 hashfull 0 tbhits 0 time 1 pv d8d3
+S|SW_B_rook_d8_110|OUT|info depth 2 seldepth 3 multipv 1 score cp 592 nodes 582 nps 582000 hashfull 0 tbhits 0 time 1 pv d8d3 e9e8
+S|SW_B_rook_d8_110|OUT|bestmove d8d3 ponder e9e8
+S|SW_B_rook_d8_110|TIMEOUT
+S|SW_B_rook_d8_110|END|lines=8
+S|SW_B_rook_d8_115|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 115 1
+S|SW_B_rook_d8_115|CMD|go depth 2
+S|SW_B_rook_d8_115|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_115|OUT|info string Using 4 threads
+S|SW_B_rook_d8_115|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_115|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_115|OUT|info depth 1 seldepth 5 multipv 1 score cp 546 nodes 88 nps 88000 hashfull 0 tbhits 0 time 1 pv d8d3
+S|SW_B_rook_d8_115|OUT|info depth 2 seldepth 2 multipv 1 score cp 549 nodes 278 nps 278000 hashfull 0 tbhits 0 time 1 pv d8d1
+S|SW_B_rook_d8_115|OUT|info depth 2 seldepth 2 multipv 1 score cp 549 nodes 519 nps 519000 hashfull 0 tbhits 0 time 1 pv d8d1 e9e8
+S|SW_B_rook_d8_115|OUT|bestmove d8d1 ponder e9e8
+S|SW_B_rook_d8_115|TIMEOUT
+S|SW_B_rook_d8_115|END|lines=8
+S|SW_B_rook_d8_118|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 118 1
+S|SW_B_rook_d8_118|CMD|go depth 2
+S|SW_B_rook_d8_118|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_118|OUT|info string Using 4 threads
+S|SW_B_rook_d8_118|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_118|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_118|OUT|info depth 1 seldepth 2 multipv 1 score cp 513 nodes 76 nps 76000 hashfull 0 tbhits 0 time 1 pv d8d2
+S|SW_B_rook_d8_118|OUT|info depth 2 seldepth 3 multipv 1 score mate 1 nodes 920 nps 920000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_118|OUT|bestmove d8f8
+S|SW_B_rook_d8_118|TIMEOUT
+S|SW_B_rook_d8_118|END|lines=7
+S|SW_B_rook_d8_119|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 119 1
+S|SW_B_rook_d8_119|CMD|go depth 2
+S|SW_B_rook_d8_119|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_119|OUT|info string Using 4 threads
+S|SW_B_rook_d8_119|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_119|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_119|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 48 nps 48000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_119|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 563 nps 563000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_119|OUT|bestmove d8f8
+S|SW_B_rook_d8_119|TIMEOUT
+S|SW_B_rook_d8_119|END|lines=7
+S|SW_B_rook_d8_120|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 120 1
+S|SW_B_rook_d8_120|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 120 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_120|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_120|CMD|go depth 2
+S|SW_B_rook_d8_120|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_120|OUT|info string Using 4 threads
+S|SW_B_rook_d8_120|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_120|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_120|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 102 nps 102000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_120|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 754 nps 754000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_120|OUT|bestmove d8f8
+S|SW_B_rook_d8_120|TIMEOUT
+S|SW_B_rook_d8_120|END|lines=9
+S|SW_B_rook_d8_121|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 121 1
+S|SW_B_rook_d8_121|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 121 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_121|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_121|CMD|go depth 2
+S|SW_B_rook_d8_121|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_121|OUT|info string Using 4 threads
+S|SW_B_rook_d8_121|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_121|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_121|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 122 nps 122000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_121|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 713 nps 713000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_121|OUT|bestmove d8f8
+S|SW_B_rook_d8_121|TIMEOUT
+S|SW_B_rook_d8_121|END|lines=9
+S|SW_B_rook_d8_122|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 122 1
+S|SW_B_rook_d8_122|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 122 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_122|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_122|CMD|go depth 2
+S|SW_B_rook_d8_122|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_122|OUT|info string Using 4 threads
+S|SW_B_rook_d8_122|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_122|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_122|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 34 nps 34000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_122|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 523 nps 523000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_122|OUT|bestmove d8f8
+S|SW_B_rook_d8_122|TIMEOUT
+S|SW_B_rook_d8_122|END|lines=9
+S|SW_B_rook_d8_125|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 125 1
+S|SW_B_rook_d8_125|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 125 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_125|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_125|CMD|go depth 2
+S|SW_B_rook_d8_125|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_125|OUT|info string Using 4 threads
+S|SW_B_rook_d8_125|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_125|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_125|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_125|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 403 nps 403000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_125|OUT|bestmove d8f8
+S|SW_B_rook_d8_125|TIMEOUT
+S|SW_B_rook_d8_125|END|lines=9
+S|SW_B_rook_d8_130|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 130 1
+S|SW_B_rook_d8_130|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 130 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_130|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_130|CMD|go depth 2
+S|SW_B_rook_d8_130|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_130|OUT|info string Using 4 threads
+S|SW_B_rook_d8_130|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_130|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_130|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 348 nps 348000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_130|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 1019 nps 1019000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_130|OUT|bestmove d8f8
+S|SW_B_rook_d8_130|TIMEOUT
+S|SW_B_rook_d8_130|END|lines=9
+S|SW_B_rook_d8_135|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 135 1
+S|SW_B_rook_d8_135|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 135 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_135|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_135|CMD|go depth 2
+S|SW_B_rook_d8_135|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_135|OUT|info string Using 4 threads
+S|SW_B_rook_d8_135|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_135|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_135|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 39 nps 39000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_135|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 583 nps 583000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_135|OUT|bestmove d8f8
+S|SW_B_rook_d8_135|TIMEOUT
+S|SW_B_rook_d8_135|END|lines=9
+S|SW_B_rook_d8_140|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 140 1
+S|SW_B_rook_d8_140|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 140 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_140|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_140|CMD|go depth 2
+S|SW_B_rook_d8_140|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_140|OUT|info string Using 4 threads
+S|SW_B_rook_d8_140|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_140|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_140|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 53 nps 53000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_140|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 674 nps 674000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_140|OUT|bestmove d8f8
+S|SW_B_rook_d8_140|TIMEOUT
+S|SW_B_rook_d8_140|END|lines=9
+S|SW_B_rook_d8_150|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 150 1
+S|SW_B_rook_d8_150|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 150 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_150|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_150|CMD|go depth 2
+S|SW_B_rook_d8_150|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_150|OUT|info string Using 4 threads
+S|SW_B_rook_d8_150|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_150|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_150|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 156 nps 156000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_150|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 957 nps 957000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_150|OUT|bestmove d8f8
+S|SW_B_rook_d8_150|TIMEOUT
+S|SW_B_rook_d8_150|END|lines=9
+S|SW_B_rook_d8_160|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 160 1
+S|SW_B_rook_d8_160|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 160 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_160|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_160|CMD|go depth 2
+S|SW_B_rook_d8_160|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_160|OUT|info string Using 4 threads
+S|SW_B_rook_d8_160|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_160|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_160|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 57 nps 57000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_160|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 752 nps 752000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_160|OUT|bestmove d8f8
+S|SW_B_rook_d8_160|TIMEOUT
+S|SW_B_rook_d8_160|END|lines=9
+S|SW_B_rook_d8_170|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 170 1
+S|SW_B_rook_d8_170|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 170 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_170|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_170|CMD|go depth 2
+S|SW_B_rook_d8_170|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_170|OUT|info string Using 4 threads
+S|SW_B_rook_d8_170|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_170|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_170|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 38 nps 38000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_170|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 414 nps 414000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_170|OUT|bestmove d8f8
+S|SW_B_rook_d8_170|TIMEOUT
+S|SW_B_rook_d8_170|END|lines=9
+S|SW_B_rook_d8_180|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 180 1
+S|SW_B_rook_d8_180|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 180 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_180|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_180|CMD|go depth 2
+S|SW_B_rook_d8_180|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_180|OUT|info string Using 4 threads
+S|SW_B_rook_d8_180|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_180|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_180|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 19 nps 19000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_180|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 287 nps 287000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_180|OUT|bestmove d8f8
+S|SW_B_rook_d8_180|TIMEOUT
+S|SW_B_rook_d8_180|END|lines=9
+S|SW_B_rook_d8_190|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 190 1
+S|SW_B_rook_d8_190|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 190 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_190|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_190|CMD|go depth 2
+S|SW_B_rook_d8_190|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_190|OUT|info string Using 4 threads
+S|SW_B_rook_d8_190|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_190|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_190|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 182 nps 182000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_190|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 809 nps 809000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_190|OUT|bestmove d8f8
+S|SW_B_rook_d8_190|TIMEOUT
+S|SW_B_rook_d8_190|END|lines=9
+S|SW_B_rook_d8_200|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 200 1
+S|SW_B_rook_d8_200|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 200 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_200|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_200|CMD|go depth 2
+S|SW_B_rook_d8_200|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_200|OUT|info string Using 4 threads
+S|SW_B_rook_d8_200|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_200|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_200|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 62 nps 62000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_200|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 561 nps 561000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_200|OUT|bestmove d8f8
+S|SW_B_rook_d8_200|TIMEOUT
+S|SW_B_rook_d8_200|END|lines=9
+S|SW_B_rook_d8_210|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 210 1
+S|SW_B_rook_d8_210|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 210 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_210|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_210|CMD|go depth 2
+S|SW_B_rook_d8_210|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_210|OUT|info string Using 4 threads
+S|SW_B_rook_d8_210|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_210|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_210|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 19 nps 19000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_210|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 652 nps 652000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_210|OUT|bestmove d8f8
+S|SW_B_rook_d8_210|TIMEOUT
+S|SW_B_rook_d8_210|END|lines=9
+S|SW_B_rook_d8_220|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 220 1
+S|SW_B_rook_d8_220|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 220 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_220|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_220|CMD|go depth 2
+S|SW_B_rook_d8_220|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_220|OUT|info string Using 4 threads
+S|SW_B_rook_d8_220|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_220|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_220|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 112 nps 112000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_220|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 723 nps 723000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_220|OUT|bestmove d8f8
+S|SW_B_rook_d8_220|TIMEOUT
+S|SW_B_rook_d8_220|END|lines=9
+S|SW_B_rook_d8_230|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 230 1
+S|SW_B_rook_d8_230|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 230 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_230|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_230|CMD|go depth 2
+S|SW_B_rook_d8_230|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_230|OUT|info string Using 4 threads
+S|SW_B_rook_d8_230|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_230|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_230|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 19 nps 19000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_230|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 454 nps 454000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_230|OUT|bestmove d8f8
+S|SW_B_rook_d8_230|TIMEOUT
+S|SW_B_rook_d8_230|END|lines=9
+S|SW_B_rook_d8_239|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 239 1
+S|SW_B_rook_d8_239|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 239 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_239|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_239|CMD|go depth 2
+S|SW_B_rook_d8_239|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_239|OUT|info string Using 4 threads
+S|SW_B_rook_d8_239|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_239|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_239|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 36 nps 36000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_239|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 383 nps 383000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_239|OUT|bestmove d8f8
+S|SW_B_rook_d8_239|TIMEOUT
+S|SW_B_rook_d8_239|END|lines=9
+S|SW_B_rook_d8_240|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 240 1
+S|SW_B_rook_d8_240|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 240 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_240|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_240|CMD|go depth 2
+S|SW_B_rook_d8_240|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_240|OUT|info string Using 4 threads
+S|SW_B_rook_d8_240|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_240|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_240|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 35 nps 35000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_240|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 464 nps 464000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_240|OUT|bestmove d8f8
+S|SW_B_rook_d8_240|TIMEOUT
+S|SW_B_rook_d8_240|END|lines=9
+S|SW_B_rook_d8_241|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 241 1
+S|SW_B_rook_d8_241|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 241 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_241|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_241|CMD|go depth 2
+S|SW_B_rook_d8_241|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_241|OUT|info string Using 4 threads
+S|SW_B_rook_d8_241|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_241|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_241|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 35 nps 35000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_241|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 416 nps 416000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_241|OUT|bestmove d8f8
+S|SW_B_rook_d8_241|TIMEOUT
+S|SW_B_rook_d8_241|END|lines=9
+S|SW_B_rook_d8_250|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 250 1
+S|SW_B_rook_d8_250|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 250 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_250|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_250|CMD|go depth 2
+S|SW_B_rook_d8_250|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_250|OUT|info string Using 4 threads
+S|SW_B_rook_d8_250|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_250|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_250|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 38 nps 38000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_250|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 531 nps 531000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_250|OUT|bestmove d8f8
+S|SW_B_rook_d8_250|TIMEOUT
+S|SW_B_rook_d8_250|END|lines=9
+S|SW_B_rook_d8_300|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 300 1
+S|SW_B_rook_d8_300|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 300 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_300|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_300|CMD|go depth 2
+S|SW_B_rook_d8_300|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_300|OUT|info string Using 4 threads
+S|SW_B_rook_d8_300|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_300|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_300|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 36 nps 36000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_300|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 478 nps 478000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_300|OUT|bestmove d8f8
+S|SW_B_rook_d8_300|TIMEOUT
+S|SW_B_rook_d8_300|END|lines=9
+S|SW_B_rook_d8_400|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 400 1
+S|SW_B_rook_d8_400|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 400 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_400|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_400|CMD|go depth 2
+S|SW_B_rook_d8_400|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_400|OUT|info string Using 4 threads
+S|SW_B_rook_d8_400|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_400|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_400|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 207 nps 207000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_400|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 852 nps 852000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_400|OUT|bestmove d8f8
+S|SW_B_rook_d8_400|TIMEOUT
+S|SW_B_rook_d8_400|END|lines=9
+S|SW_B_rook_d8_500|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 500 1
+S|SW_B_rook_d8_500|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 500 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_500|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_500|CMD|go depth 2
+S|SW_B_rook_d8_500|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_500|OUT|info string Using 4 threads
+S|SW_B_rook_d8_500|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_500|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_500|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 36 nps 36000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_500|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 639 nps 639000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_500|OUT|bestmove d8f8
+S|SW_B_rook_d8_500|TIMEOUT
+S|SW_B_rook_d8_500|END|lines=9
+S|SW_B_rook_d8_900|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 900 1
+S|SW_B_rook_d8_900|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 900 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_900|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_900|CMD|go depth 2
+S|SW_B_rook_d8_900|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_900|OUT|info string Using 4 threads
+S|SW_B_rook_d8_900|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_900|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_900|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 19 nps 19000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_900|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 387 nps 387000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_900|OUT|bestmove d8f8
+S|SW_B_rook_d8_900|TIMEOUT
+S|SW_B_rook_d8_900|END|lines=9
+S|SW_B_rook_d8_999|CMD|position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 999 1
+S|SW_B_rook_d8_999|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 999 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_B_rook_d8_999|OUT|
+DRV error unhandled: [object Object]
+S|SW_B_rook_d8_999|CMD|go depth 2
+S|SW_B_rook_d8_999|OUT|info string Available processors: 0-15
+S|SW_B_rook_d8_999|OUT|info string Using 4 threads
+S|SW_B_rook_d8_999|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_B_rook_d8_999|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_B_rook_d8_999|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 39 nps 39000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_999|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 521 nps 521000 hashfull 0 tbhits 0 time 1 pv d8f8
+S|SW_B_rook_d8_999|OUT|bestmove d8f8
+S|SW_B_rook_d8_999|TIMEOUT
+S|SW_B_rook_d8_999|END|lines=9
+S|SW_C_rook_f5_pawn_d8_110|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 110 1
+S|SW_C_rook_f5_pawn_d8_110|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_110|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_110|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_110|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_110|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_110|OUT|info depth 1 seldepth 3 multipv 1 score cp 935 nodes 112 nps 112000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8
+S|SW_C_rook_f5_pawn_d8_110|OUT|info depth 2 seldepth 4 multipv 1 score cp 1012 nodes 407 nps 407000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8
+S|SW_C_rook_f5_pawn_d8_110|OUT|bestmove d8e8 ponder e9e8
+S|SW_C_rook_f5_pawn_d8_110|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_110|END|lines=7
+S|SW_C_rook_f5_pawn_d8_115|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 115 1
+S|SW_C_rook_f5_pawn_d8_115|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_115|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_115|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_115|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_115|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_115|OUT|info depth 1 seldepth 3 multipv 1 score cp 1071 nodes 99 nps 99000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8
+S|SW_C_rook_f5_pawn_d8_115|OUT|info depth 2 seldepth 5 multipv 1 score cp 1085 nodes 555 nps 555000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8 f5e5 e8f8
+S|SW_C_rook_f5_pawn_d8_115|OUT|bestmove d8e8 ponder e9e8
+S|SW_C_rook_f5_pawn_d8_115|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_115|END|lines=7
+S|SW_C_rook_f5_pawn_d8_118|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 118 1
+S|SW_C_rook_f5_pawn_d8_118|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_118|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_118|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_118|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_118|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_118|OUT|info depth 1 seldepth 3 multipv 1 score cp 977 nodes 100 nps 100000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8
+S|SW_C_rook_f5_pawn_d8_118|OUT|info depth 2 seldepth 3 multipv 1 score cp 1068 nodes 484 nps 484000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8
+S|SW_C_rook_f5_pawn_d8_118|OUT|bestmove d8e8 ponder e9e8
+S|SW_C_rook_f5_pawn_d8_118|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_118|END|lines=7
+S|SW_C_rook_f5_pawn_d8_119|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 119 1
+S|SW_C_rook_f5_pawn_d8_119|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_119|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_119|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_119|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_119|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_119|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 122 nps 122000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|SW_C_rook_f5_pawn_d8_119|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 818 nps 818000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|SW_C_rook_f5_pawn_d8_119|OUT|bestmove f5f0
+S|SW_C_rook_f5_pawn_d8_119|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_119|END|lines=7
+S|SW_C_rook_f5_pawn_d8_120|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 1
+S|SW_C_rook_f5_pawn_d8_120|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_120|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_120|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_120|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_120|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_120|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_120|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_120|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_120|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 229 nps 229000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_120|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_120|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_120|END|lines=9
+S|SW_C_rook_f5_pawn_d8_121|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 1
+S|SW_C_rook_f5_pawn_d8_121|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_121|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_121|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_121|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_121|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_121|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_121|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_121|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 337 nps 337000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_121|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 1205 nps 1205000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_121|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_121|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_121|END|lines=9
+S|SW_C_rook_f5_pawn_d8_122|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 122 1
+S|SW_C_rook_f5_pawn_d8_122|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 122 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_122|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_122|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_122|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_122|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_122|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_122|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_122|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 64 nps 64000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_122|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 564 nps 564000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_122|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_122|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_122|END|lines=9
+S|SW_C_rook_f5_pawn_d8_125|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 125 1
+S|SW_C_rook_f5_pawn_d8_125|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 125 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_125|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_125|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_125|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_125|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_125|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_125|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_125|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_125|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 528 nps 528000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_125|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_125|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_125|END|lines=9
+S|SW_C_rook_f5_pawn_d8_130|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 130 1
+S|SW_C_rook_f5_pawn_d8_130|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 130 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_130|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_130|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_130|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_130|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_130|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_130|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_130|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_130|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 384 nps 384000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_130|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_130|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_130|END|lines=9
+S|SW_C_rook_f5_pawn_d8_135|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 135 1
+S|SW_C_rook_f5_pawn_d8_135|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 135 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_135|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_135|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_135|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_135|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_135|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_135|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_135|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 129 nps 129000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_135|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 749 nps 749000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_135|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_135|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_135|END|lines=9
+S|SW_C_rook_f5_pawn_d8_140|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 140 1
+S|SW_C_rook_f5_pawn_d8_140|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 140 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_140|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_140|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_140|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_140|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_140|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_140|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_140|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 63 nps 63000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_140|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 727 nps 727000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_140|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_140|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_140|END|lines=9
+S|SW_C_rook_f5_pawn_d8_150|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 150 1
+S|SW_C_rook_f5_pawn_d8_150|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 150 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_150|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_150|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_150|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_150|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_150|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_150|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_150|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 42 nps 42000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_150|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 487 nps 487000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_150|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_150|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_150|END|lines=9
+S|SW_C_rook_f5_pawn_d8_160|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 160 1
+S|SW_C_rook_f5_pawn_d8_160|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 160 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_160|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_160|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_160|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_160|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_160|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_160|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_160|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 36 nps 36000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_160|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 575 nps 575000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_160|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_160|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_160|END|lines=9
+S|SW_C_rook_f5_pawn_d8_170|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 170 1
+S|SW_C_rook_f5_pawn_d8_170|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 170 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_170|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_170|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_170|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_170|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_170|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_170|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_170|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 65 nps 65000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_170|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 687 nps 687000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_170|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_170|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_170|END|lines=9
+S|SW_C_rook_f5_pawn_d8_180|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 180 1
+S|SW_C_rook_f5_pawn_d8_180|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 180 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_180|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_180|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_180|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_180|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_180|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_180|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_180|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 161 nps 161000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_180|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 1042 nps 1042000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_180|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_180|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_180|END|lines=9
+S|SW_C_rook_f5_pawn_d8_190|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 190 1
+S|SW_C_rook_f5_pawn_d8_190|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 190 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_190|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_190|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_190|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_190|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_190|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_190|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_190|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 67 nps 67000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_190|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 683 nps 683000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_190|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_190|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_190|END|lines=9
+S|SW_C_rook_f5_pawn_d8_200|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 200 1
+S|SW_C_rook_f5_pawn_d8_200|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 200 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_200|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_200|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_200|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_200|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_200|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_200|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_200|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 74 nps 74000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_200|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 664 nps 664000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_200|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_200|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_200|END|lines=9
+S|SW_C_rook_f5_pawn_d8_210|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 210 1
+S|SW_C_rook_f5_pawn_d8_210|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 210 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_210|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_210|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_210|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_210|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_210|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_210|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_210|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 132 nps 132000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_210|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 813 nps 813000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_210|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_210|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_210|END|lines=9
+S|SW_C_rook_f5_pawn_d8_220|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 220 1
+S|SW_C_rook_f5_pawn_d8_220|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 220 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_220|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_220|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_220|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_220|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_220|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_220|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_220|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 64 nps 64000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_220|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 646 nps 646000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_220|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_220|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_220|END|lines=9
+S|SW_C_rook_f5_pawn_d8_230|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 230 1
+S|SW_C_rook_f5_pawn_d8_230|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 230 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_230|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_230|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_230|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_230|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_230|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_230|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_230|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 43 nps 43000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_230|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 588 nps 588000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_230|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_230|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_230|END|lines=9
+S|SW_C_rook_f5_pawn_d8_239|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 239 1
+S|SW_C_rook_f5_pawn_d8_239|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 239 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_239|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_239|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_239|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_239|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_239|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_239|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_239|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 42 nps 42000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_239|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 490 nps 490000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_239|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_239|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_239|END|lines=9
+S|SW_C_rook_f5_pawn_d8_240|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 240 1
+S|SW_C_rook_f5_pawn_d8_240|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 240 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_240|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_240|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_240|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_240|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_240|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_240|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_240|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 127 nps 127000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_240|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 842 nps 842000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_240|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_240|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_240|END|lines=9
+S|SW_C_rook_f5_pawn_d8_241|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 241 1
+S|SW_C_rook_f5_pawn_d8_241|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 241 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_241|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_241|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_241|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_241|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_241|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_241|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_241|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 35 nps 35000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_241|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 587 nps 587000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_241|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_241|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_241|END|lines=9
+S|SW_C_rook_f5_pawn_d8_250|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 250 1
+S|SW_C_rook_f5_pawn_d8_250|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 250 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_250|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_250|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_250|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_250|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_250|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_250|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_250|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 36 nps 36000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_250|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 820 nps 820000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_250|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_250|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_250|END|lines=9
+S|SW_C_rook_f5_pawn_d8_300|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 300 1
+S|SW_C_rook_f5_pawn_d8_300|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 300 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_300|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_300|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_300|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_300|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_300|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_300|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_300|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 73 nps 73000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_300|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 929 nps 929000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_300|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_300|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_300|END|lines=9
+S|SW_C_rook_f5_pawn_d8_400|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 400 1
+S|SW_C_rook_f5_pawn_d8_400|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 400 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_400|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_400|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_400|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_400|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_400|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_400|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_400|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 22 nps 22000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_400|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 302 nps 302000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_400|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_400|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_400|END|lines=9
+S|SW_C_rook_f5_pawn_d8_500|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 500 1
+S|SW_C_rook_f5_pawn_d8_500|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 500 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_500|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_500|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_500|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_500|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_500|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_500|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_500|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 42 nps 42000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_500|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 399 nps 399000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_500|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_500|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_500|END|lines=9
+S|SW_C_rook_f5_pawn_d8_900|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 900 1
+S|SW_C_rook_f5_pawn_d8_900|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 900 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_900|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_900|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_900|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_900|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_900|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_900|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_900|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 42 nps 42000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_900|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 541 nps 541000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_900|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_900|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_900|END|lines=9
+S|SW_C_rook_f5_pawn_d8_999|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 1
+S|SW_C_rook_f5_pawn_d8_999|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_C_rook_f5_pawn_d8_999|OUT|
+DRV error unhandled: [object Object]
+S|SW_C_rook_f5_pawn_d8_999|CMD|go depth 2
+S|SW_C_rook_f5_pawn_d8_999|OUT|info string Available processors: 0-15
+S|SW_C_rook_f5_pawn_d8_999|OUT|info string Using 4 threads
+S|SW_C_rook_f5_pawn_d8_999|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_C_rook_f5_pawn_d8_999|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_C_rook_f5_pawn_d8_999|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 242 nps 242000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_999|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 937 nps 937000 hashfull 0 tbhits 0 time 1 pv f5f8
+S|SW_C_rook_f5_pawn_d8_999|OUT|bestmove f5f8
+S|SW_C_rook_f5_pawn_d8_999|TIMEOUT
+S|SW_C_rook_f5_pawn_d8_999|END|lines=9
+S|SW_D_only_kings_110|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 110 1
+S|SW_D_only_kings_110|CMD|go depth 2
+S|SW_D_only_kings_110|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_110|OUT|info string Using 4 threads
+S|SW_D_only_kings_110|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_110|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_110|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 49 nps 49000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_110|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 301 nps 301000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_110|OUT|bestmove d0d1
+S|SW_D_only_kings_110|TIMEOUT
+S|SW_D_only_kings_110|END|lines=7
+S|SW_D_only_kings_115|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 115 1
+S|SW_D_only_kings_115|CMD|go depth 2
+S|SW_D_only_kings_115|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_115|OUT|info string Using 4 threads
+S|SW_D_only_kings_115|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_115|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_115|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 1 nps 1000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_115|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 195 nps 195000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_115|OUT|bestmove d0d1
+S|SW_D_only_kings_115|TIMEOUT
+S|SW_D_only_kings_115|END|lines=7
+S|SW_D_only_kings_118|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 118 1
+S|SW_D_only_kings_118|CMD|go depth 2
+S|SW_D_only_kings_118|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_118|OUT|info string Using 4 threads
+S|SW_D_only_kings_118|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_118|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_118|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 2 nps 2000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_118|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 136 nps 136000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_118|OUT|bestmove d0d1
+S|SW_D_only_kings_118|TIMEOUT
+S|SW_D_only_kings_118|END|lines=7
+S|SW_D_only_kings_119|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 119 1
+S|SW_D_only_kings_119|CMD|go depth 2
+S|SW_D_only_kings_119|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_119|OUT|info string Using 4 threads
+S|SW_D_only_kings_119|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_119|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_119|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 2 nps 2000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_119|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 202 nps 202000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_119|OUT|bestmove d0d1
+S|SW_D_only_kings_119|TIMEOUT
+S|SW_D_only_kings_119|END|lines=7
+S|SW_D_only_kings_120|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 120 1
+S|SW_D_only_kings_120|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 120 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_120|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_120|CMD|go depth 2
+S|SW_D_only_kings_120|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_120|OUT|info string Using 4 threads
+S|SW_D_only_kings_120|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_120|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_120|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 1 nps 1000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_120|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 168 nps 168000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_120|OUT|bestmove d0d1
+S|SW_D_only_kings_120|TIMEOUT
+S|SW_D_only_kings_120|END|lines=9
+S|SW_D_only_kings_121|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 121 1
+S|SW_D_only_kings_121|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 121 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_121|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_121|CMD|go depth 2
+S|SW_D_only_kings_121|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_121|OUT|info string Using 4 threads
+S|SW_D_only_kings_121|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_121|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_121|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 326 nps 326000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_121|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 505 nps 505000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_121|OUT|bestmove d0d1
+S|SW_D_only_kings_121|TIMEOUT
+S|SW_D_only_kings_121|END|lines=9
+S|SW_D_only_kings_122|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 122 1
+S|SW_D_only_kings_122|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 122 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_122|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_122|CMD|go depth 2
+S|SW_D_only_kings_122|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_122|OUT|info string Using 4 threads
+S|SW_D_only_kings_122|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_122|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_122|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 1 nps 1000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_122|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 182 nps 182000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_122|OUT|bestmove d0d1
+S|SW_D_only_kings_122|TIMEOUT
+S|SW_D_only_kings_122|END|lines=9
+S|SW_D_only_kings_125|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 125 1
+S|SW_D_only_kings_125|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 125 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_125|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_125|CMD|go depth 2
+S|SW_D_only_kings_125|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_125|OUT|info string Using 4 threads
+S|SW_D_only_kings_125|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_125|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_125|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 1 nps 1000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_125|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 180 nps 180000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_125|OUT|bestmove d0d1
+S|SW_D_only_kings_125|TIMEOUT
+S|SW_D_only_kings_125|END|lines=9
+S|SW_D_only_kings_130|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 130 1
+S|SW_D_only_kings_130|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 130 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_130|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_130|CMD|go depth 2
+S|SW_D_only_kings_130|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_130|OUT|info string Using 4 threads
+S|SW_D_only_kings_130|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_130|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_130|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 1 nps 1000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_130|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 159 nps 159000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_130|OUT|bestmove d0d1
+S|SW_D_only_kings_130|TIMEOUT
+S|SW_D_only_kings_130|END|lines=9
+S|SW_D_only_kings_135|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 135 1
+S|SW_D_only_kings_135|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 135 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_135|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_135|CMD|go depth 2
+S|SW_D_only_kings_135|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_135|OUT|info string Using 4 threads
+S|SW_D_only_kings_135|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_135|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_135|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 1 nps 1000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_135|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 161 nps 161000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_135|OUT|bestmove d0d1
+S|SW_D_only_kings_135|TIMEOUT
+S|SW_D_only_kings_135|END|lines=9
+S|SW_D_only_kings_140|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 140 1
+S|SW_D_only_kings_140|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 140 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_140|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_140|CMD|go depth 2
+S|SW_D_only_kings_140|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_140|OUT|info string Using 4 threads
+S|SW_D_only_kings_140|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_140|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_140|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 1 nps 1000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_140|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 137 nps 137000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_140|OUT|bestmove d0d1
+S|SW_D_only_kings_140|TIMEOUT
+S|SW_D_only_kings_140|END|lines=9
+S|SW_D_only_kings_150|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 150 1
+S|SW_D_only_kings_150|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 150 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_150|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_150|CMD|go depth 2
+S|SW_D_only_kings_150|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_150|OUT|info string Using 4 threads
+S|SW_D_only_kings_150|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_150|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_150|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 29 nps 29000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_150|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 193 nps 193000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_150|OUT|bestmove d0d1
+S|SW_D_only_kings_150|TIMEOUT
+S|SW_D_only_kings_150|END|lines=9
+S|SW_D_only_kings_160|CMD|position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 160 1
+S|SW_D_only_kings_160|OUT|info string CRITICAL ERROR: Command `position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 160 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|SW_D_only_kings_160|OUT|
+DRV error unhandled: [object Object]
+S|SW_D_only_kings_160|CMD|go depth 2
+S|SW_D_only_kings_160|OUT|info string Available processors: 0-15
+S|SW_D_only_kings_160|OUT|info string Using 4 threads
+S|SW_D_only_kings_160|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|SW_D_only_kings_160|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|SW_D_only_kings_160|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 13 nps 13000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_160|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 237 nps 237000 hashfull 0 tbhits 0 time 1 pv d0d1
+S|SW_D_only_kings_160|OUT|bestmove d0d1

@@ -1,0 +1,6329 @@
+{
+ "rounds": [
+  1
+ ],
+ "perGroup": {
+  "opening": {
+   "AC_AD": {
+    "overall": {
+     "n": 5,
+     "mean": 18.6,
+     "median": 12,
+     "min": -7,
+     "max": 59,
+     "sd": 22.4
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 18.6,
+       "median": 12,
+       "min": -7,
+       "max": 59,
+       "sd": 22.4
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 23,
+        "anchor": 29,
+        "ref": -6,
+        "selMove": "b0c2",
+        "gap": "10",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP02",
+        "loss": 6,
+        "anchor": 4,
+        "ref": 2,
+        "selMove": "c3c4",
+        "gap": "31",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP04",
+        "loss": 12,
+        "anchor": 17,
+        "ref": -5,
+        "selMove": "g3g4",
+        "gap": "18",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP06",
+        "loss": 59,
+        "anchor": 127,
+        "ref": -68,
+        "selMove": "b9b8",
+        "gap": "31",
+        "hit": "cap",
+        "slotUsed": "2",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP08",
+        "loss": -7,
+        "anchor": 155,
+        "ref": -162,
+        "selMove": "b9b7",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AC_AM": {
+    "overall": {
+     "n": 5,
+     "mean": 85,
+     "median": 26,
+     "min": 17,
+     "max": 210,
+     "sd": 79.6
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 85,
+       "median": 26,
+       "min": 17,
+       "max": 210,
+       "sd": 79.6
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 26,
+        "anchor": 29,
+        "ref": -3,
+        "selMove": "h0g2",
+        "gap": "20",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP02",
+        "loss": 23,
+        "anchor": 4,
+        "ref": 19,
+        "selMove": "b2e2",
+        "gap": "29",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP04",
+        "loss": 17,
+        "anchor": 17,
+        "ref": 0,
+        "selMove": "g3g4",
+        "gap": "18",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP06",
+        "loss": 149,
+        "anchor": 127,
+        "ref": 22,
+        "selMove": "b9d9",
+        "gap": "133",
+        "hit": "cap",
+        "slotUsed": "3",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP08",
+        "loss": 210,
+        "anchor": 155,
+        "ref": 55,
+        "selMove": "b9d9",
+        "gap": "194",
+        "hit": "cap",
+        "slotUsed": "3",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AC_P15": {
+    "overall": {
+     "n": 5,
+     "mean": 67.4,
+     "median": 24,
+     "min": 17,
+     "max": 153,
+     "sd": 57.4
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 67.4,
+       "median": 24,
+       "min": 17,
+       "max": 153,
+       "sd": 57.4
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 23,
+        "anchor": 29,
+        "ref": -6,
+        "selMove": "b2f2",
+        "gap": "20",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP02",
+        "loss": 24,
+        "anchor": 4,
+        "ref": 20,
+        "selMove": "i0i2",
+        "gap": "26",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP04",
+        "loss": 17,
+        "anchor": 17,
+        "ref": 0,
+        "selMove": "h2f2",
+        "gap": "10",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP06",
+        "loss": 153,
+        "anchor": 127,
+        "ref": 26,
+        "selMove": "b9d9",
+        "gap": "164",
+        "hit": "cap",
+        "slotUsed": "3",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP08",
+        "loss": 120,
+        "anchor": 155,
+        "ref": -35,
+        "selMove": "b9b4",
+        "gap": "133",
+        "hit": "cap",
+        "slotUsed": "2",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AC_P20": {
+    "overall": {
+     "n": 5,
+     "mean": 59.6,
+     "median": 11,
+     "min": 5,
+     "max": 150,
+     "sd": 63.4
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 59.6,
+       "median": 11,
+       "min": 5,
+       "max": 150,
+       "sd": 63.4
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 5,
+        "anchor": 29,
+        "ref": -24,
+        "selMove": "g3g4",
+        "gap": "6",
+        "hit": "rand",
+        "slotUsed": "2",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP02",
+        "loss": 11,
+        "anchor": 4,
+        "ref": 7,
+        "selMove": "h0i2",
+        "gap": "28",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP04",
+        "loss": 9,
+        "anchor": 17,
+        "ref": -8,
+        "selMove": "b2e2",
+        "gap": "15",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP06",
+        "loss": 150,
+        "anchor": 127,
+        "ref": 23,
+        "selMove": "b9d9",
+        "gap": "152",
+        "hit": "cap",
+        "slotUsed": "3",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP08",
+        "loss": 123,
+        "anchor": 155,
+        "ref": -32,
+        "selMove": "b9b4",
+        "gap": "138",
+        "hit": "cap",
+        "slotUsed": "2",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AC_X1": {
+    "overall": {
+     "n": 5,
+     "mean": 19.8,
+     "median": 14,
+     "min": -13,
+     "max": 55,
+     "sd": 22.2
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 19.8,
+       "median": 14,
+       "min": -13,
+       "max": 55,
+       "sd": 22.2
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 29,
+        "anchor": 29,
+        "ref": 0,
+        "selMove": "b2a2",
+        "gap": "19",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP02",
+        "loss": 14,
+        "anchor": 4,
+        "ref": 10,
+        "selMove": "d0e1",
+        "gap": "19",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP04",
+        "loss": 14,
+        "anchor": 17,
+        "ref": -3,
+        "selMove": "h2f2",
+        "gap": "14",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP06",
+        "loss": 55,
+        "anchor": 127,
+        "ref": -72,
+        "selMove": "b9b8",
+        "gap": "41",
+        "hit": "cap",
+        "slotUsed": "2",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "OP08",
+        "loss": -13,
+        "anchor": 155,
+        "ref": -168,
+        "selMove": "b9b7",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AM0": {
+    "overall": {
+     "n": 5,
+     "mean": 120.2,
+     "median": 17,
+     "min": 6,
+     "max": 340,
+     "sd": 138.7
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 120.2,
+       "median": 17,
+       "min": 6,
+       "max": 340,
+       "sd": 138.7
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 9,
+        "anchor": 29,
+        "ref": -20,
+        "selMove": "h2e2",
+        "gap": "3",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "OP02",
+        "loss": 17,
+        "anchor": 4,
+        "ref": 13,
+        "selMove": "b2e2",
+        "gap": "11",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "OP04",
+        "loss": 6,
+        "anchor": 17,
+        "ref": -11,
+        "selMove": "d0e1",
+        "gap": "4",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "OP06",
+        "loss": 229,
+        "anchor": 127,
+        "ref": 102,
+        "selMove": "h2e2",
+        "gap": "197",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "OP08",
+        "loss": 340,
+        "anchor": 155,
+        "ref": 185,
+        "selMove": "b9b6",
+        "gap": "226",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       }
+      ]
+     }
+    }
+   },
+   "CAP_AD": {
+    "overall": {
+     "n": 5,
+     "mean": 17.8,
+     "median": 16,
+     "min": 0,
+     "max": 39,
+     "sd": 12.7
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 17.8,
+       "median": 16,
+       "min": 0,
+       "max": 39,
+       "sd": 12.7
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 16,
+        "anchor": 29,
+        "ref": -13,
+        "selMove": "b2f2",
+        "gap": "13",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "OP02",
+        "loss": 13,
+        "anchor": 4,
+        "ref": 9,
+        "selMove": "h0i2",
+        "gap": "25",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "OP04",
+        "loss": 21,
+        "anchor": 17,
+        "ref": 4,
+        "selMove": "h2g2",
+        "gap": "20",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "OP06",
+        "loss": 39,
+        "anchor": 127,
+        "ref": -88,
+        "selMove": "b9b8",
+        "gap": "1",
+        "hit": "cap",
+        "slotUsed": "2",
+        "rule": "cap"
+       },
+       {
+        "pid": "OP08",
+        "loss": 0,
+        "anchor": 155,
+        "ref": -155,
+        "selMove": "b9b7",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "cap"
+       }
+      ]
+     }
+    }
+   },
+   "CAP_AM": {
+    "overall": {
+     "n": 5,
+     "mean": 105,
+     "median": 24,
+     "min": 14,
+     "max": 245,
+     "sd": 106.8
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 105,
+       "median": 24,
+       "min": 14,
+       "max": 245,
+       "sd": 106.8
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 24,
+        "anchor": 29,
+        "ref": -5,
+        "selMove": "b2f2",
+        "gap": "22",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "OP02",
+        "loss": 14,
+        "anchor": 4,
+        "ref": 10,
+        "selMove": "h0i2",
+        "gap": "26",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "OP04",
+        "loss": 16,
+        "anchor": 17,
+        "ref": -1,
+        "selMove": "h2g2",
+        "gap": "18",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "OP06",
+        "loss": 226,
+        "anchor": 127,
+        "ref": 99,
+        "selMove": "i0h0",
+        "gap": "198",
+        "hit": "cap",
+        "slotUsed": "4",
+        "rule": "cap"
+       },
+       {
+        "pid": "OP08",
+        "loss": 245,
+        "anchor": 155,
+        "ref": 90,
+        "selMove": "b9b5",
+        "gap": "199",
+        "hit": "cap",
+        "slotUsed": "3",
+        "rule": "cap"
+       }
+      ]
+     }
+    }
+   },
+   "NOI_AM": {
+    "overall": {
+     "n": 5,
+     "mean": 104.8,
+     "median": 24,
+     "min": 5,
+     "max": 246,
+     "sd": 110.2
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 104.8,
+       "median": 24,
+       "min": 5,
+       "max": 246,
+       "sd": 110.2
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 24,
+        "anchor": 29,
+        "ref": -5,
+        "selMove": "h0g2",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "noise"
+       },
+       {
+        "pid": "OP02",
+        "loss": 16,
+        "anchor": 4,
+        "ref": 12,
+        "selMove": "d0e1",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "noise"
+       },
+       {
+        "pid": "OP04",
+        "loss": 5,
+        "anchor": 17,
+        "ref": -12,
+        "selMove": "c3c4",
+        "gap": "7",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "OP06",
+        "loss": 233,
+        "anchor": 127,
+        "ref": 106,
+        "selMove": "i0h0",
+        "gap": "203",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "OP08",
+        "loss": 246,
+        "anchor": 155,
+        "ref": 91,
+        "selMove": "b9b5",
+        "gap": "258",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       }
+      ]
+     }
+    }
+   },
+   "ANCH": {
+    "overall": {
+     "n": 5,
+     "mean": 0.8,
+     "median": 1,
+     "min": -5,
+     "max": 8,
+     "sd": 4.6
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 5,
+       "mean": 0.8,
+       "median": 1,
+       "min": -5,
+       "max": 8,
+       "sd": 4.6
+      },
+      "detail": [
+       {
+        "pid": "OP00",
+        "loss": 8,
+        "anchor": 29,
+        "ref": -21,
+        "selMove": "h2e2",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "OP02",
+        "loss": 3,
+        "anchor": 4,
+        "ref": -1,
+        "selMove": "h2e2",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "OP04",
+        "loss": 1,
+        "anchor": 17,
+        "ref": -16,
+        "selMove": "i0h0",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "OP06",
+        "loss": -3,
+        "anchor": 127,
+        "ref": -130,
+        "selMove": "h2b2",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "OP08",
+        "loss": -5,
+        "anchor": 155,
+        "ref": -160,
+        "selMove": "b9b7",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "midgame": {
+   "AC_AD": {
+    "overall": {
+     "n": 12,
+     "mean": 34,
+     "median": 30,
+     "min": 0,
+     "max": 105,
+     "sd": 32.7
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 34,
+       "median": 30,
+       "min": 0,
+       "max": 105,
+       "sd": 32.7
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 11,
+        "anchor": -25,
+        "ref": 36,
+        "selMove": "c7b9",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 81,
+        "anchor": -33,
+        "ref": 114,
+        "selMove": "a7a8",
+        "gap": "30",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 47,
+        "anchor": -26,
+        "ref": 73,
+        "selMove": "f9g9",
+        "gap": "42",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": 105,
+        "anchor": -30,
+        "ref": 135,
+        "selMove": "a6a5",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 1,
+        "anchor": -14,
+        "ref": 15,
+        "selMove": "c7c3",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 6,
+        "anchor": -14,
+        "ref": 20,
+        "selMove": "c9e7",
+        "gap": "10",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 8,
+        "anchor": -12,
+        "ref": 20,
+        "selMove": "f9e8",
+        "gap": "17",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 30,
+        "anchor": -3,
+        "ref": 33,
+        "selMove": "b5a5",
+        "gap": "25",
+        "hit": "cap",
+        "slotUsed": "5",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 16,
+        "anchor": 0,
+        "ref": 16,
+        "selMove": "b5a5",
+        "gap": "25",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": 0,
+        "anchor": -3,
+        "ref": 3,
+        "selMove": "a0a1",
+        "gap": "19",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 63,
+        "anchor": 332,
+        "ref": -269,
+        "selMove": "c4a4",
+        "gap": "37",
+        "hit": "cap",
+        "slotUsed": "3",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 40,
+        "anchor": 592,
+        "ref": -552,
+        "selMove": "g6g5",
+        "gap": "47",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AC_AM": {
+    "overall": {
+     "n": 12,
+     "mean": 115,
+     "median": 35,
+     "min": 2,
+     "max": 458,
+     "sd": 165.1
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 115,
+       "median": 35,
+       "min": 2,
+       "max": 458,
+       "sd": 165.1
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 10,
+        "anchor": -25,
+        "ref": 35,
+        "selMove": "c7b9",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 63,
+        "anchor": -33,
+        "ref": 96,
+        "selMove": "f8e6",
+        "gap": "33",
+        "hit": "rand",
+        "slotUsed": "6",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 458,
+        "anchor": -26,
+        "ref": 484,
+        "selMove": "a7a3",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": 77,
+        "anchor": -30,
+        "ref": 107,
+        "selMove": "a7c7",
+        "gap": "18",
+        "hit": "rand",
+        "slotUsed": "5",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 2,
+        "anchor": -14,
+        "ref": 16,
+        "selMove": "c7c3",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 5,
+        "anchor": -14,
+        "ref": 19,
+        "selMove": "c9e7",
+        "gap": "13",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 10,
+        "anchor": -12,
+        "ref": 22,
+        "selMove": "f9e8",
+        "gap": "25",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 453,
+        "anchor": -3,
+        "ref": 456,
+        "selMove": "c7d5",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 14,
+        "anchor": 0,
+        "ref": 14,
+        "selMove": "b5a5",
+        "gap": "23",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": 10,
+        "anchor": -3,
+        "ref": 13,
+        "selMove": "i3i4",
+        "gap": "26",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 243,
+        "anchor": 332,
+        "ref": -89,
+        "selMove": "a2c0",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 35,
+        "anchor": 592,
+        "ref": -557,
+        "selMove": "a6a8",
+        "gap": "52",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AC_P15": {
+    "overall": {
+     "n": 12,
+     "mean": 63.8,
+     "median": 52,
+     "min": 0,
+     "max": 230,
+     "sd": 66.9
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 63.8,
+       "median": 52,
+       "min": 0,
+       "max": 230,
+       "sd": 66.9
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 13,
+        "anchor": -25,
+        "ref": 38,
+        "selMove": "c7b9",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 62,
+        "anchor": -33,
+        "ref": 95,
+        "selMove": "f8e6",
+        "gap": "47",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 52,
+        "anchor": -26,
+        "ref": 78,
+        "selMove": "f8h9",
+        "gap": "40",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": 118,
+        "anchor": -30,
+        "ref": 148,
+        "selMove": "a7d7",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 0,
+        "anchor": -14,
+        "ref": 14,
+        "selMove": "c7c3",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 9,
+        "anchor": -14,
+        "ref": 23,
+        "selMove": "c3b3",
+        "gap": "9",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 20,
+        "anchor": -12,
+        "ref": 32,
+        "selMove": "c7b5",
+        "gap": "23",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 230,
+        "anchor": -3,
+        "ref": 233,
+        "selMove": "d9a9",
+        "gap": "103",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 21,
+        "anchor": 0,
+        "ref": 21,
+        "selMove": "f5f6",
+        "gap": "22",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": 13,
+        "anchor": -3,
+        "ref": 16,
+        "selMove": "c2b0",
+        "gap": "14",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 146,
+        "anchor": 332,
+        "ref": -186,
+        "selMove": "i1f1",
+        "gap": "102",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 81,
+        "anchor": 592,
+        "ref": -511,
+        "selMove": "e3e4",
+        "gap": "63",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AC_P20": {
+    "overall": {
+     "n": 12,
+     "mean": 110.7,
+     "median": 78,
+     "min": 1,
+     "max": 470,
+     "sd": 132.8
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 110.7,
+       "median": 78,
+       "min": 1,
+       "max": 470,
+       "sd": 132.8
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 11,
+        "anchor": -25,
+        "ref": 36,
+        "selMove": "c7b9",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 84,
+        "anchor": -33,
+        "ref": 117,
+        "selMove": "a7b7",
+        "gap": "41",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 78,
+        "anchor": -26,
+        "ref": 104,
+        "selMove": "c3e4",
+        "gap": "39",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": 113,
+        "anchor": -30,
+        "ref": 143,
+        "selMove": "e8f7",
+        "gap": "59",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 1,
+        "anchor": -14,
+        "ref": 15,
+        "selMove": "c7c3",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 470,
+        "anchor": -14,
+        "ref": 484,
+        "selMove": "e4g4",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 10,
+        "anchor": -12,
+        "ref": 22,
+        "selMove": "f9e8",
+        "gap": "24",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 159,
+        "anchor": -3,
+        "ref": 162,
+        "selMove": "a6a5",
+        "gap": "118",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 15,
+        "anchor": 0,
+        "ref": 15,
+        "selMove": "b5a5",
+        "gap": "19",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": 36,
+        "anchor": -3,
+        "ref": 39,
+        "selMove": "a3a4",
+        "gap": "28",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 283,
+        "anchor": 332,
+        "ref": -49,
+        "selMove": "d0e1",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 68,
+        "anchor": 592,
+        "ref": -524,
+        "selMove": "i6i5",
+        "gap": "59",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AC_X1": {
+    "overall": {
+     "n": 12,
+     "mean": 38.6,
+     "median": 27,
+     "min": 2,
+     "max": 179,
+     "sd": 45.8
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 38.6,
+       "median": 27,
+       "min": 2,
+       "max": 179,
+       "sd": 45.8
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 14,
+        "anchor": -25,
+        "ref": 39,
+        "selMove": "c7b9",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 62,
+        "anchor": -33,
+        "ref": 95,
+        "selMove": "f8e6",
+        "gap": "41",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 43,
+        "anchor": -26,
+        "ref": 69,
+        "selMove": "a7a8",
+        "gap": "50",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": 179,
+        "anchor": -30,
+        "ref": 209,
+        "selMove": "a7a9",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 2,
+        "anchor": -14,
+        "ref": 16,
+        "selMove": "c7c3",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 12,
+        "anchor": -14,
+        "ref": 26,
+        "selMove": "e4d4",
+        "gap": "12",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 11,
+        "anchor": -12,
+        "ref": 23,
+        "selMove": "c7d5",
+        "gap": "6",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 51,
+        "anchor": -3,
+        "ref": 54,
+        "selMove": "d9b9",
+        "gap": "31",
+        "hit": "cap",
+        "slotUsed": "5",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 18,
+        "anchor": 0,
+        "ref": 18,
+        "selMove": "f5f6",
+        "gap": "21",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": 13,
+        "anchor": -3,
+        "ref": 16,
+        "selMove": "i3i4",
+        "gap": "24",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 27,
+        "anchor": 332,
+        "ref": -305,
+        "selMove": "c4a4",
+        "gap": "50",
+        "hit": "cap",
+        "slotUsed": "3",
+        "rule": "capnoise"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 31,
+        "anchor": 592,
+        "ref": -561,
+        "selMove": "i8h8",
+        "gap": "38",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "capnoise"
+       }
+      ]
+     }
+    }
+   },
+   "AM0": {
+    "overall": {
+     "n": 12,
+     "mean": 123.5,
+     "median": 29,
+     "min": -4,
+     "max": 592,
+     "sd": 213.5
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 123.5,
+       "median": 29,
+       "min": -4,
+       "max": 592,
+       "sd": 213.5
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 592,
+        "anchor": -25,
+        "ref": 617,
+        "selMove": "h9g7",
+        "gap": "590",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 40,
+        "anchor": -33,
+        "ref": 73,
+        "selMove": "h7i7",
+        "gap": "27",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 48,
+        "anchor": -26,
+        "ref": 74,
+        "selMove": "f8h9",
+        "gap": "34",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": -4,
+        "anchor": -30,
+        "ref": 26,
+        "selMove": "a7b7",
+        "gap": "8",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 592,
+        "anchor": -14,
+        "ref": 606,
+        "selMove": "c7d7",
+        "gap": "568",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 5,
+        "anchor": -14,
+        "ref": 19,
+        "selMove": "g7e6",
+        "gap": "4",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 17,
+        "anchor": -12,
+        "ref": 29,
+        "selMove": "d9e8",
+        "gap": "14",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 29,
+        "anchor": -3,
+        "ref": 32,
+        "selMove": "b5a5",
+        "gap": "38",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 8,
+        "anchor": 0,
+        "ref": 8,
+        "selMove": "c7d5",
+        "gap": "6",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": -2,
+        "anchor": -3,
+        "ref": 1,
+        "selMove": "c0a2",
+        "gap": "4",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 155,
+        "anchor": 332,
+        "ref": -177,
+        "selMove": "d1f2",
+        "gap": "94",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 2,
+        "anchor": 592,
+        "ref": -590,
+        "selMove": "i8f8",
+        "gap": "44",
+        "hit": "slot",
+        "slotUsed": "4",
+        "rule": "slot"
+       }
+      ]
+     }
+    }
+   },
+   "CAP_AD": {
+    "overall": {
+     "n": 12,
+     "mean": 39.8,
+     "median": 23,
+     "min": -1,
+     "max": 142,
+     "sd": 42.4
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 39.8,
+       "median": 23,
+       "min": -1,
+       "max": 142,
+       "sd": 42.4
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": -1,
+        "anchor": -25,
+        "ref": 24,
+        "selMove": "c7b9",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 43,
+        "anchor": -33,
+        "ref": 76,
+        "selMove": "b9c7",
+        "gap": "33",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 98,
+        "anchor": -26,
+        "ref": 124,
+        "selMove": "i9g9",
+        "gap": "41",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": 80,
+        "anchor": -30,
+        "ref": 110,
+        "selMove": "e9f9",
+        "gap": "57",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 1,
+        "anchor": -14,
+        "ref": 15,
+        "selMove": "c7c3",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 9,
+        "anchor": -14,
+        "ref": 23,
+        "selMove": "c3b3",
+        "gap": "14",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 18,
+        "anchor": -12,
+        "ref": 30,
+        "selMove": "b6c6",
+        "gap": "19",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 13,
+        "anchor": -3,
+        "ref": 16,
+        "selMove": "c5c4",
+        "gap": "35",
+        "hit": "cap",
+        "slotUsed": "5",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 23,
+        "anchor": 0,
+        "ref": 23,
+        "selMove": "f5f8",
+        "gap": "29",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": 17,
+        "anchor": -3,
+        "ref": 20,
+        "selMove": "c2e1",
+        "gap": "23",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 142,
+        "anchor": 332,
+        "ref": -190,
+        "selMove": "c4i4",
+        "gap": "45",
+        "hit": "cap",
+        "slotUsed": "4",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 34,
+        "anchor": 592,
+        "ref": -558,
+        "selMove": "i7e7",
+        "gap": "49",
+        "hit": "cap",
+        "slotUsed": "6",
+        "rule": "cap"
+       }
+      ]
+     }
+    }
+   },
+   "CAP_AM": {
+    "overall": {
+     "n": 12,
+     "mean": 63.2,
+     "median": 30,
+     "min": 1,
+     "max": 264,
+     "sd": 85.8
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 63.2,
+       "median": 30,
+       "min": 1,
+       "max": 264,
+       "sd": 85.8
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 2,
+        "anchor": -25,
+        "ref": 27,
+        "selMove": "c7b9",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 30,
+        "anchor": -33,
+        "ref": 63,
+        "selMove": "i9g9",
+        "gap": "38",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 55,
+        "anchor": -26,
+        "ref": 81,
+        "selMove": "f9g9",
+        "gap": "58",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": 104,
+        "anchor": -30,
+        "ref": 134,
+        "selMove": "e8f7",
+        "gap": "49",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 1,
+        "anchor": -14,
+        "ref": 15,
+        "selMove": "c7c3",
+        "gap": "0",
+        "hit": "above",
+        "slotUsed": "1",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 10,
+        "anchor": -14,
+        "ref": 24,
+        "selMove": "c3b3",
+        "gap": "10",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 6,
+        "anchor": -12,
+        "ref": 18,
+        "selMove": "f9e8",
+        "gap": "27",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 224,
+        "anchor": -3,
+        "ref": 227,
+        "selMove": "d9d7",
+        "gap": "112",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 20,
+        "anchor": 0,
+        "ref": 20,
+        "selMove": "b5a5",
+        "gap": "22",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": 11,
+        "anchor": -3,
+        "ref": 14,
+        "selMove": "i3i4",
+        "gap": "28",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 264,
+        "anchor": 332,
+        "ref": -68,
+        "selMove": "a0c0",
+        "gap": "113",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 31,
+        "anchor": 592,
+        "ref": -561,
+        "selMove": "a6a8",
+        "gap": "69",
+        "hit": "cap",
+        "slotUsed": "8",
+        "rule": "cap"
+       }
+      ]
+     }
+    }
+   },
+   "NOI_AM": {
+    "overall": {
+     "n": 12,
+     "mean": 136.6,
+     "median": 40,
+     "min": -3,
+     "max": 601,
+     "sd": 208.9
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 136.6,
+       "median": 40,
+       "min": -3,
+       "max": 601,
+       "sd": 208.9
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 601,
+        "anchor": -25,
+        "ref": 626,
+        "selMove": "d9e8",
+        "gap": "588",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 40,
+        "anchor": -33,
+        "ref": 73,
+        "selMove": "h7i7",
+        "gap": "24",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 32,
+        "anchor": -26,
+        "ref": 58,
+        "selMove": "a6a5",
+        "gap": "30",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": 56,
+        "anchor": -30,
+        "ref": 86,
+        "selMove": "f4f2",
+        "gap": "11",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 585,
+        "anchor": -14,
+        "ref": 599,
+        "selMove": "c7b7",
+        "gap": "580",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": 2,
+        "anchor": -14,
+        "ref": 16,
+        "selMove": "f8f9",
+        "gap": "7",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": 10,
+        "anchor": -12,
+        "ref": 22,
+        "selMove": "d9e8",
+        "gap": "19",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 35,
+        "anchor": -3,
+        "ref": 38,
+        "selMove": "b5a5",
+        "gap": "25",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 10,
+        "anchor": 0,
+        "ref": 10,
+        "selMove": "i6i5",
+        "gap": "11",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": -3,
+        "anchor": -3,
+        "ref": 0,
+        "selMove": "b6g6",
+        "gap": "6",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": 126,
+        "anchor": 332,
+        "ref": -206,
+        "selMove": "c4i4",
+        "gap": "97",
+        "hit": "engine",
+        "slotUsed": "4",
+        "rule": "noise"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": 145,
+        "anchor": 592,
+        "ref": -447,
+        "selMove": "e9e8",
+        "gap": "NA",
+        "hit": "rand",
+        "slotUsed": "-1",
+        "rule": "noise"
+       }
+      ]
+     }
+    }
+   },
+   "ANCH": {
+    "overall": {
+     "n": 12,
+     "mean": 1.1,
+     "median": 0,
+     "min": -7,
+     "max": 14,
+     "sd": 6.4
+    },
+    "perRound": {
+     "1": {
+      "stat": {
+       "n": 12,
+       "mean": 1.1,
+       "median": 0,
+       "min": -7,
+       "max": 14,
+       "sd": 6.4
+      },
+      "detail": [
+       {
+        "pid": "MG_QT01",
+        "loss": 14,
+        "anchor": -25,
+        "ref": 39,
+        "selMove": "c7b9",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QT05",
+        "loss": 14,
+        "anchor": -33,
+        "ref": 47,
+        "selMove": "h7h9",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QT10",
+        "loss": 3,
+        "anchor": -26,
+        "ref": 29,
+        "selMove": "i9h9",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QT14",
+        "loss": -1,
+        "anchor": -30,
+        "ref": 29,
+        "selMove": "f4b4",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QT19",
+        "loss": 1,
+        "anchor": -14,
+        "ref": 15,
+        "selMove": "c7c3",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QT24",
+        "loss": -2,
+        "anchor": -14,
+        "ref": 12,
+        "selMove": "g7f5",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QT29",
+        "loss": -2,
+        "anchor": -12,
+        "ref": 10,
+        "selMove": "a9b9",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QT34",
+        "loss": 1,
+        "anchor": -3,
+        "ref": 4,
+        "selMove": "d9d3",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QT39",
+        "loss": 0,
+        "anchor": 0,
+        "ref": 0,
+        "selMove": "b5c5",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QH01",
+        "loss": -7,
+        "anchor": -3,
+        "ref": -4,
+        "selMove": "d0e1",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QB3",
+        "loss": -7,
+        "anchor": 332,
+        "ref": -339,
+        "selMove": "a0b0",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       },
+       {
+        "pid": "MG_QB9",
+        "loss": -1,
+        "anchor": 592,
+        "ref": -593,
+        "selMove": "a6b6",
+        "gap": "0",
+        "hit": "anchor",
+        "slotUsed": "1",
+        "rule": "anchor"
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ "all": {
+  "AC_AD": {
+   "overall": {
+    "n": 17,
+    "mean": 29.5,
+    "median": 16,
+    "min": -7,
+    "max": 105,
+    "sd": 30.9
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 29.5,
+      "median": 16,
+      "min": -7,
+      "max": 105,
+      "sd": 30.9
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 23,
+       "anchor": 29,
+       "ref": -6,
+       "selMove": "b0c2",
+       "gap": "10",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP02",
+       "loss": 6,
+       "anchor": 4,
+       "ref": 2,
+       "selMove": "c3c4",
+       "gap": "31",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP04",
+       "loss": 12,
+       "anchor": 17,
+       "ref": -5,
+       "selMove": "g3g4",
+       "gap": "18",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP06",
+       "loss": 59,
+       "anchor": 127,
+       "ref": -68,
+       "selMove": "b9b8",
+       "gap": "31",
+       "hit": "cap",
+       "slotUsed": "2",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP08",
+       "loss": -7,
+       "anchor": 155,
+       "ref": -162,
+       "selMove": "b9b7",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 11,
+       "anchor": -25,
+       "ref": 36,
+       "selMove": "c7b9",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 81,
+       "anchor": -33,
+       "ref": 114,
+       "selMove": "a7a8",
+       "gap": "30",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 47,
+       "anchor": -26,
+       "ref": 73,
+       "selMove": "f9g9",
+       "gap": "42",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": 105,
+       "anchor": -30,
+       "ref": 135,
+       "selMove": "a6a5",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 1,
+       "anchor": -14,
+       "ref": 15,
+       "selMove": "c7c3",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 6,
+       "anchor": -14,
+       "ref": 20,
+       "selMove": "c9e7",
+       "gap": "10",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 8,
+       "anchor": -12,
+       "ref": 20,
+       "selMove": "f9e8",
+       "gap": "17",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 30,
+       "anchor": -3,
+       "ref": 33,
+       "selMove": "b5a5",
+       "gap": "25",
+       "hit": "cap",
+       "slotUsed": "5",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 16,
+       "anchor": 0,
+       "ref": 16,
+       "selMove": "b5a5",
+       "gap": "25",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": 0,
+       "anchor": -3,
+       "ref": 3,
+       "selMove": "a0a1",
+       "gap": "19",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 63,
+       "anchor": 332,
+       "ref": -269,
+       "selMove": "c4a4",
+       "gap": "37",
+       "hit": "cap",
+       "slotUsed": "3",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 40,
+       "anchor": 592,
+       "ref": -552,
+       "selMove": "g6g5",
+       "gap": "47",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    29.5
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "AC_AM": {
+   "overall": {
+    "n": 17,
+    "mean": 106.2,
+    "median": 26,
+    "min": 2,
+    "max": 458,
+    "sd": 145.9
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 106.2,
+      "median": 26,
+      "min": 2,
+      "max": 458,
+      "sd": 145.9
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 26,
+       "anchor": 29,
+       "ref": -3,
+       "selMove": "h0g2",
+       "gap": "20",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP02",
+       "loss": 23,
+       "anchor": 4,
+       "ref": 19,
+       "selMove": "b2e2",
+       "gap": "29",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP04",
+       "loss": 17,
+       "anchor": 17,
+       "ref": 0,
+       "selMove": "g3g4",
+       "gap": "18",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP06",
+       "loss": 149,
+       "anchor": 127,
+       "ref": 22,
+       "selMove": "b9d9",
+       "gap": "133",
+       "hit": "cap",
+       "slotUsed": "3",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP08",
+       "loss": 210,
+       "anchor": 155,
+       "ref": 55,
+       "selMove": "b9d9",
+       "gap": "194",
+       "hit": "cap",
+       "slotUsed": "3",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 10,
+       "anchor": -25,
+       "ref": 35,
+       "selMove": "c7b9",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 63,
+       "anchor": -33,
+       "ref": 96,
+       "selMove": "f8e6",
+       "gap": "33",
+       "hit": "rand",
+       "slotUsed": "6",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 458,
+       "anchor": -26,
+       "ref": 484,
+       "selMove": "a7a3",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": 77,
+       "anchor": -30,
+       "ref": 107,
+       "selMove": "a7c7",
+       "gap": "18",
+       "hit": "rand",
+       "slotUsed": "5",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 2,
+       "anchor": -14,
+       "ref": 16,
+       "selMove": "c7c3",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 5,
+       "anchor": -14,
+       "ref": 19,
+       "selMove": "c9e7",
+       "gap": "13",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 10,
+       "anchor": -12,
+       "ref": 22,
+       "selMove": "f9e8",
+       "gap": "25",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 453,
+       "anchor": -3,
+       "ref": 456,
+       "selMove": "c7d5",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 14,
+       "anchor": 0,
+       "ref": 14,
+       "selMove": "b5a5",
+       "gap": "23",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": 10,
+       "anchor": -3,
+       "ref": 13,
+       "selMove": "i3i4",
+       "gap": "26",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 243,
+       "anchor": 332,
+       "ref": -89,
+       "selMove": "a2c0",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 35,
+       "anchor": 592,
+       "ref": -557,
+       "selMove": "a6a8",
+       "gap": "52",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    106.2
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "AC_P15": {
+   "overall": {
+    "n": 17,
+    "mean": 64.8,
+    "median": 24,
+    "min": 0,
+    "max": 230,
+    "sd": 64.3
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 64.8,
+      "median": 24,
+      "min": 0,
+      "max": 230,
+      "sd": 64.3
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 23,
+       "anchor": 29,
+       "ref": -6,
+       "selMove": "b2f2",
+       "gap": "20",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP02",
+       "loss": 24,
+       "anchor": 4,
+       "ref": 20,
+       "selMove": "i0i2",
+       "gap": "26",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP04",
+       "loss": 17,
+       "anchor": 17,
+       "ref": 0,
+       "selMove": "h2f2",
+       "gap": "10",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP06",
+       "loss": 153,
+       "anchor": 127,
+       "ref": 26,
+       "selMove": "b9d9",
+       "gap": "164",
+       "hit": "cap",
+       "slotUsed": "3",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP08",
+       "loss": 120,
+       "anchor": 155,
+       "ref": -35,
+       "selMove": "b9b4",
+       "gap": "133",
+       "hit": "cap",
+       "slotUsed": "2",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 13,
+       "anchor": -25,
+       "ref": 38,
+       "selMove": "c7b9",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 62,
+       "anchor": -33,
+       "ref": 95,
+       "selMove": "f8e6",
+       "gap": "47",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 52,
+       "anchor": -26,
+       "ref": 78,
+       "selMove": "f8h9",
+       "gap": "40",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": 118,
+       "anchor": -30,
+       "ref": 148,
+       "selMove": "a7d7",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 0,
+       "anchor": -14,
+       "ref": 14,
+       "selMove": "c7c3",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 9,
+       "anchor": -14,
+       "ref": 23,
+       "selMove": "c3b3",
+       "gap": "9",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 20,
+       "anchor": -12,
+       "ref": 32,
+       "selMove": "c7b5",
+       "gap": "23",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 230,
+       "anchor": -3,
+       "ref": 233,
+       "selMove": "d9a9",
+       "gap": "103",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 21,
+       "anchor": 0,
+       "ref": 21,
+       "selMove": "f5f6",
+       "gap": "22",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": 13,
+       "anchor": -3,
+       "ref": 16,
+       "selMove": "c2b0",
+       "gap": "14",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 146,
+       "anchor": 332,
+       "ref": -186,
+       "selMove": "i1f1",
+       "gap": "102",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 81,
+       "anchor": 592,
+       "ref": -511,
+       "selMove": "e3e4",
+       "gap": "63",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    64.8
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "AC_P20": {
+   "overall": {
+    "n": 17,
+    "mean": 95.6,
+    "median": 68,
+    "min": 1,
+    "max": 470,
+    "sd": 119
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 95.6,
+      "median": 68,
+      "min": 1,
+      "max": 470,
+      "sd": 119
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 5,
+       "anchor": 29,
+       "ref": -24,
+       "selMove": "g3g4",
+       "gap": "6",
+       "hit": "rand",
+       "slotUsed": "2",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP02",
+       "loss": 11,
+       "anchor": 4,
+       "ref": 7,
+       "selMove": "h0i2",
+       "gap": "28",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP04",
+       "loss": 9,
+       "anchor": 17,
+       "ref": -8,
+       "selMove": "b2e2",
+       "gap": "15",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP06",
+       "loss": 150,
+       "anchor": 127,
+       "ref": 23,
+       "selMove": "b9d9",
+       "gap": "152",
+       "hit": "cap",
+       "slotUsed": "3",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP08",
+       "loss": 123,
+       "anchor": 155,
+       "ref": -32,
+       "selMove": "b9b4",
+       "gap": "138",
+       "hit": "cap",
+       "slotUsed": "2",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 11,
+       "anchor": -25,
+       "ref": 36,
+       "selMove": "c7b9",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 84,
+       "anchor": -33,
+       "ref": 117,
+       "selMove": "a7b7",
+       "gap": "41",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 78,
+       "anchor": -26,
+       "ref": 104,
+       "selMove": "c3e4",
+       "gap": "39",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": 113,
+       "anchor": -30,
+       "ref": 143,
+       "selMove": "e8f7",
+       "gap": "59",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 1,
+       "anchor": -14,
+       "ref": 15,
+       "selMove": "c7c3",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 470,
+       "anchor": -14,
+       "ref": 484,
+       "selMove": "e4g4",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 10,
+       "anchor": -12,
+       "ref": 22,
+       "selMove": "f9e8",
+       "gap": "24",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 159,
+       "anchor": -3,
+       "ref": 162,
+       "selMove": "a6a5",
+       "gap": "118",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 15,
+       "anchor": 0,
+       "ref": 15,
+       "selMove": "b5a5",
+       "gap": "19",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": 36,
+       "anchor": -3,
+       "ref": 39,
+       "selMove": "a3a4",
+       "gap": "28",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 283,
+       "anchor": 332,
+       "ref": -49,
+       "selMove": "d0e1",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 68,
+       "anchor": 592,
+       "ref": -524,
+       "selMove": "i6i5",
+       "gap": "59",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    95.6
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "AC_X1": {
+   "overall": {
+    "n": 17,
+    "mean": 33.1,
+    "median": 18,
+    "min": -13,
+    "max": 179,
+    "sd": 41.2
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 33.1,
+      "median": 18,
+      "min": -13,
+      "max": 179,
+      "sd": 41.2
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 29,
+       "anchor": 29,
+       "ref": 0,
+       "selMove": "b2a2",
+       "gap": "19",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP02",
+       "loss": 14,
+       "anchor": 4,
+       "ref": 10,
+       "selMove": "d0e1",
+       "gap": "19",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP04",
+       "loss": 14,
+       "anchor": 17,
+       "ref": -3,
+       "selMove": "h2f2",
+       "gap": "14",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP06",
+       "loss": 55,
+       "anchor": 127,
+       "ref": -72,
+       "selMove": "b9b8",
+       "gap": "41",
+       "hit": "cap",
+       "slotUsed": "2",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "OP08",
+       "loss": -13,
+       "anchor": 155,
+       "ref": -168,
+       "selMove": "b9b7",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 14,
+       "anchor": -25,
+       "ref": 39,
+       "selMove": "c7b9",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 62,
+       "anchor": -33,
+       "ref": 95,
+       "selMove": "f8e6",
+       "gap": "41",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 43,
+       "anchor": -26,
+       "ref": 69,
+       "selMove": "a7a8",
+       "gap": "50",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": 179,
+       "anchor": -30,
+       "ref": 209,
+       "selMove": "a7a9",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 2,
+       "anchor": -14,
+       "ref": 16,
+       "selMove": "c7c3",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 12,
+       "anchor": -14,
+       "ref": 26,
+       "selMove": "e4d4",
+       "gap": "12",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 11,
+       "anchor": -12,
+       "ref": 23,
+       "selMove": "c7d5",
+       "gap": "6",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 51,
+       "anchor": -3,
+       "ref": 54,
+       "selMove": "d9b9",
+       "gap": "31",
+       "hit": "cap",
+       "slotUsed": "5",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 18,
+       "anchor": 0,
+       "ref": 18,
+       "selMove": "f5f6",
+       "gap": "21",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": 13,
+       "anchor": -3,
+       "ref": 16,
+       "selMove": "i3i4",
+       "gap": "24",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 27,
+       "anchor": 332,
+       "ref": -305,
+       "selMove": "c4a4",
+       "gap": "50",
+       "hit": "cap",
+       "slotUsed": "3",
+       "rule": "capnoise"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 31,
+       "anchor": 592,
+       "ref": -561,
+       "selMove": "i8h8",
+       "gap": "38",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "capnoise"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    33.1
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "AM0": {
+   "overall": {
+    "n": 17,
+    "mean": 122.5,
+    "median": 17,
+    "min": -4,
+    "max": 592,
+    "sd": 194.5
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 122.5,
+      "median": 17,
+      "min": -4,
+      "max": 592,
+      "sd": 194.5
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 9,
+       "anchor": 29,
+       "ref": -20,
+       "selMove": "h2e2",
+       "gap": "3",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "OP02",
+       "loss": 17,
+       "anchor": 4,
+       "ref": 13,
+       "selMove": "b2e2",
+       "gap": "11",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "OP04",
+       "loss": 6,
+       "anchor": 17,
+       "ref": -11,
+       "selMove": "d0e1",
+       "gap": "4",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "OP06",
+       "loss": 229,
+       "anchor": 127,
+       "ref": 102,
+       "selMove": "h2e2",
+       "gap": "197",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "OP08",
+       "loss": 340,
+       "anchor": 155,
+       "ref": 185,
+       "selMove": "b9b6",
+       "gap": "226",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 592,
+       "anchor": -25,
+       "ref": 617,
+       "selMove": "h9g7",
+       "gap": "590",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 40,
+       "anchor": -33,
+       "ref": 73,
+       "selMove": "h7i7",
+       "gap": "27",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 48,
+       "anchor": -26,
+       "ref": 74,
+       "selMove": "f8h9",
+       "gap": "34",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": -4,
+       "anchor": -30,
+       "ref": 26,
+       "selMove": "a7b7",
+       "gap": "8",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 592,
+       "anchor": -14,
+       "ref": 606,
+       "selMove": "c7d7",
+       "gap": "568",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 5,
+       "anchor": -14,
+       "ref": 19,
+       "selMove": "g7e6",
+       "gap": "4",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 17,
+       "anchor": -12,
+       "ref": 29,
+       "selMove": "d9e8",
+       "gap": "14",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 29,
+       "anchor": -3,
+       "ref": 32,
+       "selMove": "b5a5",
+       "gap": "38",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 8,
+       "anchor": 0,
+       "ref": 8,
+       "selMove": "c7d5",
+       "gap": "6",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": -2,
+       "anchor": -3,
+       "ref": 1,
+       "selMove": "c0a2",
+       "gap": "4",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 155,
+       "anchor": 332,
+       "ref": -177,
+       "selMove": "d1f2",
+       "gap": "94",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 2,
+       "anchor": 592,
+       "ref": -590,
+       "selMove": "i8f8",
+       "gap": "44",
+       "hit": "slot",
+       "slotUsed": "4",
+       "rule": "slot"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    122.5
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "CAP_AD": {
+   "overall": {
+    "n": 17,
+    "mean": 33.3,
+    "median": 18,
+    "min": -1,
+    "max": 142,
+    "sd": 37.7
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 33.3,
+      "median": 18,
+      "min": -1,
+      "max": 142,
+      "sd": 37.7
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 16,
+       "anchor": 29,
+       "ref": -13,
+       "selMove": "b2f2",
+       "gap": "13",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "OP02",
+       "loss": 13,
+       "anchor": 4,
+       "ref": 9,
+       "selMove": "h0i2",
+       "gap": "25",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "OP04",
+       "loss": 21,
+       "anchor": 17,
+       "ref": 4,
+       "selMove": "h2g2",
+       "gap": "20",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "OP06",
+       "loss": 39,
+       "anchor": 127,
+       "ref": -88,
+       "selMove": "b9b8",
+       "gap": "1",
+       "hit": "cap",
+       "slotUsed": "2",
+       "rule": "cap"
+      },
+      {
+       "pid": "OP08",
+       "loss": 0,
+       "anchor": 155,
+       "ref": -155,
+       "selMove": "b9b7",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": -1,
+       "anchor": -25,
+       "ref": 24,
+       "selMove": "c7b9",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 43,
+       "anchor": -33,
+       "ref": 76,
+       "selMove": "b9c7",
+       "gap": "33",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 98,
+       "anchor": -26,
+       "ref": 124,
+       "selMove": "i9g9",
+       "gap": "41",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": 80,
+       "anchor": -30,
+       "ref": 110,
+       "selMove": "e9f9",
+       "gap": "57",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 1,
+       "anchor": -14,
+       "ref": 15,
+       "selMove": "c7c3",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 9,
+       "anchor": -14,
+       "ref": 23,
+       "selMove": "c3b3",
+       "gap": "14",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 18,
+       "anchor": -12,
+       "ref": 30,
+       "selMove": "b6c6",
+       "gap": "19",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 13,
+       "anchor": -3,
+       "ref": 16,
+       "selMove": "c5c4",
+       "gap": "35",
+       "hit": "cap",
+       "slotUsed": "5",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 23,
+       "anchor": 0,
+       "ref": 23,
+       "selMove": "f5f8",
+       "gap": "29",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": 17,
+       "anchor": -3,
+       "ref": 20,
+       "selMove": "c2e1",
+       "gap": "23",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 142,
+       "anchor": 332,
+       "ref": -190,
+       "selMove": "c4i4",
+       "gap": "45",
+       "hit": "cap",
+       "slotUsed": "4",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 34,
+       "anchor": 592,
+       "ref": -558,
+       "selMove": "i7e7",
+       "gap": "49",
+       "hit": "cap",
+       "slotUsed": "6",
+       "rule": "cap"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    33.3
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "CAP_AM": {
+   "overall": {
+    "n": 17,
+    "mean": 75.5,
+    "median": 24,
+    "min": 1,
+    "max": 264,
+    "sd": 94.4
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 75.5,
+      "median": 24,
+      "min": 1,
+      "max": 264,
+      "sd": 94.4
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 24,
+       "anchor": 29,
+       "ref": -5,
+       "selMove": "b2f2",
+       "gap": "22",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "OP02",
+       "loss": 14,
+       "anchor": 4,
+       "ref": 10,
+       "selMove": "h0i2",
+       "gap": "26",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "OP04",
+       "loss": 16,
+       "anchor": 17,
+       "ref": -1,
+       "selMove": "h2g2",
+       "gap": "18",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "OP06",
+       "loss": 226,
+       "anchor": 127,
+       "ref": 99,
+       "selMove": "i0h0",
+       "gap": "198",
+       "hit": "cap",
+       "slotUsed": "4",
+       "rule": "cap"
+      },
+      {
+       "pid": "OP08",
+       "loss": 245,
+       "anchor": 155,
+       "ref": 90,
+       "selMove": "b9b5",
+       "gap": "199",
+       "hit": "cap",
+       "slotUsed": "3",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 2,
+       "anchor": -25,
+       "ref": 27,
+       "selMove": "c7b9",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 30,
+       "anchor": -33,
+       "ref": 63,
+       "selMove": "i9g9",
+       "gap": "38",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 55,
+       "anchor": -26,
+       "ref": 81,
+       "selMove": "f9g9",
+       "gap": "58",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": 104,
+       "anchor": -30,
+       "ref": 134,
+       "selMove": "e8f7",
+       "gap": "49",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 1,
+       "anchor": -14,
+       "ref": 15,
+       "selMove": "c7c3",
+       "gap": "0",
+       "hit": "above",
+       "slotUsed": "1",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 10,
+       "anchor": -14,
+       "ref": 24,
+       "selMove": "c3b3",
+       "gap": "10",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 6,
+       "anchor": -12,
+       "ref": 18,
+       "selMove": "f9e8",
+       "gap": "27",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 224,
+       "anchor": -3,
+       "ref": 227,
+       "selMove": "d9d7",
+       "gap": "112",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 20,
+       "anchor": 0,
+       "ref": 20,
+       "selMove": "b5a5",
+       "gap": "22",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": 11,
+       "anchor": -3,
+       "ref": 14,
+       "selMove": "i3i4",
+       "gap": "28",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 264,
+       "anchor": 332,
+       "ref": -68,
+       "selMove": "a0c0",
+       "gap": "113",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 31,
+       "anchor": 592,
+       "ref": -561,
+       "selMove": "a6a8",
+       "gap": "69",
+       "hit": "cap",
+       "slotUsed": "8",
+       "rule": "cap"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    75.5
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "NOI_AM": {
+   "overall": {
+    "n": 17,
+    "mean": 127.2,
+    "median": 35,
+    "min": -3,
+    "max": 601,
+    "sd": 186
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 127.2,
+      "median": 35,
+      "min": -3,
+      "max": 601,
+      "sd": 186
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 24,
+       "anchor": 29,
+       "ref": -5,
+       "selMove": "h0g2",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "noise"
+      },
+      {
+       "pid": "OP02",
+       "loss": 16,
+       "anchor": 4,
+       "ref": 12,
+       "selMove": "d0e1",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "noise"
+      },
+      {
+       "pid": "OP04",
+       "loss": 5,
+       "anchor": 17,
+       "ref": -12,
+       "selMove": "c3c4",
+       "gap": "7",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "OP06",
+       "loss": 233,
+       "anchor": 127,
+       "ref": 106,
+       "selMove": "i0h0",
+       "gap": "203",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "OP08",
+       "loss": 246,
+       "anchor": 155,
+       "ref": 91,
+       "selMove": "b9b5",
+       "gap": "258",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 601,
+       "anchor": -25,
+       "ref": 626,
+       "selMove": "d9e8",
+       "gap": "588",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 40,
+       "anchor": -33,
+       "ref": 73,
+       "selMove": "h7i7",
+       "gap": "24",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 32,
+       "anchor": -26,
+       "ref": 58,
+       "selMove": "a6a5",
+       "gap": "30",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": 56,
+       "anchor": -30,
+       "ref": 86,
+       "selMove": "f4f2",
+       "gap": "11",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 585,
+       "anchor": -14,
+       "ref": 599,
+       "selMove": "c7b7",
+       "gap": "580",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": 2,
+       "anchor": -14,
+       "ref": 16,
+       "selMove": "f8f9",
+       "gap": "7",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": 10,
+       "anchor": -12,
+       "ref": 22,
+       "selMove": "d9e8",
+       "gap": "19",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 35,
+       "anchor": -3,
+       "ref": 38,
+       "selMove": "b5a5",
+       "gap": "25",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 10,
+       "anchor": 0,
+       "ref": 10,
+       "selMove": "i6i5",
+       "gap": "11",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": -3,
+       "anchor": -3,
+       "ref": 0,
+       "selMove": "b6g6",
+       "gap": "6",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": 126,
+       "anchor": 332,
+       "ref": -206,
+       "selMove": "c4i4",
+       "gap": "97",
+       "hit": "engine",
+       "slotUsed": "4",
+       "rule": "noise"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": 145,
+       "anchor": 592,
+       "ref": -447,
+       "selMove": "e9e8",
+       "gap": "NA",
+       "hit": "rand",
+       "slotUsed": "-1",
+       "rule": "noise"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    127.2
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  },
+  "ANCH": {
+   "overall": {
+    "n": 17,
+    "mean": 1,
+    "median": 0,
+    "min": -7,
+    "max": 14,
+    "sd": 6
+   },
+   "perRound": {
+    "1": {
+     "stat": {
+      "n": 17,
+      "mean": 1,
+      "median": 0,
+      "min": -7,
+      "max": 14,
+      "sd": 6
+     },
+     "detail": [
+      {
+       "pid": "OP00",
+       "loss": 8,
+       "anchor": 29,
+       "ref": -21,
+       "selMove": "h2e2",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "OP02",
+       "loss": 3,
+       "anchor": 4,
+       "ref": -1,
+       "selMove": "h2e2",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "OP04",
+       "loss": 1,
+       "anchor": 17,
+       "ref": -16,
+       "selMove": "i0h0",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "OP06",
+       "loss": -3,
+       "anchor": 127,
+       "ref": -130,
+       "selMove": "h2b2",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "OP08",
+       "loss": -5,
+       "anchor": 155,
+       "ref": -160,
+       "selMove": "b9b7",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT01",
+       "loss": 14,
+       "anchor": -25,
+       "ref": 39,
+       "selMove": "c7b9",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT05",
+       "loss": 14,
+       "anchor": -33,
+       "ref": 47,
+       "selMove": "h7h9",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT10",
+       "loss": 3,
+       "anchor": -26,
+       "ref": 29,
+       "selMove": "i9h9",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT14",
+       "loss": -1,
+       "anchor": -30,
+       "ref": 29,
+       "selMove": "f4b4",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT19",
+       "loss": 1,
+       "anchor": -14,
+       "ref": 15,
+       "selMove": "c7c3",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT24",
+       "loss": -2,
+       "anchor": -14,
+       "ref": 12,
+       "selMove": "g7f5",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT29",
+       "loss": -2,
+       "anchor": -12,
+       "ref": 10,
+       "selMove": "a9b9",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT34",
+       "loss": 1,
+       "anchor": -3,
+       "ref": 4,
+       "selMove": "d9d3",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QT39",
+       "loss": 0,
+       "anchor": 0,
+       "ref": 0,
+       "selMove": "b5c5",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QH01",
+       "loss": -7,
+       "anchor": -3,
+       "ref": -4,
+       "selMove": "d0e1",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QB3",
+       "loss": -7,
+       "anchor": 332,
+       "ref": -339,
+       "selMove": "a0b0",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      },
+      {
+       "pid": "MG_QB9",
+       "loss": -1,
+       "anchor": 592,
+       "ref": -593,
+       "selMove": "a6b6",
+       "gap": "0",
+       "hit": "anchor",
+       "slotUsed": "1",
+       "rule": "anchor"
+      }
+     ]
+    }
+   },
+   "roundMeans": [
+    1
+   ],
+   "roundMeanSpread": 0,
+   "perPosSdMean": null
+  }
+ },
+ "noiseFloor": {
+  "note": "ANCH plays the anchor search own bestmove; loss should be ~0. Its sd is the metric noise floor.",
+  "overall": {
+   "n": 17,
+   "mean": 1,
+   "median": 0,
+   "min": -7,
+   "max": 14,
+   "sd": 6
+  },
+  "perGroup": {
+   "opening": {
+    "n": 5,
+    "mean": 0.8,
+    "median": 1,
+    "min": -5,
+    "max": 8,
+    "sd": 4.6
+   },
+   "midgame": {
+    "n": 12,
+    "mean": 1.1,
+    "median": 0,
+    "min": -7,
+    "max": 14,
+    "sd": 6.4
+   }
+  }
+ },
+ "deltas": {
+  "CAP_AD minus AM0": {
+   "a": "CAP_AD",
+   "b": "AM0",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 17.8,
+     "meanB": 120.2,
+     "delta": -102.4,
+     "pairedSd": 157.8,
+     "seOfMean": 70.6,
+     "t": -1.45,
+     "ci95": [
+      -240.7,
+      35.9
+     ],
+     "aWorse5": 2,
+     "tie5": 1,
+     "bWorse5": 2
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 39.8,
+     "meanB": 123.5,
+     "delta": -83.8,
+     "pairedSd": 239,
+     "seOfMean": 69,
+     "t": -1.21,
+     "ci95": [
+      -219,
+      51.5
+     ],
+     "aWorse5": 5,
+     "tie5": 3,
+     "bWorse5": 4
+    },
+    "all": {
+     "n": 17,
+     "meanA": 33.3,
+     "meanB": 122.5,
+     "delta": -89.2,
+     "pairedSd": 213.5,
+     "seOfMean": 51.8,
+     "t": -1.72,
+     "ci95": [
+      -190.7,
+      12.2
+     ],
+     "aWorse5": 7,
+     "tie5": 4,
+     "bWorse5": 6
+    }
+   }
+  },
+  "CAP_AM minus AM0": {
+   "a": "CAP_AM",
+   "b": "AM0",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 105,
+     "meanB": 120.2,
+     "delta": -15.2,
+     "pairedSd": 45.3,
+     "seOfMean": 20.3,
+     "t": -0.75,
+     "ci95": [
+      -54.9,
+      24.5
+     ],
+     "aWorse5": 2,
+     "tie5": 2,
+     "bWorse5": 1
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 63.2,
+     "meanB": 123.5,
+     "delta": -60.3,
+     "pairedSd": 255.3,
+     "seOfMean": 73.7,
+     "t": -0.82,
+     "ci95": [
+      -204.8,
+      84.1
+     ],
+     "aWorse5": 7,
+     "tie5": 1,
+     "bWorse5": 4
+    },
+    "all": {
+     "n": 17,
+     "meanA": 75.5,
+     "meanB": 122.5,
+     "delta": -47.1,
+     "pairedSd": 213.9,
+     "seOfMean": 51.9,
+     "t": -0.91,
+     "ci95": [
+      -148.7,
+      54.6
+     ],
+     "aWorse5": 9,
+     "tie5": 3,
+     "bWorse5": 5
+    }
+   }
+  },
+  "CAP_AM minus CAP_AD": {
+   "a": "CAP_AM",
+   "b": "CAP_AD",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 105,
+     "meanB": 17.8,
+     "delta": 87.2,
+     "pairedSd": 119.4,
+     "seOfMean": 53.4,
+     "t": 1.63,
+     "ci95": [
+      -17.5,
+      191.9
+     ],
+     "aWorse5": 3,
+     "tie5": 2,
+     "bWorse5": 0
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 63.2,
+     "meanB": 39.8,
+     "delta": 23.4,
+     "pairedSd": 71.1,
+     "seOfMean": 20.5,
+     "t": 1.14,
+     "ci95": [
+      -16.8,
+      63.7
+     ],
+     "aWorse5": 3,
+     "tie5": 5,
+     "bWorse5": 4
+    },
+    "all": {
+     "n": 17,
+     "meanA": 75.5,
+     "meanB": 33.3,
+     "delta": 42.2,
+     "pairedSd": 89.1,
+     "seOfMean": 21.6,
+     "t": 1.95,
+     "ci95": [
+      -0.2,
+      84.5
+     ],
+     "aWorse5": 6,
+     "tie5": 7,
+     "bWorse5": 4
+    }
+   }
+  },
+  "NOI_AM minus AM0": {
+   "a": "NOI_AM",
+   "b": "AM0",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 104.8,
+     "meanB": 120.2,
+     "delta": -15.4,
+     "pairedSd": 44.4,
+     "seOfMean": 19.9,
+     "t": -0.78,
+     "ci95": [
+      -54.3,
+      23.5
+     ],
+     "aWorse5": 1,
+     "tie5": 3,
+     "bWorse5": 1
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 136.6,
+     "meanB": 123.5,
+     "delta": 13.1,
+     "pairedSd": 46,
+     "seOfMean": 13.3,
+     "t": 0.98,
+     "ci95": [
+      -13,
+      39.1
+     ],
+     "aWorse5": 4,
+     "tie5": 4,
+     "bWorse5": 4
+    },
+    "all": {
+     "n": 17,
+     "meanA": 127.2,
+     "meanB": 122.5,
+     "delta": 4.7,
+     "pairedSd": 46.2,
+     "seOfMean": 11.2,
+     "t": 0.42,
+     "ci95": [
+      -17.2,
+      26.6
+     ],
+     "aWorse5": 5,
+     "tie5": 7,
+     "bWorse5": 5
+    }
+   }
+  },
+  "AC_AD minus CAP_AD": {
+   "a": "AC_AD",
+   "b": "CAP_AD",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 18.6,
+     "meanB": 17.8,
+     "delta": 0.8,
+     "pairedSd": 12.5,
+     "seOfMean": 5.6,
+     "t": 0.14,
+     "ci95": [
+      -10.2,
+      11.8
+     ],
+     "aWorse5": 2,
+     "tie5": 0,
+     "bWorse5": 3
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 34,
+     "meanB": 39.8,
+     "delta": -5.8,
+     "pairedSd": 32.2,
+     "seOfMean": 9.3,
+     "t": -0.62,
+     "ci95": [
+      -24,
+      12.5
+     ],
+     "aWorse5": 5,
+     "tie5": 2,
+     "bWorse5": 5
+    },
+    "all": {
+     "n": 17,
+     "meanA": 29.5,
+     "meanB": 33.3,
+     "delta": -3.8,
+     "pairedSd": 27.6,
+     "seOfMean": 6.7,
+     "t": -0.57,
+     "ci95": [
+      -17,
+      9.3
+     ],
+     "aWorse5": 7,
+     "tie5": 2,
+     "bWorse5": 8
+    }
+   }
+  },
+  "AC_AM minus CAP_AM": {
+   "a": "AC_AM",
+   "b": "CAP_AM",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 85,
+     "meanB": 105,
+     "delta": -20,
+     "pairedSd": 36.2,
+     "seOfMean": 16.2,
+     "t": -1.24,
+     "ci95": [
+      -51.7,
+      11.7
+     ],
+     "aWorse5": 1,
+     "tie5": 2,
+     "bWorse5": 2
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 115,
+     "meanB": 63.2,
+     "delta": 51.8,
+     "pairedSd": 129.7,
+     "seOfMean": 37.4,
+     "t": 1.38,
+     "ci95": [
+      -21.5,
+      125.2
+     ],
+     "aWorse5": 4,
+     "tie5": 5,
+     "bWorse5": 3
+    },
+    "all": {
+     "n": 17,
+     "meanA": 106.2,
+     "meanB": 75.5,
+     "delta": 30.7,
+     "pairedSd": 114.1,
+     "seOfMean": 27.7,
+     "t": 1.11,
+     "ci95": [
+      -23.6,
+      85
+     ],
+     "aWorse5": 5,
+     "tie5": 7,
+     "bWorse5": 5
+    }
+   }
+  },
+  "AC_AM minus NOI_AM": {
+   "a": "AC_AM",
+   "b": "NOI_AM",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 85,
+     "meanB": 104.8,
+     "delta": -19.8,
+     "pairedSd": 40.6,
+     "seOfMean": 18.2,
+     "t": -1.09,
+     "ci95": [
+      -55.4,
+      15.8
+     ],
+     "aWorse5": 2,
+     "tie5": 1,
+     "bWorse5": 2
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 115,
+     "meanB": 136.6,
+     "delta": -21.6,
+     "pairedSd": 311.4,
+     "seOfMean": 89.9,
+     "t": -0.24,
+     "ci95": [
+      -197.8,
+      154.6
+     ],
+     "aWorse5": 6,
+     "tie5": 3,
+     "bWorse5": 3
+    },
+    "all": {
+     "n": 17,
+     "meanA": 106.2,
+     "meanB": 127.2,
+     "delta": -21.1,
+     "pairedSd": 259,
+     "seOfMean": 62.8,
+     "t": -0.34,
+     "ci95": [
+      -144.2,
+      102.1
+     ],
+     "aWorse5": 8,
+     "tie5": 4,
+     "bWorse5": 5
+    }
+   }
+  },
+  "AC_AM minus AC_AD": {
+   "a": "AC_AM",
+   "b": "AC_AD",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 85,
+     "meanB": 18.6,
+     "delta": 66.4,
+     "pairedSd": 91.5,
+     "seOfMean": 40.9,
+     "t": 1.62,
+     "ci95": [
+      -13.8,
+      146.6
+     ],
+     "aWorse5": 3,
+     "tie5": 2,
+     "bWorse5": 0
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 115,
+     "meanB": 34,
+     "delta": 81,
+     "pairedSd": 165.9,
+     "seOfMean": 47.9,
+     "t": 1.69,
+     "ci95": [
+      -12.9,
+      174.9
+     ],
+     "aWorse5": 4,
+     "tie5": 6,
+     "bWorse5": 2
+    },
+    "all": {
+     "n": 17,
+     "meanA": 106.2,
+     "meanB": 29.5,
+     "delta": 76.7,
+     "pairedSd": 145.1,
+     "seOfMean": 35.2,
+     "t": 2.18,
+     "ci95": [
+      7.7,
+      145.7
+     ],
+     "aWorse5": 7,
+     "tie5": 8,
+     "bWorse5": 2
+    }
+   }
+  },
+  "AC_AM minus AM0": {
+   "a": "AC_AM",
+   "b": "AM0",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 85,
+     "meanB": 120.2,
+     "delta": -35.2,
+     "pairedSd": 66.2,
+     "seOfMean": 29.6,
+     "t": -1.19,
+     "ci95": [
+      -93.3,
+      22.9
+     ],
+     "aWorse5": 3,
+     "tie5": 0,
+     "bWorse5": 2
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 115,
+     "meanB": 123.5,
+     "delta": -8.5,
+     "pairedSd": 309,
+     "seOfMean": 89.2,
+     "t": -0.1,
+     "ci95": [
+      -183.3,
+      166.3
+     ],
+     "aWorse5": 8,
+     "tie5": 1,
+     "bWorse5": 3
+    },
+    "all": {
+     "n": 17,
+     "meanA": 106.2,
+     "meanB": 122.5,
+     "delta": -16.4,
+     "pairedSd": 258.6,
+     "seOfMean": 62.7,
+     "t": -0.26,
+     "ci95": [
+      -139.3,
+      106.6
+     ],
+     "aWorse5": 11,
+     "tie5": 1,
+     "bWorse5": 5
+    }
+   }
+  },
+  "AC_AD minus AM0": {
+   "a": "AC_AD",
+   "b": "AM0",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 18.6,
+     "meanB": 120.2,
+     "delta": -101.6,
+     "pairedSd": 156.6,
+     "seOfMean": 70,
+     "t": -1.45,
+     "ci95": [
+      -238.8,
+      35.6
+     ],
+     "aWorse5": 2,
+     "tie5": 0,
+     "bWorse5": 3
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 34,
+     "meanB": 123.5,
+     "delta": -89.5,
+     "pairedSd": 236.3,
+     "seOfMean": 68.2,
+     "t": -1.31,
+     "ci95": [
+      -223.2,
+      44.2
+     ],
+     "aWorse5": 4,
+     "tie5": 4,
+     "bWorse5": 4
+    },
+    "all": {
+     "n": 17,
+     "meanA": 29.5,
+     "meanB": 122.5,
+     "delta": -93.1,
+     "pairedSd": 211.1,
+     "seOfMean": 51.2,
+     "t": -1.82,
+     "ci95": [
+      -193.4,
+      7.3
+     ],
+     "aWorse5": 6,
+     "tie5": 4,
+     "bWorse5": 7
+    }
+   }
+  },
+  "AC_X1 minus AC_AD": {
+   "a": "AC_X1",
+   "b": "AC_AD",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 19.8,
+     "meanB": 18.6,
+     "delta": 1.2,
+     "pairedSd": 6.1,
+     "seOfMean": 2.7,
+     "t": 0.44,
+     "ci95": [
+      -4.1,
+      6.5
+     ],
+     "aWorse5": 2,
+     "tie5": 2,
+     "bWorse5": 1
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 38.6,
+     "meanB": 34,
+     "delta": 4.6,
+     "pairedSd": 26.4,
+     "seOfMean": 7.6,
+     "t": 0.6,
+     "ci95": [
+      -10.3,
+      19.5
+     ],
+     "aWorse5": 4,
+     "tie5": 5,
+     "bWorse5": 3
+    },
+    "all": {
+     "n": 17,
+     "meanA": 33.1,
+     "meanB": 29.5,
+     "delta": 3.6,
+     "pairedSd": 22.1,
+     "seOfMean": 5.4,
+     "t": 0.67,
+     "ci95": [
+      -6.9,
+      14.1
+     ],
+     "aWorse5": 6,
+     "tie5": 7,
+     "bWorse5": 4
+    }
+   }
+  },
+  "AC_X1 minus AC_AM": {
+   "a": "AC_X1",
+   "b": "AC_AM",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 19.8,
+     "meanB": 85,
+     "delta": -65.2,
+     "pairedSd": 96.7,
+     "seOfMean": 43.2,
+     "t": -1.51,
+     "ci95": [
+      -150,
+      19.6
+     ],
+     "aWorse5": 0,
+     "tie5": 2,
+     "bWorse5": 3
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 38.6,
+     "meanB": 115,
+     "delta": -76.4,
+     "pairedSd": 170.8,
+     "seOfMean": 49.3,
+     "t": -1.55,
+     "ci95": [
+      -173.1,
+      20.2
+     ],
+     "aWorse5": 2,
+     "tie5": 7,
+     "bWorse5": 3
+    },
+    "all": {
+     "n": 17,
+     "meanA": 33.1,
+     "meanB": 106.2,
+     "delta": -73.1,
+     "pairedSd": 149.7,
+     "seOfMean": 36.3,
+     "t": -2.01,
+     "ci95": [
+      -144.3,
+      -1.9
+     ],
+     "aWorse5": 2,
+     "tie5": 9,
+     "bWorse5": 6
+    }
+   }
+  },
+  "AC_P15 minus AC_AD": {
+   "a": "AC_P15",
+   "b": "AC_AD",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 67.4,
+     "meanB": 18.6,
+     "delta": 48.8,
+     "pairedSd": 57.9,
+     "seOfMean": 25.9,
+     "t": 1.88,
+     "ci95": [
+      -1.9,
+      99.5
+     ],
+     "aWorse5": 3,
+     "tie5": 2,
+     "bWorse5": 0
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 63.8,
+     "meanB": 34,
+     "delta": 29.8,
+     "pairedSd": 59.4,
+     "seOfMean": 17.2,
+     "t": 1.73,
+     "ci95": [
+      -3.9,
+      63.4
+     ],
+     "aWorse5": 6,
+     "tie5": 5,
+     "bWorse5": 1
+    },
+    "all": {
+     "n": 17,
+     "meanA": 64.8,
+     "meanB": 29.5,
+     "delta": 35.4,
+     "pairedSd": 57.8,
+     "seOfMean": 14,
+     "t": 2.52,
+     "ci95": [
+      7.9,
+      62.9
+     ],
+     "aWorse5": 9,
+     "tie5": 7,
+     "bWorse5": 1
+    }
+   }
+  },
+  "AC_P20 minus AC_P15": {
+   "a": "AC_P20",
+   "b": "AC_P15",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 59.6,
+     "meanB": 67.4,
+     "delta": -7.8,
+     "pairedSd": 8.2,
+     "seOfMean": 3.7,
+     "t": -2.12,
+     "ci95": [
+      -15,
+      -0.6
+     ],
+     "aWorse5": 0,
+     "tie5": 2,
+     "bWorse5": 3
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 110.7,
+     "meanB": 63.8,
+     "delta": 46.9,
+     "pairedSd": 138.8,
+     "seOfMean": 40.1,
+     "t": 1.17,
+     "ci95": [
+      -31.6,
+      125.5
+     ],
+     "aWorse5": 5,
+     "tie5": 3,
+     "bWorse5": 4
+    },
+    "all": {
+     "n": 17,
+     "meanA": 95.6,
+     "meanB": 64.8,
+     "delta": 30.8,
+     "pairedSd": 118,
+     "seOfMean": 28.6,
+     "t": 1.08,
+     "ci95": [
+      -25.3,
+      86.9
+     ],
+     "aWorse5": 5,
+     "tie5": 5,
+     "bWorse5": 7
+    }
+   }
+  },
+  "AC_AM minus AC_P20": {
+   "a": "AC_AM",
+   "b": "AC_P20",
+   "groups": {
+    "opening": {
+     "n": 5,
+     "meanA": 85,
+     "meanB": 59.6,
+     "delta": 25.4,
+     "pairedSd": 35.3,
+     "seOfMean": 15.8,
+     "t": 1.61,
+     "ci95": [
+      -5.6,
+      56.4
+     ],
+     "aWorse5": 4,
+     "tie5": 1,
+     "bWorse5": 0
+    },
+    "midgame": {
+     "n": 12,
+     "meanA": 115,
+     "meanB": 110.7,
+     "delta": 4.3,
+     "pairedSd": 202.7,
+     "seOfMean": 58.5,
+     "t": 0.07,
+     "ci95": [
+      -110.4,
+      119
+     ],
+     "aWorse5": 2,
+     "tie5": 4,
+     "bWorse5": 6
+    },
+    "all": {
+     "n": 17,
+     "meanA": 106.2,
+     "meanB": 95.6,
+     "delta": 10.5,
+     "pairedSd": 169.3,
+     "seOfMean": 41.1,
+     "t": 0.26,
+     "ci95": [
+      -69.9,
+      91
+     ],
+     "aWorse5": 6,
+     "tie5": 5,
+     "bWorse5": 6
+    }
+   }
+  }
+ },
+ "sep": {
+  "OP00": {
+   "group": "opening",
+   "AC_AD": 23,
+   "AC_AM": 26,
+   "AC_P15": 23,
+   "AC_P20": 5,
+   "AC_X1": 29,
+   "AM0": 9,
+   "CAP_AD": 16,
+   "CAP_AM": 24,
+   "NOI_AM": 24,
+   "ANCH": 8,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": 7,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 2,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": 17,
+     "cls": "FLAT"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 3,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "OP02": {
+   "group": "opening",
+   "AC_AD": 6,
+   "AC_AM": 23,
+   "AC_P15": 24,
+   "AC_P20": 11,
+   "AC_X1": 14,
+   "AM0": 17,
+   "CAP_AD": 13,
+   "CAP_AM": 14,
+   "NOI_AM": 16,
+   "ANCH": 3,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -7,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 9,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": 6,
+     "cls": "FLAT"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 17,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "OP04": {
+   "group": "opening",
+   "AC_AD": 12,
+   "AC_AM": 17,
+   "AC_P15": 17,
+   "AC_P20": 9,
+   "AC_X1": 14,
+   "AM0": 6,
+   "CAP_AD": 21,
+   "CAP_AM": 16,
+   "NOI_AM": 5,
+   "ANCH": 1,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -9,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 1,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": 11,
+     "cls": "FLAT"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 5,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "OP06": {
+   "group": "opening",
+   "AC_AD": 59,
+   "AC_AM": 149,
+   "AC_P15": 153,
+   "AC_P20": 150,
+   "AC_X1": 55,
+   "AM0": 229,
+   "CAP_AD": 39,
+   "CAP_AM": 226,
+   "NOI_AM": 233,
+   "ANCH": -3,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": 20,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": -77,
+     "cls": "INV"
+    },
+    "AC_AM>AM0": {
+     "delta": -80,
+     "cls": "INV"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 90,
+     "cls": "SEP"
+    }
+   }
+  },
+  "OP08": {
+   "group": "opening",
+   "AC_AD": -7,
+   "AC_AM": 210,
+   "AC_P15": 120,
+   "AC_P20": 123,
+   "AC_X1": -13,
+   "AM0": 340,
+   "CAP_AD": 0,
+   "CAP_AM": 245,
+   "NOI_AM": 246,
+   "ANCH": -5,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -7,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": -35,
+     "cls": "INV"
+    },
+    "AC_AM>AM0": {
+     "delta": -130,
+     "cls": "INV"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 217,
+     "cls": "SEP"
+    }
+   }
+  },
+  "MG_QT01": {
+   "group": "midgame",
+   "AC_AD": 11,
+   "AC_AM": 10,
+   "AC_P15": 13,
+   "AC_P20": 11,
+   "AC_X1": 14,
+   "AM0": 592,
+   "CAP_AD": -1,
+   "CAP_AM": 2,
+   "NOI_AM": 601,
+   "ANCH": 14,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": 12,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 8,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": -582,
+     "cls": "INV"
+    },
+    "AC_AM>AC_AD": {
+     "delta": -1,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "MG_QT05": {
+   "group": "midgame",
+   "AC_AD": 81,
+   "AC_AM": 63,
+   "AC_P15": 62,
+   "AC_P20": 84,
+   "AC_X1": 62,
+   "AM0": 40,
+   "CAP_AD": 43,
+   "CAP_AM": 30,
+   "NOI_AM": 40,
+   "ANCH": 14,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": 38,
+     "cls": "SEP"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 33,
+     "cls": "SEP"
+    },
+    "AC_AM>AM0": {
+     "delta": 23,
+     "cls": "SEP"
+    },
+    "AC_AM>AC_AD": {
+     "delta": -18,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "MG_QT10": {
+   "group": "midgame",
+   "AC_AD": 47,
+   "AC_AM": 458,
+   "AC_P15": 52,
+   "AC_P20": 78,
+   "AC_X1": 43,
+   "AM0": 48,
+   "CAP_AD": 98,
+   "CAP_AM": 55,
+   "NOI_AM": 32,
+   "ANCH": 3,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -51,
+     "cls": "INV"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 403,
+     "cls": "SEP"
+    },
+    "AC_AM>AM0": {
+     "delta": 410,
+     "cls": "SEP"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 411,
+     "cls": "SEP"
+    }
+   }
+  },
+  "MG_QT14": {
+   "group": "midgame",
+   "AC_AD": 105,
+   "AC_AM": 77,
+   "AC_P15": 118,
+   "AC_P20": 113,
+   "AC_X1": 179,
+   "AM0": -4,
+   "CAP_AD": 80,
+   "CAP_AM": 104,
+   "NOI_AM": 56,
+   "ANCH": -1,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": 25,
+     "cls": "SEP"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": -27,
+     "cls": "INV"
+    },
+    "AC_AM>AM0": {
+     "delta": 81,
+     "cls": "SEP"
+    },
+    "AC_AM>AC_AD": {
+     "delta": -28,
+     "cls": "INV"
+    }
+   }
+  },
+  "MG_QT19": {
+   "group": "midgame",
+   "AC_AD": 1,
+   "AC_AM": 2,
+   "AC_P15": 0,
+   "AC_P20": 1,
+   "AC_X1": 2,
+   "AM0": 592,
+   "CAP_AD": 1,
+   "CAP_AM": 1,
+   "NOI_AM": 585,
+   "ANCH": 1,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": 0,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 1,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": -590,
+     "cls": "INV"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 1,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "MG_QT24": {
+   "group": "midgame",
+   "AC_AD": 6,
+   "AC_AM": 5,
+   "AC_P15": 9,
+   "AC_P20": 470,
+   "AC_X1": 12,
+   "AM0": 5,
+   "CAP_AD": 9,
+   "CAP_AM": 10,
+   "NOI_AM": 2,
+   "ANCH": -2,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -3,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": -5,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": 0,
+     "cls": "FLAT"
+    },
+    "AC_AM>AC_AD": {
+     "delta": -1,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "MG_QT29": {
+   "group": "midgame",
+   "AC_AD": 8,
+   "AC_AM": 10,
+   "AC_P15": 20,
+   "AC_P20": 10,
+   "AC_X1": 11,
+   "AM0": 17,
+   "CAP_AD": 18,
+   "CAP_AM": 6,
+   "NOI_AM": 10,
+   "ANCH": -2,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -10,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 4,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": -7,
+     "cls": "FLAT"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 2,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "MG_QT34": {
+   "group": "midgame",
+   "AC_AD": 30,
+   "AC_AM": 453,
+   "AC_P15": 230,
+   "AC_P20": 159,
+   "AC_X1": 51,
+   "AM0": 29,
+   "CAP_AD": 13,
+   "CAP_AM": 224,
+   "NOI_AM": 35,
+   "ANCH": 1,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": 17,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 229,
+     "cls": "SEP"
+    },
+    "AC_AM>AM0": {
+     "delta": 424,
+     "cls": "SEP"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 423,
+     "cls": "SEP"
+    }
+   }
+  },
+  "MG_QT39": {
+   "group": "midgame",
+   "AC_AD": 16,
+   "AC_AM": 14,
+   "AC_P15": 21,
+   "AC_P20": 15,
+   "AC_X1": 18,
+   "AM0": 8,
+   "CAP_AD": 23,
+   "CAP_AM": 20,
+   "NOI_AM": 10,
+   "ANCH": 0,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -7,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": -6,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": 6,
+     "cls": "FLAT"
+    },
+    "AC_AM>AC_AD": {
+     "delta": -2,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "MG_QH01": {
+   "group": "midgame",
+   "AC_AD": 0,
+   "AC_AM": 10,
+   "AC_P15": 13,
+   "AC_P20": 36,
+   "AC_X1": 13,
+   "AM0": -2,
+   "CAP_AD": 17,
+   "CAP_AM": 11,
+   "NOI_AM": -3,
+   "ANCH": -7,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -17,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": -1,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": 12,
+     "cls": "FLAT"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 10,
+     "cls": "FLAT"
+    }
+   }
+  },
+  "MG_QB3": {
+   "group": "midgame",
+   "AC_AD": 63,
+   "AC_AM": 243,
+   "AC_P15": 146,
+   "AC_P20": 283,
+   "AC_X1": 27,
+   "AM0": 155,
+   "CAP_AD": 142,
+   "CAP_AM": 264,
+   "NOI_AM": 126,
+   "ANCH": -7,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": -79,
+     "cls": "INV"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": -21,
+     "cls": "INV"
+    },
+    "AC_AM>AM0": {
+     "delta": 88,
+     "cls": "SEP"
+    },
+    "AC_AM>AC_AD": {
+     "delta": 180,
+     "cls": "SEP"
+    }
+   }
+  },
+  "MG_QB9": {
+   "group": "midgame",
+   "AC_AD": 40,
+   "AC_AM": 35,
+   "AC_P15": 81,
+   "AC_P20": 68,
+   "AC_X1": 31,
+   "AM0": 2,
+   "CAP_AD": 34,
+   "CAP_AM": 31,
+   "NOI_AM": 145,
+   "ANCH": -1,
+   "sep": {
+    "AC_AD>CAP_AD": {
+     "delta": 6,
+     "cls": "FLAT"
+    },
+    "AC_AM>CAP_AM": {
+     "delta": 4,
+     "cls": "FLAT"
+    },
+    "AC_AM>AM0": {
+     "delta": 33,
+     "cls": "SEP"
+    },
+    "AC_AM>AC_AD": {
+     "delta": -5,
+     "cls": "FLAT"
+    }
+   }
+  }
+ },
+ "ruleDiag": {
+  "AC_AD": {
+   "cap": 60,
+   "p": 0.1,
+   "hits": {
+    "cap": 13,
+    "above": 3,
+    "rand": 1
+   },
+   "randShare": 0.059,
+   "capBranchShare": 0.941,
+   "capDegenerateShare": 0.176,
+   "wouldBeSlotHist": {
+    "7": 1
+   },
+   "capBranchSlotHist": {
+    "1": 3,
+    "2": 1,
+    "3": 1,
+    "5": 1,
+    "8": 10
+   },
+   "capViolations": []
+  },
+  "AC_AM": {
+   "cap": 200,
+   "p": 0.25,
+   "hits": {
+    "cap": 10,
+    "above": 2,
+    "rand": 5
+   },
+   "randShare": 0.294,
+   "capBranchShare": 0.706,
+   "capDegenerateShare": 0.118,
+   "wouldBeSlotHist": {
+    "8": 5
+   },
+   "capBranchSlotHist": {
+    "1": 2,
+    "3": 2,
+    "8": 8
+   },
+   "capViolations": []
+  },
+  "AC_P15": {
+   "cap": 200,
+   "p": 0.15,
+   "hits": {
+    "cap": 14,
+    "above": 2,
+    "rand": 1
+   },
+   "randShare": 0.059,
+   "capBranchShare": 0.941,
+   "capDegenerateShare": 0.118,
+   "wouldBeSlotHist": {
+    "8": 1
+   },
+   "capBranchSlotHist": {
+    "1": 2,
+    "2": 1,
+    "3": 1,
+    "8": 12
+   },
+   "capViolations": []
+  },
+  "AC_P20": {
+   "cap": 200,
+   "p": 0.2,
+   "hits": {
+    "rand": 3,
+    "cap": 12,
+    "above": 2
+   },
+   "randShare": 0.176,
+   "capBranchShare": 0.824,
+   "capDegenerateShare": 0.118,
+   "wouldBeSlotHist": {
+    "8": 3
+   },
+   "capBranchSlotHist": {
+    "1": 2,
+    "2": 1,
+    "3": 1,
+    "8": 10
+   },
+   "capViolations": []
+  },
+  "AC_X1": {
+   "cap": 60,
+   "p": 0.25,
+   "hits": {
+    "cap": 13,
+    "above": 3,
+    "rand": 1
+   },
+   "randShare": 0.059,
+   "capBranchShare": 0.941,
+   "capDegenerateShare": 0.176,
+   "wouldBeSlotHist": {
+    "7": 1
+   },
+   "capBranchSlotHist": {
+    "1": 3,
+    "2": 1,
+    "3": 1,
+    "5": 1,
+    "8": 10
+   },
+   "capViolations": []
+  },
+  "CAP_AD": {
+   "hits": {
+    "cap": 14,
+    "above": 3
+   },
+   "slotUsedHist": {
+    "1": 3,
+    "2": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "8": 10
+   }
+  },
+  "CAP_AM": {
+   "hits": {
+    "cap": 15,
+    "above": 2
+   },
+   "slotUsedHist": {
+    "1": 2,
+    "3": 1,
+    "4": 1,
+    "8": 13
+   }
+  },
+  "NOI_AM": {
+   "hits": {
+    "rand": 3,
+    "engine": 14
+   },
+   "randShare": 0.176
+  }
+ },
+ "instability": {
+  "AC_AD": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "AC_AM": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "AC_P15": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "AC_P20": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "AC_X1": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "AM0": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "CAP_AD": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "CAP_AM": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "NOI_AM": {
+   "pairs": 0,
+   "unstable": 0
+  },
+  "ANCH": {
+   "pairs": 0,
+   "unstable": 0
+  }
+ },
+ "cost": {
+  "AC_AD": {
+   "n": 17,
+   "depthMin": 10,
+   "depthMax": 14,
+   "nodesMin": 256982,
+   "nodesMax": 353892,
+   "nodesMean": 310638,
+   "gapStat": {
+    "n": 16,
+    "mean": 21.4,
+    "median": 25,
+    "min": 0,
+    "max": 47,
+    "sd": 14.3
+   },
+   "gapBuckets": {
+    "0": 3,
+    "1-9": 0,
+    "10-49": 13,
+    "50-199": 0,
+    "200-499": 0,
+    "500+": 0
+   }
+  },
+  "AC_AM": {
+   "n": 17,
+   "depthMin": 9,
+   "depthMax": 15,
+   "nodesMin": 249253,
+   "nodesMax": 358881,
+   "nodesMean": 312700,
+   "gapStat": {
+    "n": 14,
+    "mean": 41.7,
+    "median": 25,
+    "min": 0,
+    "max": 194,
+    "sd": 52.5
+   },
+   "gapBuckets": {
+    "0": 2,
+    "1-9": 0,
+    "10-49": 9,
+    "50-199": 3,
+    "200-499": 0,
+    "500+": 0
+   }
+  },
+  "AC_P15": {
+   "n": 17,
+   "depthMin": 8,
+   "depthMax": 15,
+   "nodesMin": 247595,
+   "nodesMax": 359455,
+   "nodesMean": 314036,
+   "gapStat": {
+    "n": 16,
+    "mean": 48.5,
+    "median": 26,
+    "min": 0,
+    "max": 164,
+    "sd": 48.9
+   },
+   "gapBuckets": {
+    "0": 2,
+    "1-9": 1,
+    "10-49": 8,
+    "50-199": 5,
+    "200-499": 0,
+    "500+": 0
+   }
+  },
+  "AC_P20": {
+   "n": 17,
+   "depthMin": 8,
+   "depthMax": 15,
+   "nodesMin": 236728,
+   "nodesMax": 370324,
+   "nodesMean": 305594,
+   "gapStat": {
+    "n": 15,
+    "mean": 48.4,
+    "median": 28,
+    "min": 0,
+    "max": 152,
+    "sd": 47.5
+   },
+   "gapBuckets": {
+    "0": 2,
+    "1-9": 1,
+    "10-49": 7,
+    "50-199": 5,
+    "200-499": 0,
+    "500+": 0
+   }
+  },
+  "AC_X1": {
+   "n": 17,
+   "depthMin": 8,
+   "depthMax": 14,
+   "nodesMin": 244505,
+   "nodesMax": 364409,
+   "nodesMean": 307140,
+   "gapStat": {
+    "n": 16,
+    "mean": 22.9,
+    "median": 21,
+    "min": 0,
+    "max": 50,
+    "sd": 16.8
+   },
+   "gapBuckets": {
+    "0": 3,
+    "1-9": 1,
+    "10-49": 10,
+    "50-199": 2,
+    "200-499": 0,
+    "500+": 0
+   }
+  },
+  "AM0": {
+   "n": 17,
+   "depthMin": 10,
+   "depthMax": 16,
+   "nodesMin": 154731,
+   "nodesMax": 319779,
+   "nodesMean": 284737,
+   "gapStat": {
+    "n": 17,
+    "mean": 110.1,
+    "median": 27,
+    "min": 3,
+    "max": 590,
+    "sd": 183
+   },
+   "gapBuckets": {
+    "0": 0,
+    "1-9": 6,
+    "10-49": 6,
+    "50-199": 2,
+    "200-499": 1,
+    "500+": 2
+   }
+  },
+  "CAP_AD": {
+   "n": 17,
+   "depthMin": 8,
+   "depthMax": 14,
+   "nodesMin": 245615,
+   "nodesMax": 386350,
+   "nodesMean": 316367,
+   "gapStat": {
+    "n": 17,
+    "mean": 23.8,
+    "median": 23,
+    "min": 0,
+    "max": 57,
+    "sd": 17.5
+   },
+   "gapBuckets": {
+    "0": 3,
+    "1-9": 1,
+    "10-49": 12,
+    "50-199": 1,
+    "200-499": 0,
+    "500+": 0
+   }
+  },
+  "CAP_AM": {
+   "n": 17,
+   "depthMin": 9,
+   "depthMax": 14,
+   "nodesMin": 255696,
+   "nodesMax": 348127,
+   "nodesMean": 312494,
+   "gapStat": {
+    "n": 17,
+    "mean": 58.2,
+    "median": 28,
+    "min": 0,
+    "max": 199,
+    "sd": 60.5
+   },
+   "gapBuckets": {
+    "0": 2,
+    "1-9": 0,
+    "10-49": 9,
+    "50-199": 6,
+    "200-499": 0,
+    "500+": 0
+   }
+  },
+  "NOI_AM": {
+   "n": 17,
+   "depthMin": 11,
+   "depthMax": 16,
+   "nodesMin": 230960,
+   "nodesMax": 315700,
+   "nodesMean": 288776,
+   "gapStat": {
+    "n": 14,
+    "mean": 133.3,
+    "median": 25,
+    "min": 6,
+    "max": 588,
+    "sd": 198.8
+   },
+   "gapBuckets": {
+    "0": 0,
+    "1-9": 3,
+    "10-49": 6,
+    "50-199": 1,
+    "200-499": 2,
+    "500+": 2
+   }
+  },
+  "ANCH": {
+   "n": 17,
+   "depthMin": 20,
+   "depthMax": 29,
+   "nodesMin": 3010588,
+   "nodesMax": 3869541,
+   "nodesMean": 3560076,
+   "gapStat": {
+    "n": 17,
+    "mean": 0,
+    "median": 0,
+    "min": 0,
+    "max": 0,
+    "sd": 0
+   },
+   "gapBuckets": {
+    "0": 17,
+    "1-9": 0,
+    "10-49": 0,
+    "50-199": 0,
+    "200-499": 0,
+    "500+": 0
+   }
+  }
+ },
+ "skips": [],
+ "crit": 0,
+ "skipCount": 0,
+ "selCount": 170,
+ "anchorCount": 17,
+ "refCount": 170
+}

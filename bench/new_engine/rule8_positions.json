@@ -1,0 +1,110 @@
+{
+ "positions": {
+  "PERP": {
+   "label": "长将判定：红单马长将 + 黑有过河卒可永远横走（红绝无杀）",
+   "fenCheck": "ok",
+   "selfCheckOk": true,
+   "fen": "2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1",
+   "cycle": [
+    "c9d7",
+    "e9e8",
+    "d7c9",
+    "e8e9"
+   ],
+   "log": [
+    {
+     "ply": 0,
+     "mover": 1,
+     "play": "c9d7",
+     "wasInCheck": false,
+     "legalBefore": 5
+    },
+    {
+     "ply": 1,
+     "mover": -1,
+     "play": "e9e8",
+     "wasInCheck": true,
+     "legalBefore": 3
+    },
+    {
+     "ply": 2,
+     "mover": 1,
+     "play": "d7c9",
+     "wasInCheck": false,
+     "legalBefore": 9
+    },
+    {
+     "ply": 3,
+     "mover": -1,
+     "play": "e8e9",
+     "wasInCheck": true,
+     "legalBefore": 3
+    },
+    {
+     "ply": 4,
+     "mover": 1,
+     "play": "c9d7",
+     "wasInCheck": false,
+     "legalBefore": 5
+    },
+    {
+     "ply": 5,
+     "mover": -1,
+     "play": "e9e8",
+     "wasInCheck": true,
+     "legalBefore": 3
+    },
+    {
+     "ply": 6,
+     "mover": 1,
+     "play": "d7c9",
+     "wasInCheck": false,
+     "legalBefore": 9
+    },
+    {
+     "ply": 7,
+     "mover": -1,
+     "play": "e8e9",
+     "wasInCheck": true,
+     "legalBefore": 3
+    },
+    {
+     "ply": 8,
+     "mover": 1,
+     "play": "c9d7",
+     "wasInCheck": false,
+     "legalBefore": 5
+    },
+    {
+     "ply": 9,
+     "mover": -1,
+     "play": "e9e8",
+     "wasInCheck": true,
+     "legalBefore": 3
+    },
+    {
+     "ply": 10,
+     "mover": 1,
+     "play": "d7c9",
+     "wasInCheck": false,
+     "legalBefore": 9
+    },
+    {
+     "ply": 11,
+     "mover": -1,
+     "play": "e8e9",
+     "wasInCheck": true,
+     "legalBefore": 3
+    }
+   ],
+   "depth8ScoreNoMate": 54,
+   "nodes8": 17282
+  },
+  "R60": {
+   "M1": "4k4/3P5/9/9/5R3/9/9/9/9/3K5",
+   "M2": "2N1k4/9/9/9/9/9/9/3K5/9/9",
+   "M1rows": "ok",
+   "M2rows": "ok"
+  }
+ }
+}

@@ -1,0 +1,357 @@
+{
+ "generated": "2026-10-04T18:01:53.009Z",
+ "source": {
+  "analysis": "new_engine_logs/tier_analysis.json",
+  "fit": "tier_fit_out.json",
+  "logs": [
+   "../new_engine_logs/tier_r1.log",
+   "../new_engine_logs/tier_r2.log"
+  ]
+ },
+ "contract": {
+  "parameters": [
+   "cap",
+   "p",
+   "mistakeBand"
+  ],
+  "definitions": {
+   "cap": "stable strength: the largest judged degradation (cp vs the pool best) this tier plays normally",
+   "p": "probability of MAKING A MISTAKE instead of playing the stable choice",
+   "mistakeBand": "extra reach of a mistake: only candidates with cap < gap <= cap+mistakeBand may be picked; this is the bounded degradation limit from bench/NEW_ENGINE_WEAK_TIER_BOUNDED.md (t_f844043c)"
+  },
+  "boundedRelationship": "mistakeBand == the bounded limit of the boundednoise rule, re-expressed so the random branch is strictly WORSE than the stable choice (the fix for the bounded card's negative finding 1b). hardMistakeBand 700 is the 少子形 variant of the same limit.",
+  "effectRate": "realized mistake rate = p * P(band non-empty), NOT p. See mistakeEffectRate per tier."
+ },
+ "fixedSearchBudget": {
+  "movetime": 300,
+  "multipv": 8,
+  "hash": 64,
+  "threads": 4
+ },
+ "note": "cap/p/mistakeBand are the only strength knobs; 大师 is the ceiling (MultiPV=1 + the measured ANCHOR budget), not a rung.",
+ "mistakeEffectRate": {
+  "definition": "realized mistake rate = share of played selections that were actually WORSE than the stable choice (hit=rand). It equals p * P(band non-empty) and is always below p.",
+  "calibration": {
+   "业余": {
+    "measuredCfg": "P50",
+    "note": "cfg probed in the calibration = plain cap/p/mistakeBand (no per-class overrides); cfg decided adds openingCap=cap and hardCap0/hardMistakeBand700 — both ceilings are given.",
+    "perRound": [
+     {
+      "round": "tier_analysis_r1.json",
+      "n": 17,
+      "firedRate": 0.59,
+      "effectRate": 0.12
+     },
+     {
+      "round": "tier_analysis_r2.json",
+      "n": 17,
+      "firedRate": 0.53,
+      "effectRate": 0.12
+     }
+    ],
+    "calibrationEffectRate": 0.12,
+    "firedRate": 0.5599999999999999,
+    "effectRateOfFired": 0.2142857142857143,
+    "bandCeilingProbedCfg": 0.23529411764705888,
+    "bandCeilingDecidedCfg": 0.3529411764705882,
+    "poolsTested": 34,
+    "selectionsTested": 34
+   },
+   "进阶": {
+    "measuredCfg": "CAP80",
+    "note": "cfg probed in the calibration = plain cap/p/mistakeBand (no per-class overrides); cfg decided adds openingCap=cap and hardCap0/hardMistakeBand700 — both ceilings are given.",
+    "perRound": [
+     {
+      "round": "tier_analysis_r1.json",
+      "n": 17,
+      "firedRate": 0,
+      "effectRate": 0
+     },
+     {
+      "round": "tier_analysis_r2.json",
+      "n": 17,
+      "firedRate": 0,
+      "effectRate": 0
+     }
+    ],
+    "calibrationEffectRate": 0,
+    "firedRate": 0,
+    "effectRateOfFired": null,
+    "bandCeilingProbedCfg": 0.23529411764705888,
+    "bandCeilingDecidedCfg": 0.3529411764705882,
+    "poolsTested": 34,
+    "selectionsTested": 34
+   },
+   "高手": {
+    "measuredCfg": "G10",
+    "note": "cfg probed in the calibration = plain cap/p/mistakeBand (no per-class overrides); cfg decided adds openingCap=cap and hardCap0/hardMistakeBand700 — both ceilings are given.",
+    "perRound": [
+     {
+      "round": "tier_analysis_r1.json",
+      "n": 17,
+      "firedRate": 0.12,
+      "effectRate": 0.12
+     },
+     {
+      "round": "tier_analysis_r2.json",
+      "n": 17,
+      "firedRate": 0.12,
+      "effectRate": 0.06
+     }
+    ],
+    "calibrationEffectRate": 0.09,
+    "firedRate": 0.12,
+    "effectRateOfFired": 0.75,
+    "bandCeilingProbedCfg": 0.5882352941176471,
+    "bandCeilingDecidedCfg": 0.7058823529411764,
+    "poolsTested": 34,
+    "selectionsTested": 34
+   }
+  },
+  "game": {
+   "source": "node tier_effect_report.js --games new_engine_logs/games_r1.log games_r2.log (32 games, 1388 moves)",
+   "业余": {
+    "moves": 541,
+    "effectiveRand": 109,
+    "firedButBandEmpty": 162,
+    "effectRate": 0.201,
+    "effectRateOfFired": 0.402
+   },
+   "进阶": {
+    "moves": 450,
+    "effectiveRand": 0,
+    "firedButBandEmpty": 0,
+    "effectRate": 0,
+    "note": "p=0 by design"
+   },
+   "高手": {
+    "moves": 397,
+    "effectiveRand": 28,
+    "firedButBandEmpty": 13,
+    "effectRate": 0.071,
+    "effectRateOfFired": 0.683
+   },
+   "measuredGapOfMistakeMoves": {
+    "业余": {
+     "median": 116,
+     "p90": 220,
+     "max": 264
+    },
+    "高手": {
+     "median": 94,
+     "p90": 181,
+     "max": 200
+    }
+   }
+  },
+  "hardPositionsNote": "in 少子形 (HARD) positions no engine tier ever played a mistake candidate: 34 HARD moves across the 32 games (业余 12 / 进阶 11 / 高手 11), hit=rand 0 times (业余 7 above + 5 bmiss, band empty in 11/12; 进阶 11 above; 高手 10 above + 1 bmiss). hardCap 0 means only the pool-best candidate is accepted and hardMistakeBand 700 was empty in 30/34 of them. The bounded constraint works as designed, but the low tiers are artificially careful in simplified positions and that must not be promised to players."
+ },
+ "mistakeBandLadderMeasured": {
+  "source": "node tier_verify.js new_engine_logs/tier_r4.log --out new_engine_logs/tier_analysis_r4.json (same 17 positions, same 300ms/MultiPV8/Hash64 budget, only mistakeBand varied)",
+  "finding": "widening the band from cap+50 to cap+200 is NOT a strength knob (measured 43.9 vs 52.9 cp overall, midgame 54.4 vs 45.6 — inside the noise floor, and both above the p=0 reference 37.4). Removing the upper bound DOES change strength (104.6 cp) and it breaks the bounded constraint: a 583 cp blunder on MG_QT01 and 290.5 cp average in HARD positions, which is exactly the 白丢子 the bounded card (t_f844043c) was closed for.",
+  "decision": "keep mistakeBand 200 (bounded). To make a tier weaker, move cap or p — not the band.",
+  "measured": {
+   "CAP80_p0": {
+    "overall": 37.4,
+    "opening": 21.8,
+    "midgame": 43.8,
+    "hard": -1.5,
+    "gapMax": 73
+   },
+   "band_cap50_p50": {
+    "overall": 43.9,
+    "opening": 18.8,
+    "midgame": 54.4,
+    "hard": 0.5,
+    "gapMax": 128
+   },
+   "band_cap200_p50": {
+    "overall": 52.9,
+    "opening": 70.6,
+    "midgame": 45.6,
+    "hard": -1.5,
+    "gapMax": 240
+   },
+   "band_unbounded_p50": {
+    "overall": 104.6,
+    "opening": 107.2,
+    "midgame": 103.5,
+    "hard": 290.5,
+    "gapMax": 588
+   },
+   "band_cap50_cap25_p10": {
+    "overall": 46.8,
+    "midgame": 61.7,
+    "hard": 291,
+    "note": "cap25 + band50 lets a 565 cp blunder through in HARD"
+   },
+   "band_cap200_cap25_p10": {
+    "overall": 8,
+    "midgame": 9.8,
+    "hard": 2.5,
+    "gapMax": 25
+   },
+   "band_unbounded_cap25_p10": {
+    "overall": 38.5,
+    "midgame": 53.3,
+    "hard": 283.5,
+    "gapMax": 556
+   }
+  }
+ },
+ "reviewPending": [
+  "大师 movetime is a bench-only measurement (r3: 6 positions, r5: 10 positions) and is marked pending-real-device; 1000-8000 ms are indistinguishable in strength on that sample, so the value is chosen on cost, not strength.",
+  "adjacent tiers are separable on the MEAN (18-21 cp) but not per single game: per-position hit rate 24-53%, noise floor ±7 cp per position / ±14 cp per round mean.",
+  "17 calibration positions include only 2 HARD and several \"everything is bad\" positions; a finer ladder needs more midgame positions with real intermediate gradients.",
+  "in 少子形 (HARD) positions no engine tier ever played a mistake candidate: 34 HARD moves across the 32 games (业余 12 / 进阶 11 / 高手 11) produced hit=rand 0 times (业余 7 above + 5 bmiss with the band empty in 11/12, 进阶 11 above, 高手 10 above + 1 bmiss). The bounded constraint works as designed, but \"the low tiers blunder in simplified positions\" is NOT supported by this data and must not be promised to players."
+ ],
+ "入门": {
+  "id": "T_RUKN",
+  "kind": "builtin",
+  "depth": 2,
+  "qDepth": 0,
+  "maxNodes": 1500,
+  "randomness": 45
+ },
+ "对照": {
+  "name": "对照",
+  "tier": "对照",
+  "note": "control rung: always the best candidate at the TIER budget (isolates a tier mistake dimension from thinking time)",
+  "id": "C_CAP0",
+  "rule": "tier",
+  "cap": 0,
+  "p": 0,
+  "mistakeBand": 200,
+  "openingCap": 0,
+  "openingMistakeBand": 200,
+  "hardCap": 0,
+  "hardMistakeBand": 700,
+  "multipv": 8,
+  "movetime": 300,
+  "hash": 64
+ },
+ "业余": {
+  "name": "业余",
+  "tier": "业余",
+  "id": "T_YOU",
+  "rule": "tier",
+  "cap": 80,
+  "p": 0.5,
+  "mistakeBand": 200,
+  "openingCap": 80,
+  "openingMistakeBand": 200,
+  "hardCap": 0,
+  "hardMistakeBand": 700,
+  "multipv": 8,
+  "movetime": 300,
+  "hash": 64
+ },
+ "进阶": {
+  "name": "进阶",
+  "tier": "进阶",
+  "id": "T_JIN",
+  "rule": "tier",
+  "cap": 80,
+  "p": 0,
+  "mistakeBand": 200,
+  "openingCap": 80,
+  "openingMistakeBand": 200,
+  "hardCap": 0,
+  "hardMistakeBand": 700,
+  "multipv": 8,
+  "movetime": 300,
+  "hash": 64
+ },
+ "高手": {
+  "name": "高手",
+  "tier": "高手",
+  "id": "T_GAO",
+  "rule": "tier",
+  "cap": 25,
+  "p": 0.1,
+  "mistakeBand": 200,
+  "openingCap": 25,
+  "openingMistakeBand": 200,
+  "hardCap": 0,
+  "hardMistakeBand": 700,
+  "multipv": 8,
+  "movetime": 300,
+  "hash": 64
+ },
+ "大师": {
+  "name": "大师",
+  "tier": "大师",
+  "id": "T_DA",
+  "kind": "master",
+  "multipv": 1,
+  "movetime": 2000,
+  "hash": 256,
+  "movetimeAlternatives": [
+   1000,
+   2000,
+   4000,
+   6000,
+   8000
+  ],
+  "status": "pending-real-device",
+  "statusNote": "movetime measured on bench samples only (r3: 6 positions; r5: 10 positions). 1000/2000/4000/6000/8000 ms are indistinguishable in strength on that sample (all within the noise floor), so 2000 is chosen as the cheapest of the flat region, NOT because it is stronger. Needs a real-device check on complex positions (memory, first-load, UI latency) before it is final.",
+  "measuredCost": {
+   "note": "bench/new_engine_logs/tier_r5.log + tier_ceiling_cost.js (10 positions, MultiPV1, Hash256)",
+   "firstLoadMs": {
+    "importScripts": 5,
+    "wasmModule": 42,
+    "nnueFetch": 166,
+    "nnueFsWrite": 179,
+    "engineInitialize": 551
+   },
+   "nnueBytes": 50706378,
+   "wasmHeapAfterInitBytes": 322174976,
+   "wasmHeapGrewToBytes": 573571072,
+   "heapNote": "the WASM heap reaches ~547 MB and does NOT grow further between movetime 1000 and 8000 ms at Hash 256 — the memory cost is the Hash setting, not the movetime.",
+   "nodesMeanByMovetime": {
+    "1000": 1773897,
+    "2000": 3447290,
+    "4000": 7013783,
+    "6000": 10311265,
+    "8000": 13671819,
+    "300/MultiPV8": 580900
+   },
+   "lossMeanByMovetime": {
+    "1000": -0.4,
+    "2000": -4.5,
+    "4000": -3.7,
+    "6000": -2.7,
+    "8000": -4.1,
+    "300/MultiPV8": -2.5,
+    "ANCHOR": -3
+   },
+   "samplePositions": 10
+  }
+ },
+ "predictedLoss": {
+  "大师": {
+   "all": -7.923529411764705,
+   "opening": -1.1,
+   "normal": -12.5,
+   "hard": -2.1
+  },
+  "高手": {
+   "all": 12.844704714285717,
+   "opening": 16.498785666666667,
+   "normal": 13.956806380952383,
+   "hard": -1.8510060000000002
+  },
+  "进阶": {
+   "all": 31.14725882352941,
+   "opening": 17.52476,
+   "normal": 44.607960000000006,
+   "hard": -2.1
+  },
+  "业余": {
+   "all": 49.96779882352942,
+   "opening": 63.6029,
+   "normal": 53.314814,
+   "hard": -0.8550300000000001
+  }
+ }
+}

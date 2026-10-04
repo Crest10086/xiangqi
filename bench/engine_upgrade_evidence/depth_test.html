@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>depth curves</title></head>
+<body>
+<script>
+// Compares nodes/time needed at FIXED depth for mistboard (full net) vs current (small net).
+const LOG = (s) => { fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); };
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+const FEN = 'rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1';
+if (!self.crossOriginIsolated) {
+  navigator.serviceWorker.register('./coi-serviceworker.js').then(() => location.reload()).catch(e => LOG('SW fail ' + e));
+} else {
+  main();
+}
+async function main() {
+  LOG('DEPTH coi=' + self.crossOriginIsolated);
+  await runMb();
+  await runCur();
+  LOG('DEPTH DONE');
+  document.title = 'DONE';
+}
+function makeMb() {
+  const w = new Worker('./worker_mb.js');
+  const lines = [];
+  let readyRes = null; const ready = new Promise(r => { readyRes = r; });
+  let bestCb = null;
+  w.onmessage = (ev) => {
+    const d = ev.data || {};
+    if (d.type === 'ready') { if (readyRes) readyRes(true); }
+    if (d.type === 'error') { LOG('DEPTH mb error ' + d.error); if (readyRes) readyRes(false); }
+    if (d.type === 'line') { lines.push(d.line); if (bestCb && /^bestmove /.test(d.line)) { const cb = bestCb; bestCb = null; cb(); } }
+  };
+  return {
+    ready,
+    start: () => w.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' }),
+    cmd: (c) => w.postMessage({ type: 'command', command: c }),
+    searchDepth: (depth) => new Promise((res) => {
+      const mark = lines.length;
+      const t0 = performance.now();
+      let settled = false;
+      const to = setTimeout(() => { if (!settled) { settled = true; bestCb = null; res({ depth, nodes: -1, ms: -1, note: 'TIMEOUT' }); } }, 120000);
+      bestCb = () => {
+        if (settled) return; settled = true; clearTimeout(to);
+        const ms = performance.now() - t0;
+        let maxDepth = 0, nodes = 0;
+        for (let i = mark; i < lines.length; i++) {
+          const l = lines[i];
+          const dd = /info depth (\d+)/.exec(l); if (dd) maxDepth = Math.max(maxDepth, +dd[1]);
+          const nn = /nodes (\d+)/.exec(l); if (nn) nodes = Math.max(nodes, +nn[1]);
+        }
+        res({ depth: maxDepth, nodes, ms: Math.round(ms) });
+      };
+      w.postMessage({ type: 'command', command: 'position fen ' + FEN });
+      w.postMessage({ type: 'command', command: 'go depth ' + depth });
+    }),
+  };
+}
+async function runMb() {
+  const mb = makeMb();
+  mb.start();
+  const ok = await mb.ready;
+  if (!ok) return;
+  mb.cmd('setoption name Threads value 1');
+  mb.cmd('setoption name Hash value 256');
+  mb.cmd('isready');
+  await sleep(1500);
+  for (const d of [18, 20]) {
+    const r = await mb.searchDepth(d);
+    LOG('DEPTH mb1 d' + r.depth + ' -> nodes ' + r.nodes + ' ms ' + r.ms + (r.note ? ' ' + r.note : ''));
+  }
+}
+function runCur() {
+  return new Promise((resolve) => {
+    const w = new Worker('./js/engines/pikafish/pikafish.worker.js');
+    const lines = [];
+    let bestCb = null;
+    let done = false;
+    const finish = () => { if (!done) { done = true; resolve(); } };
+    w.onmessage = (ev) => {
+      const d = ev.data || {};
+      if (d.type === 'READY') {
+        (async () => {
+          for (const dd of [18, 20]) {
+            const r = await searchDepth(dd);
+            LOG('DEPTH cur d' + r.depth + ' -> nodes ' + r.nodes + ' ms ' + r.ms + (r.note ? ' ' + r.note : ''));
+          }
+          finish();
+        })();
+      }
+      else if (d.type === 'BEST_MOVE') { if (bestCb) { const cb = bestCb; bestCb = null; cb(); } }
+      else if (d.type === 'INFO') { lines.push(d.info); }
+      else if (d.type === 'ERROR') { LOG('DEPTH cur error ' + d.message); finish(); }
+    };
+    function searchDepth(depth) {
+      return new Promise((res) => {
+        const mark = lines.length;
+        const t0 = performance.now();
+        let settled = false;
+        const to = setTimeout(() => { if (!settled) { settled = true; bestCb = null; res({ depth, nodes: -1, ms: -1, note: 'TIMEOUT' }); } }, 180000);
+        bestCb = () => {
+          if (settled) return; settled = true; clearTimeout(to);
+          const ms = performance.now() - t0;
+          let maxDepth = 0, nodes = 0;
+          for (let i = mark; i < lines.length; i++) {
+            const l = lines[i];
+            const dd2 = /depth (\d+)/.exec(l); if (dd2) maxDepth = Math.max(maxDepth, +dd2[1]);
+            const nn = /nodes (\d+)/.exec(l); if (nn) nodes = Math.max(nodes, +nn[1]);
+          }
+          res({ depth: maxDepth, nodes, ms: Math.round(ms) });
+        };
+        w.postMessage({ type: 'SEARCH', fen: FEN, movetime: 1000, seq: 1, depth });
+      });
+    }
+    w.postMessage({ type: 'INIT' });
+  });
+}
+</script>
+</body>
+</html>

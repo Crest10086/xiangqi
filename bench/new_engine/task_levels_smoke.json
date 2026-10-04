@@ -1,0 +1,59 @@
+{
+ "round": 1,
+ "refMs": 2000,
+ "refHash": 256,
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64",
+  "setoption name MultiPV value 1"
+ ],
+ "configs": [
+  {
+   "id": "AM",
+   "multipv": 4,
+   "slot": 4,
+   "movetime": 150,
+   "hash": 64
+  },
+  {
+   "id": "AD",
+   "multipv": 3,
+   "slot": 3,
+   "movetime": 300,
+   "hash": 64
+  },
+  {
+   "id": "EX",
+   "multipv": 2,
+   "slot": 2,
+   "movetime": 500,
+   "hash": 128
+  },
+  {
+   "id": "GM",
+   "multipv": 1,
+   "slot": 1,
+   "movetime": 6000,
+   "hash": 256
+  },
+  {
+   "id": "S1T300",
+   "multipv": 4,
+   "slot": 1,
+   "movetime": 300,
+   "hash": 64
+  }
+ ],
+ "positions": [
+  {
+   "id": "OP00",
+   "group": "opening",
+   "fen": "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1"
+  },
+  {
+   "id": "MG_QT01",
+   "group": "midgame",
+   "fen": "1Rbaka1nr/9/c1n1b2c1/p1p1p3p/6p2/9/P1P1P1P1P/2N1C2CN/9/2BAKAB1R b - - 0 1"
+  }
+ ]
+}

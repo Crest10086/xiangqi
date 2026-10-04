@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>tier calibration driver (t_a8096ea3)</title></head>
+<body>
+<script src="./tier_rules.js"></script>
+<script>
+/* tier_driver.html — TEST-ONLY calibration harness for card t_a8096ea3
+ * (按新契约定五档参数：小 cap 区间标定 + 业余档定型).
+ * Derived from alt_driver.html (card t_f844043c): same engine, same ANCHOR/REF metric, same 17
+ * positions, same worker (worker_mb.js). The selection rule lives in tier_rules.js (unit-tested by
+ * test_tier_rules.js) and is deliberately NOT duplicated here.
+ *
+ * What is different from alt_driver: the tier rule is judged by its OWN candidate pool, so there is
+ * no judge probe search at all — one MultiPV search per config, plus the ANCHOR and the REF reply.
+ * Every config uses ONE fixed movetime/Hash (set by tier_gen_task.js); the only things that vary
+ * are cap / p / mistakeBand, which is what the contract requires.
+ *
+ * Task JSON: { pre:[...], round:int, seedSalt:int, refMs:int, refHash:int,
+ *              configs:[{id,multipv,movetime,hash,rule:'tier',cap,p,mistakeBand,...}],
+ *              positions:[{id,group,fen,side,legal:[uci...]}] }
+ *
+ * Log lines (POSTed to /__log) — same shape as alt_driver so alt_verify.js-style replay works:
+ *   L|<round>|<posId>|ANCHOR|move=..|score=..|cp|depth=..|nodes=..|crit=0
+ *   L|<round>|<posId>|<cfgId>|SEL|move=..|slotScore=..|top1=..|gap=..|rule=tier|hit=..|slotUsed=N|seed=N|probs=..|depth=..|nodes=..|slots=1:s,2:s|smoves=1:uci,..|crit=0
+ *   L|<round>|<posId>|<cfgId>|REF|move=..|score=..|depth=..|nodes=..|crit=0
+ *   L|<round>|<posId>|<cfgId>|SKIP|reason=..
+ *   PROG|<round>|<posId>
+ * Score convention: engine's own side-to-move view; mate scores mapped to +/-100000-100*ply.
+ */
+const LOG = (s) => { return fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); };
+const TASK = new URLSearchParams(location.search).get('task') || 'task_tier_r1.json';
+if (!self.crossOriginIsolated) {
+  const t = +(sessionStorage.getItem('tdrvN') || 0);
+  sessionStorage.setItem('tdrvN', String(t + 1));
+  if (t < 3) { LOG('DRV: not isolated, registering SW (try ' + t + ')'); navigator.serviceWorker.register('./coi-serviceworker.js').then(() => location.reload()).catch(e => LOG('DRV SW fail ' + e)); }
+  else { LOG('DRV: gave up'); document.title = 'NOISO'; }
+} else if (typeof TierRules !== 'object') { LOG('DRV: tier_rules.js not loaded'); document.title = 'NORULES'; }
+else { main(); }
+
+let activeCollector = null;
+
+async function main() {
+  LOG('DRV: isolated ok, task=' + TASK);
+  const task = await (await fetch('./' + TASK)).json();
+  const w = new Worker('./worker_mb.js');
+  w.onmessage = (ev) => {
+    const d = ev.data || {};
+    if (d.type === 'line') {
+      const line = String(d.line);
+      if (activeCollector) activeCollector(line);
+    } else if (d.type === 'stderr') { LOG('DRVerr: ' + d.line); }
+    else if (d.type === 'error') { LOG('DRV error ' + d.error); document.title = 'ERR'; }
+    else if (d.type === 'ready') { LOG('DRV: engine ready'); }
+    // cost instrumentation (worker_mb.js): first-load timings, NNUE size, WASM heap, Chrome memory.
+    // Logged as MEM/HEAP/TIMING lines so tier_ceiling_cost.js can turn them into numbers.
+    else if (d.type === 'mem') { LOG('MEM|' + (d.tag || '-') + '|total=' + d.total + '|bd=' + (d.bd || []).map((b) => b.t + ':' + b.b).join(';')); }
+    else if (d.type === 'mem-err') { LOG('MEM|' + (d.tag || '-') + '|err=' + d.e); }
+    else if (d.type === 'heap') { LOG('HEAP|' + (d.tag || '-') + '|bytes=' + d.bytes); }
+    else if (d.type === 'timing') { LOG('TIMING|' + d.k + '|ms=' + d.ms + (d.bytes !== undefined ? '|bytes=' + d.bytes : '')); }
+    else if (d.type === 'net-written') { LOG('NET|bytes=' + d.bytes); }
+  };
+  const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+  await new Promise((res) => {
+    const orig = w.onmessage;
+    w.onmessage = (ev) => { if (ev.data && ev.data.type === 'ready') { orig(ev); res(); } else orig(ev); };
+    w.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' });
+    setTimeout(res, 60000);
+  });
+
+  for (const cmd of (task.pre || [])) { w.postMessage({ type: 'command', command: cmd }); await sleep(120); }
+
+  async function runSearch(cmds, timeoutMs) {
+    const lines = [];
+    let bmResolve = null;
+    activeCollector = (l) => {
+      lines.push(l);
+      if (/^bestmove/.test(l) && bmResolve) { const r = bmResolve; bmResolve = null; r(); }
+    };
+    for (const cmd of cmds) {
+      w.postMessage({ type: 'command', command: cmd });
+      await sleep(150);
+      if (/^go(\s|$)/.test(cmd)) {
+        await new Promise((res) => {
+          let done = false;
+          bmResolve = () => { if (!done) { done = true; res(); } };
+          setTimeout(() => { if (!done) { done = true; res(); } }, timeoutMs);
+        });
+      }
+    }
+    activeCollector = null;
+    return lines;
+  }
+
+  function parse(lines) {
+    const slots = {}; let nodes = null, depth = 0, crit = 0, bestmove = null;
+    for (const l of lines) {
+      if (l.indexOf('CRITICAL ERROR') >= 0) crit++;
+      if (/^bestmove/.test(l)) { const m = l.match(/^bestmove (\S+)/); if (m) bestmove = m[1]; }
+      const nm = l.match(/\bnodes (\d+)/); if (nm) nodes = +nm[1];
+      const dm = l.match(/\bdepth (\d+)/); if (dm) depth = Math.max(depth, +dm[1]);
+      const mm = l.match(/\bmultipv (\d+)/); if (!mm) continue;
+      const sm = l.match(/\bscore (cp|mate) (-?\d+)/); if (!sm) continue;
+      const pm = l.match(/\bpv (.+)$/);
+      let val;
+      if (sm[1] === 'mate') { const n = +sm[2]; val = n > 0 ? 100000 - 100 * n : -100000 + 100 * n; }
+      else val = +sm[2];
+      slots[+mm[1]] = { score: val, mate: sm[1] === 'mate' ? (+sm[2]) : null, pv: pm ? pm[1].trim().split(/\s+/) : [] };
+    }
+    return { slots, nodes, depth, crit, bestmove };
+  }
+
+  const REF_MS = task.refMs || 2000, REF_HASH = task.refHash || 256;
+  const MOVE_RE = /^[a-i][0-9][a-i][0-9]$/;
+  const SEED0 = task.seedSalt || 12345;
+
+  for (const pos of task.positions) {
+    const R = task.round;
+    const posCmd = (extra) => {
+      let c = 'position fen ' + pos.fen;
+      const mv = (pos.moves || []).concat(extra || []);
+      if (mv.length) c += ' moves ' + mv.join(' ');
+      return c;
+    };
+
+    // ANCHOR (yardstick, identical to NEW_ENGINE_LEVELS_BASELINE.md)
+    let lines = await runSearch([
+      'setoption name MultiPV value 1',
+      'setoption name Hash value ' + REF_HASH,
+      posCmd(null),
+      'go movetime ' + REF_MS,
+    ], REF_MS + 20000);
+    let p = parse(lines);
+    const anchor = p.slots[1];
+    if (!anchor) { LOG('L|' + R + '|' + pos.id + '|ANCHOR|SKIP|no slot1|lines=' + lines.length); continue; }
+    LOG('L|' + R + '|' + pos.id + '|ANCHOR|move=' + (anchor.pv[0] || p.bestmove || '-') +
+        '|score=' + anchor.score + '|mate=' + (anchor.mate === null ? '-' : anchor.mate) +
+        '|depth=' + p.depth + '|nodes=' + p.nodes + '|crit=' + p.crit);
+    const anchorPool = p;
+
+    for (const cfg of task.configs) {
+      let pool;
+      if (cfg.rule === 'anchor') {
+        pool = anchorPool;   // no extra search: replay the ANCHOR's own bestmove (metric noise floor)
+      } else {
+        lines = await runSearch([
+          'setoption name Hash value ' + cfg.hash,
+          'setoption name MultiPV value ' + cfg.multipv,
+          posCmd(null),
+          'go movetime ' + cfg.movetime,
+        ], cfg.movetime + 20000);
+        pool = parse(lines);
+      }
+      const seed = (TierRules.strHash(R + '|' + pos.id + '|' + cfg.id) ^ SEED0) >>> 0;
+      const sel = TierRules.pick(cfg, pool, pos, seed);
+      if (sel.skip) { LOG('L|' + R + '|' + pos.id + '|' + cfg.id + '|SKIP|reason=' + sel.skip); continue; }
+      const chosen = sel.move;
+      const used = pool.slots[sel.slotUsed] || null;
+      const slotScore = used ? used.score : 'NA';
+      const top1 = pool.slots[1] ? pool.slots[1].score : 'NA';
+      const gap = (used && pool.slots[1]) ? top1 - used.score : 'NA';
+      const keys = Object.keys(pool.slots).sort((a, b) => a - b);
+      const slotStr = keys.map(k => k + ':' + pool.slots[k].score).join(',');
+      const moveStr = keys.map(k => k + ':' + (pool.slots[k].pv[0] || '-')).join(',');
+      LOG('L|' + R + '|' + pos.id + '|' + cfg.id + '|SEL|move=' + chosen + '|slotScore=' + slotScore +
+          '|top1=' + top1 + '|gap=' + gap + '|rule=' + cfg.rule + '|hit=' + sel.hit + '|slotUsed=' + sel.slotUsed +
+          '|seed=' + seed + '|probs=' + (sel.probs || '') + '|depth=' + pool.depth + '|nodes=' + pool.nodes +
+          '|slots=' + slotStr + '|smoves=' + moveStr + '|crit=' + pool.crit);
+      if (!MOVE_RE.test(chosen)) { LOG('L|' + R + '|' + pos.id + '|' + cfg.id + '|REF|SKIP|bad move ' + chosen); continue; }
+      lines = await runSearch([
+        'setoption name MultiPV value 1',
+        'setoption name Hash value ' + REF_HASH,
+        posCmd([chosen]),
+        'go movetime ' + REF_MS,
+      ], REF_MS + 20000);
+      p = parse(lines);
+      const r = p.slots[1];
+      if (!r) { LOG('L|' + R + '|' + pos.id + '|' + cfg.id + '|REF|SKIP|no ref slot1|crit=' + p.crit); continue; }
+      LOG('L|' + R + '|' + pos.id + '|' + cfg.id + '|REF|move=' + chosen + '|score=' + r.score +
+          '|mate=' + (r.mate === null ? '-' : r.mate) + '|depth=' + p.depth + '|nodes=' + p.nodes + '|crit=' + p.crit);
+      // cost probe for this config (task.memProbe): WASM heap size + Chrome's measured memory after
+      // this config's searches. Nothing about the search changes; only extra log lines.
+      if (task.memProbe) {
+        w.postMessage({ type: 'heapreq', tag: R + '|' + pos.id + '|' + cfg.id });
+        w.postMessage({ type: 'measure', tag: R + '|' + pos.id + '|' + cfg.id });
+        await sleep(700);
+      }
+    }
+    LOG('PROG|' + R + '|' + pos.id);
+  }
+  LOG('DRV DONE positions=' + task.positions.length + ' round=' + task.round);
+  document.title = 'DONE';
+}
+</script>
+</body>
+</html>

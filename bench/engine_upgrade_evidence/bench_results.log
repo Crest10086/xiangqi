@@ -1,0 +1,15 @@
+HARNESS tag=t1 threads=1
+net-progress DONE 50706378/50706378
+READY
+LINE: uciok
+BENCH START threads=1
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: bestmove c3c4 ponder b7c7
+BENCH 500ms -> depth 18 nodes 213841 score 25 move c3c4
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: bestmove c3c4 ponder g6g5
+BENCH 2000ms -> depth 22 nodes 864118 score 28 move c3c4
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: bestmove g3g4 ponder b7e7
+BENCH 6000ms -> depth 26 nodes 2506267 score 30 move g3g4
+BENCH DONE total=17526ms

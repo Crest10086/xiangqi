@@ -1,0 +1,9 @@
+{
+  "pre": ["setoption name Threads value 4", "setoption name Hash value 128"],
+  "steps": [
+    { "id": "RULE_PROBE1", "cmds": ["position fen 1k7/pp7/C1P6/rP7/9/9/9/9/4P4/3AKA3 w - - 0 1", "go depth 26"], "timeoutMs": 40000 },
+    { "id": "RULE_PROBE1_REPLAY", "cmds": ["position fen 1k7/pp7/C1P6/rP7/9/9/9/9/4P4/3AKA3 w - - 0 1 moves a7b7 b9a7", "go depth 26"], "timeoutMs": 40000 },
+    { "id": "RULE_CTRL1", "cmds": ["position fen 1k5p1p7/C1P6/rP7/9/9/9/9/4P4/3AKA3 w - - 0 1", "go depth 26"], "timeoutMs": 40000 },
+    { "id": "RULE_PROBE1_SHALLOW", "cmds": ["position fen 1k7/pp7/C1P6/rP7/9/9/9/9/4P4/3AKA3 w - - 0 1", "go depth 12"], "timeoutMs": 20000 }
+  ]
+}

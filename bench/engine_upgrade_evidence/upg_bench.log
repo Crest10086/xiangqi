@@ -1,0 +1,3 @@
+L3 origin http://192.168.10.99:8796 coi=false
+L3 lan100 OK 10ms {"ok": true}
+L3 lan100 move OK 508ms depth=24 nodes=3532390

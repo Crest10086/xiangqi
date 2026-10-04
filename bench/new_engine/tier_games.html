@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>tier games (t_a8096ea3)</title></head>
+<body>
+<script src="./xq_engine.js"></script>
+<script src="./tier_rules.js"></script>
+<script>
+/* tier_games.html — TEST-ONLY five-tier game harness for card t_a8096ea3 (五档互弈).
+ *
+ * It plays COMPLETE games with the real production pieces:
+ *   - rules + 入门 built-in engine: xq_engine.js, a byte-copy of the repo's engine.js
+ *     (tier_gen_games.js copies it and logs both sha256; the served root is new_engine/, so it
+ *     cannot reference ../engine.js). checkEnd below is the same line-by-line copy bench/play.js
+ *     makes of index.html checkEnd: threefold repetition (+长将 side rules), 将死, 困毙, ply cap.
+ *   - engine tiers: the same worker (worker_mb.js) and the same Pikafish WASM + full NNUE the
+ *     position-calibration driver used.
+ *   - the tier selection rule: tier_rules.js (unit-tested), never duplicated here.
+ *
+ * Task JSON: { round, games:[{id,hi:{id,kind,...},lo:{...},pairName,posId,fen,group,
+ *                              hiPlaysFirst,maxPlies,seed}] }
+ * Log lines (POSTed to /__log):
+ *   G|<round>|<gameId>|START|pos=<posId>|pair=<pairName>|hi=<cfgId>|lo=<cfgId>|hiFirst=0/1|fen=..
+ *   GM|<round>|<gameId>|<ply>|side=1|-1|cfg=<cfgId>|kind=..|move=uci|hit=..|slot=..|gap=..|depth=..|nodes=..|legal=..|probs=..
+ *   GE|<round>|<gameId>|END|winner=hi|lo|draw|reason=..|plies=..|tierMoves=..|invalid=..|hiScore=..|loScore=..
+ *   PROG|<round>|<gameId>
+ *   DRV DONE games=N
+ */
+const LOG = (s) => { return fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); };
+const TASK = new URLSearchParams(location.search).get('task') || 'task_games_r1.json';
+if (!self.crossOriginIsolated) {
+  const t = +(sessionStorage.getItem('tgn') || 0);
+  sessionStorage.setItem('tgn', String(t + 1));
+  if (t < 3) { LOG('DRV: not isolated, registering SW (try ' + t + ')'); navigator.serviceWorker.register('./coi-serviceworker.js').then(() => location.reload()).catch(e => LOG('DRV SW fail ' + e)); }
+  else { LOG('DRV: gave up'); document.title = 'NOISO'; }
+} else if (typeof XQ !== 'object') { LOG('DRV: xq_engine.js not loaded'); document.title = 'NOXQ'; }
+else if (typeof TierRules !== 'object') { LOG('DRV: tier_rules.js not loaded'); document.title = 'NORULES'; }
+else { main(); }
+
+let activeCollector = null;
+
+/* ---- reproducible randomness (same recipe as bench/play.js: seed Math.random) ---- */
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/* ---- FEN <-> board (same mapping the calibration harness uses) ---- */
+const PIECE_FEN = { 1: 'K', 2: 'A', 3: 'B', 4: 'N', 5: 'R', 6: 'C', 7: 'P' };
+function boardToFen(board, side, halfmove) {
+  let out = '';
+  for (let r = 0; r < 10; r++) {
+    let empty = 0;
+    for (let c = 0; c < 9; c++) {
+      const v = board[r * 9 + c];
+      if (v === 0) { empty++; continue; }
+      if (empty) { out += empty; empty = 0; }
+      out += v > 0 ? PIECE_FEN[v] : PIECE_FEN[-v].toLowerCase();
+    }
+    if (empty) out += empty;
+    if (r < 9) out += '/';
+  }
+  // the engine rejects halfmove > 119 (NEW_ENGINE_OPTIONS.md 3.3); the front-end caps its own counter
+  const hm = Math.max(0, Math.min(119, halfmove || 0));
+  return out + ' ' + (side === 1 ? 'w' : 'b') + ' - - ' + hm + ' 1';
+}
+function fenToBoard(fen) {
+  const MAP = { K: 1, A: 2, B: 3, C: 6, N: 4, R: 5, P: 7 };
+  const board = new Array(90).fill(0);
+  fen.split(' ')[0].split('/').forEach((row, r) => {
+    let c = 0;
+    for (const ch of row) {
+      if (/[0-9]/.test(ch)) { c += +ch; continue; }
+      const v = MAP[ch.toUpperCase()];
+      board[r * 9 + c] = (ch === ch.toUpperCase()) ? v : -v;
+      c++;
+    }
+  });
+  return board;
+}
+const L = 'abcdefghi';
+const uciOf = (m) => L[m.f % 9] + (9 - Math.floor(m.f / 9)) + L[m.t % 9] + (9 - Math.floor(m.t / 9));
+const parseUci = (s) => {
+  const m = /^([a-i])([0-9])([a-i])([0-9])$/.exec(String(s || ''));
+  if (!m) return null;
+  return { f: (9 - (+m[2])) * 9 + (m[1].charCodeAt(0) - 97), t: (9 - (+m[4])) * 9 + (m[3].charCodeAt(0) - 97) };
+};
+
+/* ---- 判罚: same as index.html checkEnd / bench/play.js checkEnd ---- */
+function checkEnd(game, seenPos) {
+  const s = game.board.join('') + '#' + game.side;
+  seenPos[s] = (seenPos[s] || 0) + 1;
+  if (seenPos[s] >= 3) {
+    const last4 = game.history.slice(-4);
+    const allCheck = (arr) => arr.length > 0 && arr.every(h => h.gaveCheck);
+    const redAll = allCheck(last4.filter(h => h.side === 1));
+    const blkAll = allCheck(last4.filter(h => h.side === -1));
+    if (redAll && blkAll) return { winner: 0, reason: '双方循环将军判和' };
+    if (redAll) return { winner: -1, reason: '红方长将红方负' };
+    if (blkAll) return { winner: 1, reason: '黑方长将黑方负' };
+    return { winner: 0, reason: '三次重复判和' };
+  }
+  const lm = game.legalMoves().length;
+  if (lm === 0) {
+    if (game.inCheck()) return { winner: -game.side, reason: '将死' };
+    return { winner: 0, reason: '困毙判和' };
+  }
+  return null;
+}
+
+async function main() {
+  LOG('DRV: isolated ok, task=' + TASK);
+  const task = await (await fetch('./' + TASK)).json();
+  const w = new Worker('./worker_mb.js');
+  w.onmessage = (ev) => {
+    const d = ev.data || {};
+    if (d.type === 'line') { if (activeCollector) activeCollector(String(d.line)); }
+    else if (d.type === 'stderr') { LOG('DRVerr: ' + d.line); }
+    else if (d.type === 'error') { LOG('DRV error ' + d.error); document.title = 'ERR'; }
+    else if (d.type === 'ready') { LOG('DRV: engine ready'); }
+  };
+  const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+  await new Promise((res) => {
+    const orig = w.onmessage;
+    w.onmessage = (ev) => { if (ev.data && ev.data.type === 'ready') { orig(ev); res(); } else orig(ev); };
+    w.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' });
+    setTimeout(res, 90000);
+  });
+  /* production parity: the same rule options the production bridge sends (bench/pf.js). The engine
+   * has no UCI_Elo/Skill Level and does no xiangqi 判例 judgement, so repetition/draw handling
+   * stays in this file (checkEnd) — NEW_ENGINE_OPTIONS.md §4 item 1. */
+  for (const c of ['setoption name Threads value 4',
+                   'setoption name Repetition Rule value AsianRule',
+                   'setoption name Draw Rule value None',
+                   'setoption name Sixty Move Rule value true']) {
+    w.postMessage({ type: 'command', command: c }); await sleep(120);
+  }
+
+  async function runSearch(cmds, timeoutMs) {
+    const lines = [];
+    let bmResolve = null;
+    activeCollector = (l) => {
+      lines.push(l);
+      if (/^bestmove/.test(l) && bmResolve) { const r = bmResolve; bmResolve = null; r(); }
+    };
+    for (const cmd of cmds) {
+      w.postMessage({ type: 'command', command: cmd });
+      await sleep(60);
+      if (/^go(\s|$)/.test(cmd)) {
+        await new Promise((res) => {
+          let done = false;
+          bmResolve = () => { if (!done) { done = true; res(); } };
+          setTimeout(() => { if (!done) { done = true; res(); } }, timeoutMs);
+        });
+      }
+    }
+    activeCollector = null;
+    return lines;
+  }
+
+  function parse(lines) {
+    const slots = {}; let nodes = null, depth = 0, crit = 0, bestmove = null;
+    for (const l of lines) {
+      if (l.indexOf('CRITICAL ERROR') >= 0) crit++;
+      if (/^bestmove/.test(l)) { const m = l.match(/^bestmove (\S+)/); if (m) bestmove = m[1]; }
+      const nm = l.match(/\bnodes (\d+)/); if (nm) nodes = +nm[1];
+      const dm = l.match(/\bdepth (\d+)/); if (dm) depth = Math.max(depth, +dm[1]);
+      const mm = l.match(/\bmultipv (\d+)/); if (!mm) continue;
+      const sm = l.match(/\bscore (cp|mate) (-?\d+)/); if (!sm) continue;
+      const pm = l.match(/\bpv (.+)$/);
+      let val;
+      if (sm[1] === 'mate') { const n = +sm[2]; val = n > 0 ? 100000 - 100 * n : -100000 + 100 * n; }
+      else val = +sm[2];
+      slots[+mm[1]] = { score: val, mate: sm[1] === 'mate' ? (+sm[2]) : null, pv: pm ? pm[1].trim().split(/\s+/) : [] };
+    }
+    return { slots, nodes, depth, crit, bestmove };
+  }
+
+  let gamesDone = 0;
+  for (const g of task.games) {
+    const R = task.round;
+    Math.random = mulberry32(g.seed);           // builtin engine randomness is reproducible per game
+    const board = fenToBoard(g.fen);
+    const game = XQ.Game.fromBoard(board);
+    const firstSide = g.fenSide || 1;          // the fixture's side to move plays the first move of the game
+    game.side = firstSide;
+    const hiSide = g.hiPlaysFirst ? firstSide : -firstSide;
+    const seenPos = {};
+    let halfmove = 0;
+    const cfgOf = (side) => (side === hiSide ? g.hi : g.lo);
+    LOG('G|' + R + '|' + g.id + '|START|pos=' + g.posId + '|pair=' + encodeURIComponent(g.pairName) +
+        '|hi=' + g.hi.id + '|lo=' + g.lo.id + '|hiFirst=' + (hiSide === 1 ? 1 : 0) + '|fen=' + g.fen);
+
+    let result = null, plies = 0, tierMoves = 0, invalid = 0, critEvents = 0;
+    const tierStats = {};
+    while (!result) {
+      if (plies >= (g.maxPlies || 150)) { result = { winner: 0, reason: '步数上限判和' }; break; }
+      const cfg = cfgOf(game.side);
+      const legal = game.legalMoves();
+      if (!legal.length) { result = { winner: 0, reason: '无合法着法(异常)' }; break; }
+      let mv = null, diag = { hit: '-', slot: '-', gap: '-', depth: '-', nodes: '-', probs: '' };
+
+      if (cfg.kind === 'builtin') {
+        const t = game.aiMove(cfg.depth, cfg.qDepth, cfg.maxNodes, cfg.randomness);
+        if (!t) { result = { winner: 0, reason: '内置引擎无解(异常)' }; break; }
+        const h = game.history[game.history.length - 1];
+        plies++;
+        const stb = tierStats[cfg.id] = tierStats[cfg.id] || { n: 0 };
+        stb.n++;
+        LOG('GM|' + R + '|' + g.id + '|' + plies + '|side=' + game.side + '|cfg=' + cfg.id + '|kind=builtin|move=' +
+            uciOf(h.move) + '|hit=builtin|slot=-|gap=-|depth=' + cfg.depth + '|nodes=' + (t.nodes || '-') +
+            '|legal=' + legal.length + '|probs=rand=' + cfg.randomness);
+        halfmove = h.captured ? 0 : halfmove + 1;
+        result = checkEnd(game, seenPos);
+        continue;
+      }
+
+      const fen = boardToFen(game.board, game.side, halfmove);
+      const lines = await runSearch([
+        'setoption name Hash value ' + cfg.hash,
+        'setoption name MultiPV value ' + cfg.multipv,
+        'position fen ' + fen,
+        'go movetime ' + cfg.movetime,
+      ], cfg.movetime + 20000);
+      const pool = parse(lines);
+      let chosen = null;
+      if (cfg.kind === 'master') {
+        const s = pool.slots[1];
+        chosen = s && s.pv[0] ? s.pv[0] : pool.bestmove;
+        diag = { hit: 'best', slot: 1, gap: 0, depth: pool.depth, nodes: pool.nodes, probs: 'mpv=1' };
+      } else {
+        const seed = (TierRules.strHash(R + '|' + g.id + '|' + plies + '|' + game.side) ^ (task.seedSalt || 0)) >>> 0;
+        const sel = TierRules.pick(cfg, pool, { group: g.group, legal: legal.map(uciOf) }, seed);
+        if (!sel.skip) {
+          chosen = sel.move;
+          diag = { hit: sel.hit, slot: sel.slotUsed, gap: sel.gap, depth: pool.depth, nodes: pool.nodes, probs: sel.probs };
+        }
+      }
+      if (!chosen) {
+        invalid++;
+        // fall back to the built-in engine so the game can continue; the incident is counted
+        const t = game.aiMove(4, 2, 25000, 0);
+        if (!t) { result = { winner: 0, reason: '引擎无解且内置兜底失败' }; break; }
+        plies++; result = checkEnd(game, seenPos);
+        continue;
+      }
+      const pm = parseUci(chosen);
+      if (!pm || !legal.some(m => m.f === pm.f && m.t === pm.t)) {
+        invalid++;
+        const t = game.aiMove(4, 2, 25000, 0);
+        if (!t) { result = { winner: 0, reason: '非法着法且内置兜底失败' }; break; }
+        plies++; result = checkEnd(game, seenPos);
+        continue;
+      }
+      const res = game.move(pm);
+      if (!res) { invalid++; result = { winner: 0, reason: 'INVALID move ' + chosen }; break; }
+      plies++; tierMoves++;
+      tierStats[cfg.id] = tierStats[cfg.id] || { n: 0, rand: 0, cap: 0, above: 0, bmiss: 0, gapSum: 0, gapMax: 0, nodesSum: 0 };
+      const st = tierStats[cfg.id];
+      st.n++;
+      if (diag.hit === 'rand') st.rand++;
+      if (diag.hit === 'cap') st.cap++;
+      if (diag.hit === 'above') st.above++;
+      if (diag.hit === 'bmiss') st.bmiss++;
+      if (typeof diag.gap === 'number') { st.gapSum += diag.gap; st.gapMax = Math.max(st.gapMax, diag.gap); }
+      if (typeof diag.nodes === 'number') st.nodesSum += diag.nodes;
+      if (pool.crit) critEvents++;
+      LOG('GM|' + R + '|' + g.id + '|' + plies + '|side=' + game.side + '|cfg=' + cfg.id + '|kind=' + (cfg.kind || 'tier') +
+          '|move=' + chosen + '|hit=' + diag.hit + '|slot=' + diag.slot + '|gap=' + diag.gap +
+          '|depth=' + diag.depth + '|nodes=' + diag.nodes + '|legal=' + legal.length + '|probs=' + (diag.probs || ''));
+      // Game.move reports res.captured; a capture resets the 60-move counter (boardToFen caps it at
+      // 119 because the engine rejects halfmove > 119).
+      halfmove = res.captured ? 0 : halfmove + 1;
+      result = checkEnd(game, seenPos);
+    }
+
+    const winnerSide = result.winner;
+    const winner = winnerSide === 0 ? 'draw' : (winnerSide === hiSide ? 'hi' : 'lo');
+    LOG('GE|' + R + '|' + g.id + '|END|winner=' + winner + '|reason=' + encodeURIComponent(result.reason) +
+        '|plies=' + plies + '|tierMoves=' + tierMoves + '|invalid=' + invalid + '|crit=' + critEvents +
+        '|hiSide=' + hiSide + '|stats=' + Object.keys(tierStats).map(k => {
+          const s = tierStats[k];
+          return k + ':n=' + s.n + ',rand=' + (s.rand || 0) + ',cap=' + (s.cap || 0) + ',above=' + (s.above || 0) +
+                 ',bmiss=' + (s.bmiss || 0) + ',gapMean=' + (s.n ? Math.round((s.gapSum || 0) / s.n) : '-') + ',gapMax=' + (s.gapMax || 0);
+        }).join(';'));
+    LOG('PROG|' + R + '|' + g.id);
+    gamesDone++;
+  }
+  LOG('DRV DONE games=' + gamesDone + ' round=' + task.round);
+  document.title = 'DONE';
+}
+</script>
+</body>
+</html>

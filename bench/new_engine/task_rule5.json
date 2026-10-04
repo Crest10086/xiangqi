@@ -1,0 +1,224 @@
+{
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64"
+ ],
+ "steps": [
+  {
+   "id": "PERP_R0",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  },
+  {
+   "id": "PERP_R2",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  },
+  {
+   "id": "PERP_R3",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M1_116",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 116 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M1_117",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 117 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M1_118",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 118 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M1_119",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 119 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M1_120",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M1_121",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M1_125",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 125 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M2_116",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 116 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M2_117",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 117 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M2_118",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 118 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M2_119",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 119 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M2_120",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 120 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M2_121",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 121 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "B60_M2_125",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 125 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "RNG_999_999",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 999",
+    "go depth 10"
+   ],
+   "timeoutMs": 10000,
+   "gapMs": 300
+  },
+  {
+   "id": "RNG_999_1",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 10000,
+   "gapMs": 300
+  },
+  {
+   "id": "RNG_1000_1",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 1000 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 10000,
+   "gapMs": 300
+  },
+  {
+   "id": "RNG_10000_1",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 10000 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 10000,
+   "gapMs": 300
+  },
+  {
+   "id": "RNG_120_999",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 999",
+    "go depth 10"
+   ],
+   "timeoutMs": 10000,
+   "gapMs": 300
+  },
+  {
+   "id": "RNG_121_999",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 999",
+    "go depth 10"
+   ],
+   "timeoutMs": 10000,
+   "gapMs": 300
+  },
+  {
+   "id": "RNG_0_999",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 0 999",
+    "go depth 10"
+   ],
+   "timeoutMs": 10000,
+   "gapMs": 300
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 128"
+ ],
+ "steps": [
+  {
+   "id": "REP_P0",
+   "cmds": [
+    "position fen 4k4/9/9/P8/9/9/9/9/R7r/3K5 w - - 0 1",
+    "go depth 20"
+   ],
+   "timeoutMs": 25000
+  },
+  {
+   "id": "REP_REPLAY8",
+   "cmds": [
+    "position fen 4k4/9/9/P8/9/9/9/9/R7r/3K5 w - - 0 1 moves a1b1 e9f9 b1a1 f9e9 a1b1 e9f9 b1a1 f9e9",
+    "go depth 20"
+   ],
+   "timeoutMs": 25000
+  },
+  {
+   "id": "HALFMOVE999",
+   "cmds": [
+    "position fen 4k4/9/9/P8/9/9/9/9/R7r/3K5 w - - 999 999",
+    "go depth 20"
+   ],
+   "timeoutMs": 25000
+  },
+  {
+   "id": "CHK_PERP",
+   "cmds": [
+    "position fen 4k4/9/9/P8/9/3R5/9/9/8r/3K5 w - - 0 1 moves d4e4 e9d9 e4d4 d9e9 d4e4 e9d9",
+    "go depth 20"
+   ],
+   "timeoutMs": 25000
+  }
+ ]
+}

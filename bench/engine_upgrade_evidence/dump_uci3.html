@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>uci dump v3</title></head>
+<body>
+<script>
+// Dumps mistboard build UCI options. Handles the COI service-worker reload dance itself.
+const LOG = (s) => { fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); };
+if (!self.crossOriginIsolated) {
+  const t = +(sessionStorage.getItem('uciN') || 0);
+  sessionStorage.setItem('uciN', String(t + 1));
+  if (t < 3) {
+    LOG('UCIDUMP: not isolated, registering SW (try ' + t + ')');
+    navigator.serviceWorker.register('./coi-serviceworker.js').then(() => location.reload()).catch(e => LOG('UCIDUMP SW fail ' + e));
+  } else {
+    LOG('UCIDUMP: gave up after 4 tries');
+  }
+} else {
+  run();
+}
+function run() {
+  LOG('UCIDUMP: isolated ok, starting');
+  window.__DONE = false;
+  const w = new Worker('./worker_mb.js');
+  w.onmessage = (ev) => {
+    const d = ev.data || {};
+    if (d.type === 'line') {
+      if (/^(id |option |info string NNUE|info string Available|info string Using)/.test(d.line) || /error|Error|NNUE/.test(d.line)) LOG('U: ' + d.line);
+    }
+    if (d.type === 'ready') {
+      w.postMessage({ type: 'command', command: 'uci' });
+      setTimeout(() => { w.postMessage({ type: 'command', command: 'isready' }); }, 800);
+      setTimeout(() => {
+        w.postMessage({ type: 'command', command: 'setoption name Threads value 1' });
+        w.postMessage({ type: 'command', command: 'setoption name Hash value 64' });
+        w.postMessage({ type: 'command', command: 'position fen rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1' });
+        w.postMessage({ type: 'command', command: 'go movetime 300' });
+      }, 2000);
+      setTimeout(() => { LOG('UCIDUMP DONE'); window.__DONE = true; }, 6000);
+    }
+    if (d.type === 'error') { LOG('UCIDUMP error ' + d.error); window.__DONE = true; }
+    if (d.type === 'stderr') { LOG('Uerr: ' + d.line); }
+  };
+  w.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' });
+}
+</script>
+</body>
+</html>

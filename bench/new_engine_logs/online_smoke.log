@@ -1,0 +1,26 @@
+SMOKE start coi=false sab=false
+SMOKE start coi=true sab=true
+READY=true ms=628 env={"type":"ENV","coi":true,"sab":true,"threads":4} net={"netBytes":50706378}
+SEL|OP00|业余|move=h2d2|hit=cap|gap=15|legal=1|wall=306|depth=12|nodes=506330|mpv=8|ms=300|hash=64|cap=80|p=0.5|band=200
+SEL|OP00|进阶|move=h0g2|hit=cap|gap=13|legal=1|wall=304|depth=11|nodes=488378|mpv=8|ms=300|hash=64|cap=80|p=0|band=200
+SEL|OP00|高手|move=g0e2|hit=cap|gap=13|legal=1|wall=303|depth=12|nodes=397905|mpv=8|ms=300|hash=64|cap=25|p=0.1|band=200
+SEL|OP00|大师|move=b2e2|hit=best|gap=0|legal=1|wall=2010|depth=23|nodes=2881276|mpv=1|ms=2000|hash=256
+SEL|OP04|业余|move=b2e2|hit=bmiss|gap=17|legal=1|wall=304|depth=15|nodes=628824|mpv=8|ms=300|hash=64|cap=80|p=0.5|band=200
+SEL|OP04|进阶|move=i3i4|hit=cap|gap=11|legal=1|wall=304|depth=12|nodes=594423|mpv=8|ms=300|hash=64|cap=80|p=0|band=200
+SEL|OP04|高手|move=g3g4|hit=cap|gap=19|legal=1|wall=303|depth=12|nodes=588508|mpv=8|ms=300|hash=64|cap=25|p=0.1|band=200
+SEL|OP04|大师|move=d0e1|hit=best|gap=0|legal=1|wall=2011|depth=23|nodes=3490829|mpv=1|ms=2000|hash=256
+SEL|MG_QT01|业余|move=a7a8|hit=rand|gap=587|legal=1|wall=303|depth=14|nodes=568263|mpv=8|ms=300|hash=64|cap=80|p=0.5|band=200
+SEL|MG_QT01|进阶|move=c7b9|hit=above|gap=0|legal=1|wall=303|depth=15|nodes=570826|mpv=8|ms=300|hash=64|cap=80|p=0|band=200
+SEL|MG_QT01|高手|move=c7b9|hit=above|gap=0|legal=1|wall=305|depth=14|nodes=543499|mpv=8|ms=300|hash=64|cap=25|p=0.1|band=200
+SEL|MG_QT01|大师|move=c7b9|hit=best|gap=0|legal=1|wall=2010|depth=27|nodes=3679567|mpv=1|ms=2000|hash=256
+SEL|MG_QT10|业余|move=f9g9|hit=bmiss|gap=44|legal=1|wall=304|depth=11|nodes=626872|mpv=8|ms=300|hash=64|cap=80|p=0.5|band=200
+SEL|MG_QT10|进阶|move=c3e4|hit=cap|gap=45|legal=1|wall=303|depth=11|nodes=618004|mpv=8|ms=300|hash=64|cap=80|p=0|band=200
+SEL|MG_QT10|高手|move=f8h7|hit=cap|gap=24|legal=1|wall=303|depth=11|nodes=631070|mpv=8|ms=300|hash=64|cap=25|p=0.1|band=200
+SEL|MG_QT10|大师|move=i9h9|hit=best|gap=0|legal=1|wall=2011|depth=23|nodes=3784741|mpv=1|ms=2000|hash=256
+CHECK|BADFEN|业余|rejected=1|err=critical:引擎报告 CRITICAL ERROR（着法会沿用上一条局面）|critical=1
+CHECK|BADFEN|进阶|rejected=1|err=critical:引擎报告 CRITICAL ERROR（着法会沿用上一条局面）|critical=1
+CHECK|BADFEN|高手|rejected=1|err=critical:引擎报告 CRITICAL ERROR（着法会沿用上一条局面）|critical=1
+CHECK|BADFEN|大师|rejected=1|err=critical:引擎报告 CRITICAL ERROR（着法会沿用上一条局面）|critical=1
+RECOVER|OP00|ok=1|move=b2f2|wall=304|lastRawLine=info depth 11 seldepth 18 multipv 8 score cp 12 nodes 541480 nps 1798936 hashfull 34 tbhits 0 time 301 pv b2f2 b9c7 b0c2 c6c5 g3g4 a9b9 h0g2
+RECOVER|OP04|ok=1|move=h2g2|wall=302|lastRawLine=info depth 12 seldepth 17 multipv 8 score cp 4 nodes 601431 nps 2004770 hashfull 33 tbhits 0 time 300 pv h2g2 b9a7 i0h0 h9g7 d0e1 b7b5 c3c4
+SMOKE DONE

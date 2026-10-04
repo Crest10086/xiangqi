@@ -1,0 +1,32 @@
+{
+ "A_rook_a5": {
+  "fen": "4k4/9/9/9/R8/9/9/9/9/3K5",
+  "redLegal": 18,
+  "redInCheck": false,
+  "staticEval": 413
+ },
+ "B_rook_d8": {
+  "fen": "4k4/3R5/9/9/9/9/9/9/9/3K5",
+  "redLegal": 17,
+  "redInCheck": false,
+  "staticEval": 420
+ },
+ "C_rook_f5_pawn_d8": {
+  "fen": "4k4/3P5/9/9/5R3/9/9/9/9/3K5",
+  "redLegal": 34,
+  "redInCheck": false,
+  "staticEval": 519
+ },
+ "D_only_kings": {
+  "fen": "4k4/9/9/9/9/9/9/9/9/3K5",
+  "redLegal": 1,
+  "redInCheck": false,
+  "staticEval": -3
+ },
+ "E_rook_a5_extra_pawn": {
+  "fen": "4k4/9/9/9/R8/9/9/P8/9/3K5",
+  "redLegal": 27,
+  "redInCheck": false,
+  "staticEval": 515
+ }
+}

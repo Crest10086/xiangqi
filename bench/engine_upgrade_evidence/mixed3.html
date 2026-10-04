@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>LAN page fetch test</title></head>
+<body>
+<script>
+function log(s) { fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); }
+log('L3 origin ' + location.origin + ' coi=' + self.crossOriginIsolated);
+(async () => {
+  const t0 = Date.now();
+  try { const r = await fetch('http://192.168.10.100:8899/healthz'); log('L3 lan100 OK ' + (Date.now() - t0) + 'ms ' + (await r.text())); }
+  catch (e) { log('L3 lan100 FAIL ' + (Date.now() - t0) + 'ms ' + e); }
+  const t1 = Date.now();
+  try { const r = await fetch('http://192.168.10.100:8899/move?ms=500'); const j = await r.json(); log('L3 lan100 move OK ' + (Date.now() - t1) + 'ms depth=' + j.depth + ' nodes=' + j.nodes); }
+  catch (e) { log('L3 lan100 move FAIL ' + (Date.now() - t1) + 'ms ' + e); }
+})();
+</script>
+</body>
+</html>

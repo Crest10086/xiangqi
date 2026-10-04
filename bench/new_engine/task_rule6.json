@@ -1,0 +1,44 @@
+{
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64"
+ ],
+ "steps": [
+  {
+   "id": "IDLE_R1",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9b7 e9f9 b7c9 f9e9",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  },
+  {
+   "id": "IDLE_R3",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9b7 e9f9 b7c9 f9e9 c9b7 e9f9 b7c9 f9e9 c9b7 e9f9 b7c9 f9e9",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHK_R4",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHK_R6",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  }
+ ]
+}

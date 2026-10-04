@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>upgrade bench</title></head>
+<body>
+<script>
+// Phased harness: P1 = mistboard engine without isolation (expect failure), then SW+reload;
+// P2 = isolated: net timing + memory + mistboard bench (4 threads then 1 thread);
+// P3 = current production build (small net) bench in same environment.
+const LOG = (s) => { fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); };
+const T0 = performance.now();
+const el = () => ((performance.now() - T0) / 1000).toFixed(2) + 's';
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+const FEN = 'rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1';
+window.onerror = (m, f, l) => { LOG('PAGE onerror: ' + m + ' @' + f + ':' + l); };
+LOG('boot coi=' + self.crossOriginIsolated + ' sab=' + (typeof SharedArrayBuffer !== 'undefined') + ' t=' + el());
+
+if (!self.crossOriginIsolated) {
+  const t = +(sessionStorage.getItem('coiN') || 0);
+  sessionStorage.setItem('coiN', String(t + 1));
+  if (t === 0) { phase1(); }
+  else if (t === 1) { LOG('retry: registering SW again'); navigator.serviceWorker.register('./coi-serviceworker.js').then(() => location.reload()).catch(e => LOG('SW fail ' + e)); }
+  else { LOG('P1: cannot reach isolation after 3 tries, giving up'); }
+} else {
+  phase2();
+}
+
+function phase1() {
+  LOG('P1: mistboard engine WITHOUT isolation — attempting init');
+  let done = false;
+  const w = new Worker('./worker_mb.js');
+  const finish = (verdict) => {
+    if (done) return; done = true;
+    LOG('P1 RESULT: ' + verdict);
+    LOG('P1 done at ' + el() + '; registering coi-serviceworker + reload');
+    navigator.serviceWorker.register('./coi-serviceworker.js')
+      .then(() => { LOG('SW registered, reloading'); location.reload(); })
+      .catch(e => LOG('SW register failed: ' + e));
+  };
+  w.onmessage = (ev) => {
+    const d = ev.data || {};
+    if (d.type === 'error') { finish('INIT ERROR: ' + d.error); }
+    else if (d.type === 'ready') { finish('UNEXPECTED READY (engine started without isolation!)'); }
+    else if (d.type === 'env') { LOG('P1 worker env: sab=' + d.sab + ' coi=' + d.coi); }
+    else if (d.type === 'stderr') { LOG('P1 stderr: ' + d.line); }
+    else if (d.type === 'line') { LOG('P1 line: ' + d.line); }
+  };
+  w.onerror = (e) => finish('WORKER ONERROR: ' + (e.message || '?') + ' @' + (e.filename || '') + ':' + (e.lineno || ''));
+  w.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' });
+  setTimeout(() => finish('TIMEOUT 12s (no ready/error)'), 12000);
+}
+
+function makeMb() {
+  const w = new Worker('./worker_mb.js');
+  const lines = [];
+  let bestCb = null;
+  let readyDone = false;
+  let readyRes = null;
+  const ready = new Promise(r => { readyRes = r; });
+  w.onmessage = (ev) => {
+    const d = ev.data || {};
+    if (d.type === 'net-progress') { if (d.loaded === d.total) LOG('P2 net fetched (all bytes) t=' + el()); }
+    else if (d.type === 'timing') { LOG('P2 timing ' + d.k + ' at ' + d.ms.toFixed(0) + 'ms' + (d.bytes ? ' bytes=' + d.bytes : '')); }
+    else if (d.type === 'mem') { LOG('P2 mem[' + d.tag + '] total=' + d.total + ' bd=' + JSON.stringify(d.bd)); }
+    else if (d.type === 'mem-na') { LOG('P2 mem[' + d.tag + '] unavailable'); }
+    else if (d.type === 'mem-err') { LOG('P2 mem[' + d.tag + '] ERR ' + d.e); }
+    else if (d.type === 'heap') { LOG('P2 wasm heap[' + (d.tag || '') + '] bytes=' + d.bytes); }
+    else if (d.type === 'env') { LOG('P2 worker env sab=' + d.sab + ' coi=' + d.coi); }
+    else if (d.type === 'line') {
+      lines.push(d.line);
+      if (bestCb && /^bestmove /.test(d.line)) { const cb = bestCb; bestCb = null; cb(d.line); }
+    }
+    else if (d.type === 'error') { LOG('P2 ERROR: ' + d.error); if (!readyDone) { readyDone = true; if (readyRes) readyRes(false); } }
+    else if (d.type === 'ready') { readyDone = true; if (readyRes) readyRes(true); }
+  };
+  w.onerror = (e) => LOG('P2 worker onerror: ' + e.message);
+  return {
+    ready,
+    start: () => w.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' }),
+    cmd: (c) => w.postMessage({ type: 'command', command: c }),
+    measure: (tag) => w.postMessage({ type: 'measure', tag }),
+    heapreq: (tag) => w.postMessage({ type: 'heapreq', tag }),
+    search: (ms) => new Promise((res) => {
+      const mark = lines.length;
+      let settled = false;
+      const to = setTimeout(() => { if (!settled) { settled = true; bestCb = null; res({ depth: 0, nodes: 0, score: null, move: 'TIMEOUT' }); } }, ms + 20000);
+      bestCb = (bmLine) => {
+        if (settled) return; settled = true; clearTimeout(to);
+        let depth = 0, nodes = 0, score = null;
+        for (let i = mark; i < lines.length; i++) {
+          const l = lines[i];
+          const dd = /info depth (\d+)/.exec(l); if (dd) depth = Math.max(depth, +dd[1]);
+          const nn = /nodes (\d+)/.exec(l); if (nn) nodes = Math.max(nodes, +nn[1]);
+          const ss = /score (cp (-?\d+)|mate (-?\d+))/.exec(l); if (ss) score = ss[2] !== undefined ? +ss[2] : (ss[3] > 0 ? 99999 : -99999);
+        }
+        res({ depth, nodes, score, move: bmLine.split(/\s+/)[1] });
+      };
+      w.postMessage({ type: 'command', command: 'position fen ' + FEN });
+      w.postMessage({ type: 'command', command: 'go movetime ' + ms });
+    }),
+  };
+}
+
+async function phase2() {
+  try {
+    LOG('P2 begin coi=' + self.crossOriginIsolated + ' t=' + el());
+    const mb = makeMb();
+    mb.start();
+    const ok = await Promise.race([mb.ready, sleep(45000).then(() => 'timeout')]);
+    if (ok !== true) { LOG('P2 engine not ready (result=' + ok + '), skipping P2 benches'); }
+    else {
+      LOG('P2 engine ready t=' + el());
+      mb.cmd('uci');
+      await sleep(1500);
+      mb.cmd('setoption name Threads value 4');
+      mb.cmd('setoption name Hash value 256');
+      mb.cmd('isready');
+      await sleep(1500);
+      mb.heapreq('after-hash');
+      await sleep(800);
+      for (const ms of [500, 2000, 6000]) {
+        const r = await mb.search(ms);
+        LOG('BENCH mb4 ' + ms + 'ms -> depth ' + r.depth + ' nodes ' + r.nodes + ' score ' + r.score + ' move ' + r.move);
+      }
+      mb.heapreq('after-bench4');
+      await sleep(800);
+      mb.cmd('setoption name Threads value 1');
+      await sleep(500);
+      for (const ms of [500, 2000, 6000]) {
+        const r = await mb.search(ms);
+        LOG('BENCH mb1 ' + ms + 'ms -> depth ' + r.depth + ' nodes ' + r.nodes + ' score ' + r.score + ' move ' + r.move);
+      }
+      mb.heapreq('after-bench1');
+      await sleep(1500);
+    }
+    LOG('P3 begin (current small-net build) t=' + el());
+    await runCurrent();
+    LOG('ALL DONE t=' + el());
+    document.title = 'DONE';
+  } catch (e) {
+    LOG('P2/P3 FATAL: ' + e);
+  }
+}
+
+function runCurrent() {
+  return new Promise((resolve) => {
+    const w = new Worker('./js/engines/pikafish/pikafish.worker.js');
+    const lines = [];
+    let bestCb = null;
+    let done = false;
+    const finish = () => { if (!done) { done = true; resolve(); } };
+    w.onmessage = (ev) => {
+      const d = ev.data || {};
+      if (d.type === 'READY') {
+        LOG('P3 READY t=' + el());
+        (async () => {
+          for (const ms of [500, 2000, 6000]) {
+            const r = await curSearch(ms);
+            LOG('BENCH cur ' + ms + 'ms -> depth ' + r.depth + ' nodes ' + r.nodes + ' move ' + r.move);
+          }
+          finish();
+        })();
+      }
+      else if (d.type === 'BEST_MOVE') { if (bestCb) { const cb = bestCb; bestCb = null; cb(d.move); } }
+      else if (d.type === 'INFO') { lines.push(d.info); }
+      else if (d.type === 'ERROR') { LOG('P3 ERROR: ' + d.message); finish(); }
+    };
+    w.onerror = (e) => { LOG('P3 worker onerror: ' + e.message); finish(); };
+    function curSearch(ms) {
+      return new Promise((res) => {
+        const mark = lines.length;
+        let settled = false;
+        const to = setTimeout(() => { if (!settled) { settled = true; bestCb = null; res({ depth: 0, nodes: 0, move: 'TIMEOUT' }); } }, ms + 25000);
+        bestCb = (mv) => {
+          if (settled) return; settled = true; clearTimeout(to);
+          let depth = 0, nodes = 0;
+          for (let i = mark; i < lines.length; i++) {
+            const l = lines[i];
+            const dd = /depth (\d+)/.exec(l); if (dd) depth = Math.max(depth, +dd[1]);
+            const nn = /nodes (\d+)/.exec(l); if (nn) nodes = Math.max(nodes, +nn[1]);
+          }
+          res({ depth, nodes, move: mv });
+        };
+        w.postMessage({ type: 'SEARCH', fen: FEN, movetime: ms, seq: (Date.now() % 100000) });
+      });
+    }
+    w.postMessage({ type: 'INIT' });
+    setTimeout(() => { if (!done) { LOG('P3 TIMEOUT 90s'); finish(); } }, 90000);
+  });
+}
+</script>
+</body>
+</html>

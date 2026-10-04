@@ -1,0 +1,100 @@
+DRV: not isolated, registering SW (try 0)
+DRV: isolated ok, task=task_rule6.json
+DRV: engine ready
+S|IDLE_R1|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9b7 e9f9 b7c9 f9e9
+S|IDLE_R1|CMD|go depth 15
+S|IDLE_R1|OUT|info string Available processors: 0-15
+S|IDLE_R1|OUT|info string Using 4 threads
+S|IDLE_R1|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|IDLE_R1|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|IDLE_R1|OUT|info depth 1 seldepth 3 multipv 1 score cp -42 nodes 185 nps 37000 hashfull 0 tbhits 0 time 5 pv c9d7 e9e8
+S|IDLE_R1|OUT|info depth 2 seldepth 4 multipv 1 score cp -7 nodes 1105 nps 138125 hashfull 0 tbhits 0 time 8 pv c9b7
+S|IDLE_R1|OUT|info depth 3 seldepth 4 multipv 1 score cp 0 nodes 2554 nps 283777 hashfull 0 tbhits 0 time 9 pv c9d7 e9e8
+S|IDLE_R1|OUT|info depth 4 seldepth 13 multipv 1 score cp 0 nodes 3479 nps 347900 hashfull 0 tbhits 0 time 10 pv c9d7 e9d9
+S|IDLE_R1|OUT|info depth 5 seldepth 9 multipv 1 score cp 2 nodes 3674 nps 367400 hashfull 0 tbhits 0 time 10 pv c9d7 e9d9 d2d1 a0b0 d1e1
+S|IDLE_R1|OUT|info depth 6 seldepth 6 multipv 1 score cp 0 nodes 3832 nps 348363 hashfull 0 tbhits 0 time 11 pv d2d1
+S|IDLE_R1|OUT|info depth 7 seldepth 8 multipv 1 score cp 5 nodes 3901 nps 325083 hashfull 0 tbhits 0 time 12 pv c9d7 e9d9 d2e2 a0b0 d7e9 b0c0 e9f7
+S|IDLE_R1|OUT|info depth 8 seldepth 9 multipv 1 score cp 6 nodes 3988 nps 332333 hashfull 0 tbhits 0 time 12 pv c9d7 e9d9 d2e2 a0b0 d7e9
+S|IDLE_R1|OUT|info depth 9 seldepth 13 multipv 1 score cp 9 nodes 5349 nps 382071 hashfull 0 tbhits 0 time 14 pv c9d7 e9d9 d2e2 d9d8
+S|IDLE_R1|OUT|info depth 10 seldepth 15 multipv 1 score cp 11 nodes 7599 nps 506600 hashfull 0 tbhits 0 time 15 pv c9d7 e9d9 d2e2 a0b0 d7b8 d9d8 b8d9 d8d9
+S|IDLE_R1|OUT|info depth 11 seldepth 13 multipv 1 score cp 17 nodes 10235 nps 602058 hashfull 0 tbhits 0 time 17 pv c9d7 e9d9 d2e2 a0b0 d7c9 d9d8 c9b7 d8d7 b7c5 d7d8 c5e6 d8d7
+S|IDLE_R1|OUT|info depth 12 seldepth 17 multipv 1 score cp 22 nodes 13927 nps 733000 hashfull 0 tbhits 0 time 19 pv c9d7 e9e8 d7f6 e8f8 f6h5 f8f7
+S|IDLE_R1|OUT|info depth 13 seldepth 15 multipv 1 score cp 27 nodes 26473 nps 1103041 hashfull 0 tbhits 0 time 24 pv c9d7 e9e8 d7c5
+S|IDLE_R1|OUT|info depth 14 seldepth 15 multipv 1 score cp 27 nodes 31887 nps 1226423 hashfull 0 tbhits 0 time 26 pv c9d7 e9d9 d2e2 a0b0 d7c5 b0c0 c5b3
+S|IDLE_R1|OUT|info depth 15 seldepth 22 multipv 1 score cp 32 nodes 48623 nps 1519468 hashfull 1 tbhits 0 time 32 pv d2d1 a0b0 c9b7 e9e8 b7a5 e8e7 a5b3 e7e8 b3c1 b0c0 c1a2
+S|IDLE_R1|OUT|bestmove d2d1 ponder a0b0
+S|IDLE_R1|TIMEOUT
+S|IDLE_R1|END|lines=20
+S|IDLE_R3|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9b7 e9f9 b7c9 f9e9 c9b7 e9f9 b7c9 f9e9 c9b7 e9f9 b7c9 f9e9
+S|IDLE_R3|CMD|go depth 15
+S|IDLE_R3|OUT|info string Available processors: 0-15
+S|IDLE_R3|OUT|info string Using 4 threads
+S|IDLE_R3|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|IDLE_R3|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|IDLE_R3|OUT|info depth 1 seldepth 3 multipv 1 score cp 34 nodes 56 nps 56000 hashfull 0 tbhits 0 time 1 pv d2d1
+S|IDLE_R3|OUT|info depth 2 seldepth 5 multipv 1 score cp 46 nodes 446 nps 446000 hashfull 0 tbhits 0 time 1 pv d2d1
+S|IDLE_R3|OUT|info depth 3 seldepth 5 multipv 1 score cp 39 nodes 705 nps 705000 hashfull 0 tbhits 0 time 1 pv c9d7 e9e8
+S|IDLE_R3|OUT|info depth 4 seldepth 7 multipv 1 score cp 36 nodes 1073 nps 1073000 hashfull 0 tbhits 0 time 1 pv c9d7 e9e8 d7f6 e8e9 f6g8 e9e8
+S|IDLE_R3|OUT|info depth 5 seldepth 7 multipv 1 score cp 36 nodes 1487 nps 743500 hashfull 0 tbhits 0 time 2 pv c9d7 e9e8 d7f6 e8e7 f6g8 e7e8
+S|IDLE_R3|OUT|info depth 6 seldepth 11 multipv 1 score cp 29 nodes 2083 nps 1041500 hashfull 0 tbhits 0 time 2 pv c9d7 e9e8 d7f6 e8e7 f6g8 e7e8 d2d1 a0b0 g8f6 e8e7
+S|IDLE_R3|OUT|info depth 7 seldepth 11 multipv 1 score cp 32 nodes 2542 nps 1271000 hashfull 0 tbhits 0 time 2 pv c9d7 e9e8 d7f6 e8e7 f6g8 e7e8
+S|IDLE_R3|OUT|info depth 8 seldepth 9 multipv 1 score cp 34 nodes 2994 nps 1497000 hashfull 0 tbhits 0 time 2 pv c9d7 e9e8 d7f6 e8e7 f6d5 e7d7 d2e2
+S|IDLE_R3|OUT|info depth 9 seldepth 15 multipv 1 score cp 30 nodes 5132 nps 1710666 hashfull 0 tbhits 0 time 3 pv c9d7 e9e8 d7f6 e8e7 f6g8 e7e8 g8i7 a0b0 i7h9 b0a0
+S|IDLE_R3|OUT|info depth 10 seldepth 16 multipv 1 score cp 33 nodes 5704 nps 1901333 hashfull 0 tbhits 0 time 3 pv c9d7 e9e8 d7f6 e8e7 f6g8 e7e8 d2d1 a0b0 g8f6 e8e7 f6d5 e7e8 d1d2 b0a0 d5b4
+S|IDLE_R3|OUT|info depth 11 seldepth 21 multipv 1 score cp 29 nodes 8633 nps 2158250 hashfull 0 tbhits 0 time 4 pv c9d7 e9e8 d7f6 e8e7 f6g8 e7e8 d2d1 a0b0 g8f6 e8e7 f6g8
+S|IDLE_R3|OUT|info depth 12 seldepth 23 multipv 1 score cp 20 nodes 21169 nps 3024142 hashfull 0 tbhits 0 time 7 pv c9d7 e9e8 d7f6 e8e7 f6g8 e7e8 g8h6 e8e7
+S|IDLE_R3|OUT|info depth 13 seldepth 22 multipv 1 score cp 7 nodes 61801 nps 3862562 hashfull 0 tbhits 0 time 16 pv c9d7 e9e8 d7f6 e8e9 f6e4 a0b0 d2d1 e9e8 e4d2 b0a0 d2b3 e8e7 b3c1 a0b0 d1d2 e7e8
+S|IDLE_R3|OUT|info depth 14 seldepth 24 multipv 1 score cp 1 nodes 90013 nps 4286333 hashfull 0 tbhits 0 time 21 pv c9d7 e9e8 d7f6 e8e9 f6e4 a0b0 d2d1 b0c0 e4c3 c0b0 c3a2 b0c0 a2c1 e9e8 d1d2
+S|IDLE_R3|OUT|info depth 15 seldepth 24 multipv 1 score cp 0 nodes 97937 nps 4258130 hashfull 0 tbhits 0 time 23 pv c9d7 e9e8 d7f6 e8e7 f6d5 e7e8 d5c3 e8e7 c3a2 e7e8 a2c1 a0b0 c1a2 b0a0 d2d1
+S|IDLE_R3|OUT|bestmove c9d7 ponder e9e8
+S|IDLE_R3|TIMEOUT
+S|IDLE_R3|END|lines=20
+S|CHK_R4|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9
+S|CHK_R4|CMD|go depth 15
+S|CHK_R4|OUT|info string Available processors: 0-15
+S|CHK_R4|OUT|info string Using 4 threads
+S|CHK_R4|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|CHK_R4|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|CHK_R4|OUT|info depth 1 seldepth 2 multipv 1 score cp 4 nodes 17 nps 17000 hashfull 0 tbhits 0 time 1 pv c9a8
+S|CHK_R4|OUT|info depth 2 seldepth 4 multipv 1 score cp 4 nodes 272 nps 272000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|CHK_R4|OUT|info depth 3 seldepth 7 multipv 1 score cp 10 nodes 712 nps 712000 hashfull 0 tbhits 0 time 1 pv c9a8
+S|CHK_R4|OUT|info depth 4 seldepth 7 multipv 1 score cp 0 nodes 1121 nps 1121000 hashfull 0 tbhits 0 time 1 pv c9a8 e9e8
+S|CHK_R4|OUT|info depth 5 seldepth 7 multipv 1 score cp 0 nodes 1407 nps 1407000 hashfull 0 tbhits 0 time 1 pv c9a8 e9e8 a8c7 e8e7 c7d5 e7e8
+S|CHK_R4|OUT|info depth 6 seldepth 10 multipv 1 score cp 0 nodes 1748 nps 1748000 hashfull 0 tbhits 0 time 1 pv c9a8 e9e8 a8c7 e8e7 c7d5 e7e8 d5c3 e8e7 c3a4
+S|CHK_R4|OUT|info depth 8 seldepth 15 multipv 1 score cp 0 nodes 3477 nps 3477000 hashfull 0 tbhits 0 time 1 pv c9b7 e9e8 b7a9 a0b0 a9c8 b0c0
+S|CHK_R4|OUT|info depth 9 seldepth 15 multipv 1 score cp 0 nodes 4212 nps 2106000 hashfull 0 tbhits 0 time 2 pv c9b7 e9e8 b7a9 e8e7 a9c8 e7e8 c8d6 e8e9 d6f5
+S|CHK_R4|OUT|info depth 10 seldepth 15 multipv 1 score cp 0 nodes 4713 nps 2356500 hashfull 0 tbhits 0 time 2 pv c9b7 e9e8 b7d6 e8e7 d6f5 e7e8 f5g7 e8e7 g7i6 a0b0
+S|CHK_R4|OUT|info depth 11 seldepth 17 multipv 1 score cp 0 nodes 5956 nps 2978000 hashfull 0 tbhits 0 time 2 pv c9b7 e9e8 b7d6 e8e7 d6c8 e7e8 c8a7 a0b0 a7c8 b0a0
+S|CHK_R4|OUT|info depth 7 seldepth 17 multipv 1 score cp 0 nodes 2526 nps 2526000 hashfull 0 tbhits 0 time 1 pv c9b7 e9e8 b7c9
+S|CHK_R4|OUT|info depth 12 seldepth 11 multipv 1 score cp 0 nodes 6462 nps 3231000 hashfull 0 tbhits 0 time 2 pv c9b7 e9e8 b7d6 e8e9 d6c8 e9e8 c8a7 a0b0 a7c8 b0a0
+S|CHK_R4|OUT|info depth 13 seldepth 15 multipv 1 score cp 0 nodes 7180 nps 3590000 hashfull 0 tbhits 0 time 2 pv c9b7 e9e8 b7d6 e8e7 d6c8 e7e8 c8a7 a0b0 d2d1 e8e7 a7c8 e7e8 c8d6 e8e9
+S|CHK_R4|OUT|info depth 14 seldepth 16 multipv 1 score cp 0 nodes 8388 nps 2796000 hashfull 0 tbhits 0 time 3 pv c9b7 e9e8 b7d6 e8e7 d6c8 e7e8 c8a7 a0b0 a7b9 e8e7 b9a7 e7e8
+S|CHK_R4|OUT|info depth 15 seldepth 21 multipv 1 score cp 0 nodes 10497 nps 3499000 hashfull 0 tbhits 0 time 3 pv c9b7 e9e8 b7d6 e8e7 d6c8 e7e8 d2d1 e8f8 c8a7 f8e8 a7c8
+S|CHK_R4|OUT|bestmove c9b7 ponder e9e8
+S|CHK_R4|TIMEOUT
+S|CHK_R4|END|lines=20
+S|CHK_R6|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9
+S|CHK_R6|CMD|go depth 15
+S|CHK_R6|OUT|info string Available processors: 0-15
+S|CHK_R6|OUT|info string Using 4 threads
+S|CHK_R6|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|CHK_R6|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|CHK_R6|OUT|info depth 1 seldepth 5 multipv 1 score cp 0 nodes 29 nps 29000 hashfull 0 tbhits 0 time 1 pv c9a8
+S|CHK_R6|OUT|info depth 2 seldepth 4 multipv 1 score cp 0 nodes 438 nps 438000 hashfull 0 tbhits 0 time 1 pv c9a8 e9e8 a8c7
+S|CHK_R6|OUT|info depth 3 seldepth 7 multipv 1 score cp 0 nodes 954 nps 954000 hashfull 0 tbhits 0 time 1 pv c9a8 e9e8 a8c7 e8e7 c7d5 e7e8
+S|CHK_R6|OUT|info depth 4 seldepth 9 multipv 1 score cp 1 nodes 1531 nps 1531000 hashfull 0 tbhits 0 time 1 pv c9a8 a0b0 a8c7 b0c0 d2d1
+S|CHK_R6|OUT|info depth 5 seldepth 8 multipv 1 score cp 3 nodes 1929 nps 1929000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|CHK_R6|OUT|info depth 6 seldepth 8 multipv 1 score cp 1 nodes 2423 nps 2423000 hashfull 0 tbhits 0 time 1 pv c9b7 e9e8 b7d6 e8e9 d6f5 e9e8
+S|CHK_R6|OUT|info depth 7 seldepth 9 multipv 1 score cp 0 nodes 2836 nps 2836000 hashfull 0 tbhits 0 time 1 pv c9b7 e9e8 b7d6 e8e9 d6f5 e9e8 f5g7 e8e7
+S|CHK_R6|OUT|info depth 8 seldepth 9 multipv 1 score cp 0 nodes 3345 nps 3345000 hashfull 0 tbhits 0 time 1 pv c9b7 a0b0 b7d6 b0a0 d6b5 e9e8 b5d6 e8e9
+S|CHK_R6|OUT|info depth 9 seldepth 8 multipv 1 score cp 0 nodes 3906 nps 3906000 hashfull 0 tbhits 0 time 1 pv c9b7 a0b0 b7d6 b0a0 d6e4 a0b0 e4d6
+S|CHK_R6|OUT|info depth 10 seldepth 15 multipv 1 score cp 0 nodes 5386 nps 2693000 hashfull 0 tbhits 0 time 2 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 f6g8 e7e8 d1d2 b0a0
+S|CHK_R6|OUT|info depth 11 seldepth 17 multipv 1 score cp 0 nodes 6794 nps 3397000 hashfull 0 tbhits 0 time 2 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 f6g8 e7e8 d1d2 b0c0 g8f6 e8e7 f6d7 c0b0 d7c9 b0a0
+S|CHK_R6|OUT|info depth 12 seldepth 16 multipv 1 score cp 0 nodes 11191 nps 3730333 hashfull 0 tbhits 0 time 3 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 d1d2 b0a0 f6g8 e7e8 g8f6 e8e9 d2d1 a0b0 f6d7
+S|CHK_R6|OUT|info depth 13 seldepth 21 multipv 1 score cp 0 nodes 12863 nps 4287666 hashfull 0 tbhits 0 time 3 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 d1d2 b0a0 f6d5 e7e8 d5e3 a0b0 e3f5 b0c0 d2d1
+S|CHK_R6|OUT|info depth 14 seldepth 16 multipv 1 score cp 0 nodes 14944 nps 3736000 hashfull 0 tbhits 0 time 4 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 d1d2 b0a0 f6e4 a0b0 e4f6
+S|CHK_R6|OUT|info depth 15 seldepth 23 multipv 1 score cp 0 nodes 19516 nps 4879000 hashfull 0 tbhits 0 time 4 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 d1d2 b0c0 f6d5 e7e8 d5f6 e8e7 f6g8
+S|CHK_R6|OUT|bestmove d2d1 ponder a0b0
+S|CHK_R6|TIMEOUT
+S|CHK_R6|END|lines=20
+DRV DONE steps=4

@@ -1,0 +1,57 @@
+{
+ "NOREP_100": {
+  "plies": 100,
+  "captures": 0,
+  "positionsInCheckAfterMove": 0,
+  "illegal": null,
+  "rootFenAtEnd": "4k4/7R1/9/9/9/9/9/9/9/3K5 w - - 100 1",
+  "sideToMove": 1,
+  "inCheck": false,
+  "legalMovesAtRoot": 18,
+  "staticEvalRedPositive": 419
+ },
+ "NOREP_118": {
+  "plies": 118,
+  "captures": 0,
+  "positionsInCheckAfterMove": 0,
+  "illegal": null,
+  "rootFenAtEnd": "5k3/6R2/9/9/9/9/9/9/9/3K5 w - - 118 1",
+  "sideToMove": 1,
+  "inCheck": false,
+  "legalMovesAtRoot": 19,
+  "staticEvalRedPositive": 423
+ },
+ "NOREP_119": {
+  "plies": 119,
+  "captures": 0,
+  "positionsInCheckAfterMove": 0,
+  "illegal": null,
+  "rootFenAtEnd": "5k3/3R5/9/9/9/9/9/9/9/3K5 b - - 119 1",
+  "sideToMove": -1,
+  "inCheck": false,
+  "legalMovesAtRoot": 1,
+  "staticEvalRedPositive": 423
+ },
+ "NOREP_120": {
+  "plies": 120,
+  "captures": 0,
+  "positionsInCheckAfterMove": 0,
+  "illegal": null,
+  "rootFenAtEnd": "4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 120 1",
+  "sideToMove": 1,
+  "inCheck": false,
+  "legalMovesAtRoot": 17,
+  "staticEvalRedPositive": 420
+ },
+ "NOREP_121": {
+  "plies": 121,
+  "captures": 0,
+  "positionsInCheckAfterMove": 0,
+  "illegal": null,
+  "rootFenAtEnd": "4k4/5R3/9/9/9/9/9/9/9/3K5 b - - 121 1",
+  "sideToMove": -1,
+  "inCheck": false,
+  "legalMovesAtRoot": 0,
+  "staticEvalRedPositive": 420
+ }
+}

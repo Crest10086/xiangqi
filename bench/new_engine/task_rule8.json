@@ -1,0 +1,161 @@
+{
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64"
+ ],
+ "steps": [
+  {
+   "id": "R60T_W_0",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 0 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_W_116",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 116 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_W_117",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 117 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_W_118",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 118 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_W_119",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 119 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_W_120",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 120 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_W_121",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 121 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_W_122",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 122 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_W_125",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 125 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_B_0",
+   "cmds": [
+    "position fen 5k3/3R5/9/9/9/9/9/9/9/3K5 b - - 0 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_B_118",
+   "cmds": [
+    "position fen 5k3/3R5/9/9/9/9/9/9/9/3K5 b - - 118 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_B_119",
+   "cmds": [
+    "position fen 5k3/3R5/9/9/9/9/9/9/9/3K5 b - - 119 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_B_120",
+   "cmds": [
+    "position fen 5k3/3R5/9/9/9/9/9/9/9/3K5 b - - 120 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60T_B_121",
+   "cmds": [
+    "position fen 5k3/3R5/9/9/9/9/9/9/9/3K5 b - - 121 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZF_R0",
+   "cmds": [
+    "position fen 5k3/9/9/9/2b6/4R4/9/9/9/3K5 w - - 0 1",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZF_R2",
+   "cmds": [
+    "position fen 5k3/9/9/9/2b6/4R4/9/9/9/3K5 w - - 0 1 moves e4c4 c5e7 c4e4 e7c5 e4c4 c5e7 c4e4 e7c5",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZF_R3",
+   "cmds": [
+    "position fen 5k3/9/9/9/2b6/4R4/9/9/9/3K5 w - - 0 1 moves e4c4 c5e7 c4e4 e7c5 e4c4 c5e7 c4e4 e7c5 e4c4 c5e7 c4e4 e7c5",
+    "go depth 15"
+   ],
+   "timeoutMs": 20000,
+   "gapMs": 300
+  }
+ ]
+}

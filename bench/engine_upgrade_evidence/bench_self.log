@@ -1,0 +1,359 @@
+HARNESS tag=self-patched threads=4
+MSG net-progress 2035458/50706378
+MSG net-progress 2097152/50706378
+MSG net-progress 2686976/50706378
+MSG net-progress 2883584/50706378
+MSG net-progress 2949120/50706378
+MSG net-progress 3080192/50706378
+MSG net-progress 3145728/50706378
+MSG net-progress 3211264/50706378
+MSG net-progress 3276800/50706378
+MSG net-progress 4518983/50706378
+MSG net-progress 4194304/50706378
+MSG net-progress 4453447/50706378
+MSG net-progress 4584519/50706378
+MSG net-progress 4650055/50706378
+MSG net-progress 4715591/50706378
+MSG net-progress 4781127/50706378
+MSG net-progress 4846663/50706378
+MSG net-progress 4912199/50706378
+MSG net-progress 4977735/50706378
+MSG net-progress 5502023/50706378
+MSG net-progress 5567559/50706378
+MSG net-progress 5829703/50706378
+MSG net-progress 5895239/50706378
+MSG net-progress 5960775/50706378
+MSG net-progress 6291456/50706378
+MSG net-progress 6488064/50706378
+MSG net-progress 6619136/50706378
+MSG net-progress 6684672/50706378
+MSG net-progress 6750208/50706378
+MSG net-progress 6815744/50706378
+MSG net-progress 7208960/50706378
+MSG net-progress 7274496/50706378
+MSG net-progress 7340032/50706378
+MSG net-progress 7536640/50706378
+MSG net-progress 7602176/50706378
+MSG net-progress 7667712/50706378
+MSG net-progress 7798784/50706378
+MSG net-progress 8060928/50706378
+MSG net-progress 8388608/50706378
+MSG net-progress 8454144/50706378
+MSG net-progress 8519680/50706378
+MSG net-progress 8585216/50706378
+MSG net-progress 8650752/50706378
+MSG net-progress 8847360/50706378
+MSG net-progress 9306112/50706378
+MSG net-progress 9895936/50706378
+MSG net-progress 10289152/50706378
+MSG net-progress 10354688/50706378
+MSG net-progress 10420224/50706378
+MSG net-progress 10485760/50706378
+MSG net-progress 10551296/50706378
+MSG net-progress 10616832/50706378
+MSG net-progress 10682368/50706378
+MSG net-progress 11141120/50706378
+MSG net-progress 11730944/50706378
+MSG net-progress 11862016/50706378
+MSG net-progress 11927552/50706378
+MSG net-progress 11993088/50706378
+MSG net-progress 12058624/50706378
+MSG net-progress 12124160/50706378
+MSG net-progress 12189696/50706378
+MSG net-progress 12320768/50706378
+MSG net-progress 12451840/50706378
+MSG net-progress 12517376/50706378
+MSG net-progress 12582912/50706378
+MSG net-progress 12648448/50706378
+MSG net-progress 12713984/50706378
+MSG net-progress 12779520/50706378
+MSG net-progress 12845056/50706378
+MSG net-progress 12910592/50706378
+MSG net-progress 12976128/50706378
+MSG net-progress 13041664/50706378
+MSG net-progress 13107200/50706378
+MSG net-progress 13172736/50706378
+MSG net-progress 13303808/50706378
+MSG net-progress 13369344/50706378
+MSG net-progress 13434880/50706378
+MSG net-progress 13500416/50706378
+MSG net-progress 14024704/50706378
+MSG net-progress 14286848/50706378
+MSG net-progress 14548992/50706378
+MSG net-progress 14680064/50706378
+MSG net-progress 15925248/50706378
+MSG net-progress 15990784/50706378
+MSG net-progress 16056320/50706378
+MSG net-progress 16121856/50706378
+MSG net-progress 16318464/50706378
+MSG net-progress 16384000/50706378
+MSG net-progress 16515072/50706378
+MSG net-progress 16777216/50706378
+MSG net-progress 17563648/50706378
+MSG net-progress 17694720/50706378
+MSG net-progress 17825792/50706378
+MSG net-progress 18087936/50706378
+MSG net-progress 18546688/50706378
+MSG net-progress 18677760/50706378
+MSG net-progress 18743296/50706378
+MSG net-progress 18874368/50706378
+MSG net-progress 18939904/50706378
+MSG net-progress 19005440/50706378
+MSG net-progress 19070976/50706378
+MSG net-progress 19595264/50706378
+MSG net-progress 19988480/50706378
+MSG net-progress 20054016/50706378
+MSG net-progress 20119552/50706378
+MSG net-progress 20185088/50706378
+MSG net-progress 20381696/50706378
+MSG net-progress 20447232/50706378
+MSG net-progress 20512768/50706378
+MSG net-progress 20578304/50706378
+MSG net-progress 20709376/50706378
+MSG net-progress 20840448/50706378
+MSG net-progress 20971520/50706378
+MSG net-progress 21102592/50706378
+MSG net-progress 21168128/50706378
+MSG net-progress 21233664/50706378
+MSG net-progress 21299200/50706378
+MSG net-progress 21692416/50706378
+MSG net-progress 22151168/50706378
+MSG net-progress 22478848/50706378
+MSG net-progress 22609920/50706378
+MSG net-progress 22675456/50706378
+MSG net-progress 22937600/50706378
+MSG net-progress 23003136/50706378
+MSG net-progress 23068672/50706378
+MSG net-progress 23134208/50706378
+MSG net-progress 23265280/50706378
+MSG net-progress 23461888/50706378
+MSG net-progress 23527424/50706378
+MSG net-progress 23724032/50706378
+MSG net-progress 24838144/50706378
+MSG net-progress 25165824/50706378
+MSG net-progress 25231360/50706378
+MSG net-progress 25559040/50706378
+MSG net-progress 25624576/50706378
+MSG net-progress 25690112/50706378
+MSG net-progress 25821184/50706378
+MSG net-progress 26148864/50706378
+MSG net-progress 26476544/50706378
+MSG net-progress 26607616/50706378
+MSG net-progress 26673152/50706378
+MSG net-progress 27066368/50706378
+MSG net-progress 27131904/50706378
+MSG net-progress 27262976/50706378
+MSG net-progress 27328512/50706378
+MSG net-progress 27787264/50706378
+MSG net-progress 27983872/50706378
+MSG net-progress 28049408/50706378
+MSG net-progress 28114944/50706378
+MSG net-progress 28180480/50706378
+MSG net-progress 28770304/50706378
+MSG net-progress 28835840/50706378
+MSG net-progress 29163520/50706378
+MSG net-progress 29360128/50706378
+MSG net-progress 29425664/50706378
+MSG net-progress 29491200/50706378
+MSG net-progress 29556736/50706378
+MSG net-progress 29622272/50706378
+MSG net-progress 29687808/50706378
+MSG net-progress 30081024/50706378
+MSG net-progress 30146560/50706378
+MSG net-progress 30212096/50706378
+MSG net-progress 30277632/50706378
+MSG net-progress 30801920/50706378
+MSG net-progress 30867456/50706378
+MSG net-progress 31064064/50706378
+MSG net-progress 31129600/50706378
+MSG net-progress 31195136/50706378
+MSG net-progress 31326208/50706378
+MSG net-progress 31457280/50706378
+MSG net-progress 31981568/50706378
+MSG net-progress 32178176/50706378
+MSG net-progress 32243712/50706378
+MSG net-progress 32309248/50706378
+MSG net-progress 32374784/50706378
+MSG net-progress 32702464/50706378
+MSG net-progress 33423360/50706378
+MSG net-progress 33554432/50706378
+MSG net-progress 33619968/50706378
+MSG net-progress 33751040/50706378
+MSG net-progress 33816576/50706378
+MSG net-progress 33882112/50706378
+MSG net-progress 33947648/50706378
+MSG net-progress 34013184/50706378
+MSG net-progress 34275328/50706378
+MSG net-progress 34406400/50706378
+MSG net-progress 35323904/50706378
+MSG net-progress 35520512/50706378
+MSG net-progress 35586048/50706378
+MSG net-progress 35651584/50706378
+MSG net-progress 36372480/50706378
+MSG net-progress 36634624/50706378
+MSG net-progress 36831232/50706378
+MSG net-progress 36962304/50706378
+MSG net-progress 37027840/50706378
+MSG net-progress 37355520/50706378
+MSG net-progress 37421056/50706378
+MSG net-progress 37748736/50706378
+MSG net-progress 37945344/50706378
+MSG net-progress 38141952/50706378
+MSG net-progress 38535168/50706378
+MSG net-progress 38666240/50706378
+MSG net-progress 38731776/50706378
+MSG net-progress 38993920/50706378
+MSG net-progress 39452672/50706378
+MSG net-progress 39518208/50706378
+MSG net-progress 39845888/50706378
+MSG net-progress 39976960/50706378
+MSG net-progress 40042496/50706378
+MSG net-progress 40435712/50706378
+MSG net-progress 40566784/50706378
+MSG net-progress 40632320/50706378
+MSG net-progress 40697856/50706378
+MSG net-progress 40828928/50706378
+MSG net-progress 40960000/50706378
+MSG net-progress 41025536/50706378
+MSG net-progress 41287680/50706378
+MSG net-progress 41484288/50706378
+MSG net-progress 41877504/50706378
+MSG net-progress 41943040/50706378
+MSG net-progress 44040192/50706378
+MSG net-progress 44105728/50706378
+MSG net-progress 44171264/50706378
+MSG net-progress 44236800/50706378
+MSG net-progress 44302336/50706378
+MSG net-progress 44367872/50706378
+MSG net-progress 44433408/50706378
+MSG net-progress 44498944/50706378
+MSG net-progress 44564480/50706378
+MSG net-progress 44630016/50706378
+MSG net-progress 44695552/50706378
+MSG net-progress 44761088/50706378
+MSG net-progress 45285376/50706378
+MSG net-progress 46137344/50706378
+MSG net-progress 46333952/50706378
+MSG net-progress 46465024/50706378
+MSG net-progress 46727168/50706378
+MSG net-progress 46858240/50706378
+MSG net-progress 47775744/50706378
+MSG net-progress 48234496/50706378
+MSG net-progress 48955392/50706378
+MSG net-progress 49086464/50706378
+MSG net-progress 49545216/50706378
+MSG net-progress 50331648/50706378
+MSG net-progress 50706378/50706378
+net-progress DONE 50706378/50706378
+MSG net-written bytes=50706378
+MSG line Pikafish dev-20261003-nogit by the Pikafish developers (see AUTHORS file)
+MSG ready
+READY
+MSG line id name Pikafish dev-20261003-nogit
+MSG line id author the Pikafish developers (see AUTHORS file)
+MSG line option name Debug Log File type string default <empty>
+MSG line
+MSG line option name NumaPolicy type string default auto
+MSG line option name Threads type spin default 1 min 1 max 1024
+MSG line option name Hash type spin default 16 min 1 max 33554432
+MSG line option name Clear Hash type button
+MSG line option name Ponder type check default false
+MSG line option name MultiPV type spin default 1 min 1 max 128
+MSG line option name Move Overhead type spin default 10 min 0 max 5000
+MSG line option name nodestime type spin default 0 min 0 max 10000
+MSG line option name UCI_ShowWDL type check default false
+MSG line option name EvalFile type string default pikafish.nnue
+MSG line uciok
+LINE: uciok
+MSG line info string Using 4 threads
+BENCH START threads=4
+MSG line info string Available processors: 0-15
+MSG line info string Using 4 threads
+MSG line info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+MSG line info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+MSG line info depth 1 seldepth 3 multipv 1 score cp 22 nodes 360 nps 72000 hashfull 0 tbhits 0 time 5 pv b2e2
+MSG line info depth 2 seldepth 7 multipv 1 score cp 40 nodes 1274 nps 212333 hashfull 0 tbhits 0 time 6 pv b2e2
+MSG line info depth 3 seldepth 4 multipv 1 score cp 31 nodes 1520 nps 253333 hashfull 0 tbhits 0 time 6 pv h2e2
+MSG line info depth 4 seldepth 6 multipv 1 score cp 59 nodes 2301 nps 287625 hashfull 0 tbhits 0 time 8 pv b2e2
+MSG line info depth 5 seldepth 7 multipv 1 score cp 56 nodes 2468 nps 308500 hashfull 0 tbhits 0 time 8 pv b2e2 g9e7
+MSG line info depth 6 seldepth 7 multipv 1 score cp 49 nodes 4416 nps 441600 hashfull 0 tbhits 0 time 10 pv b2e2 b9c7 b0c2 a9b9 a0b0
+MSG line info depth 7 seldepth 12 multipv 1 score cp 27 nodes 16482 nps 867473 hashfull 0 tbhits 0 time 19 pv b2e2 b9c7 b0c2 h9g7
+MSG line info depth 8 seldepth 14 multipv 1 score cp 25 nodes 25350 nps 1056250 hashfull 0 tbhits 0 time 24 pv b2e2 b9c7 b0c2 a9b9 a0b0 h9g7 h0g2 b7b3 g3g4
+MSG line info depth 9 seldepth 14 multipv 1 score cp 24 nodes 42129 nps 1276636 hashfull 0 tbhits 0 time 33 pv b2e2 b9c7 c3c4 h7e7 h0g2 h9g7 i0h0 a9b9 b0c2 i9h9 a0b0
+MSG line info depth 10 seldepth 15 multipv 1 score cp 24 nodes 45015 nps 1286142 hashfull 0 tbhits 0 time 35 pv b2e2 b9c7 b0c2 c6c5 a0b0 a9b9 b0b4 h9g7 c3c4 c5c4 b4c4 c7b5
+MSG line info depth 11 seldepth 16 multipv 1 score cp 27 nodes 59668 nps 1420666 hashfull 0 tbhits 0 time 42 pv b2e2 b9c7 b0c2 c6c5 a0b0 a9b9 b0b6 g6g5 h0i2 h9g7 h2f2 i9h9
+MSG line info depth 12 seldepth 17 multipv 1 score cp 30 nodes 74753 nps 1495060 hashfull 0 tbhits 0 time 50 pv b2e2 b9c7 c3c4 a9b9 b0c2 b7a7 h0i2 h7e7 h2g2 h9g7 i0h0
+MSG line info depth 13 seldepth 22 multipv 1 score cp 25 nodes 152539 nps 1676252 hashfull 2 tbhits 0 time 91 pv b2e2 b9c7 b0c2 a9b9 a0b0 c6c5 b0b6 g6g5 h0g2
+MSG line info depth 14 seldepth 20 multipv 1 score cp 26 nodes 169417 nps 1677396 hashfull 3 tbhits 0 time 101 pv b2e2 b9c7 b0c2 a9b9 a0b0 g6g5 c3c4 h9g7 h0i2 g9e7 h2f2 b7b5 f2f6 h7h2 f6c6 i9h9 i0h0 b5b3
+MSG line info depth 15 seldepth 28 multipv 1 score cp 23 nodes 287508 nps 1742472 hashfull 6 tbhits 0 time 165 pv c3c4 h7e7 h0g2 h9g7 g3g4 b9a7 i0h0 b7c7 b2e2 a9b9 b0c2 i9h9
+MSG line info depth 16 seldepth 23 multipv 1 score cp 21 nodes 348666 nps 1726069 hashfull 7 tbhits 0 time 202 pv h2e2 h9g7 h0g2 i9h9 i0h0 g6g5 h0h6 b9c7 c3c4 h7i7 h6h9 g7h9 b0c2 c9e7
+MSG line info depth 17 seldepth 33 multipv 1 score cp 25 nodes 879020 nps 1754530 hashfull 18 tbhits 0 time 501 pv g3g4 b9c7 c3c4 h7g7 b0c2 g6g5 c2d4 g5g4 g0e2 h9i7 h2h7 g9e7 h0i2 a9a8 i0h0 a8d8
+MSG line bestmove g3g4 ponder b9c7
+LINE: bestmove g3g4 ponder b9c7
+BENCH 500ms -> depth 17 nodes 879020 score 25 move g3g4
+MSG line info string Available processors: 0-15
+MSG line info string Using 4 threads
+MSG line info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+MSG line info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+MSG line info depth 1 seldepth 4 multipv 1 score cp 28 nodes 188 nps 188000 hashfull 0 tbhits 0 time 1 pv c3c4
+MSG line info depth 2 seldepth 3 multipv 1 score cp 28 nodes 467 nps 467000 hashfull 0 tbhits 0 time 1 pv b2e2
+MSG line info depth 3 seldepth 5 multipv 1 score cp 31 nodes 881 nps 881000 hashfull 0 tbhits 0 time 1 pv g3g4 b9c7
+MSG line info depth 4 seldepth 5 multipv 1 score cp 28 nodes 1407 nps 1407000 hashfull 0 tbhits 0 time 1 pv g3g4 h9i7 b2e2
+MSG line info depth 5 seldepth 7 multipv 1 score cp 28 nodes 2099 nps 2099000 hashfull 0 tbhits 0 time 1 pv g3g4 h9i7 b2e2 b7e7 b0c2 b9c7
+MSG line info depth 6 seldepth 13 multipv 1 score cp 31 nodes 5119 nps 2559500 hashfull 0 tbhits 0 time 2 pv c3c4 g6g5 h2g2 c9e7 h0i2 h9g7 i0h0
+MSG line info depth 7 seldepth 9 multipv 1 score cp 31 nodes 5408 nps 2704000 hashfull 0 tbhits 0 time 2 pv c3c4 g6g5 h2g2 c9e7 h0i2 h9g7
+MSG line info depth 8 seldepth 14 multipv 1 score cp 33 nodes 11725 nps 2345000 hashfull 0 tbhits 0 time 5 pv c3c4 h7d7 h0g2 h9g7 i0h0 i9h9 g3g4
+MSG line info depth 9 seldepth 13 multipv 1 score cp 32 nodes 13381 nps 2230166 hashfull 0 tbhits 0 time 6 pv c3c4 h7c7 c0e2 h9g7 h0i2 i9h9 i0h0
+MSG line info depth 10 seldepth 16 multipv 1 score cp 30 nodes 25966 nps 2163833 hashfull 0 tbhits 0 time 12 pv c3c4 h7e7 h0g2 h9g7 i0h0 i9h9 h2h6 g6g5 b0c2 b9a7
+MSG line info depth 11 seldepth 18 multipv 1 score cp 33 nodes 83005 nps 2128333 hashfull 0 tbhits 0 time 39 pv g3g4 b7g7 c0e2 b9c7 b2d2 h9i7
+MSG line info depth 12 seldepth 24 multipv 1 score cp 28 nodes 112152 nps 2116075 hashfull 0 tbhits 0 time 53 pv g3g4 b9c7 c3c4 h7g7 g0e2 h9i7 h0g2 i9h9 i0h0 a9a8 b2c2 h9h5 b0a2 h5b5 h2h7
+MSG line info depth 13 seldepth 25 multipv 1 score cp 27 nodes 248327 nps 2104466 hashfull 2 tbhits 0 time 118 pv c3c4 g6g5 b0c2 h9g7 g0e2 b9a7 a0a1 g9e7 a1g1 h7h8 h0i2
+MSG line info depth 14 seldepth 19 multipv 1 score cp 27 nodes 250432 nps 2104470 hashfull 2 tbhits 0 time 119 pv c3c4 g6g5 b0c2 h9g7 g0e2 b9a7 a0a1 g9e7 a1g1 h7h8 g3g4 g5g4 g1g4 a9a8 h0f1 a8f8 f1d2 a6a5
+MSG line info depth 15 seldepth 29 multipv 1 score cp 29 nodes 327001 nps 2043756 hashfull 4 tbhits 0 time 160 pv c3c4 g6g5 b0c2 h9g7 a0a1 c9e7 g0e2 b9d8 h0f1 a9c9 g3g4 g5g4 i0g0 c6c5 c4c5 g7f5 a1d1 i9i8 d1d5 f5h6 c2d4 h7h2 f1h2 c9c5 d5c5 e7c5 h2g4
+MSG line info depth 16 seldepth 26 multipv 1 score cp 27 nodes 373532 nps 2030065 hashfull 5 tbhits 0 time 184 pv c3c4 g6g5 h0i2 h9g7 b2e2 c9e7 h2g2 b9d8 i0h0 g7f5 b0c2 c6c5 h0h4
+MSG line info depth 17 seldepth 28 multipv 1 score cp 25 nodes 574845 nps 1975412 hashfull 9 tbhits 0 time 291 pv c3c4 g6g5 b0c2 h9g7 g0e2 b9a7 a0a1 g9e7 h0f1 a9a8 i0g0 a8f8 c2d4
+MSG line info depth 18 seldepth 29 multipv 1 score cp 28 nodes 714258 nps 1940918 hashfull 11 tbhits 0 time 368 pv c3c4 g6g5 h2g2 c9e7 h0i2 h9g7 i0h0 i9h9 b2e2 c6c5 c4c5 b9d8 a0a1 a9c9 a1d1 h9h8 d1d5 h7h3 b0c2 c9c8 g3g4 g5g4 d5d7 c8c5
+MSG line info depth 19 seldepth 36 multipv 1 score cp 26 nodes 873404 nps 1906995 hashfull 14 tbhits 0 time 458 pv c3c4 g6g5 b0c2 h9g7 g0e2 g9e7 h0f1 b9a7 i0g0 a9a8 g3g4 g5g4 g0g4 h7h9 a0a1 a8f8 g4h4 a6a5 h2h9 i9h9 h4h9 g7h9 c2d4 b7b4 d4e6
+MSG line info depth 20 seldepth 33 multipv 1 score cp 28 nodes 1506263 nps 1897056 hashfull 28 tbhits 0 time 794 pv c3c4 g6g5 h2g2 c9e7 h0i2 h9g7 i0h0 i9h9 h0h4 b9d8 b0c2 h7i7 h4f4 a9c9 c0e2 h9h8 i3i4
+MSG line info depth 21 seldepth 35 multipv 1 score cp 26 nodes 1998773 nps 1889199 hashfull 34 tbhits 0 time 1058 pv c3c4 g6g5 h2g2 b7c7 c0e2 g9e7 b0c2 h9g7 h0i2 i9h9 i0h0 b9a7 a0b0 a9b9 b2b6 h7h3 g3g4 g5g4 e2g4 c6c5 g2g7 c7g7 c4c5 e7c5 g4e2 h3h2 c2d4
+MSG line info depth 22 seldepth 33 multipv 1 score cp 26 nodes 2244581 nps 1883037 hashfull 40 tbhits 0 time 1192 pv c3c4 g6g5 h2g2 b7c7 c0e2 g9e7 b0c2 b9a7 a0b0 a9b9 h0i2 h9g7 i0h0 i9h9 b2b6 h7h3 g3g4 g5g4 e2g4 c6c5 c4c5 g7f5
+MSG line info depth 23 seldepth 37 multipv 1 score cp 31 nodes 3633557 nps 1814963 hashfull 74 tbhits 0 time 2002 pv b2e2 b9c7 b0c2 a9b9 a0b0 h9g7 g3g4 c6c5 b0b6 c7d5 h0g2 i9i8 i0i1 i8f8 i1d1 b7d7 b6b9 d7d1 b9c9 d5c7 e3e4 d1d2 e4e5 f8f3 e5e6 f9e8
+MSG line bestmove b2e2 ponder b9c7
+LINE: bestmove b2e2 ponder b9c7
+BENCH 2000ms -> depth 23 nodes 3633557 score 31 move b2e2
+MSG line info string Available processors: 0-15
+MSG line info string Using 4 threads
+MSG line info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+MSG line info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+MSG line info depth 1 seldepth 5 multipv 1 score cp 31 nodes 210 nps 210000 hashfull 0 tbhits 0 time 1 pv b2e2
+MSG line info depth 2 seldepth 3 multipv 1 score cp 31 nodes 533 nps 533000 hashfull 0 tbhits 0 time 1 pv b2e2
+MSG line info depth 3 seldepth 7 multipv 1 score cp 33 nodes 1460 nps 1460000 hashfull 0 tbhits 0 time 1 pv b2e2 b9c7
+MSG line info depth 4 seldepth 7 multipv 1 score cp 31 nodes 2208 nps 2208000 hashfull 0 tbhits 0 time 1 pv b2e2 h9g7
+MSG line info depth 5 seldepth 9 multipv 1 score cp 33 nodes 2751 nps 2751000 hashfull 0 tbhits 0 time 1 pv b2e2 b9c7 b0c2 a9b9 c3c4 g6g5 a0b0
+MSG line info depth 6 seldepth 9 multipv 1 score cp 29 nodes 3309 nps 1654500 hashfull 0 tbhits 0 time 2 pv b2e2 b9c7 b0c2 a9b9 c3c4 g6g5 a0b0
+MSG line info depth 7 seldepth 12 multipv 1 score cp 29 nodes 5020 nps 2510000 hashfull 0 tbhits 0 time 2 pv b2e2 b9c7 b0c2 a9b9 c3c4 g6g5 a0b0 h9g7 h0i2 i9i8 h2h6
+MSG line info depth 8 seldepth 14 multipv 1 score cp 28 nodes 6230 nps 2076666 hashfull 0 tbhits 0 time 3 pv b2e2 b9c7 b0c2 a9b9 c3c4 g6g5 a0b0 h9g7 h0i2 i9i8 h2h6 g7f5 i0i1
+MSG line info depth 9 seldepth 17 multipv 1 score cp 28 nodes 7125 nps 2375000 hashfull 0 tbhits 0 time 3 pv b2e2 b9c7 b0c2 a9b9 c3c4 g6g5 a0b0 h9g7 h0i2 i9i8 h2h6 g7f5 i0i1 i8d8 b0b6 d8d5
+MSG line info depth 10 seldepth 13 multipv 1 score cp 28 nodes 9496 nps 2374000 hashfull 0 tbhits 0 time 4 pv b2e2 b9c7 b0c2 a9b9 a0b0 h9g7 c3c4 g6g5 h0i2 i9i8 h2h6
+MSG line info depth 11 seldepth 17 multipv 1 score cp 28 nodes 11668 nps 2333600 hashfull 0 tbhits 0 time 5 pv b2e2 b9c7 b0c2 a9b9 a0b0 h9g7 c3c4 g6g5 h0i2 i9i8 h2h6 g7f5 h6c6 h7e7 i0i1 i8d8
+MSG line info depth 12 seldepth 23 multipv 1 score cp 28 nodes 19592 nps 2449000 hashfull 0 tbhits 0 time 8 pv b2e2 b9c7 b0c2 a9b9 a0b0 c6c5 h0g2 h9g7 b0b6 g6g5 i0i1
+MSG line info depth 13 seldepth 25 multipv 1 score cp 29 nodes 27464 nps 2496727 hashfull 0 tbhits 0 time 11 pv b2e2 b9c7 b0c2 a9b9 a0b0 h9g7 c3c4 g6g5 h0i2 i9i8 h2h6 g7f5 h6c6 h7e7 c4c5 i8d8 i0h0 f5e3 b0b3 b7a7 b3b9 c7b9
+MSG line info depth 14 seldepth 36 multipv 1 score cp 27 nodes 84093 nps 2402657 hashfull 0 tbhits 0 time 35 pv b2e2 b9c7 b0c2 a9b9 a0b0 h9g7 c3c4 g6g5 h0i2 i6i5 h2f2 b7b5 c2d4 i9i6 i0h0 g7h5
+MSG line info depth 15 seldepth 37 multipv 1 score cp 26 nodes 400589 nps 2043821 hashfull 4 tbhits 0 time 196 pv c3c4 g6g5 h2g2 b7c7 h0i2 g9e7 c0e2 b9a7 b0c2 a9b9 a0b0 h9g7
+MSG line info depth 16 seldepth 28 multipv 1 score cp 28 nodes 430486 nps 2049933 hashfull 5 tbhits 0 time 210 pv c3c4 g6g5 h2g2 b7c7 b2e2 c6c5 e2e6 h9g7 e6e4 c5c4 b0c2 c7c2 g2e2 h7i7 a0a2 c2c3 a2d2 i9h9 i0i1
+MSG line info depth 17 seldepth 31 multipv 1 score cp 28 nodes 493973 nps 2032810 hashfull 6 tbhits 0 time 243 pv c3c4 g6g5 h2g2 b7c7 b2e2 c6c5 e2e6 h9g7 e6e4 c5c4 b0c2 c7c2 g2e2 h7i7 a0a2 c2c3 a2d2 i9h9 i0i1 h9h0 d2d8
+MSG line info depth 18 seldepth 45 multipv 1 score cp 30 nodes 1205601 nps 1910619 hashfull 18 tbhits 0 time 631 pv h2e2 h9g7 h0g2 i9h9 i0h0 g6g5 h0h6 b9c7 b0c2 c6c5 a0a1 d9e8 a1d1 c9e7 e3e4 b7b3 g3g4 g5g4 e4e5 e6e5 c2e3 g4f4 e2e5 f4f3 e3d5 c7d5 d1d5 b3b5 d5c5 b5e5 c5e5 f3f2 g2f4 a9b9 b2a2
+MSG line info depth 19 seldepth 42 multipv 1 score cp 24 nodes 1802167 nps 1852175 hashfull 28 tbhits 0 time 973 pv b2e2 b9c7 b0c2 a9b9 a0b0 c6c5 h0g2 h9g7 b0b6 g6g5 e3e4 h7h6 b6b4 g9e7 c2e3 f9e8 g3g4 b7b5 c3c4 h6h5 h2h1 c5c4 b4c4 g5g4 e3g4 c7d5
+MSG line info depth 20 seldepth 42 multipv 1 score cp 24 nodes 2176923 nps 1852700 hashfull 34 tbhits 0 time 1175 pv h2e2 h9g7 h0g2 g6g5 i0h0 i9h9 h0h6 c6c5 b0c2 b9c7 a0a1 d9e8 a1d1 g7f5 e3e4 g5g4 h6f6 f5g3 g2e3 g3e2 b2e2 h7g7 g0i2 g4f4 f6f4 c9e7 e4e5 e6e5 c3c4 a9d9 d1d9 c7d9 e2e5 c5c4 e3g4 h9h3 f4c4
+MSG line info depth 21 seldepth 46 multipv 1 score cp 23 nodes 3142130 nps 1809982 hashfull 56 tbhits 0 time 1736 pv h2e2 h9g7 h0g2 g6g5 i0h0 i9h9 h0h6 c6c5 b2c2 b9c7 b0a2 c7b5 a0a1 c9e7 a1d1 d9e8 e3e4 h7i7 h6h9 g7h9 e2e6 a9d9 d1d9 e9d9 e4e5 b5a3 c2d2 d9e9 g2e3 i7i3 g3g4 b7b5 e5d5
+MSG line info depth 22 seldepth 41 multipv 1 score cp 21 nodes 4492545 nps 1838945 hashfull 80 tbhits 0 time 2443 pv h2e2 h9g7 h0g2 g6g5 i0h0 i9h9 h0h6 c6c5 b2c2 b9c7 b0a2 c7b5 a0a1 c9e7 e3e4 d9e8 a1d1 a9d9 d1d9 e8d9 a3a4 h7h8 e2e6 h8e8 h6h9 g7h9
+MSG line info depth 23 seldepth 37 multipv 1 score cp 21 nodes 6947583 nps 1817787 hashfull 128 tbhits 0 time 3822 pv h2e2 h9g7 h0g2 g6g5 i0h0 i9h9 h0h6 b9c7 c3c4 h7i7 h6g6 i7i8 b0c2 d9e8 c2d4 i8g8 g6f6 h9h4 b2b4 c9e7 e2d2 c6c5 g3g4 h4h5 c4c5 e7c5 g0e2
+MSG line info depth 24 seldepth 34 multipv 1 score cp 23 nodes 8794379 nps 1808426 hashfull 170 tbhits 0 time 4863 pv h2e2 h9g7 g3g4 i9h9 h0g2 h7i7 b0c2 c6c5 b2a2 b9c7 a0b0 a9b9 b0b6 c7d5 i0i1 c5c4 b6b5 c4c3 b5d5 c3c2 i1b1 h9h3 g2e1 h3h1 b1b6 c2c1 g4g5 g6g5 d5g5
+MSG line info depth 26 seldepth 44 multipv 1 score cp 24 nodes 10779640 nps 1796606 hashfull 214 tbhits 0 time 6000 pv h2e2 h9g7 h0g2 g6g5 i0h0 i9h9 h0h6 b9c7 b0c2 c6c5 a0a1 d9e8 a1d1 g7f5 e3e4 g5g4 h6f6 f5g3 g2e3 g3e2 b2e2 h7g7 g0i2 g4f4 e4e5 e6e5 f6f4 g7e7 d1d6 h9h3 f4b4 b7a7
+MSG line bestmove h2e2 ponder h9g7
+LINE: bestmove h2e2 ponder h9g7
+BENCH 6000ms -> depth 26 nodes 10779640 score 24 move h2e2
+BENCH DONE total=17531ms

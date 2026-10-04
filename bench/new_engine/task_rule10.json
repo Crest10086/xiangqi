@@ -1,0 +1,1313 @@
+{
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64"
+ ],
+ "steps": [
+  {
+   "id": "SW_A_rook_a5_110",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 110 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_115",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 115 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_118",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 118 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_119",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 119 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_120",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 120 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_121",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 121 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_122",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 122 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_125",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 125 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_130",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 130 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_135",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 135 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_140",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 140 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_150",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 150 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_160",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 160 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_170",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 170 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_180",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 180 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_190",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 190 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_200",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 200 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_210",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 210 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_220",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 220 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_230",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 230 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_239",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 239 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_240",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 240 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_241",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 241 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_250",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 250 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_300",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 300 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_400",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 400 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_500",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 500 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_900",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 900 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_A_rook_a5_999",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 999 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_110",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 110 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_115",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 115 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_118",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 118 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_119",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 119 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_120",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 120 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_121",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 121 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_122",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 122 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_125",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 125 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_130",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 130 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_135",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 135 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_140",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 140 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_150",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 150 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_160",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 160 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_170",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 170 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_180",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 180 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_190",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 190 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_200",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 200 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_210",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 210 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_220",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 220 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_230",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 230 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_239",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 239 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_240",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 240 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_241",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 241 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_250",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 250 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_300",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 300 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_400",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 400 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_500",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 500 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_900",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 900 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_B_rook_d8_999",
+   "cmds": [
+    "position fen 4k4/3R5/9/9/9/9/9/9/9/3K5 w - - 999 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_110",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 110 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_115",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 115 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_118",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 118 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_119",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 119 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_120",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_121",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_122",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 122 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_125",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 125 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_130",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 130 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_135",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 135 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_140",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 140 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_150",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 150 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_160",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 160 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_170",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 170 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_180",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 180 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_190",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 190 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_200",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 200 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_210",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 210 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_220",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 220 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_230",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 230 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_239",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 239 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_240",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 240 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_241",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 241 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_250",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 250 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_300",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 300 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_400",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 400 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_500",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 500 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_900",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 900 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_C_rook_f5_pawn_d8_999",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_110",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 110 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_115",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 115 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_118",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 118 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_119",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 119 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_120",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 120 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_121",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 121 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_122",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 122 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_125",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 125 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_130",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 130 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_135",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 135 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_140",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 140 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_150",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 150 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_160",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 160 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_170",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 170 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_180",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 180 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_190",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 190 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_200",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 200 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_210",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 210 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_220",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 220 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_230",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 230 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_239",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 239 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_240",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 240 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_241",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 241 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_250",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 250 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_300",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 300 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_400",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 400 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_500",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 500 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_900",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 900 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_D_only_kings_999",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/9/9/9/9/3K5 w - - 999 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_110",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 110 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_115",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 115 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_118",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 118 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_119",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 119 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_120",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 120 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_121",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 121 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_122",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 122 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_125",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 125 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_130",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 130 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_135",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 135 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_140",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 140 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_150",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 150 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_160",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 160 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_170",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 170 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_180",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 180 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_190",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 190 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_200",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 200 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_210",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 210 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_220",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 220 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_230",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 230 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_239",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 239 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_240",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 240 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_241",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 241 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_250",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 250 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_300",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 300 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_400",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 400 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_500",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 500 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_900",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 900 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  },
+  {
+   "id": "SW_E_rook_a5_extra_pawn_999",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/P8/9/3K5 w - - 999 1",
+    "go depth 2"
+   ],
+   "timeoutMs": 5000,
+   "gapMs": 120
+  }
+ ]
+}

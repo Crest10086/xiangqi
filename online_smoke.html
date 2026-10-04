@@ -1,0 +1,89 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>online wiring smoke (t_9c93fb06)</title></head>
+<body><pre id="log">…</pre>
+<!-- 与线上完全相同的脚本与路径（页面放在站点根目录，与 GitHub Pages 上的 index.html 同构） -->
+<script src="engine.js"></script>
+<script src="js/tier_rules.js"></script>
+<script src="js/tier_config.js"></script>
+<script src="js/pikafish_bridge.js"></script>
+<script>
+/* test_online_smoke.html — 端到端冒烟：真实浏览器 + 真实生产文件 + 真实完整强度引擎。
+ * 服务方式与线上 Pages 同构（serve_upg.js 不发 COOP/COEP 头），因此这一步同时验证
+ * coi-serviceworker 的注册/重载路径、50.7MB 网络的懒加载路径、以及四档选着是否真按定案参数走。
+ * 日志 POST 到 /__log -> bench/new_engine_logs/online_smoke.log
+ */
+const LOG = (s) => { document.getElementById('log').textContent += '\n' + s; return fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); };
+const POS = [
+  { id: 'OP00', fen: 'rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w', side: 1 },
+  { id: 'OP04', fen: 'rnbak1bnr/4a4/1cc6/p1p1p1p1p/9/9/P1P1P1P1P/BC5CN/9/RN1AKAB1R w', side: 1 },
+  { id: 'MG_QT01', fen: '1Rbaka1nr/9/c1n1b2c1/p1p1p3p/6p2/9/P1P1P1P1P/2N1C2CN/9/2BAKAB1R b', side: -1 },
+  { id: 'MG_QT10', fen: '2bakc2r/4an3/c3b4/p6RC/2p1P1p2/9/P1n3P1P/2N3C1N/9/2BAKAB2 b', side: -1 },
+  // 故意非法（白兵在底线，引擎实测回 CRITICAL ERROR）：验证该次结果被丢弃、
+  // 不会把"上一条局面的着法"当作当前局面的着法用出去。FEN 逐字取自 new_engine_rule4.log。
+  { id: 'BADFEN', fen: '1k7/pp7/C1P6/rP7/9/9/9/9/4P4/3AKA3 w - - 0 1', side: 1, expect: 'reject', raw: true }
+];
+function fenBoard(fen) {
+  const M = { K: 1, A: 2, B: 3, N: 4, R: 5, C: 6, P: 7 };
+  const b = new Array(90).fill(0);
+  fen.split(' ')[0].split('/').forEach((row, r) => {
+    let c = 0;
+    for (const ch of row) {
+      if (/[0-9]/.test(ch)) { c += +ch; continue; }
+      b[r * 9 + c] = ch === ch.toUpperCase() ? M[ch] : -M[ch.toUpperCase()];
+      c++;
+    }
+  });
+  return b;
+}
+async function main() {
+  LOG('SMOKE start coi=' + (self.crossOriginIsolated || false) + ' sab=' + (typeof SharedArrayBuffer !== 'undefined'));
+  const t0 = performance.now();
+  const ok = await PF.whenReady();
+  LOG('READY=' + ok + ' ms=' + Math.round(performance.now() - t0) + ' env=' + JSON.stringify(PF.env) + ' net=' + JSON.stringify(PF.lastCost));
+  if (!ok) { LOG('SMOKE FAIL engine not ready: ' + PF.lastError); document.title = 'FAIL'; return; }
+  const cfgs = PF.TIERS;
+  for (const pos of POS) {
+    const board = fenBoard(pos.fen);
+    const legal = XQ.legalMoves(board, pos.side);
+    const fen = pos.raw ? pos.fen : PF.boardToFen(board, pos.side);
+    for (const idx of [1, 2, 3, 4]) {
+      const c = cfgs[idx];
+      let res, err = null;
+      const s0 = performance.now();
+      try { res = await PF.tierSearch(idx, fen, { legal: legal, ply: pos.id === 'OP00' ? 0 : 20 }); }
+      catch (e) { err = String((e && e.kind) || '') + ':' + String(e && e.message || e); }
+      if (pos.expect === 'reject') {
+        LOG('CHECK|' + pos.id + '|' + c.name + '|rejected=' + (err ? 1 : 0) + '|err=' + (err || '-') +
+            '|critical=' + (PF.lastCritical ? 1 : 0));
+        continue;
+      }
+      const wall = Math.round(performance.now() - s0);
+      const info = PF.lastInfo || {};
+      if (err) { LOG('SEL|' + pos.id + '|' + c.name + '|ERR ' + err); continue; }
+      const mv = PF.parseMove(res.move);
+      const legalOk = !!mv && legal.some(m => m.f === mv.f && m.t === mv.t);
+      LOG('SEL|' + pos.id + '|' + c.name + '|move=' + res.move + '|hit=' + res.hit + '|gap=' + res.gap +
+          '|legal=' + (legalOk ? 1 : 0) + '|wall=' + wall + '|depth=' + (info.depth || 0) + '|nodes=' + (info.nodes || 0) +
+          '|mpv=' + c.multipv + '|ms=' + c.movetime + '|hash=' + c.hash + (c.cap !== undefined ? '|cap=' + c.cap + '|p=' + c.p + '|band=' + c.mistakeBand : ''));
+    }
+  }
+  // 恢复性检查：非法局面之后引擎是否还能正常出着（若卡住，后续每一步都会白等）
+  for (const pos of POS.slice(0, 2)) {
+    const board = fenBoard(pos.fen);
+    const legal = XQ.legalMoves(board, pos.side);
+    const fen = PF.boardToFen(board, pos.side);
+    const c = cfgs[2];
+    const t0 = performance.now();
+    let line = 'RECOVER|' + pos.id + '|';
+    try {
+      const r = await PF.tierSearch(2, fen, { legal: legal, ply: 20 });
+      const mv = PF.parseMove(r.move);
+      line += 'ok=' + (mv && legal.some(m => m.f === mv.f && m.t === mv.t) ? 1 : 0) + '|move=' + r.move;
+    } catch (e) { line += 'ERR ' + String(e && e.message || e); }
+    LOG(line + '|wall=' + Math.round(performance.now() - t0) + '|lastRawLine=' + String(PF.lastRawLine || '-').slice(0, 160));
+  }
+  LOG('SMOKE DONE');
+  document.title = 'DONE';
+}
+main();
+</script>
+</body></html>

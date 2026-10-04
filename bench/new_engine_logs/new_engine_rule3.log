@@ -1,0 +1,171 @@
+DRV: not isolated, registering SW (try 0)
+DRV: isolated ok, task=task_rule3.json
+DRV: engine ready
+S|CHK_R0|CMD|position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1
+S|CHK_R0|OUT|info string CRITICAL ERROR: Command `position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1` failed. Reason: Invalid FEN. Board state encoding ended but cursor not at end.
+S|CHK_R0|OUT|
+DRV error unhandled: [object Object]
+S|CHK_R0|CMD|go depth 16
+S|CHK_R0|OUT|info string Available processors: 0-15
+S|CHK_R0|OUT|info string Using 4 threads
+S|CHK_R0|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|CHK_R0|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|CHK_R0|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 96 nps 19200 hashfull 0 tbhits 0 time 5 pv d4d0
+S|CHK_R0|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 2374 nps 395666 hashfull 0 tbhits 0 time 6 pv d4d0
+S|CHK_R0|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 2790 nps 465000 hashfull 0 tbhits 0 time 6 pv d4d3
+S|CHK_R0|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 3121 nps 445857 hashfull 0 tbhits 0 time 7 pv d4d3
+S|CHK_R0|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 3462 nps 494571 hashfull 0 tbhits 0 time 7 pv d4d1
+S|CHK_R0|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 4037 nps 576714 hashfull 0 tbhits 0 time 7 pv d4d1
+S|CHK_R0|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 4964 nps 709142 hashfull 0 tbhits 0 time 7 pv d4d0
+S|CHK_R0|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 6679 nps 834875 hashfull 0 tbhits 0 time 8 pv d4d0
+S|CHK_R0|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 7691 nps 854555 hashfull 0 tbhits 0 time 9 pv d4d3
+S|CHK_R0|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 8226 nps 914000 hashfull 0 tbhits 0 time 9 pv d4d1
+S|CHK_R0|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 7199 nps 899875 hashfull 0 tbhits 0 time 8 pv d4d3
+S|CHK_R0|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 8682 nps 964666 hashfull 0 tbhits 0 time 9 pv d4d1
+S|CHK_R0|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 9108 nps 1012000 hashfull 0 tbhits 0 time 9 pv d4d0
+S|CHK_R0|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 9777 nps 1086333 hashfull 0 tbhits 0 time 9 pv d4d0
+S|CHK_R0|OUT|info depth 15 seldepth 2 multipv 1 score cp 0 nodes 10241 nps 1137888 hashfull 0 tbhits 0 time 9 pv d4d3
+S|CHK_R0|OUT|info depth 16 seldepth 2 multipv 1 score cp 0 nodes 10792 nps 1079200 hashfull 0 tbhits 0 time 10 pv d4d3
+S|CHK_R0|OUT|bestmove d4d3
+S|CHK_R0|TIMEOUT
+S|CHK_R0|END|lines=23
+S|CHK_R8|CMD|position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1 moves d4e4 e9d9 e4d4 d9e9 d4e4 e9d9 e4d4 d9e9
+S|CHK_R8|OUT|info string CRITICAL ERROR: Command `position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1 moves d4e4 e9d9 e4d4 d9e9 d4e4 e9d9 e4d4 d9e9` failed. Reason: Invalid FEN. Board state encoding ended but cursor not at end.
+S|CHK_R8|OUT|
+DRV error unhandled: [object Object]
+S|CHK_R8|CMD|go depth 16
+S|CHK_R8|OUT|info string Available processors: 0-15
+S|CHK_R8|OUT|info string Using 4 threads
+S|CHK_R8|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|CHK_R8|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|CHK_R8|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 18 nps 18000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R8|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 352 nps 352000 hashfull 0 tbhits 0 time 1 pv d4d1
+S|CHK_R8|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 964 nps 964000 hashfull 0 tbhits 0 time 1 pv d4d1
+S|CHK_R8|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1422 nps 1422000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R8|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 1845 nps 1845000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R8|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 2333 nps 2333000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R8|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 2525 nps 2525000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R8|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 2799 nps 2799000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R8|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 3411 nps 3411000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R8|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 3930 nps 3930000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R8|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 4491 nps 4491000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R8|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 5095 nps 5095000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R8|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 5757 nps 5757000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R8|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 6379 nps 6379000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R8|OUT|info depth 15 seldepth 2 multipv 1 score cp 0 nodes 7003 nps 7003000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R8|OUT|info depth 16 seldepth 2 multipv 1 score cp 0 nodes 7798 nps 3899000 hashfull 0 tbhits 0 time 2 pv d4d0
+S|CHK_R8|OUT|bestmove d4d0
+S|CHK_R8|TIMEOUT
+S|CHK_R8|END|lines=23
+S|CHK_R12|CMD|position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1 moves d4e4 e9d9 e4d4 d9e9 d4e4 e9d9 e4d4 d9e9 d4e4 e9d9 e4d4 d9e9
+S|CHK_R12|OUT|info string CRITICAL ERROR: Command `position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1 moves d4e4 e9d9 e4d4 d9e9 d4e4 e9d9 e4d4 d9e9 d4e4 e9d9 e4d4 d9e9` failed. Reason: Invalid FEN. Board state encoding ended but cursor not at end.
+S|CHK_R12|OUT|
+DRV error unhandled: [object Object]
+S|CHK_R12|CMD|go depth 16
+S|CHK_R12|OUT|info string Available processors: 0-15
+S|CHK_R12|OUT|info string Using 4 threads
+S|CHK_R12|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|CHK_R12|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|CHK_R12|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 36 nps 36000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R12|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 790 nps 790000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R12|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 2338 nps 2338000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R12|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 2891 nps 2891000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R12|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 3380 nps 3380000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|CHK_R12|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 3862 nps 3862000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R12|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 4483 nps 4483000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|CHK_R12|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 4969 nps 2484500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|CHK_R12|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 6241 nps 3120500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|CHK_R12|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 6762 nps 3381000 hashfull 0 tbhits 0 time 2 pv d4d2
+S|CHK_R12|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 7262 nps 3631000 hashfull 0 tbhits 0 time 2 pv d4d2
+S|CHK_R12|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 7757 nps 3878500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|CHK_R12|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 8295 nps 4147500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|CHK_R12|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 8741 nps 4370500 hashfull 0 tbhits 0 time 2 pv d4d2
+S|CHK_R12|OUT|info depth 15 seldepth 2 multipv 1 score cp 0 nodes 9193 nps 4596500 hashfull 0 tbhits 0 time 2 pv d4d2
+S|CHK_R12|OUT|info depth 16 seldepth 2 multipv 1 score cp 0 nodes 9802 nps 3267333 hashfull 0 tbhits 0 time 3 pv d4d0
+S|CHK_R12|OUT|bestmove d4d0
+S|CHK_R12|TIMEOUT
+S|CHK_R12|END|lines=23
+S|REP_R0|CMD|position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1
+S|REP_R0|OUT|info string CRITICAL ERROR: Command `position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1` failed. Reason: Invalid FEN. Board state encoding ended but cursor not at end.
+S|REP_R0|OUT|
+DRV error unhandled: [object Object]
+S|REP_R0|CMD|moves d4c4 e9d9 c4d4 d9e9
+S|REP_R0|OUT|Unknown command: 'moves d4c4 e9d9 c4d4 d9e9'. Type help for more information.
+S|REP_R0|CMD|go depth 16
+S|REP_R0|OUT|info string Available processors: 0-15
+S|REP_R0|OUT|info string Using 4 threads
+S|REP_R0|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|REP_R0|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|REP_R0|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 457 nps 457000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R0|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 18 nps 18000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R0|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 956 nps 956000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R0|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1380 nps 1380000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R0|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 1787 nps 1787000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R0|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 2200 nps 2200000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R0|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 2669 nps 2669000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R0|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 3164 nps 3164000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R0|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 3590 nps 3590000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R0|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 4063 nps 4063000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R0|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 4543 nps 4543000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R0|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 4918 nps 4918000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R0|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 5436 nps 5436000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R0|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 5817 nps 2908500 hashfull 0 tbhits 0 time 2 pv d4d2
+S|REP_R0|OUT|info depth 15 seldepth 2 multipv 1 score cp 0 nodes 6299 nps 3149500 hashfull 0 tbhits 0 time 2 pv d4d2
+S|REP_R0|OUT|info depth 16 seldepth 2 multipv 1 score cp 0 nodes 6831 nps 3415500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|REP_R0|OUT|bestmove d4d0
+S|REP_R0|TIMEOUT
+S|REP_R0|END|lines=24
+S|REP_R8|CMD|position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1 moves d4c4 e9d9 c4d4 d9e9 d4c4 e9d9 c4d4 d9e9
+S|REP_R8|OUT|info string CRITICAL ERROR: Command `position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1 moves d4c4 e9d9 c4d4 d9e9 d4c4 e9d9 c4d4 d9e9` failed. Reason: Invalid FEN. Board state encoding ended but cursor not at end.
+S|REP_R8|OUT|
+DRV error unhandled: [object Object]
+S|REP_R8|CMD|go depth 16
+S|REP_R8|OUT|info string Available processors: 0-15
+S|REP_R8|OUT|info string Using 4 threads
+S|REP_R8|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|REP_R8|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|REP_R8|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 111 nps 111000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R8|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 807 nps 807000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R8|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1902 nps 1902000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R8|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 1384 nps 1384000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R8|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 2555 nps 2555000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R8|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 3781 nps 3781000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R8|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 4412 nps 4412000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R8|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 5121 nps 5121000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R8|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 5690 nps 5690000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R8|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 6322 nps 6322000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R8|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 6860 nps 6860000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R8|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 7730 nps 3865000 hashfull 0 tbhits 0 time 2 pv d4d0
+S|REP_R8|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 8209 nps 4104500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|REP_R8|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 8857 nps 4428500 hashfull 0 tbhits 0 time 2 pv d4d2
+S|REP_R8|OUT|info depth 15 seldepth 2 multipv 1 score cp 0 nodes 9407 nps 4703500 hashfull 0 tbhits 0 time 2 pv d4d2
+S|REP_R8|OUT|info depth 16 seldepth 2 multipv 1 score cp 0 nodes 9925 nps 4962500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|REP_R8|OUT|bestmove d4d0
+S|REP_R8|TIMEOUT
+S|REP_R8|END|lines=23
+S|REP_R12|CMD|position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1 moves d4c4 e9d9 c4d4 d9e9 d4c4 e9d9 c4d4 d9e9 d4c4 e9d9 c4d4 d9e9
+S|REP_R12|OUT|info string CRITICAL ERROR: Command `position fen 4k3k/9/9/9/9/3R5/9/9/9/5K2 w - - 0 1 moves d4c4 e9d9 c4d4 d9e9 d4c4 e9d9 c4d4 d9e9 d4c4 e9d9 c4d4 d9e9` failed. Reason: Invalid FEN. Board state encoding ended but cursor not at end.
+S|REP_R12|OUT|
+DRV error unhandled: [object Object]
+S|REP_R12|CMD|go depth 16
+S|REP_R12|OUT|info string Available processors: 0-15
+S|REP_R12|OUT|info string Using 4 threads
+S|REP_R12|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|REP_R12|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|REP_R12|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 191 nps 191000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R12|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 1212 nps 1212000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R12|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 1956 nps 1956000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R12|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 2642 nps 2642000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R12|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 3192 nps 3192000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R12|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 3946 nps 3946000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R12|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 4547 nps 4547000 hashfull 0 tbhits 0 time 1 pv d4d2
+S|REP_R12|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 5166 nps 5166000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R12|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 5816 nps 5816000 hashfull 0 tbhits 0 time 1 pv d4d0
+S|REP_R12|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 6426 nps 3213000 hashfull 0 tbhits 0 time 2 pv d4d2
+S|REP_R12|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 6996 nps 3498000 hashfull 0 tbhits 0 time 2 pv d4d2
+S|REP_R12|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 7599 nps 3799500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|REP_R12|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 8157 nps 4078500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|REP_R12|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 8810 nps 4405000 hashfull 0 tbhits 0 time 2 pv d4d2
+S|REP_R12|OUT|info depth 15 seldepth 2 multipv 1 score cp 0 nodes 9440 nps 4720000 hashfull 0 tbhits 0 time 2 pv d4d2
+S|REP_R12|OUT|info depth 16 seldepth 2 multipv 1 score cp 0 nodes 10061 nps 5030500 hashfull 0 tbhits 0 time 2 pv d4d0
+S|REP_R12|OUT|bestmove d4d0

@@ -1,0 +1,134 @@
+{
+ "round": 2,
+ "refMs": 2000,
+ "refHash": 256,
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64",
+  "setoption name MultiPV value 1"
+ ],
+ "configs": [
+  {
+   "id": "AM",
+   "multipv": 4,
+   "slot": 4,
+   "movetime": 150,
+   "hash": 64
+  },
+  {
+   "id": "AD",
+   "multipv": 3,
+   "slot": 3,
+   "movetime": 300,
+   "hash": 64
+  },
+  {
+   "id": "EX",
+   "multipv": 2,
+   "slot": 2,
+   "movetime": 500,
+   "hash": 128
+  },
+  {
+   "id": "GM",
+   "multipv": 1,
+   "slot": 1,
+   "movetime": 6000,
+   "hash": 256
+  },
+  {
+   "id": "S1T300",
+   "multipv": 4,
+   "slot": 1,
+   "movetime": 300,
+   "hash": 64
+  }
+ ],
+ "positions": [
+  {
+   "id": "OP00",
+   "group": "opening",
+   "fen": "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1"
+  },
+  {
+   "id": "OP02",
+   "group": "opening",
+   "fen": "rnbakabnr/9/1cc6/p1p1p1p1p/9/9/P1P1P1P1P/BC5C1/9/RN1AKABNR w - - 0 1"
+  },
+  {
+   "id": "OP04",
+   "group": "opening",
+   "fen": "rnbak1bnr/4a4/1cc6/p1p1p1p1p/9/9/P1P1P1P1P/BC5CN/9/RN1AKAB1R w - - 0 1"
+  },
+  {
+   "id": "OP06",
+   "group": "opening",
+   "fen": "rCbak1bn1/4a4/1cc5r/p1p1p1p1p/9/9/P1P1P1P1P/B6CN/9/RN1AKAB1R w - - 0 1"
+  },
+  {
+   "id": "OP08",
+   "group": "opening",
+   "fen": "rCbak1bn1/4a4/2c5r/p1p1p1p1p/9/9/PcP1P1P1P/B6CN/R8/1N1AKAB1R w - - 0 1"
+  },
+  {
+   "id": "MG_QT01",
+   "group": "midgame",
+   "fen": "1Rbaka1nr/9/c1n1b2c1/p1p1p3p/6p2/9/P1P1P1P1P/2N1C2CN/9/2BAKAB1R b - - 0 1"
+  },
+  {
+   "id": "MG_QT05",
+   "group": "midgame",
+   "fen": "1nbak3r/4an3/c3b2c1/p4C2p/2p3p2/9/P1P1P1P1P/2N3C1N/9/2BAKABR1 b - - 0 1"
+  },
+  {
+   "id": "MG_QT10",
+   "group": "midgame",
+   "fen": "2bakc2r/4an3/c3b4/p6RC/2p1P1p2/9/P1n3P1P/2N3C1N/9/2BAKAB2 b - - 0 1"
+  },
+  {
+   "id": "MG_QT14",
+   "group": "midgame",
+   "fen": "2bak3C/4a4/c3b1n2/p8/2p1P1p2/5c2P/P1n3P2/2N1B1C1N/9/2BAKA3 b - - 0 1"
+  },
+  {
+   "id": "MG_QT19",
+   "group": "midgame",
+   "fen": "2ba4C/4ak3/2c1b1n2/p8/1cp1P1p2/8P/P1C3P2/2N1B3N/4A4/2BAK4 b - - 0 1"
+  },
+  {
+   "id": "MG_QT24",
+   "group": "midgame",
+   "fen": "2ba5/4ak3/6n2/p8/2C3b2/4c3P/P1c1N4/4B3N/4A4/2BAK4 b - - 0 1"
+  },
+  {
+   "id": "MG_QT29",
+   "group": "midgame",
+   "fen": "r2akabr1/9/2n1b1n2/pc2p3p/2p3pc1/4P2R1/P1P1N1P1P/C1N1C4/9/R1BAKAB2 b - - 0 1"
+  },
+  {
+   "id": "MG_QT34",
+   "group": "midgame",
+   "fen": "3rkabn1/4a4/2n1b4/p3p3p/1cp3p1c/1RP1P4/P3N1P1P/C1N1C4/4A4/2B1KAB2 b - - 0 1"
+  },
+  {
+   "id": "MG_QT39",
+   "group": "midgame",
+   "fen": "3rkab2/4a4/2n1b1n2/p3p3p/1c3cp2/1R2P4/P3NCP1P/2N1B4/4A4/C3KAB2 b - - 0 1"
+  },
+  {
+   "id": "MG_QH01",
+   "group": "midgame",
+   "fen": "r1bakabn1/9/1cn6/pC2p1p1p/2p6/6P2/P1c1P3P/2N1C1N2/9/R1BAKAB2 w - - 0 1"
+  },
+  {
+   "id": "MG_QB3",
+   "group": "midgame",
+   "fen": "1n1a1abnr/r3k4/4b4/pcp3pcp/4p4/2C6/P1P1P1P1P/B5N1B/3N4R/R2AKA1C1 w - - 0 1"
+  },
+  {
+   "id": "MG_QB9",
+   "group": "midgame",
+   "fen": "2bakabn1/8r/2n5c/r1p1p1p1p/p8/2B5P/P1P1c1P2/2C2C2R/9/RNBAKA1N1 b - - 0 1"
+  }
+ ]
+}

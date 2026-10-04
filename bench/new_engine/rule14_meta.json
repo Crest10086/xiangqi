@@ -1,0 +1,23 @@
+{
+ "seq130": {
+  "plies": 130,
+  "maxOccurrence": 1,
+  "rootFenAtEnd": "9/4k4/9/9/9/9/R8/9/3K5/c1c6 w - - 130 1",
+  "sideToMove": 1,
+  "legalAtRoot": 18
+ },
+ "seq149": {
+  "plies": 149,
+  "maxOccurrence": 1,
+  "rootFenAtEnd": "5R3/4k4/9/9/9/9/9/9/3K5/1cc6 b - - 149 1",
+  "sideToMove": -1,
+  "legalAtRoot": 3
+ },
+ "seq150": {
+  "plies": 150,
+  "maxOccurrence": 1,
+  "rootFenAtEnd": "5R3/9/4k4/9/9/9/9/9/3K5/1cc6 w - - 150 1",
+  "sideToMove": 1,
+  "legalAtRoot": 18
+ }
+}

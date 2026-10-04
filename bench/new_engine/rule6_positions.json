@@ -1,0 +1,502 @@
+{
+ "generated": "gen_rule6.js",
+ "positions": {
+  "CHK": {
+   "label": "长将形A 红车+兵长将单将（应将被迫）",
+   "fen": "4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 0 1",
+   "fenCheck": "ok",
+   "cycle": [
+    "f5e5",
+    "e9f9",
+    "e5f5",
+    "f9e9"
+   ],
+   "selfCheckOk": true,
+   "uniqueReply": true,
+   "log": [
+    {
+     "ply": 0,
+     "side": 1,
+     "inCheck": false,
+     "play": "f5e5",
+     "legalMove": true,
+     "legalCount": 21
+    },
+    {
+     "ply": 1,
+     "side": -1,
+     "inCheck": true,
+     "play": "e9f9",
+     "legalMove": true,
+     "legalCount": 1
+    },
+    {
+     "ply": 2,
+     "side": 1,
+     "inCheck": false,
+     "play": "e5f5",
+     "legalMove": true,
+     "legalCount": 22
+    },
+    {
+     "ply": 3,
+     "side": -1,
+     "inCheck": true,
+     "play": "f9e9",
+     "legalMove": true,
+     "legalCount": 1
+    },
+    {
+     "ply": 4,
+     "side": 1,
+     "inCheck": false,
+     "play": "f5e5",
+     "legalMove": true,
+     "legalCount": 21
+    },
+    {
+     "ply": 5,
+     "side": -1,
+     "inCheck": true,
+     "play": "e9f9",
+     "legalMove": true,
+     "legalCount": 1
+    },
+    {
+     "ply": 6,
+     "side": 1,
+     "inCheck": false,
+     "play": "e5f5",
+     "legalMove": true,
+     "legalCount": 22
+    },
+    {
+     "ply": 7,
+     "side": -1,
+     "inCheck": true,
+     "play": "f9e9",
+     "legalMove": true,
+     "legalCount": 1
+    },
+    {
+     "ply": 8,
+     "side": 1,
+     "inCheck": false,
+     "play": "f5e5",
+     "legalMove": true,
+     "legalCount": 21
+    },
+    {
+     "ply": 9,
+     "side": -1,
+     "inCheck": true,
+     "play": "e9f9",
+     "legalMove": true,
+     "legalCount": 1
+    },
+    {
+     "ply": 10,
+     "side": 1,
+     "inCheck": false,
+     "play": "e5f5",
+     "legalMove": true,
+     "legalCount": 22
+    },
+    {
+     "ply": 11,
+     "side": -1,
+     "inCheck": true,
+     "play": "f9e9",
+     "legalMove": true,
+     "legalCount": 1
+    }
+   ]
+  },
+  "HORSE": {
+   "label": "长将形B 红单马长将单将（单马例和，无杀）",
+   "fenCheck": "ok",
+   "fen": "2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 0 1",
+   "cycle": [
+    "c9d7",
+    "e9e8",
+    "d7c9",
+    "e8e9"
+   ],
+   "selfCheckOk": true,
+   "uniqueReply": false,
+   "depth6ScoreNoMate": 98,
+   "log": [
+    {
+     "ply": 0,
+     "side": 1,
+     "inCheck": false,
+     "play": "c9d7",
+     "legalMove": true,
+     "legalCount": 5
+    },
+    {
+     "ply": 1,
+     "side": -1,
+     "inCheck": true,
+     "play": "e9e8",
+     "legalMove": true,
+     "legalCount": 3
+    },
+    {
+     "ply": 2,
+     "side": 1,
+     "inCheck": false,
+     "play": "d7c9",
+     "legalMove": true,
+     "legalCount": 9
+    },
+    {
+     "ply": 3,
+     "side": -1,
+     "inCheck": true,
+     "play": "e8e9",
+     "legalMove": true,
+     "legalCount": 3
+    },
+    {
+     "ply": 4,
+     "side": 1,
+     "inCheck": false,
+     "play": "c9d7",
+     "legalMove": true,
+     "legalCount": 5
+    },
+    {
+     "ply": 5,
+     "side": -1,
+     "inCheck": true,
+     "play": "e9e8",
+     "legalMove": true,
+     "legalCount": 3
+    },
+    {
+     "ply": 6,
+     "side": 1,
+     "inCheck": false,
+     "play": "d7c9",
+     "legalMove": true,
+     "legalCount": 9
+    },
+    {
+     "ply": 7,
+     "side": -1,
+     "inCheck": true,
+     "play": "e8e9",
+     "legalMove": true,
+     "legalCount": 3
+    },
+    {
+     "ply": 8,
+     "side": 1,
+     "inCheck": false,
+     "play": "c9d7",
+     "legalMove": true,
+     "legalCount": 5
+    },
+    {
+     "ply": 9,
+     "side": -1,
+     "inCheck": true,
+     "play": "e9e8",
+     "legalMove": true,
+     "legalCount": 3
+    },
+    {
+     "ply": 10,
+     "side": 1,
+     "inCheck": false,
+     "play": "d7c9",
+     "legalMove": true,
+     "legalCount": 9
+    },
+    {
+     "ply": 11,
+     "side": -1,
+     "inCheck": true,
+     "play": "e8e9",
+     "legalMove": true,
+     "legalCount": 3
+    }
+   ]
+  },
+  "CHZ1": {
+   "label": "长捉形1 红车长捉无根黑象（符合捉定义，循环非被迫：红可直接吃象）",
+   "fen": "3k5/9/9/9/4b4/2R6/9/9/9/5K3 w - - 0 1",
+   "fenCheck": "ok",
+   "cycle": [
+    "c4e4",
+    "e5c7",
+    "e4c4",
+    "c7e5"
+   ],
+   "selfCheckOk": true,
+   "log": [
+    {
+     "ply": 0,
+     "side": 1,
+     "inCheck": false,
+     "play": "c4e4",
+     "legalMove": true,
+     "legalCount": 19,
+     "chasedAt": "e5e5",
+     "attacked": true,
+     "guardedByEnemy": false
+    },
+    {
+     "ply": 1,
+     "side": -1,
+     "inCheck": false,
+     "play": "e5c7",
+     "legalMove": true,
+     "legalCount": 4
+    },
+    {
+     "ply": 2,
+     "side": 1,
+     "inCheck": false,
+     "play": "e4c4",
+     "legalMove": true,
+     "legalCount": 19,
+     "chasedAt": "c7c7",
+     "attacked": true,
+     "guardedByEnemy": false
+    },
+    {
+     "ply": 3,
+     "side": -1,
+     "inCheck": false,
+     "play": "c7e5",
+     "legalMove": true,
+     "legalCount": 6
+    },
+    {
+     "ply": 4,
+     "side": 1,
+     "inCheck": false,
+     "play": "c4e4",
+     "legalMove": true,
+     "legalCount": 19,
+     "chasedAt": "e5e5",
+     "attacked": true,
+     "guardedByEnemy": false
+    },
+    {
+     "ply": 5,
+     "side": -1,
+     "inCheck": false,
+     "play": "e5c7",
+     "legalMove": true,
+     "legalCount": 4
+    },
+    {
+     "ply": 6,
+     "side": 1,
+     "inCheck": false,
+     "play": "e4c4",
+     "legalMove": true,
+     "legalCount": 19,
+     "chasedAt": "c7c7",
+     "attacked": true,
+     "guardedByEnemy": false
+    },
+    {
+     "ply": 7,
+     "side": -1,
+     "inCheck": false,
+     "play": "c7e5",
+     "legalMove": true,
+     "legalCount": 6
+    },
+    {
+     "ply": 8,
+     "side": 1,
+     "inCheck": false,
+     "play": "c4e4",
+     "legalMove": true,
+     "legalCount": 19,
+     "chasedAt": "e5e5",
+     "attacked": true,
+     "guardedByEnemy": false
+    },
+    {
+     "ply": 9,
+     "side": -1,
+     "inCheck": false,
+     "play": "e5c7",
+     "legalMove": true,
+     "legalCount": 4
+    },
+    {
+     "ply": 10,
+     "side": 1,
+     "inCheck": false,
+     "play": "e4c4",
+     "legalMove": true,
+     "legalCount": 19,
+     "chasedAt": "c7c7",
+     "attacked": true,
+     "guardedByEnemy": false
+    },
+    {
+     "ply": 11,
+     "side": -1,
+     "inCheck": false,
+     "play": "c7e5",
+     "legalMove": true,
+     "legalCount": 6
+    }
+   ]
+  },
+  "CHZ2": {
+   "label": "长捉形2 红车长捉有根黑炮（吃炮=车换炮亏300cp，只能持续捉；严格按定义不构成捉）",
+   "fen": "4k4/9/9/9/2R1c3r/9/9/9/9/3K5 w - - 0 1",
+   "fenCheck": "ok",
+   "cycle": [
+    "c5d5",
+    "e5f5",
+    "d5c5",
+    "f5e5"
+   ],
+   "selfCheckOk": true,
+   "log": [
+    {
+     "ply": 0,
+     "side": 1,
+     "inCheck": false,
+     "play": "c5d5",
+     "legalMove": true,
+     "legalCount": 15,
+     "chasedAt": "e5e5",
+     "attacked": true,
+     "guardedByEnemy": true
+    },
+    {
+     "ply": 1,
+     "side": -1,
+     "inCheck": false,
+     "play": "e5f5",
+     "legalMove": true,
+     "legalCount": 25
+    },
+    {
+     "ply": 2,
+     "side": 1,
+     "inCheck": false,
+     "play": "d5c5",
+     "legalMove": true,
+     "legalCount": 14,
+     "chasedAt": "f5f5",
+     "attacked": true,
+     "guardedByEnemy": true
+    },
+    {
+     "ply": 3,
+     "side": -1,
+     "inCheck": false,
+     "play": "f5e5",
+     "legalMove": true,
+     "legalCount": 26
+    },
+    {
+     "ply": 4,
+     "side": 1,
+     "inCheck": false,
+     "play": "c5d5",
+     "legalMove": true,
+     "legalCount": 15,
+     "chasedAt": "e5e5",
+     "attacked": true,
+     "guardedByEnemy": true
+    },
+    {
+     "ply": 5,
+     "side": -1,
+     "inCheck": false,
+     "play": "e5f5",
+     "legalMove": true,
+     "legalCount": 25
+    },
+    {
+     "ply": 6,
+     "side": 1,
+     "inCheck": false,
+     "play": "d5c5",
+     "legalMove": true,
+     "legalCount": 14,
+     "chasedAt": "f5f5",
+     "attacked": true,
+     "guardedByEnemy": true
+    },
+    {
+     "ply": 7,
+     "side": -1,
+     "inCheck": false,
+     "play": "f5e5",
+     "legalMove": true,
+     "legalCount": 26
+    },
+    {
+     "ply": 8,
+     "side": 1,
+     "inCheck": false,
+     "play": "c5d5",
+     "legalMove": true,
+     "legalCount": 15,
+     "chasedAt": "e5e5",
+     "attacked": true,
+     "guardedByEnemy": true
+    },
+    {
+     "ply": 9,
+     "side": -1,
+     "inCheck": false,
+     "play": "e5f5",
+     "legalMove": true,
+     "legalCount": 25
+    },
+    {
+     "ply": 10,
+     "side": 1,
+     "inCheck": false,
+     "play": "d5c5",
+     "legalMove": true,
+     "legalCount": 14,
+     "chasedAt": "f5f5",
+     "attacked": true,
+     "guardedByEnemy": true
+    },
+    {
+     "ply": 11,
+     "side": -1,
+     "inCheck": false,
+     "play": "f5e5",
+     "legalMove": true,
+     "legalCount": 26
+    }
+   ]
+  },
+  "SEQ": {
+   "label": "rule60 探针：无吃子无兵循环（红车 a5<->b5 / 黑将 e9<->f9）",
+   "fen": "4k4/9/9/9/R8/9/9/9/9/3K5 w - - 0 1",
+   "cycle": [
+    "a5b5",
+    "e9f9",
+    "b5a5",
+    "f9e9"
+   ],
+   "selfCheckOk": true,
+   "movesGenerated": 160,
+   "moves118": "a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9",
+   "moves119": "a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5",
+   "moves120": "a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9",
+   "moves121": "a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5",
+   "moves149": "a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5",
+   "moves150": "a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9"
+  }
+ }
+}

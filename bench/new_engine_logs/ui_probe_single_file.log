@@ -1,0 +1,161 @@
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-single/optimization_guide_model_store/25/63922A0C010C80A5/AA1D9354206FA8A5/visual_model_desktop.tflite': Device or resource busy
+boot: {"coi":false,"url":"file:///C:/Users/35165/xiangqi/xiangqi.html"}
+..... done
+
+=== PROBE RESULT (30s) ===
+{
+ "coi": false,
+ "engineReadyBefore": false,
+ "rows": [
+  {
+   "level": 1,
+   "name": "业余",
+   "human": [
+    "炮二平四",
+    "炮四进四",
+    "炮八平三",
+    "炮三退一"
+   ],
+   "ai": [
+    "砲2平5",
+    "砲5进4",
+    "砲8平5",
+    "前砲5退1"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 1200,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": null,
+   "engineLastError": null,
+   "engineInfo": null,
+   "tierParams": {
+    "cap": 80,
+    "p": 0.5,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 2,
+   "name": "进阶",
+   "human": [
+    "炮二平六",
+    "炮六进五",
+    "炮八进二",
+    "炮八退二"
+   ],
+   "ai": [
+    "马2进3",
+    "砲2平4",
+    "砲8平5",
+    "车1平2"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 1200,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": null,
+   "engineLastError": null,
+   "engineInfo": null,
+   "tierParams": {
+    "cap": 80,
+    "p": 0,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 3,
+   "name": "高手",
+   "human": [
+    "车一进一",
+    "帅五进一",
+    "兵七进一",
+    "炮八退一"
+   ],
+   "ai": [
+    "砲8进7",
+    "马8进7",
+    "车9平8",
+    "车8进7"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 2400,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": null,
+   "engineLastError": null,
+   "engineInfo": null,
+   "tierParams": {
+    "cap": 25,
+    "p": 0.1,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 4,
+   "name": "大师",
+   "human": [
+    "兵一进一",
+    "马二进一",
+    "马一进二",
+    "马八进七"
+   ],
+   "ai": [
+    "卒3进1",
+    "卒9进1",
+    "砲8进5",
+    "砲8平2"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 24000,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": null,
+   "engineLastError": null,
+   "engineInfo": null,
+   "tierParams": {
+    "mpv": 1,
+    "ms": 2000,
+    "hash": 256
+   }
+  }
+ ],
+ "status": "红方行棋（你）",
+ "logTail": [
+  "1.兵一进一卒3进12.马二进一卒9进13.马一进二砲8进54.马八进七砲8平2"
+ ]
+}
+=== LOG ENTRIES (0) ===

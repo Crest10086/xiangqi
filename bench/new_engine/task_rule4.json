@@ -1,0 +1,287 @@
+{
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64"
+ ],
+ "steps": [
+  {
+   "id": "CHK_R0",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 0 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHK_R2",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 0 1 moves f5e5 e9f9 e5f5 f9e9 f5e5 e9f9 e5f5 f9e9",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHK_R3",
+   "cmds": [
+    "position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 0 1 moves f5e5 e9f9 e5f5 f9e9 f5e5 e9f9 e5f5 f9e9 f5e5 e9f9 e5f5 f9e9",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "HORSE_R0",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 0 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "HORSE_R2",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "HORSE_R3",
+   "cmds": [
+    "position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZ1_R0",
+   "cmds": [
+    "position fen 3k5/9/9/9/4b4/2R6/9/9/9/5K3 w - - 0 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZ1_R2",
+   "cmds": [
+    "position fen 3k5/9/9/9/4b4/2R6/9/9/9/5K3 w - - 0 1 moves c4e4 e5c7 e4c4 c7e5 c4e4 e5c7 e4c4 c7e5",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZ1_R3",
+   "cmds": [
+    "position fen 3k5/9/9/9/4b4/2R6/9/9/9/5K3 w - - 0 1 moves c4e4 e5c7 e4c4 c7e5 c4e4 e5c7 e4c4 c7e5 c4e4 e5c7 e4c4 c7e5",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZ2_R0",
+   "cmds": [
+    "position fen 4k4/9/9/9/2R1c3r/9/9/9/9/3K5 w - - 0 1",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZ2_R2",
+   "cmds": [
+    "position fen 4k4/9/9/9/2R1c3r/9/9/9/9/3K5 w - - 0 1 moves c5d5 e5f5 d5c5 f5e5 c5d5 e5f5 d5c5 f5e5",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "CHZ2_R3",
+   "cmds": [
+    "position fen 4k4/9/9/9/2R1c3r/9/9/9/9/3K5 w - - 0 1 moves c5d5 e5f5 d5c5 f5e5 c5d5 e5f5 d5c5 f5e5 c5d5 e5f5 d5c5 f5e5",
+    "go depth 14"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 300
+  },
+  {
+   "id": "SEQR_118",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 0 1 moves a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9",
+    "go depth 12"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 400
+  },
+  {
+   "id": "SEQR_119",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 0 1 moves a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5",
+    "go depth 12"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 400
+  },
+  {
+   "id": "SEQR_120",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 0 1 moves a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9",
+    "go depth 12"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 400
+  },
+  {
+   "id": "SEQR_121",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 0 1 moves a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5",
+    "go depth 12"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 400
+  },
+  {
+   "id": "SEQR_149",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 0 1 moves a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5",
+    "go depth 12"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 400
+  },
+  {
+   "id": "SEQR_150",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 0 1 moves a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9 b5a5 f9e9 a5b5 e9f9",
+    "go depth 12"
+   ],
+   "timeoutMs": 12000,
+   "gapMs": 400
+  },
+  {
+   "id": "R60F_119",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 119 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_120",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 120 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_121",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 121 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_149",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 149 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_150",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 150 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_199",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 199 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_200",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 200 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_299",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 299 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_300",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 300 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_499",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 499 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_500",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 500 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_998",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 998 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  },
+  {
+   "id": "R60F_999",
+   "cmds": [
+    "position fen 4k4/9/9/9/R8/9/9/9/9/3K5 w - - 999 1",
+    "go depth 10"
+   ],
+   "timeoutMs": 8000,
+   "gapMs": 300
+  }
+ ]
+}

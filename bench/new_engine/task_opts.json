@@ -1,0 +1,26 @@
+{
+  "pre": [],
+  "steps": [
+    { "id": "UCI_DUMP", "cmds": ["uci"], "timeoutMs": 8000 },
+    { "id": "ISREADY1", "cmds": ["isready"], "timeoutMs": 8000 },
+    { "id": "OPT_REPETITION", "cmds": ["setoption name Repetition Rule value AsianRule"], "timeoutMs": 4000 },
+    { "id": "OPT_DRAWRULE", "cmds": ["setoption name Draw Rule value None"], "timeoutMs": 4000 },
+    { "id": "OPT_SIXTYMOVE", "cmds": ["setoption name Sixty Move Rule value false"], "timeoutMs": 4000 },
+    { "id": "OPT_LIMITSTRENGTH", "cmds": ["setoption name UCI_LimitStrength value true"], "timeoutMs": 4000 },
+    { "id": "OPT_ELO1400", "cmds": ["setoption name UCI_Elo value 1400"], "timeoutMs": 4000 },
+    { "id": "OPT_SKILLLEVEL", "cmds": ["setoption name Skill Level value 10"], "timeoutMs": 4000 },
+    { "id": "OPT_THREADS1", "cmds": ["setoption name Threads value 1"], "timeoutMs": 4000 },
+    { "id": "OPT_HASH64", "cmds": ["setoption name Hash value 64"], "timeoutMs": 4000 },
+    { "id": "OPT_BOGUS", "cmds": ["setoption name Zzz Not A Real Option value 1"], "timeoutMs": 4000 },
+    { "id": "ISREADY2", "cmds": ["isready"], "timeoutMs": 8000 },
+    { "id": "SEARCH_AFTER_OLD_OPTS", "cmds": ["position fen rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1", "go movetime 500"], "timeoutMs": 20000 },
+    { "id": "EVALFILE_PROBE", "cmds": ["setoption name EvalFile value /pikafish.nnue", "isready"], "timeoutMs": 8000 },
+    { "id": "NODASTIME_PROBE", "cmds": ["setoption name nodestime value 200", "position fen rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1", "go infinite"], "timeoutMs": 20000 },
+    { "id": "NODASTIME_OFF", "cmds": ["setoption name nodestime value 0"], "timeoutMs": 4000 },
+    { "id": "SHOWWDL_PROBE", "cmds": ["setoption name UCI_ShowWDL value true", "position fen rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1", "go movetime 300"], "timeoutMs": 20000 },
+    { "id": "SHOWWDL_OFF", "cmds": ["setoption name UCI_ShowWDL value false"], "timeoutMs": 4000 },
+    { "id": "HASH256_THREADS4", "cmds": ["setoption name Hash value 256", "setoption name Threads value 4", "isready"], "timeoutMs": 10000 },
+    { "id": "BOUNDS_PROBE", "cmds": ["setoption name MultiPV value 99", "setoption name Threads value 99", "setoption name Hash value 99999", "isready"], "timeoutMs": 15000 },
+    { "id": "RESET", "cmds": ["setoption name MultiPV value 1", "setoption name Threads value 4", "setoption name Hash value 64", "isready"], "timeoutMs": 15000 }
+  ]
+}

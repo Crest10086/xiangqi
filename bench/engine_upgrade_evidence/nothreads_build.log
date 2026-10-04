@@ -1,0 +1,24 @@
++ cd /c/Users/35165/AppData/Local/hermes/cache/scratch
++ source emsdk/emsdk_env.sh
++ em++ --version
++ head -2
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.11 (a0014542110d6078c3a1a7941fa1ddb3a2281f16)
+Copyright (C) 2026 the Emscripten authors (see AUTHORS.txt)
++ cd pkw-build
++ rm -rf dist/wasm_nothreads
++ bash wasm/build_nothreads.sh dist/wasm_nothreads
+BUILD OK -> dist/wasm_nothreads/pikafish.js
+
+real	1m0.242s
+user	0m0.076s
+sys	0m0.107s
++ ls -la dist/wasm_nothreads/
+total 680
+drwxr-xr-x 1 SYSTEM 18      0 10月  3 18:33 .
+drwxr-xr-x 1 SYSTEM 18      0 10月  3 18:32 ..
+-rw-r--r-- 1 SYSTEM 18  35149 10月  3 18:33 COPYING.txt
+-rw-r--r-- 1 SYSTEM 18  61428 10月  3 18:33 pikafish.js
+-rw-r--r-- 1 SYSTEM 18 597732 10月  3 18:33 pikafish.wasm
++ echo NOTHREADS-BUILD-EXIT=0
+NOTHREADS-BUILD-EXIT=0
+EXIT=0

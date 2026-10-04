@@ -1,0 +1,34 @@
+{
+ "candidate_check": {
+  "fenStart": "3ak4/4n4/9/9/4R4/9/9/9/9/4K4 w - - 0 1",
+  "fenAfterReplay": "3ak4/4n4/9/9/4R4/9/9/9/9/4K4 w - - 0 1",
+  "sideAfter": 1,
+  "log": [
+   "ILLEGAL e4e0 side=1"
+  ]
+ },
+ "candidate_check2": {
+  "fenStart": "3ak4/4n4/9/9/4R4/9/9/9/9/4K4 w - - 0 1",
+  "fenAfterReplay": "3ak4/4n4/9/9/4R4/9/9/9/9/4K4 w - - 0 1",
+  "sideAfter": 1,
+  "log": [
+   "ILLEGAL e4e1 side=1"
+  ]
+ },
+ "candidate_chase": {
+  "fenStart": "4k4/9/2n6/2R6/9/9/9/9/9/R3K4 w - - 0 1",
+  "fenAfterReplay": "4k4/9/2n6/2R6/9/9/9/9/9/R3K4 w - - 0 1",
+  "sideAfter": 1,
+  "log": [
+   "ILLEGAL c3c2 side=1"
+  ]
+ },
+ "candidate_chase2": {
+  "fenStart": "4k4/9/2n6/2R6/9/9/9/9/9/R3K4 w - - 0 1",
+  "fenAfterReplay": "4k4/9/2n6/2R6/9/9/9/9/9/R3K4 w - - 0 1",
+  "sideAfter": 1,
+  "log": [
+   "ILLEGAL c3c2 side=1"
+  ]
+ }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>new engine uci driver</title></head>
+<body>
+<script>
+/* driver.html — generic UCI step runner for the mistboard (full-strength) Pikafish WASM.
+ * Reads ./task.json  {init:{...}, pre:[cmd...], steps:[{id, cmds:[...], capture:bool, timeoutMs}]}
+ * Every engine stdout line is POSTed to /__log as: S|<step id>|OUT|<raw line>
+ * Handles the coi-serviceworker reload dance. */
+const LOG = (s) => { return fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); };
+const TASK = new URLSearchParams(location.search).get('task') || 'task.json';
+if (!self.crossOriginIsolated) {
+  const t = +(sessionStorage.getItem('drvN') || 0);
+  sessionStorage.setItem('drvN', String(t + 1));
+  if (t < 3) { LOG('DRV: not isolated, registering SW (try ' + t + ')'); navigator.serviceWorker.register('./coi-serviceworker.js').then(() => location.reload()).catch(e => LOG('DRV SW fail ' + e)); }
+  else { LOG('DRV: gave up'); document.title = 'NOISO'; }
+} else { main(); }
+
+async function main() {
+  LOG('DRV: isolated ok, task=' + TASK);
+  const task = await (await fetch('./' + TASK)).json();
+  let collector = null, bmResolve = null;
+  const w = new Worker('./worker_mb.js');
+  w.onmessage = (ev) => {
+    const d = ev.data || {};
+    if (d.type === 'line') {
+      const line = String(d.line);
+      if (collector) collector(line);
+      if (/^bestmove/.test(line) && bmResolve) { const r = bmResolve; bmResolve = null; r(); }
+    } else if (d.type === 'stderr') { LOG('DRVerr: ' + d.line); }
+    else if (d.type === 'error') { LOG('DRV error ' + d.error); document.title = 'ERR'; }
+    else if (d.type === 'ready') { LOG('DRV: engine ready'); window.__READY = true; }
+  };
+  const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+  await new Promise((res) => {
+    const orig = w.onmessage;
+    w.onmessage = (ev) => { if (ev.data && ev.data.type === 'ready') { orig(ev); res(); } else orig(ev); };
+    w.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' });
+    setTimeout(res, 30000);
+  });
+
+  for (const cmd of (task.pre || [])) { w.postMessage({ type: 'command', command: cmd }); await sleep(120); }
+
+  for (const step of task.steps) {
+    const lines = [];
+    collector = (l) => { lines.push(l); if (step.capture !== false) LOG('S|' + step.id + '|OUT|' + l); };
+    bmResolve = null;
+    for (const cmd of step.cmds) {
+      LOG('S|' + step.id + '|CMD|' + cmd);
+      w.postMessage({ type: 'command', command: cmd });
+      await sleep(step.gapMs || 150);
+      if (/^go(\s|$)/.test(cmd)) {
+        await new Promise((res) => {
+          let done = false;
+          bmResolve = () => { if (!done) { done = true; res(); } };
+          const to = setTimeout(() => { if (!done) { done = true; LOG('S|' + step.id + '|TIMEOUT'); res(); } }, step.timeoutMs || 20000);
+        });
+      }
+    }
+    collector = null;
+    LOG('S|' + step.id + '|END|lines=' + lines.length);
+  }
+  LOG('DRV DONE steps=' + task.steps.length);
+  document.title = 'DONE';
+}
+</script>
+</body>
+</html>

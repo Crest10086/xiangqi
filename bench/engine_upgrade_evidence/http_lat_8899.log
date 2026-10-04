@@ -1,0 +1,4 @@
+HTTP .100 500ms -> wall 507.9ms (server 506ms) depth 23 nodes 3546930 move h2e2
+HTTP .100 2000ms -> wall 2002.3ms (server 2000ms) depth 26 nodes 13204093 move b2e2
+HTTP .100 6000ms -> wall 6004.9ms (server 6003ms) depth 30 nodes 38410036 move h2e2
+healthz RTT: min 0.93 med 1.23 max 1.96 ms

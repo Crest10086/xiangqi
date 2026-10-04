@@ -1,0 +1,30 @@
+Pikafish dev-20240816-b41514ac by the Pikafish developers (see AUTHORS file)
+id name Pikafish dev-20240816-b41514ac
+id author the Pikafish developers (see AUTHORS file)
+
+option name Debug Log File type string default 
+option name NumaPolicy type string default auto
+option name Threads type spin default 1 min 1 max 1024
+option name Hash type spin default 16 min 1 max 33554432
+option name Clear Hash type button
+option name Ponder type check default false
+option name MultiPV type spin default 1 min 1 max 128
+option name Move Overhead type spin default 10 min 0 max 5000
+option name nodestime type spin default 0 min 0 max 10000
+option name Skill Level type spin default 20 min 0 max 20
+option name Mate Threat Depth type spin default 1 min 0 max 10
+option name Repetition Rule type combo default AsianRule var AsianRule var ChineseRule var SkyRule var ComputerRule var AllowChase
+option name Draw Rule type combo default None var None var DrawAsBlackWin var DrawAsRedWin var DrawRepAsBlackWin var DrawRepAsRedWin
+option name Sixty Move Rule type check default true
+option name Rule60MaxPly type spin default 120 min 1 max 150
+option name MaxCheckCount type spin default 0 min 0 max 1000
+option name UCI_LimitStrength type check default false
+option name UCI_Elo type spin default 1280 min 1280 max 3133
+option name UCI_WDLCentipawn type check default true
+option name LU_Output type check default true
+option name UCI_ShowWDL type check default false
+option name EvalFile type string default pikafish.nnue
+info string Available Processors: 0
+uciok
+No such option: Nonsense Option
+readyok

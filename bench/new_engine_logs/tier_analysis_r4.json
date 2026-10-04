@@ -1,0 +1,1267 @@
+{
+ "generated": "2026-10-04T17:28:07.512Z",
+ "logs": [
+  "tier_r4.log"
+ ],
+ "salts": {
+  "1": 97977,
+  "2": 98954,
+  "3": 99931,
+  "4": 100908,
+  "5": 101885,
+  "9": 105793
+ },
+ "lines": 289,
+ "skips": 0,
+ "replay": {
+  "checked": 136,
+  "mismatch": 0,
+  "samples": []
+ },
+ "positions": 17,
+ "perCfg": {
+  "CAP80": {
+   "n": 17,
+   "cfg": {
+    "id": "CAP80",
+    "multipv": 8,
+    "movetime": 300,
+    "hash": 64,
+    "rule": "tier",
+    "cap": 80,
+    "p": 0
+   },
+   "hitShare": "cap:0.82,above:0.18",
+   "gapMean": 29.764705882352942,
+   "gapMedian": 22,
+   "gapMax": 73,
+   "predictedGap": 29.764705882352942,
+   "costMean": 37.35294117647059,
+   "costMedian": 21,
+   "costP25": 17,
+   "costP75": 53,
+   "costOpening": 21.8,
+   "costMidgame": 43.833333333333336,
+   "nodesMean": 572353.9411764706,
+   "hardN": 2,
+   "hardCostMean": -1.5
+  },
+  "B50": {
+   "n": 17,
+   "cfg": {
+    "id": "B50",
+    "multipv": 8,
+    "movetime": 300,
+    "hash": 64,
+    "rule": "tier",
+    "cap": 80,
+    "p": 0.5,
+    "mistakeBand": 50,
+    "openingCap": 80,
+    "openingMistakeBand": 50,
+    "hardCap": 0,
+    "hardMistakeBand": 700
+   },
+   "hitShare": "bmiss:0.29,cap:0.41,above:0.18,rand:0.12",
+   "gapMean": 37.11764705882353,
+   "gapMedian": 26,
+   "gapMax": 128,
+   "predictedGap": 68.70168067226892,
+   "costMean": 43.94117647058823,
+   "costMedian": 27,
+   "costP25": 16,
+   "costP75": 43,
+   "costOpening": 18.8,
+   "costMidgame": 54.416666666666664,
+   "nodesMean": 582425.4705882353,
+   "hardN": 2,
+   "hardCostMean": 0.5
+  },
+  "B200": {
+   "n": 17,
+   "cfg": {
+    "id": "B200",
+    "multipv": 8,
+    "movetime": 300,
+    "hash": 64,
+    "rule": "tier",
+    "cap": 80,
+    "p": 0.5,
+    "mistakeBand": 200,
+    "openingCap": 80,
+    "openingMistakeBand": 200,
+    "hardCap": 0,
+    "hardMistakeBand": 700
+   },
+   "hitShare": "bmiss:0.12,cap:0.65,rand:0.12,above:0.12",
+   "gapMean": 47.8235294117647,
+   "gapMedian": 33,
+   "gapMax": 240,
+   "predictedGap": 78.80420168067226,
+   "costMean": 52.94117647058823,
+   "costMedian": 26,
+   "costP25": 16,
+   "costP75": 79,
+   "costOpening": 70.6,
+   "costMidgame": 45.583333333333336,
+   "nodesMean": 573982.5882352941,
+   "hardN": 2,
+   "hardCostMean": -1.5
+  },
+  "BINF": {
+   "n": 17,
+   "cfg": {
+    "id": "BINF",
+    "multipv": 8,
+    "movetime": 300,
+    "hash": 64,
+    "rule": "tier",
+    "cap": 80,
+    "p": 0.5,
+    "mistakeBand": 100000,
+    "openingCap": 80,
+    "openingMistakeBand": 100000,
+    "hardCap": 0,
+    "hardMistakeBand": 700
+   },
+   "hitShare": "cap:0.41,bmiss:0.29,rand:0.24,above:0.06",
+   "gapMean": 94.58823529411765,
+   "gapMedian": 40,
+   "gapMax": 588,
+   "predictedGap": 81.16799719887956,
+   "costMean": 104.58823529411765,
+   "costMedian": 28,
+   "costP25": 18,
+   "costP75": 114,
+   "costOpening": 107.2,
+   "costMidgame": 103.5,
+   "nodesMean": 567102.4705882353,
+   "hardN": 2,
+   "hardCostMean": 290.5
+  },
+  "G50": {
+   "n": 17,
+   "cfg": {
+    "id": "G50",
+    "multipv": 8,
+    "movetime": 300,
+    "hash": 64,
+    "rule": "tier",
+    "cap": 25,
+    "p": 0.1,
+    "mistakeBand": 50,
+    "openingCap": 25,
+    "openingMistakeBand": 50,
+    "hardCap": 0,
+    "hardMistakeBand": 700
+   },
+   "hitShare": "cap:0.71,above:0.24,rand:0.06",
+   "gapMean": 47.411764705882355,
+   "gapMedian": 19,
+   "gapMax": 565,
+   "predictedGap": 22.314663865546223,
+   "costMean": 46.8235294117647,
+   "costMedian": 15,
+   "costP25": 0,
+   "costP75": 28,
+   "costOpening": 11.2,
+   "costMidgame": 61.666666666666664,
+   "nodesMean": 576293.5882352941,
+   "hardN": 2,
+   "hardCostMean": 291
+  },
+  "G200": {
+   "n": 17,
+   "cfg": {
+    "id": "G200",
+    "multipv": 8,
+    "movetime": 300,
+    "hash": 64,
+    "rule": "tier",
+    "cap": 25,
+    "p": 0.1,
+    "mistakeBand": 200,
+    "openingCap": 25,
+    "openingMistakeBand": 200,
+    "hardCap": 0,
+    "hardMistakeBand": 700
+   },
+   "hitShare": "cap:0.65,above:0.35",
+   "gapMean": 12.352941176470589,
+   "gapMedian": 14,
+   "gapMax": 25,
+   "predictedGap": 22.349537815126055,
+   "costMean": 8,
+   "costMedian": 7,
+   "costP25": -2,
+   "costP75": 15,
+   "costOpening": 3.6,
+   "costMidgame": 9.833333333333334,
+   "nodesMean": 581019.7647058824,
+   "hardN": 2,
+   "hardCostMean": 2.5
+  },
+  "GINF": {
+   "n": 17,
+   "cfg": {
+    "id": "GINF",
+    "multipv": 8,
+    "movetime": 300,
+    "hash": 64,
+    "rule": "tier",
+    "cap": 25,
+    "p": 0.1,
+    "mistakeBand": 100000,
+    "openingCap": 25,
+    "openingMistakeBand": 100000,
+    "hardCap": 0,
+    "hardMistakeBand": 700
+   },
+   "hitShare": "cap:0.71,above:0.24,rand:0.06",
+   "gapMean": 46.23529411764706,
+   "gapMedian": 18,
+   "gapMax": 556,
+   "predictedGap": 24.53484593837535,
+   "costMean": 38.529411764705884,
+   "costMedian": 10,
+   "costP25": -3,
+   "costP75": 19,
+   "costOpening": 3.2,
+   "costMidgame": 53.25,
+   "nodesMean": 580107.4117647059,
+   "hardN": 2,
+   "hardCostMean": 283.5
+  },
+  "ANCH": {
+   "n": 17,
+   "cfg": {
+    "id": "ANCH",
+    "multipv": 1,
+    "movetime": 0,
+    "hash": 256,
+    "rule": "anchor"
+   },
+   "hitShare": "above:1.00",
+   "gapMean": 0,
+   "gapMedian": 0,
+   "gapMax": 0,
+   "predictedGap": 0,
+   "costMean": -4.294117647058823,
+   "costMedian": -1,
+   "costP25": -5,
+   "costP75": 3,
+   "costOpening": -4.8,
+   "costMidgame": -4.083333333333333,
+   "nodesMean": 3415435.0588235296,
+   "hardN": 0,
+   "hardCostMean": null
+  }
+ },
+ "perCfgByGroup": {},
+ "perPosition": {
+  "OP00": {
+   "anchor": {
+    "move": "b2e2",
+    "score": 24,
+    "nodes": 22
+   },
+   "group": "opening",
+   "poolGaps": [
+    0,
+    0,
+    1,
+    2,
+    6,
+    9,
+    13,
+    17
+   ],
+   "poolCls": "opening",
+   "lossByCfg": {
+    "CAP80": 19,
+    "B50": 16,
+    "B200": 16,
+    "BINF": 16,
+    "G50": 24,
+    "G200": 6,
+    "GINF": 17,
+    "ANCH": 6
+   },
+   "gapByCfg": {
+    "CAP80": 17,
+    "B50": 12,
+    "B200": 16,
+    "BINF": 20,
+    "G50": 19,
+    "G200": 19,
+    "GINF": 13,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "bmiss",
+    "B200": "bmiss",
+    "BINF": "cap",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "opening",
+    "B50": "opening",
+    "B200": "opening",
+    "BINF": "opening",
+    "G50": "opening",
+    "G200": "opening",
+    "GINF": "opening",
+    "ANCH": "opening"
+   }
+  },
+  "OP02": {
+   "anchor": {
+    "move": "h0g2",
+    "score": 11,
+    "nodes": 22
+   },
+   "group": "opening",
+   "poolGaps": [
+    0,
+    10,
+    11,
+    14,
+    19,
+    20,
+    20,
+    24
+   ],
+   "poolCls": "opening",
+   "lossByCfg": {
+    "CAP80": 21,
+    "B50": 27,
+    "B200": 24,
+    "BINF": 20,
+    "G50": 28,
+    "G200": 14,
+    "GINF": 9,
+    "ANCH": 3
+   },
+   "gapByCfg": {
+    "CAP80": 24,
+    "B50": 24,
+    "B200": 26,
+    "BINF": 28,
+    "G50": 24,
+    "G200": 23,
+    "GINF": 22,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "cap",
+    "B200": "cap",
+    "BINF": "bmiss",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "opening",
+    "B50": "opening",
+    "B200": "opening",
+    "BINF": "opening",
+    "G50": "opening",
+    "G200": "opening",
+    "GINF": "opening",
+    "ANCH": "opening"
+   }
+  },
+  "OP04": {
+   "anchor": {
+    "move": "i0h0",
+    "score": 21,
+    "nodes": 23
+   },
+   "group": "opening",
+   "poolGaps": [
+    0,
+    0,
+    1,
+    3,
+    5,
+    7,
+    19,
+    16
+   ],
+   "poolCls": "opening",
+   "lossByCfg": {
+    "CAP80": 18,
+    "B50": 16,
+    "B200": 12,
+    "BINF": 18,
+    "G50": 17,
+    "G200": 16,
+    "GINF": 19,
+    "ANCH": 5
+   },
+   "gapByCfg": {
+    "CAP80": 19,
+    "B50": 24,
+    "B200": 14,
+    "BINF": 15,
+    "G50": 17,
+    "G200": 14,
+    "GINF": 12,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "cap",
+    "B200": "cap",
+    "BINF": "bmiss",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "opening",
+    "B50": "opening",
+    "B200": "opening",
+    "BINF": "opening",
+    "G50": "opening",
+    "G200": "opening",
+    "GINF": "opening",
+    "ANCH": "opening"
+   }
+  },
+  "OP06": {
+   "anchor": {
+    "move": "h2b2",
+    "score": 124,
+    "nodes": 22
+   },
+   "group": "opening",
+   "poolGaps": [
+    0,
+    32,
+    81,
+    197,
+    198,
+    219,
+    252,
+    273
+   ],
+   "poolCls": "opening",
+   "lossByCfg": {
+    "CAP80": 53,
+    "B50": 43,
+    "B200": 52,
+    "BINF": 222,
+    "G50": 0,
+    "G200": -3,
+    "GINF": -16,
+    "ANCH": -9
+   },
+   "gapByCfg": {
+    "CAP80": 32,
+    "B50": 50,
+    "B200": 44,
+    "BINF": 215,
+    "G50": 0,
+    "G200": 0,
+    "GINF": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "cap",
+    "B200": "cap",
+    "BINF": "rand",
+    "G50": "above",
+    "G200": "above",
+    "GINF": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "opening",
+    "B50": "opening",
+    "B200": "opening",
+    "BINF": "opening",
+    "G50": "opening",
+    "G200": "opening",
+    "GINF": "opening",
+    "ANCH": "opening"
+   }
+  },
+  "OP08": {
+   "anchor": {
+    "move": "b9b7",
+    "score": 152,
+    "nodes": 22
+   },
+   "group": "opening",
+   "poolGaps": [
+    0,
+    92,
+    224,
+    234,
+    259,
+    297,
+    293,
+    293
+   ],
+   "poolCls": "opening",
+   "lossByCfg": {
+    "CAP80": -2,
+    "B50": -8,
+    "B200": 249,
+    "BINF": 260,
+    "G50": -13,
+    "G200": -15,
+    "GINF": -13,
+    "ANCH": -29
+   },
+   "gapByCfg": {
+    "CAP80": 0,
+    "B50": 0,
+    "B200": 240,
+    "BINF": 224,
+    "G50": 0,
+    "G200": 0,
+    "GINF": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "above",
+    "B50": "above",
+    "B200": "rand",
+    "BINF": "rand",
+    "G50": "above",
+    "G200": "above",
+    "GINF": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "opening",
+    "B50": "opening",
+    "B200": "opening",
+    "BINF": "opening",
+    "G50": "opening",
+    "G200": "opening",
+    "GINF": "opening",
+    "ANCH": "opening"
+   }
+  },
+  "MG_QT01": {
+   "anchor": {
+    "move": "c7b9",
+    "score": -32,
+    "nodes": 26
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    575,
+    576,
+    584,
+    590,
+    599,
+    592,
+    592
+   ],
+   "poolCls": "hard",
+   "lossByCfg": {
+    "CAP80": -2,
+    "B50": 0,
+    "B200": 1,
+    "BINF": 583,
+    "G50": 584,
+    "G200": 7,
+    "GINF": 570,
+    "ANCH": 6
+   },
+   "gapByCfg": {
+    "CAP80": 0,
+    "B50": 0,
+    "B200": 0,
+    "BINF": 588,
+    "G50": 565,
+    "G200": 0,
+    "GINF": 556,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "above",
+    "B50": "above",
+    "B200": "above",
+    "BINF": "rand",
+    "G50": "rand",
+    "G200": "above",
+    "GINF": "rand",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "hard",
+    "B50": "hard",
+    "B200": "hard",
+    "BINF": "hard",
+    "G50": "hard",
+    "G200": "hard",
+    "GINF": "hard",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT05": {
+   "anchor": {
+    "move": "h7h9",
+    "score": -40,
+    "nodes": 24
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    14,
+    16,
+    21,
+    36,
+    46,
+    47,
+    47
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 58,
+    "B50": 37,
+    "B200": 36,
+    "BINF": 100,
+    "G50": 33,
+    "G200": 15,
+    "GINF": 30,
+    "ANCH": -13
+   },
+   "gapByCfg": {
+    "CAP80": 47,
+    "B50": 36,
+    "B200": 45,
+    "BINF": 40,
+    "G50": 22,
+    "G200": 11,
+    "GINF": 23,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "cap",
+    "B200": "cap",
+    "BINF": "cap",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT10": {
+   "anchor": {
+    "move": "i9h9",
+    "score": -30,
+    "nodes": 24
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    24,
+    28,
+    35,
+    37,
+    40,
+    45,
+    49
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 84,
+    "B50": 91,
+    "B200": 79,
+    "BINF": 89,
+    "G50": 32,
+    "G200": -2,
+    "GINF": -3,
+    "ANCH": -5
+   },
+   "gapByCfg": {
+    "CAP80": 49,
+    "B50": 65,
+    "B200": 47,
+    "BINF": 64,
+    "G50": 25,
+    "G200": 0,
+    "GINF": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "cap",
+    "B200": "cap",
+    "BINF": "bmiss",
+    "G50": "cap",
+    "G200": "above",
+    "GINF": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT14": {
+   "anchor": {
+    "move": "f4b4",
+    "score": -22,
+    "nodes": 25
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    10,
+    11,
+    21,
+    23,
+    38,
+    38,
+    55
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 91,
+    "B50": 116,
+    "B200": 91,
+    "BINF": 114,
+    "G50": 61,
+    "G200": 55,
+    "GINF": 43,
+    "ANCH": -1
+   },
+   "gapByCfg": {
+    "CAP80": 55,
+    "B50": 65,
+    "B200": 56,
+    "BINF": 65,
+    "G50": 18,
+    "G200": 17,
+    "GINF": 25,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "cap",
+    "B200": "cap",
+    "BINF": "cap",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT19": {
+   "anchor": {
+    "move": "c7c3",
+    "score": -17,
+    "nodes": 27
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    576,
+    581,
+    592,
+    635,
+    710,
+    714,
+    724
+   ],
+   "poolCls": "hard",
+   "lossByCfg": {
+    "CAP80": -1,
+    "B50": 1,
+    "B200": -4,
+    "BINF": -2,
+    "G50": -2,
+    "G200": -2,
+    "GINF": -3,
+    "ANCH": 0
+   },
+   "gapByCfg": {
+    "CAP80": 0,
+    "B50": 0,
+    "B200": 0,
+    "BINF": 0,
+    "G50": 0,
+    "G200": 0,
+    "GINF": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "above",
+    "B50": "above",
+    "B200": "above",
+    "BINF": "above",
+    "G50": "above",
+    "G200": "above",
+    "GINF": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "hard",
+    "B50": "hard",
+    "B200": "hard",
+    "BINF": "hard",
+    "G50": "hard",
+    "G200": "hard",
+    "GINF": "hard",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT24": {
+   "anchor": {
+    "move": "g7f5",
+    "score": -14,
+    "nodes": 30
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    1,
+    4,
+    6,
+    10,
+    11,
+    12,
+    13
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 7,
+    "B50": 5,
+    "B200": 6,
+    "BINF": 7,
+    "G50": 7,
+    "G200": 6,
+    "GINF": 8,
+    "ANCH": -3
+   },
+   "gapByCfg": {
+    "CAP80": 13,
+    "B50": 11,
+    "B200": 14,
+    "BINF": 6,
+    "G50": 8,
+    "G200": 10,
+    "GINF": 9,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "bmiss",
+    "B200": "cap",
+    "BINF": "cap",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT29": {
+   "anchor": {
+    "move": "a9b9",
+    "score": -12,
+    "nodes": 28
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    1,
+    3,
+    7,
+    8,
+    10,
+    21,
+    22
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 49,
+    "B50": 39,
+    "B200": 31,
+    "BINF": 19,
+    "G50": 15,
+    "G200": 10,
+    "GINF": 10,
+    "ANCH": -2
+   },
+   "gapByCfg": {
+    "CAP80": 22,
+    "B50": 25,
+    "B200": 29,
+    "BINF": 33,
+    "G50": 24,
+    "G200": 24,
+    "GINF": 25,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "bmiss",
+    "B200": "cap",
+    "BINF": "bmiss",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT34": {
+   "anchor": {
+    "move": "d9d3",
+    "score": -6,
+    "nodes": 26
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    25,
+    32,
+    37,
+    43,
+    114,
+    117,
+    117
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 48,
+    "B50": 133,
+    "B200": 147,
+    "BINF": 28,
+    "G50": 7,
+    "G200": 9,
+    "GINF": 11,
+    "ANCH": -2
+   },
+   "gapByCfg": {
+    "CAP80": 43,
+    "B50": 84,
+    "B200": 93,
+    "BINF": 48,
+    "G50": 23,
+    "G200": 25,
+    "GINF": 19,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "rand",
+    "B200": "rand",
+    "BINF": "cap",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT39": {
+   "anchor": {
+    "move": "b5c5",
+    "score": 0,
+    "nodes": 28
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    4,
+    6,
+    6,
+    14,
+    16,
+    17,
+    17
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 17,
+    "B50": 25,
+    "B200": 23,
+    "BINF": 16,
+    "G50": 19,
+    "G200": 20,
+    "GINF": 25,
+    "ANCH": 0
+   },
+   "gapByCfg": {
+    "CAP80": 17,
+    "B50": 26,
+    "B200": 26,
+    "BINF": 23,
+    "G50": 19,
+    "G200": 25,
+    "GINF": 18,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "bmiss",
+    "B200": "cap",
+    "BINF": "cap",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QH01": {
+   "anchor": {
+    "move": "d0e1",
+    "score": 1,
+    "nodes": 24
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    2,
+    3,
+    3,
+    4,
+    11,
+    18,
+    22
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 20,
+    "B50": 21,
+    "B200": 26,
+    "BINF": 21,
+    "G50": 6,
+    "G200": 19,
+    "GINF": 15,
+    "ANCH": -1
+   },
+   "gapByCfg": {
+    "CAP80": 22,
+    "B50": 28,
+    "B200": 33,
+    "BINF": 33,
+    "G50": 24,
+    "G200": 24,
+    "GINF": 22,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "cap",
+    "B200": "bmiss",
+    "BINF": "bmiss",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QB3": {
+   "anchor": {
+    "move": "a0b0",
+    "score": 335,
+    "nodes": 21
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    14,
+    50,
+    68,
+    73,
+    105,
+    106,
+    124
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 134,
+    "B50": 152,
+    "B200": 86,
+    "BINF": 231,
+    "G50": -8,
+    "G200": -22,
+    "GINF": -68,
+    "ANCH": -32
+   },
+   "gapByCfg": {
+    "CAP80": 73,
+    "B50": 128,
+    "B200": 76,
+    "BINF": 141,
+    "G50": 0,
+    "G200": 0,
+    "GINF": 25,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "rand",
+    "B200": "cap",
+    "BINF": "rand",
+    "G50": "above",
+    "G200": "above",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QB9": {
+   "anchor": {
+    "move": "a6b6",
+    "score": 590,
+    "nodes": 20
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    27,
+    29,
+    35,
+    45,
+    49,
+    84,
+    73
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "CAP80": 21,
+    "B50": 33,
+    "B200": 25,
+    "BINF": 36,
+    "G50": -14,
+    "G200": 3,
+    "GINF": 1,
+    "ANCH": 4
+   },
+   "gapByCfg": {
+    "CAP80": 73,
+    "B50": 53,
+    "B200": 54,
+    "BINF": 65,
+    "G50": 18,
+    "G200": 18,
+    "GINF": 17,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "CAP80": "cap",
+    "B50": "bmiss",
+    "B200": "cap",
+    "BINF": "cap",
+    "G50": "cap",
+    "G200": "cap",
+    "GINF": "cap",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "CAP80": "normal",
+    "B50": "normal",
+    "B200": "normal",
+    "BINF": "normal",
+    "G50": "normal",
+    "G200": "normal",
+    "GINF": "normal",
+    "ANCH": "normal"
+   }
+  }
+ },
+ "cost": {}
+}

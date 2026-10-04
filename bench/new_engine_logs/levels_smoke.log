@@ -1,0 +1,27 @@
+DRV: not isolated, registering SW (try 0)
+DRV: not isolated, registering SW (try 1)
+DRV: isolated ok, task=task_levels_smoke.json
+DRV: engine ready
+L|1|OP00|ANCHOR|score=28|mate=-|depth=22|nodes=2695413|crit=0
+L|1|OP00|AM|SEL|move=c3c4|slotScore=25|top1=34|gap=9|depth=12|nodes=256631|slots=1:34,2:30,3:29,4:25|crit=0
+L|1|OP00|AM|REF|move=c3c4|score=-14|mate=-|depth=24|nodes=3578979|crit=0
+L|1|OP00|AD|SEL|move=c3c4|slotScore=21|top1=33|gap=12|depth=15|nodes=546457|slots=1:33,2:27,3:21|crit=0
+L|1|OP00|AD|REF|move=c3c4|score=-18|mate=-|depth=23|nodes=3500545|crit=0
+L|1|OP00|EX|SEL|move=g3g4|slotScore=26|top1=30|gap=4|depth=18|nodes=830537|slots=1:30,2:26|crit=0
+L|1|OP00|EX|REF|move=g3g4|score=-24|mate=-|depth=24|nodes=3314000|crit=0
+L|1|OP00|GM|SEL|move=h2e2|slotScore=20|top1=20|gap=0|depth=26|nodes=9891329|slots=1:20|crit=0
+L|1|OP00|GM|REF|move=h2e2|score=-28|mate=-|depth=24|nodes=3454247|crit=0
+L|1|OP00|S1T300|SEL|move=h2e2|slotScore=29|top1=29|gap=0|depth=15|nodes=534129|slots=1:29,2:26,3:22,4:21|crit=0
+L|1|OP00|S1T300|REF|move=h2e2|score=-20|mate=-|depth=25|nodes=3463487|crit=0
+L|1|MG_QT01|ANCHOR|score=-26|mate=-|depth=26|nodes=3723856|crit=0
+L|1|MG_QT01|AM|SEL|move=f9e8|slotScore=-619|top1=-24|gap=595|depth=15|nodes=299800|slots=1:-24,2:-612,3:-618,4:-619|crit=0
+L|1|MG_QT01|AM|REF|move=f9e8|score=597|mate=-|depth=25|nodes=3230305|crit=0
+L|1|MG_QT01|AD|SEL|move=f9e8|slotScore=-603|top1=-25|gap=578|depth=19|nodes=569507|slots=1:-25,2:-589,3:-603|crit=0
+L|1|MG_QT01|AD|REF|move=f9e8|score=606|mate=-|depth=26|nodes=3048495|crit=0
+L|1|MG_QT01|EX|SEL|move=c6c5|slotScore=-601|top1=-22|gap=579|depth=21|nodes=932993|slots=1:-22,2:-601|crit=0
+L|1|MG_QT01|EX|REF|move=c6c5|score=602|mate=-|depth=24|nodes=3096407|crit=0
+L|1|MG_QT01|GM|SEL|move=c7b9|slotScore=-32|top1=-32|gap=0|depth=30|nodes=10651375|slots=1:-32|crit=0
+L|1|MG_QT01|GM|REF|move=c7b9|score=33|mate=-|depth=25|nodes=3589653|crit=0
+L|1|MG_QT01|S1T300|SEL|move=c7b9|slotScore=-34|top1=-34|gap=0|depth=16|nodes=537793|slots=1:-34,2:-595,3:-609,4:-611|crit=0
+L|1|MG_QT01|S1T300|REF|move=c7b9|score=33|mate=-|depth=27|nodes=3574459|crit=0
+DRV DONE positions=2 round=1

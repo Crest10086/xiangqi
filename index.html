@@ -94,6 +94,8 @@
 <script src="engine.js"></script>
 <script src="js/book.js"></script>
 <script src="js/xqbook.js"></script>
+<script src="js/tier_rules.js"></script>
+<script src="js/tier_config.js"></script>
 <script src="js/pikafish_bridge.js"></script>
 <script>
 'use strict';
@@ -126,8 +128,18 @@ for (const k of Object.keys(XQ.HANDICAPS)) {
 }
 levelSel.value = levelIdx;
 
-// 预热皮卡鱼引擎（高手/大师档首步不必白等）；入门~进阶档不受影响
-if (typeof PF !== 'undefined') PF.load().catch(() => {});
+// 引擎懒加载：只有选到引擎档（业余~大师）并且真的要走棋时才加载（完整网络 50.7MB），
+// 入门档与不下的用户都不必付这份下载。加载进度写进状态栏（见 setStatus 的 loading 分支）。
+function ensureEngine() {
+  if (typeof PF === 'undefined' || PF.ready()) return;
+  PF.onProgress = (p) => {
+    if (thinking && game && game.side !== humanSide) {
+      const pct = p.total ? Math.floor(p.loaded * 100 / p.total) : 0;
+      setStatus('loading', p.total ? ('正在加载引擎 ' + pct + '%') : '正在加载引擎…');
+    }
+  };
+  PF.load().catch(() => {});
+}
 
 function applyMove(m) {
   const res = game.move(m);
@@ -293,8 +305,11 @@ function afterHuman() {
   if (!over) setTimeout(aiTurn, 60);
 }
 
+let lastAiSource = null; // 诊断用：本手 AI 是引擎出的还是内置 AI 兜底的（自检页/测试读它）
+
 function aiTurn() {
   thinking = true; draw(); setStatus('thinking');
+  lastAiSource = null;
   const g = game; // capture current game to guard against undo/new-game racing the async result
   // 开局谱招只给高手档（大师纯靠满强度长考）：低档靠引擎强度阶梯，保证五档可区分
   if (levelIdx === 3 && typeof XQBook !== 'undefined') {
@@ -302,25 +317,26 @@ function aiTurn() {
     const bm = XQBook.pick(g.board, g.side, legal);
     if (bm && legal.some(m => m.f === bm.f && m.t === bm.t)) {
       const res = applyMove(bm);
-      if (res) { thinking = false; renderLog(); checkEnd(); draw(); return; }
+      if (res) { thinking = false; lastAiSource = 'book'; renderLog(); checkEnd(); draw(); return; }
     }
   }
   if (PF.isHeavyLevel(levelIdx)) {
+    ensureEngine();
     PF.whenReady().then((ok) => {
       if (!(g === game && thinking)) return; // stale: board changed meanwhile
       if (!ok) { builtInAiTurn(g); return; } // engine not ready -> fall back
       const fen = PF.boardToFen(g.board, g.side);
-      const mpv = PF.MULTIPV[levelIdx] || 1;
-      PF.search(fen, PF.MILLIS[levelIdx], mpv, PF.UCI_EXTRA[levelIdx] || null).then((out) => {
+      const legal = g.legalMoves();
+      PF.tierSearch(levelIdx, fen, { legal: legal, ply: g.history.length }).then((out) => {
         if (!(g === game && thinking)) return;
-        const r = (typeof out === 'string') ? { move: out, candidates: null } : (out || { move: '', candidates: null });
-        let mv = pickCandidate(r, mpv, g);
+        const mv = PF.parseMove(out.move);
         if (!mv || !g.legalMoves().some(m => m.f === mv.f && m.t === mv.t)) {
-          builtInAiTurn(g); return; // illegal / timeout -> fall back
+          builtInAiTurn(g); return; // illegal / timeout / engine-critical -> fall back
         }
         const res = g.move(mv);
         if (res) lastMove = g.history[g.history.length - 1].move;
         thinking = false;
+        lastAiSource = 'engine';
         renderLog(); checkEnd(); draw();
       }).catch(() => { if (g === game && thinking) builtInAiTurn(g); });
     });
@@ -329,28 +345,8 @@ function aiTurn() {
   builtInAiTurn(g);
 }
 
-// 多候选加权随机（进阶档）: 名次越靠后权重越低 1/(k+1)^1.2，只接受合法着法
-function pickCandidate(r, mpv, g) {
-  const legal = g.legalMoves();
-  const ok = (m) => m && legal.some(x => x.f === m.f && x.t === m.t);
-  if (mpv > 1 && r.candidates && r.candidates.length > 1) {
-    const pool = [];
-    const cs = r.candidates.slice(0, mpv);
-    for (let i = 0; i < cs.length; i++) {
-      const m = PF.parseMove(cs[i].move);
-      if (m && ok(m) && !pool.some(p => p.f === m.f && p.t === m.t)) pool.push(m);
-    }
-    if (pool.length > 1) {
-      let sum = 0;
-      const w = pool.map((m, i) => { const v = 1 / Math.pow(i + 1, 1.2); sum += v; return v; });
-      let x = Math.random() * sum;
-      for (let i = 0; i < pool.length; i++) { x -= w[i]; if (x <= 0) return pool[i]; }
-      return pool[pool.length - 1];
-    }
-    if (pool.length === 1) return pool[0];
-  }
-  return PF.parseMove(r.move);
-}
+// 多候选选着不在这里做：它由 js/tier_rules.js（定案契约的选着规则）+ js/tier_config.js
+// （定案参数）在 PF.tierSearch 里完成，与 bench 台架用的是同一份规则文件。
 
 function builtInAiTurn(g) {
   setTimeout(() => {
@@ -359,6 +355,7 @@ function builtInAiTurn(g) {
     const res = g.aiMove(L.depth, L.qDepth, L.maxNodes, L.randomness);
     if (res) lastMove = g.history[g.history.length - 1].move;
     thinking = false;
+    lastAiSource = 'builtin';
     renderLog(); checkEnd(); draw();
   }, 50);
 }
@@ -399,6 +396,7 @@ function checkEnd() {
 function setStatus(mode, text) {
   const el = document.getElementById('status');
   if (mode === 'thinking') { el.innerHTML = '<span class="dot" style="background:#f1c40f"></span> AI 思考中…'; return; }
+  if (mode === 'loading') { el.innerHTML = '<span class="dot" style="background:#3498db"></span> ' + text; return; }
   if (text) { el.innerHTML = text; return; }
   const isHuman = game.side === humanSide;
   const who = game.side === 1 ? '红方' : '黑方';

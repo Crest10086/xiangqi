@@ -1,0 +1,758 @@
+{
+ "generated": "2026-10-04T17:50:10.907Z",
+ "logs": [
+  "tier_r5.log"
+ ],
+ "salts": {
+  "1": 97977,
+  "2": 98954,
+  "3": 99931,
+  "4": 100908,
+  "5": 101885,
+  "9": 105793
+ },
+ "lines": 150,
+ "skips": 0,
+ "replay": {
+  "checked": 70,
+  "mismatch": 0,
+  "samples": []
+ },
+ "positions": 10,
+ "perCfg": {
+  "M300M8": {
+   "n": 10,
+   "cfg": {
+    "id": "M300M8",
+    "multipv": 8,
+    "movetime": 300,
+    "hash": 64,
+    "rule": "tier",
+    "cap": 0,
+    "p": 0
+   },
+   "hitShare": "above:1.00",
+   "gapMean": 0,
+   "gapMedian": 0,
+   "gapMax": 0,
+   "predictedGap": 0,
+   "costMean": -2.5,
+   "costMedian": -4,
+   "costP25": -7,
+   "costP75": -3,
+   "costOpening": -0.3333333333333333,
+   "costMidgame": -3.4285714285714284,
+   "nodesMean": 580899.6,
+   "hardN": 2,
+   "hardCostMean": -4.5
+  },
+  "M1000": {
+   "n": 10,
+   "cfg": {
+    "id": "M1000",
+    "multipv": 1,
+    "movetime": 1000,
+    "hash": 256,
+    "rule": "tier",
+    "cap": 0,
+    "p": 0
+   },
+   "hitShare": "above:1.00",
+   "gapMean": 0,
+   "gapMedian": 0,
+   "gapMax": 0,
+   "predictedGap": 0,
+   "costMean": -0.4,
+   "costMedian": -2,
+   "costP25": -7,
+   "costP75": 0,
+   "costOpening": 6,
+   "costMidgame": -3.142857142857143,
+   "nodesMean": 1773897,
+   "hardN": 0,
+   "hardCostMean": null
+  },
+  "M2000": {
+   "n": 10,
+   "cfg": {
+    "id": "M2000",
+    "multipv": 1,
+    "movetime": 2000,
+    "hash": 256,
+    "rule": "tier",
+    "cap": 0,
+    "p": 0
+   },
+   "hitShare": "above:1.00",
+   "gapMean": 0,
+   "gapMedian": 0,
+   "gapMax": 0,
+   "predictedGap": 0,
+   "costMean": -4.5,
+   "costMedian": -3,
+   "costP25": -7,
+   "costP75": -1,
+   "costOpening": -8.333333333333334,
+   "costMidgame": -2.857142857142857,
+   "nodesMean": 3447289.5,
+   "hardN": 0,
+   "hardCostMean": null
+  },
+  "M4000": {
+   "n": 10,
+   "cfg": {
+    "id": "M4000",
+    "multipv": 1,
+    "movetime": 4000,
+    "hash": 256,
+    "rule": "tier",
+    "cap": 0,
+    "p": 0
+   },
+   "hitShare": "above:1.00",
+   "gapMean": 0,
+   "gapMedian": 0,
+   "gapMax": 0,
+   "predictedGap": 0,
+   "costMean": -3.7,
+   "costMedian": -2,
+   "costP25": -7,
+   "costP75": 4,
+   "costOpening": -7.333333333333333,
+   "costMidgame": -2.142857142857143,
+   "nodesMean": 7013783.2,
+   "hardN": 0,
+   "hardCostMean": null
+  },
+  "M6000": {
+   "n": 10,
+   "cfg": {
+    "id": "M6000",
+    "multipv": 1,
+    "movetime": 6000,
+    "hash": 256,
+    "rule": "tier",
+    "cap": 0,
+    "p": 0
+   },
+   "hitShare": "above:1.00",
+   "gapMean": 0,
+   "gapMedian": 0,
+   "gapMax": 0,
+   "predictedGap": 0,
+   "costMean": -2.7,
+   "costMedian": 0,
+   "costP25": -5,
+   "costP75": 2,
+   "costOpening": -3,
+   "costMidgame": -2.5714285714285716,
+   "nodesMean": 10311265.1,
+   "hardN": 0,
+   "hardCostMean": null
+  },
+  "M8000": {
+   "n": 10,
+   "cfg": {
+    "id": "M8000",
+    "multipv": 1,
+    "movetime": 8000,
+    "hash": 256,
+    "rule": "tier",
+    "cap": 0,
+    "p": 0
+   },
+   "hitShare": "above:1.00",
+   "gapMean": 0,
+   "gapMedian": 0,
+   "gapMax": 0,
+   "predictedGap": 0,
+   "costMean": -4.1,
+   "costMedian": -1,
+   "costP25": -9,
+   "costP75": 1,
+   "costOpening": -3.6666666666666665,
+   "costMidgame": -4.285714285714286,
+   "nodesMean": 13671818.5,
+   "hardN": 0,
+   "hardCostMean": null
+  },
+  "ANCH": {
+   "n": 10,
+   "cfg": {
+    "id": "ANCH",
+    "multipv": 1,
+    "movetime": 0,
+    "hash": 256,
+    "rule": "anchor"
+   },
+   "hitShare": "above:1.00",
+   "gapMean": 0,
+   "gapMedian": 0,
+   "gapMax": 0,
+   "predictedGap": 0,
+   "costMean": -3,
+   "costMedian": 0,
+   "costP25": -4,
+   "costP75": 1,
+   "costOpening": -6,
+   "costMidgame": -1.7142857142857142,
+   "nodesMean": 3485837,
+   "hardN": 0,
+   "hardCostMean": null
+  }
+ },
+ "perCfgByGroup": {},
+ "perPosition": {
+  "OP00": {
+   "anchor": {
+    "move": "b2e2",
+    "score": 27,
+    "nodes": 21
+   },
+   "group": "opening",
+   "poolGaps": [
+    0,
+    2,
+    2,
+    2,
+    2,
+    3,
+    5,
+    14
+   ],
+   "poolCls": "opening",
+   "lossByCfg": {
+    "M300M8": 9,
+    "M1000": 6,
+    "M2000": 3,
+    "M4000": 4,
+    "M6000": 8,
+    "M8000": 6,
+    "ANCH": 3
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "opening",
+    "M1000": "opening",
+    "M2000": "opening",
+    "M4000": "opening",
+    "M6000": "opening",
+    "M8000": "opening",
+    "ANCH": "opening"
+   }
+  },
+  "OP06": {
+   "anchor": {
+    "move": "h2b2",
+    "score": 123,
+    "nodes": 21
+   },
+   "group": "opening",
+   "poolGaps": [
+    0,
+    30,
+    139,
+    187,
+    194,
+    245,
+    274,
+    275
+   ],
+   "poolCls": "opening",
+   "lossByCfg": {
+    "M300M8": -4,
+    "M1000": -11,
+    "M2000": -6,
+    "M4000": -7,
+    "M6000": 0,
+    "M8000": -1,
+    "ANCH": -2
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "opening",
+    "M1000": "opening",
+    "M2000": "opening",
+    "M4000": "opening",
+    "M6000": "opening",
+    "M8000": "opening",
+    "ANCH": "opening"
+   }
+  },
+  "OP08": {
+   "anchor": {
+    "move": "b9b7",
+    "score": 165,
+    "nodes": 23
+   },
+   "group": "opening",
+   "poolGaps": [
+    0,
+    116,
+    195,
+    252,
+    287,
+    292,
+    299,
+    301
+   ],
+   "poolCls": "opening",
+   "lossByCfg": {
+    "M300M8": -6,
+    "M1000": 23,
+    "M2000": -22,
+    "M4000": -19,
+    "M6000": -17,
+    "M8000": -16,
+    "ANCH": -19
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "opening",
+    "M1000": "opening",
+    "M2000": "opening",
+    "M4000": "opening",
+    "M6000": "opening",
+    "M8000": "opening",
+    "ANCH": "opening"
+   }
+  },
+  "MG_QT01": {
+   "anchor": {
+    "move": "c7b9",
+    "score": -31,
+    "nodes": 27
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    528,
+    574,
+    575,
+    585,
+    586,
+    587,
+    588
+   ],
+   "poolCls": "hard",
+   "lossByCfg": {
+    "M300M8": -8,
+    "M1000": -1,
+    "M2000": 4,
+    "M4000": 9,
+    "M6000": 5,
+    "M8000": 2,
+    "ANCH": 1
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "hard",
+    "M1000": "normal",
+    "M2000": "normal",
+    "M4000": "normal",
+    "M6000": "normal",
+    "M8000": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT05": {
+   "anchor": {
+    "move": "h7h9",
+    "score": -33,
+    "nodes": 23
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    4,
+    6,
+    9,
+    28,
+    34,
+    37,
+    44
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "M300M8": -4,
+    "M1000": -2,
+    "M2000": -3,
+    "M4000": 4,
+    "M6000": 1,
+    "M8000": 0,
+    "ANCH": 1
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "normal",
+    "M1000": "normal",
+    "M2000": "normal",
+    "M4000": "normal",
+    "M6000": "normal",
+    "M8000": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT10": {
+   "anchor": {
+    "move": "i9h9",
+    "score": -27,
+    "nodes": 24
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    25,
+    30,
+    34,
+    36,
+    45,
+    49,
+    52
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "M300M8": -3,
+    "M1000": -5,
+    "M2000": -3,
+    "M4000": -1,
+    "M6000": 2,
+    "M8000": 3,
+    "ANCH": 5
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "normal",
+    "M1000": "normal",
+    "M2000": "normal",
+    "M4000": "normal",
+    "M6000": "normal",
+    "M8000": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT14": {
+   "anchor": {
+    "move": "f4b4",
+    "score": -30,
+    "nodes": 25
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    10,
+    13,
+    19,
+    27,
+    35,
+    24,
+    55
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "M300M8": -7,
+    "M1000": -7,
+    "M2000": -7,
+    "M4000": -5,
+    "M6000": -5,
+    "M8000": -9,
+    "ANCH": -4
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "normal",
+    "M1000": "normal",
+    "M2000": "normal",
+    "M4000": "normal",
+    "M6000": "normal",
+    "M8000": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QT19": {
+   "anchor": {
+    "move": "c7c3",
+    "score": -14,
+    "nodes": 29
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    572,
+    576,
+    584,
+    624,
+    704,
+    704,
+    714
+   ],
+   "poolCls": "hard",
+   "lossByCfg": {
+    "M300M8": -1,
+    "M1000": 0,
+    "M2000": -1,
+    "M4000": -2,
+    "M6000": -1,
+    "M8000": 1,
+    "ANCH": 0
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "hard",
+    "M1000": "normal",
+    "M2000": "normal",
+    "M4000": "normal",
+    "M6000": "normal",
+    "M8000": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QB3": {
+   "anchor": {
+    "move": "i1h1",
+    "score": 390,
+    "nodes": 20
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    5,
+    34,
+    100,
+    120,
+    127,
+    143,
+    82
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "M300M8": -11,
+    "M1000": -13,
+    "M2000": -17,
+    "M4000": -26,
+    "M6000": -27,
+    "M8000": -20,
+    "ANCH": -19
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "normal",
+    "M1000": "normal",
+    "M2000": "normal",
+    "M4000": "normal",
+    "M6000": "normal",
+    "M8000": "normal",
+    "ANCH": "normal"
+   }
+  },
+  "MG_QB9": {
+   "anchor": {
+    "move": "a6b6",
+    "score": 595,
+    "nodes": 20
+   },
+   "group": "midgame",
+   "poolGaps": [
+    0,
+    9,
+    17,
+    38,
+    39,
+    52,
+    80,
+    85
+   ],
+   "poolCls": "normal",
+   "lossByCfg": {
+    "M300M8": 10,
+    "M1000": 6,
+    "M2000": 7,
+    "M4000": 6,
+    "M6000": 7,
+    "M8000": -7,
+    "ANCH": 4
+   },
+   "gapByCfg": {
+    "M300M8": 0,
+    "M1000": 0,
+    "M2000": 0,
+    "M4000": 0,
+    "M6000": 0,
+    "M8000": 0,
+    "ANCH": 0
+   },
+   "hitByCfg": {
+    "M300M8": "above",
+    "M1000": "above",
+    "M2000": "above",
+    "M4000": "above",
+    "M6000": "above",
+    "M8000": "above",
+    "ANCH": "above"
+   },
+   "clsByCfg": {
+    "M300M8": "normal",
+    "M1000": "normal",
+    "M2000": "normal",
+    "M4000": "normal",
+    "M6000": "normal",
+    "M8000": "normal",
+    "ANCH": "normal"
+   }
+  }
+ },
+ "cost": {}
+}

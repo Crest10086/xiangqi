@@ -1,0 +1,19 @@
+coi test: crossOriginIsolated=false SAB=false
+not isolated -> registering coi-serviceworker and reloading
+SW registered, reloading...
+coi test: crossOriginIsolated=true SAB=true
+ISOLATED OK, running engine
+net-progress DONE 50706378/50706378
+READY
+LINE: uciok
+BENCH START threads=4
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: bestmove h2e2 ponder h9g7
+BENCH 500ms -> depth 20 nodes 838680 score 31 move h2e2
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: bestmove c3c4 ponder b7c7
+BENCH 2000ms -> depth 23 nodes 3447465 score 23 move c3c4
+LINE: info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+LINE: bestmove g3g4 ponder b7e7
+BENCH 6000ms -> depth 27 nodes 10700893 score 23 move g3g4
+BENCH DONE

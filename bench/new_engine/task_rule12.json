@@ -1,0 +1,89 @@
+{
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64"
+ ],
+ "steps": [
+  {
+   "id": "R60S_118",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "R60S_119",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "R60S_120",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "R60S_121",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7b7",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "R60S_125",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7b7 a7c9 b7b2 c9a7 b2i2",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "R60S_130",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7b7 a7c9 b7b2 c9a7 b2i2 a7c9 i2a2 c9a7 a2h2 a7c9",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "R60S_140",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7b7 a7c9 b7b2 c9a7 b2i2 a7c9 i2a2 c9a7 a2h2 a7c9 h2c2 c9a7 c2c8 a7c9 c8c0 c9a7 c0c7 a7c9 c7c1 c9a7",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "R60S_149",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7b7 a7c9 b7b2 c9a7 b2i2 a7c9 i2a2 c9a7 a2h2 a7c9 h2c2 c9a7 c2c8 a7c9 c8c0 c9a7 c0c7 a7c9 c7c1 c9a7 c1c6 a7c9 c6h6 c9a7 h6h3 a7c9 h3a3 c9a7 a3i3",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "R60S_150",
+   "cmds": [
+    "position fen 2b1k4/9/9/9/9/R8/9/9/9/5K3 w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7i0 a7c9 i0i8 c9a7 i8a8 a7c9 a8a0 c9a7 a0a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7b7 a7c9 b7b2 c9a7 b2i2 a7c9 i2a2 c9a7 a2h2 a7c9 h2c2 c9a7 c2c8 a7c9 c8c0 c9a7 c0c7 a7c9 c7c1 c9a7 c1c6 a7c9 c6h6 c9a7 h6h3 a7c9 h3a3 c9a7 a3i3 a7c9",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  }
+ ]
+}

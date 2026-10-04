@@ -1,0 +1,35 @@
+{
+ "pre": [
+  "setoption name Threads value 4",
+  "setoption name Hash value 64"
+ ],
+ "steps": [
+  {
+   "id": "NOREP_130",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/R8/9/9/9/c1cK5 w - - 0 1 moves d0d1 e9e8 a4i4 e8e9 i4b4 e9e8 b4h4 e8e9 h4c4 e9e8 c4c9 e8e7 c9c1 e7e8 c1c7 e8e9 c7c1 e9f9 c1c8 f9e9 c8c2 e9e8 c2i2 e8e9 i2a2 e9e8 a2a9 e8e7 a9a1 e7e8 a1a7 e8e9 a7i7 e9e8 i7i0 e8e9 i0i8 e9f9 i8i0 f9f8 i0i9 f8f7 i9i0 f7e7 i0i9 e7e8 i9i1 e8e9 i1i6 e9e8 i6a6 e8e9 a6h6 e9e8 h6h0 e8e9 h0h8 e9f9 h8h0 f9f8 h0h9 f8f7 h9h0 f7e7 h0h9 e7e8 h9h1 e8e9 h1h7 e9e8 h7b7 e8e9 b7b0 e9e8 b0b9 e8e7 b9b0 e7f7 b0b9 f7f8 b9b0 f8f9 b0b8 f9e9 b8b1 e9e8 b1b6 e8e9 b6g6 e9e8 g6g0 e8e9 g0g8 e9f9 g8g0 f9f8 g0g9 f8f7 g9g0 f7e7 g0g9 e7e8 g9g1 e8e9 g1g7 e9e8 g7g2 e8e9 g2b2 e9e8 b2h2 e8e9 h2d2 e9e8 d2d9 e8e7 d9d2 e7f7 d2d9 f7f8 d9d2 f8f9 d2d8 f9e9 d8d3 e9e8 d3i3 e8e9 i3a3 e9e8",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "NOREP_149",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/R8/9/9/9/c1cK5 w - - 0 1 moves d0d1 e9e8 a4i4 e8e9 i4b4 e9e8 b4h4 e8e9 h4c4 e9e8 c4c9 e8e7 c9c1 e7e8 c1c7 e8e9 c7c1 e9f9 c1c8 f9e9 c8c2 e9e8 c2i2 e8e9 i2a2 e9e8 a2a9 e8e7 a9a1 e7e8 a1a7 e8e9 a7i7 e9e8 i7i0 e8e9 i0i8 e9f9 i8i0 f9f8 i0i9 f8f7 i9i0 f7e7 i0i9 e7e8 i9i1 e8e9 i1i6 e9e8 i6a6 e8e9 a6h6 e9e8 h6h0 e8e9 h0h8 e9f9 h8h0 f9f8 h0h9 f8f7 h9h0 f7e7 h0h9 e7e8 h9h1 e8e9 h1h7 e9e8 h7b7 e8e9 b7b0 e9e8 b0b9 e8e7 b9b0 e7f7 b0b9 f7f8 b9b0 f8f9 b0b8 f9e9 b8b1 e9e8 b1b6 e8e9 b6g6 e9e8 g6g0 e8e9 g0g8 e9f9 g8g0 f9f8 g0g9 f8f7 g9g0 f7e7 g0g9 e7e8 g9g1 e8e9 g1g7 e9e8 g7g2 e8e9 g2b2 e9e8 b2h2 e8e9 h2d2 e9e8 d2d9 e8e7 d9d2 e7f7 d2d9 f7f8 d9d2 f8f9 d2d8 f9e9 d8d3 e9e8 d3i3 e8e9 i3a3 e9e8 a3h3 e8e9 h3b3 e9e8 b3g3 e8e9 g3c3 e9e8 c3c6 e8e9 c6f6 e9e8 f6f0 e8e9 f0f8 a0b0 f8f0 e9e8 f0f9",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  },
+  {
+   "id": "NOREP_150",
+   "cmds": [
+    "position fen 4k4/9/9/9/9/R8/9/9/9/c1cK5 w - - 0 1 moves d0d1 e9e8 a4i4 e8e9 i4b4 e9e8 b4h4 e8e9 h4c4 e9e8 c4c9 e8e7 c9c1 e7e8 c1c7 e8e9 c7c1 e9f9 c1c8 f9e9 c8c2 e9e8 c2i2 e8e9 i2a2 e9e8 a2a9 e8e7 a9a1 e7e8 a1a7 e8e9 a7i7 e9e8 i7i0 e8e9 i0i8 e9f9 i8i0 f9f8 i0i9 f8f7 i9i0 f7e7 i0i9 e7e8 i9i1 e8e9 i1i6 e9e8 i6a6 e8e9 a6h6 e9e8 h6h0 e8e9 h0h8 e9f9 h8h0 f9f8 h0h9 f8f7 h9h0 f7e7 h0h9 e7e8 h9h1 e8e9 h1h7 e9e8 h7b7 e8e9 b7b0 e9e8 b0b9 e8e7 b9b0 e7f7 b0b9 f7f8 b9b0 f8f9 b0b8 f9e9 b8b1 e9e8 b1b6 e8e9 b6g6 e9e8 g6g0 e8e9 g0g8 e9f9 g8g0 f9f8 g0g9 f8f7 g9g0 f7e7 g0g9 e7e8 g9g1 e8e9 g1g7 e9e8 g7g2 e8e9 g2b2 e9e8 b2h2 e8e9 h2d2 e9e8 d2d9 e8e7 d9d2 e7f7 d2d9 f7f8 d9d2 f8f9 d2d8 f9e9 d8d3 e9e8 d3i3 e8e9 i3a3 e9e8 a3h3 e8e9 h3b3 e9e8 b3g3 e8e9 g3c3 e9e8 c3c6 e8e9 c6f6 e9e8 f6f0 e8e9 f0f8 a0b0 f8f0 e9e8 f0f9 e8e7",
+    "go depth 12"
+   ],
+   "timeoutMs": 15000,
+   "gapMs": 500
+  }
+ ]
+}

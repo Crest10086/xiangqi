@@ -1,0 +1,221 @@
+DRV: not isolated, registering SW (try 0)
+DRV: not isolated, registering SW (try 1)
+DRV: isolated ok, task=task_rule12.json
+DRV: engine ready
+S|R60S_118|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9
+S|R60S_118|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_118|OUT|
+DRV error unhandled: [object Object]
+S|R60S_118|CMD|go depth 12
+S|R60S_118|OUT|info string Available processors: 0-15
+S|R60S_118|OUT|info string Using 4 threads
+S|R60S_118|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_118|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_118|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 134 nps 22333 hashfull 0 tbhits 0 time 6 pv a4a0
+S|R60S_118|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 2045 nps 340833 hashfull 0 tbhits 0 time 6 pv a4a1
+S|R60S_118|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 2306 nps 329428 hashfull 0 tbhits 0 time 7 pv a4a1
+S|R60S_118|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 2762 nps 394571 hashfull 0 tbhits 0 time 7 pv a4a1
+S|R60S_118|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 3102 nps 443142 hashfull 0 tbhits 0 time 7 pv a4a2
+S|R60S_118|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 3417 nps 488142 hashfull 0 tbhits 0 time 7 pv a4a1
+S|R60S_118|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 4346 nps 620857 hashfull 0 tbhits 0 time 7 pv a4a1
+S|R60S_118|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 3997 nps 571000 hashfull 0 tbhits 0 time 7 pv a4a1
+S|R60S_118|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 4745 nps 593125 hashfull 0 tbhits 0 time 8 pv a4a2
+S|R60S_118|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 8506 nps 945111 hashfull 0 tbhits 0 time 9 pv a4a1
+S|R60S_118|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 8892 nps 988000 hashfull 0 tbhits 0 time 9 pv a4a1
+S|R60S_118|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 9168 nps 1018666 hashfull 0 tbhits 0 time 9 pv a4a1
+S|R60S_118|OUT|bestmove a4a1
+S|R60S_118|TIMEOUT
+S|R60S_118|END|lines=19
+S|R60S_119|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8
+S|R60S_119|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_119|OUT|
+DRV error unhandled: [object Object]
+S|R60S_119|CMD|go depth 12
+S|R60S_119|OUT|info string Available processors: 0-15
+S|R60S_119|OUT|info string Using 4 threads
+S|R60S_119|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_119|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_119|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 17 nps 17000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_119|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 483 nps 483000 hashfull 0 tbhits 0 time 1 pv a4a1
+S|R60S_119|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 974 nps 974000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_119|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1518 nps 1518000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_119|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 1775 nps 1775000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_119|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 2342 nps 2342000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_119|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 2862 nps 2862000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_119|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 3366 nps 3366000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_119|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 3907 nps 1953500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_119|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 4726 nps 2363000 hashfull 0 tbhits 0 time 2 pv a4a2
+S|R60S_119|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 5273 nps 2636500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_119|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 5903 nps 2951500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_119|OUT|bestmove a4a0
+S|R60S_119|TIMEOUT
+S|R60S_119|END|lines=19
+S|R60S_120|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7
+S|R60S_120|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_120|OUT|
+DRV error unhandled: [object Object]
+S|R60S_120|CMD|go depth 12
+S|R60S_120|OUT|info string Available processors: 0-15
+S|R60S_120|OUT|info string Using 4 threads
+S|R60S_120|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_120|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_120|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 1658 nps 1658000 hashfull 0 tbhits 0 time 1 pv a4a1
+S|R60S_120|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 2373 nps 2373000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 3080 nps 3080000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 3530 nps 3530000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 86 nps 86000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 3984 nps 3984000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_120|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 4592 nps 4592000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 5177 nps 5177000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 5737 nps 5737000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 6240 nps 6240000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_120|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 6800 nps 6800000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 7441 nps 7441000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_120|OUT|bestmove a4a0
+S|R60S_120|TIMEOUT
+S|R60S_120|END|lines=19
+S|R60S_121|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0
+S|R60S_121|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_121|OUT|
+DRV error unhandled: [object Object]
+S|R60S_121|CMD|go depth 12
+S|R60S_121|OUT|info string Available processors: 0-15
+S|R60S_121|OUT|info string Using 4 threads
+S|R60S_121|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_121|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_121|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_121|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 700 nps 700000 hashfull 0 tbhits 0 time 1 pv a4a1
+S|R60S_121|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 2309 nps 2309000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_121|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 2899 nps 2899000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_121|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 3568 nps 3568000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_121|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 4119 nps 4119000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_121|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 4868 nps 4868000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_121|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 5458 nps 5458000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_121|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 5979 nps 5979000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_121|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 6658 nps 3329000 hashfull 0 tbhits 0 time 2 pv a4a2
+S|R60S_121|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 7385 nps 3692500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_121|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 8050 nps 4025000 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_121|OUT|bestmove a4a0
+S|R60S_121|TIMEOUT
+S|R60S_121|END|lines=19
+S|R60S_125|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1
+S|R60S_125|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_125|OUT|
+DRV error unhandled: [object Object]
+S|R60S_125|CMD|go depth 12
+S|R60S_125|OUT|info string Available processors: 0-15
+S|R60S_125|OUT|info string Using 4 threads
+S|R60S_125|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_125|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_125|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 17 nps 17000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 515 nps 515000 hashfull 0 tbhits 0 time 1 pv a4a1
+S|R60S_125|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 1079 nps 1079000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1734 nps 1734000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 2369 nps 2369000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 2884 nps 2884000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_125|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 3557 nps 3557000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 4199 nps 4199000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 4798 nps 4798000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 5367 nps 5367000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_125|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 5924 nps 5924000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 6435 nps 6435000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_125|OUT|bestmove a4a0
+S|R60S_125|TIMEOUT
+S|R60S_125|END|lines=19
+S|R60S_130|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1 a7c9 g1g6 c9a7 g6a6 a7c9
+S|R60S_130|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1 a7c9 g1g6 c9a7 g6a6 a7c9` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_130|OUT|
+DRV error unhandled: [object Object]
+S|R60S_130|CMD|go depth 12
+S|R60S_130|OUT|info string Available processors: 0-15
+S|R60S_130|OUT|info string Using 4 threads
+S|R60S_130|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_130|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_130|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 35 nps 35000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_130|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 808 nps 808000 hashfull 0 tbhits 0 time 1 pv a4a1
+S|R60S_130|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 1390 nps 1390000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_130|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 2021 nps 2021000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_130|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 2670 nps 2670000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_130|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 3381 nps 3381000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_130|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 3911 nps 3911000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_130|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 4462 nps 4462000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_130|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 5067 nps 5067000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_130|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 5603 nps 5603000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_130|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 6127 nps 3063500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_130|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 6640 nps 3320000 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_130|OUT|bestmove a4a0
+S|R60S_130|TIMEOUT
+S|R60S_130|END|lines=19
+S|R60S_140|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1 a7c9 g1g6 c9a7 g6a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6h6 c9a7 h6c6 a7c9 c6c0 c9a7
+S|R60S_140|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1 a7c9 g1g6 c9a7 g6a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6h6 c9a7 h6c6 a7c9 c6c0 c9a7` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_140|OUT|
+DRV error unhandled: [object Object]
+S|R60S_140|CMD|go depth 12
+S|R60S_140|OUT|info string Available processors: 0-15
+S|R60S_140|OUT|info string Using 4 threads
+S|R60S_140|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_140|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_140|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 511 nps 511000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_140|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 1384 nps 1384000 hashfull 0 tbhits 0 time 1 pv a4a1
+S|R60S_140|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 2159 nps 2159000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_140|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 2825 nps 2825000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_140|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 3534 nps 3534000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_140|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 4265 nps 4265000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_140|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 4909 nps 2454500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_140|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 5617 nps 2808500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_140|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 6253 nps 3126500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_140|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 6847 nps 3423500 hashfull 0 tbhits 0 time 2 pv a4a2
+S|R60S_140|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 7549 nps 3774500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_140|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 8257 nps 4128500 hashfull 0 tbhits 0 time 2 pv a4a0
+S|R60S_140|OUT|bestmove a4a0
+S|R60S_140|TIMEOUT
+S|R60S_140|END|lines=19
+S|R60S_149|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1 a7c9 g1g6 c9a7 g6a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6h6 c9a7 h6c6 a7c9 c6c0 c9a7 c0c8 a7c9 c8c1 c9a7 c1c7 a7c9 c7c2 c9a7 c2c5
+S|R60S_149|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1 a7c9 g1g6 c9a7 g6a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6h6 c9a7 h6c6 a7c9 c6c0 c9a7 c0c8 a7c9 c8c1 c9a7 c1c7 a7c9 c7c2 c9a7 c2c5` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_149|OUT|
+DRV error unhandled: [object Object]
+S|R60S_149|CMD|go depth 12
+S|R60S_149|OUT|info string Available processors: 0-15
+S|R60S_149|OUT|info string Using 4 threads
+S|R60S_149|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_149|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_149|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 51 nps 51000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 964 nps 964000 hashfull 0 tbhits 0 time 1 pv a4a1
+S|R60S_149|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 1639 nps 1639000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 2314 nps 2314000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 2942 nps 2942000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 3502 nps 3502000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_149|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 3933 nps 3933000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 4409 nps 4409000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 4917 nps 4917000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 5525 nps 5525000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_149|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 6087 nps 6087000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 6684 nps 6684000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_149|OUT|bestmove a4a0
+S|R60S_149|TIMEOUT
+S|R60S_149|END|lines=19
+S|R60S_150|CMD|position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1 a7c9 g1g6 c9a7 g6a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6h6 c9a7 h6c6 a7c9 c6c0 c9a7 c0c8 a7c9 c8c1 c9a7 c1c7 a7c9 c7c2 c9a7 c2c5 a7c9
+S|R60S_150|OUT|info string CRITICAL ERROR: Command `position fen 2b1k4/9/9/9/9/R8/9/9/9/8K w - - 0 1 moves a4i4 c9a7 i4a4 a7c5 a4i4 c5e7 i4a4 e7g9 a4i4 g9i7 i4a4 i7g5 a4i4 e9e8 i4a4 g5e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 e8e7 a4i4 c5a7 i4a4 a7c9 a4i4 e7d7 i4a4 c9a7 a4i4 a7c5 i4a4 c5e7 a4i4 e7g9 i4a4 g9i7 a4i4 i7g5 i4a4 d7d8 a4i4 g5e7 i4a4 e7g9 a4i4 g9i7 i4a4 d8d9 a4i4 i7g9 i4a4 g9e7 a4i4 e7c9 i4a4 c9a7 a4i4 a7c5 i4a4 d9d8 a4i4 c5a7 i4a4 a7c9 a4i4 c9a7 i4b4 a7c9 b4h4 c9a7 h4h9 a7c9 h9h0 c9a7 h0h7 a7c9 h7a7 d8d9 a7i7 c9a7 i7b7 a7c9 b7b0 c9a7 b0b8 a7c5 b8b0 c5e7 b0b8 e7c9 b8b1 c9a7 b1i1 a7c9 i1a1 c9a7 a1h1 a7c9 h1h8 c9a7 h8h0 a7c9 h0h7 c9a7 h7h2 a7c9 h2a2 c9a7 a2i2 a7c9 i2b2 c9a7 b2g2 a7c9 g2g8 c9a7 g8g0 a7c9 g0g7 c9a7 g7g1 a7c9 g1g6 c9a7 g6a6 a7c9 a6i6 c9a7 i6b6 a7c9 b6h6 c9a7 h6c6 a7c9 c6c0 c9a7 c0c8 a7c9 c8c1 c9a7 c1c7 a7c9 c7c2 c9a7 c2c5 a7c9` failed. Reason: Unsupported position. WHITE king(s) on invalid positions.
+S|R60S_150|OUT|
+DRV error unhandled: [object Object]
+S|R60S_150|CMD|go depth 12
+S|R60S_150|OUT|info string Available processors: 0-15
+S|R60S_150|OUT|info string Using 4 threads
+S|R60S_150|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|R60S_150|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|R60S_150|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 17 nps 17000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 544 nps 544000 hashfull 0 tbhits 0 time 1 pv a4a1
+S|R60S_150|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 1181 nps 1181000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1781 nps 1781000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 2447 nps 2447000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 3115 nps 3115000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_150|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 3929 nps 3929000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 4502 nps 4502000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 5133 nps 5133000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 5868 nps 5868000 hashfull 0 tbhits 0 time 1 pv a4a2
+S|R60S_150|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 6520 nps 6520000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 7237 nps 7237000 hashfull 0 tbhits 0 time 1 pv a4a0
+S|R60S_150|OUT|bestmove a4a0
+S|R60S_150|TIMEOUT
+S|R60S_150|END|lines=19
+DRV DONE steps=9

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>pkw bench coi</title></head>
+<body>
+<script>
+// Test: NO COOP/COEP headers from server (GitHub-Pages-like), cross-origin isolation via coi-serviceworker.
+function log(s) {
+  fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {});
+  console.log(s);
+}
+log('coi test: crossOriginIsolated=' + self.crossOriginIsolated + ' SAB=' + (typeof SharedArrayBuffer !== 'undefined'));
+
+if (!self.crossOriginIsolated) {
+  log('not isolated -> registering coi-serviceworker and reloading');
+  navigator.serviceWorker.register('./coi-serviceworker.js').then(() => {
+    log('SW registered, reloading...');
+    location.reload();
+  }).catch(e => log('SW register failed: ' + e));
+} else {
+  log('ISOLATED OK, running engine');
+  runEngine();
+}
+
+function runEngine() {
+  const QS = new URLSearchParams(location.search);
+  window.THREADS = +(QS.get('threads') || 4);
+  const worker = new Worker('./worker.js');
+  const lines = [];
+  worker.onmessage = (ev) => {
+    const d = ev.data;
+    if (d.type === 'net-progress') {
+      if (d.loaded === d.total) log('net-progress DONE ' + d.loaded + '/' + d.total);
+    } else if (d.type === 'ready') {
+      log('READY');
+      worker.postMessage({ type: 'command', command: 'uci' });
+      setTimeout(() => worker.postMessage({ type: 'command', command: 'setoption name Threads value ' + window.THREADS }), 1500);
+      setTimeout(() => worker.postMessage({ type: 'command', command: 'setoption name Hash value 256' }), 1600);
+      setTimeout(runBench, 3500);
+    } else if (d.type === 'line') {
+      lines.push(d.line);
+      if (/NNUE evaluation|bestmove|uciok/.test(d.line)) log('LINE: ' + d.line);
+    } else if (d.type === 'stderr') {
+      log('STDERR: ' + d.line);
+    } else if (d.type === 'error') {
+      log('ERROR: ' + d.error);
+    }
+  };
+  async function search(ms) {
+    const mark = lines.length;
+    worker.postMessage({ type: 'command', command: 'position fen rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1' });
+    worker.postMessage({ type: 'command', command: 'go movetime ' + ms });
+    await new Promise(r => setTimeout(r, ms + 3000));
+    let depth = 0, nodes = 0, score = null, move = null;
+    for (let i = mark; i < lines.length; i++) {
+      const l = lines[i];
+      const dd = /info depth (\d+)/.exec(l); if (dd) depth = Math.max(depth, +dd[1]);
+      const nn = /nodes (\d+)/.exec(l); if (nn) nodes = Math.max(nodes, +nn[1]);
+      const ss = /score (cp (-?\d+)|mate (-?\d+))/.exec(l); if (ss) score = ss[2] !== undefined ? +ss[2] : (ss[3] > 0 ? 99999 : -99999);
+      if (/^bestmove /.test(l)) move = l.split(/\s+/)[1];
+    }
+    return { depth, nodes, score, move };
+  }
+  async function runBench() {
+    log('BENCH START threads=' + window.THREADS);
+    for (const ms of [500, 2000, 6000]) {
+      const r = await search(ms);
+      log('BENCH ' + ms + 'ms -> depth ' + r.depth + ' nodes ' + r.nodes + ' score ' + r.score + ' move ' + r.move);
+    }
+    log('BENCH DONE');
+  }
+  worker.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' });
+}
+</script>
+</body>
+</html>

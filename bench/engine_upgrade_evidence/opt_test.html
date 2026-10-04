@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>option behavior test</title></head>
+<body>
+<script>
+// Tests how the mistboard (2026-09) build reacts to the options the game's bridge sends today:
+// Repetition Rule / Draw Rule / Sixty Move Rule / MultiPV / UCI_LimitStrength / UCI_Elo.
+// Also checks MultiPV candidate output and 'No such option' replies.
+const LOG = (s) => { fetch('/__log', { method: 'POST', body: String(s) }).catch(() => {}); };
+if (!self.crossOriginIsolated) {
+  const t = +(sessionStorage.getItem('optN') || 0);
+  sessionStorage.setItem('optN', String(t + 1));
+  if (t < 3) { navigator.serviceWorker.register('./coi-serviceworker.js').then(() => location.reload()).catch(e => LOG('OPT SW fail ' + e)); }
+  else { LOG('OPT: gave up'); }
+} else {
+  run();
+}
+function run() {
+  LOG('OPT: isolated, start');
+  const w = new Worker('./worker_mb.js');
+  const lines = [];
+  let phase = 0;
+  w.onmessage = (ev) => {
+    const d = ev.data || {};
+    if (d.type === 'line') {
+      lines.push(d.line);
+      if (/No such option|Unknown option|error/i.test(d.line)) LOG('OPT!! ' + d.line);
+    }
+    if (d.type === 'stderr') { LOG('OPTerr: ' + d.line); }
+    if (d.type === 'ready') {
+      w.postMessage({ type: 'command', command: 'uci' });
+      setTimeout(() => {
+        // exact option sequence the bridge sends today
+        LOG('OPT: sending bridge-style options');
+        w.postMessage({ type: 'command', command: 'setoption name Repetition Rule value AsianRule' });
+        w.postMessage({ type: 'command', command: 'setoption name Draw Rule value None' });
+        w.postMessage({ type: 'command', command: 'setoption name Sixty Move Rule value false' });
+        w.postMessage({ type: 'command', command: 'setoption name MultiPV value 4' });
+        w.postMessage({ type: 'command', command: 'setoption name UCI_LimitStrength value true' });
+        w.postMessage({ type: 'command', command: 'setoption name UCI_Elo value 1400' });
+        w.postMessage({ type: 'command', command: 'isready' });
+        setTimeout(() => {
+          w.postMessage({ type: 'command', command: 'position fen rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1' });
+          w.postMessage({ type: 'command', command: 'go movetime 1500' });
+        }, 1200);
+        setTimeout(() => {
+          // count multipv outputs from the last search
+          const recent = lines.slice(-200);
+          const mpvs = {};
+          for (const l of recent) { const m = /multipv (\d+)/.exec(l); if (m) mpvs[m[1]] = (mpvs[m[1]] || 0) + 1; }
+          LOG('OPT multipv keys seen: ' + JSON.stringify(Object.keys(mpvs)));
+          const bm = recent.filter(l => /^bestmove/.test(l));
+          LOG('OPT bestmove: ' + JSON.stringify(bm.slice(-1)));
+          LOG('OPT DONE');
+          document.title = 'DONE';
+        }, 4200);
+      }, 2000);
+    }
+    if (d.type === 'error') { LOG('OPT error ' + d.error); }
+  };
+  w.postMessage({ type: 'init', jsUrl: './pikafish.js', wasmUrl: './pikafish.wasm', netUrl: './pikafish.nnue' });
+}
+</script>
+</body>
+</html>

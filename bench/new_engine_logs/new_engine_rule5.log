@@ -1,0 +1,567 @@
+DRV: not isolated, registering SW (try 0)
+DRV: isolated ok, task=task_rule5.json
+DRV: engine ready
+S|PERP_R0|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1
+S|PERP_R0|CMD|go depth 15
+S|PERP_R0|OUT|info string Available processors: 0-15
+S|PERP_R0|OUT|info string Using 4 threads
+S|PERP_R0|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|PERP_R0|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|PERP_R0|OUT|info depth 1 seldepth 3 multipv 1 score cp -43 nodes 148 nps 29600 hashfull 0 tbhits 0 time 5 pv c9d7 e9e8
+S|PERP_R0|OUT|info depth 2 seldepth 5 multipv 1 score cp -5 nodes 943 nps 157166 hashfull 0 tbhits 0 time 6 pv d2d1
+S|PERP_R0|OUT|info depth 3 seldepth 4 multipv 1 score cp -6 nodes 1153 nps 192166 hashfull 0 tbhits 0 time 6 pv c9b7
+S|PERP_R0|OUT|info depth 4 seldepth 7 multipv 1 score cp -3 nodes 1416 nps 202285 hashfull 0 tbhits 0 time 7 pv d2d1
+S|PERP_R0|OUT|info depth 5 seldepth 10 multipv 1 score cp 0 nodes 2047 nps 292428 hashfull 0 tbhits 0 time 7 pv c9b7
+S|PERP_R0|OUT|info depth 6 seldepth 11 multipv 1 score cp 3 nodes 3581 nps 397888 hashfull 0 tbhits 0 time 9 pv c9d7 e9d9 d2e2 a0b0
+S|PERP_R0|OUT|info depth 7 seldepth 8 multipv 1 score cp 4 nodes 3949 nps 394900 hashfull 0 tbhits 0 time 10 pv c9d7 e9e8 d7f6 e8f8
+S|PERP_R0|OUT|info depth 8 seldepth 9 multipv 1 score cp 9 nodes 4082 nps 408200 hashfull 0 tbhits 0 time 10 pv c9d7 e9d9
+S|PERP_R0|OUT|info depth 9 seldepth 11 multipv 1 score cp 11 nodes 4613 nps 384416 hashfull 0 tbhits 0 time 12 pv c9d7 e9f9 d7e5
+S|PERP_R0|OUT|info depth 10 seldepth 12 multipv 1 score cp 15 nodes 7389 nps 527785 hashfull 0 tbhits 0 time 14 pv c9d7 e9d9 d2e2 a0b0 d7f6 b0c0 f6e8
+S|PERP_R0|OUT|info depth 11 seldepth 13 multipv 1 score cp 16 nodes 8916 nps 594400 hashfull 0 tbhits 0 time 15 pv c9d7 e9d9 d2e2 a0b0 d7e9 b0c0 e9f7
+S|PERP_R0|OUT|info depth 12 seldepth 16 multipv 1 score cp 20 nodes 15293 nps 804894 hashfull 0 tbhits 0 time 19 pv c9d7 e9e8 d7c5 a0b0 c5b3 e8e7 b3a1
+S|PERP_R0|OUT|info depth 13 seldepth 14 multipv 1 score cp 22 nodes 23119 nps 1100904 hashfull 0 tbhits 0 time 21 pv c9d7 e9e8 d7c5 a0b0 c5e4 e8f8 d2e2 b0c0 e2e1 f8f7
+S|PERP_R0|OUT|info depth 14 seldepth 15 multipv 1 score cp 25 nodes 31187 nps 1355956 hashfull 1 tbhits 0 time 23 pv c9d7 e9e8 d7f6 e8e7 f6g4 a0b0 d2d1 b0c0 g4h6 e7e8
+S|PERP_R0|OUT|info depth 15 seldepth 17 multipv 1 score cp 26 nodes 35898 nps 1435920 hashfull 1 tbhits 0 time 25 pv c9d7 e9e8 d7f6 e8e7 f6g4 a0b0 g4e3 b0c0 e3c2 e7f7
+S|PERP_R0|OUT|bestmove c9d7 ponder e9e8
+S|PERP_R0|TIMEOUT
+S|PERP_R0|END|lines=20
+S|PERP_R2|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9
+S|PERP_R2|CMD|go depth 15
+S|PERP_R2|OUT|info string Available processors: 0-15
+S|PERP_R2|OUT|info string Using 4 threads
+S|PERP_R2|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|PERP_R2|OUT|info depth 1 seldepth 8 multipv 1 score cp 21 nodes 95 nps 95000 hashfull 0 tbhits 0 time 1 pv c9a8
+S|PERP_R2|OUT|info depth 2 seldepth 5 multipv 1 score cp -9 nodes 349 nps 349000 hashfull 0 tbhits 0 time 1 pv c9e8
+S|PERP_R2|OUT|info depth 3 seldepth 10 multipv 1 score cp 18 nodes 705 nps 705000 hashfull 0 tbhits 0 time 1 pv c9a8
+S|PERP_R2|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|PERP_R2|OUT|info depth 4 seldepth 5 multipv 1 score cp 21 nodes 981 nps 981000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|PERP_R2|OUT|info depth 5 seldepth 4 multipv 1 score cp 24 nodes 1299 nps 1299000 hashfull 0 tbhits 0 time 1 pv c9a8 a0b0
+S|PERP_R2|OUT|info depth 6 seldepth 6 multipv 1 score cp 29 nodes 1659 nps 1659000 hashfull 0 tbhits 0 time 1 pv c9a8 a0b0 a8c7 e9f9
+S|PERP_R2|OUT|info depth 7 seldepth 7 multipv 1 score cp 32 nodes 2180 nps 2180000 hashfull 0 tbhits 0 time 1 pv c9a8 a0b0 a8c7 b0a0
+S|PERP_R2|OUT|info depth 8 seldepth 10 multipv 1 score cp 34 nodes 3266 nps 3266000 hashfull 0 tbhits 0 time 1 pv c9a8 e9e8
+S|PERP_R2|OUT|info depth 9 seldepth 15 multipv 1 score cp 41 nodes 7378 nps 3689000 hashfull 0 tbhits 0 time 2 pv c9a8 e9e8 a8c7 e8e7 c7d5 e7d7 d2e2 a0b0 e2e1 d7d8
+S|PERP_R2|OUT|info depth 10 seldepth 14 multipv 1 score cp 42 nodes 8618 nps 2872666 hashfull 0 tbhits 0 time 3 pv c9a8 e9e8 a8c7 e8e7 c7d5 e7d7 d2e2 d7d8 e2f2
+S|PERP_R2|OUT|info depth 11 seldepth 16 multipv 1 score cp 38 nodes 12988 nps 3247000 hashfull 0 tbhits 0 time 4 pv c9a8 e9e8 a8b6 a0b0 b6c8 b0c0 c8d6 e8e7
+S|PERP_R2|OUT|info depth 12 seldepth 24 multipv 1 score cp 18 nodes 43796 nps 4379600 hashfull 1 tbhits 0 time 10 pv c9a8 e9e8 a8c7 e8e9 c7d5 a0b0 d5f6 b0c0 d2d1 c0b0 f6d7 e9e8 d7e5
+S|PERP_R2|OUT|info depth 13 seldepth 19 multipv 1 score cp 20 nodes 53612 nps 4467666 hashfull 1 tbhits 0 time 12 pv c9a8 e9e8 a8c7 e8e7 c7e6 a0b0 e6d4
+S|PERP_R2|OUT|info depth 14 seldepth 25 multipv 1 score cp 8 nodes 114457 nps 5202590 hashfull 1 tbhits 0 time 22 pv c9b7 e9e8 b7d6 e8e7 d6f5 e7e8 d2d1 a0b0 f5d4 b0c0 d4c6 c0b0 c6e5 b0c0
+S|PERP_R2|OUT|info depth 15 seldepth 25 multipv 1 score cp 5 nodes 124731 nps 5423086 hashfull 1 tbhits 0 time 23 pv c9b7 e9e8 b7d6 e8e7 d6f5 e7e8 f5g7 e8e7 d2d1 a0b0 g7f5 e7e8 f5d6 e8e7 d6c8 e7e8
+S|PERP_R2|OUT|bestmove c9b7 ponder e9e8
+S|PERP_R2|TIMEOUT
+S|PERP_R2|END|lines=20
+S|PERP_R3|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/p8 w - - 0 1 moves c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9 c9d7 e9e8 d7c9 e8e9
+S|PERP_R3|CMD|go depth 15
+S|PERP_R3|OUT|info string Available processors: 0-15
+S|PERP_R3|OUT|info string Using 4 threads
+S|PERP_R3|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|PERP_R3|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|PERP_R3|OUT|info depth 1 seldepth 5 multipv 1 score cp 5 nodes 11 nps 11000 hashfull 0 tbhits 0 time 1 pv c9b7 e9e8 b7d6 e8e7
+S|PERP_R3|OUT|info depth 2 seldepth 2 multipv 1 score cp 5 nodes 227 nps 227000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|PERP_R3|OUT|info depth 3 seldepth 5 multipv 1 score cp 4 nodes 709 nps 709000 hashfull 0 tbhits 0 time 1 pv c9b7 a0b0
+S|PERP_R3|OUT|info depth 4 seldepth 9 multipv 1 score cp 9 nodes 1419 nps 1419000 hashfull 0 tbhits 0 time 1 pv c9b7 e9e8
+S|PERP_R3|OUT|info depth 5 seldepth 5 multipv 1 score cp 6 nodes 1720 nps 1720000 hashfull 0 tbhits 0 time 1 pv c9b7 a0b0 b7d6 b0a0
+S|PERP_R3|OUT|info depth 7 seldepth 9 multipv 1 score cp 4 nodes 2971 nps 2971000 hashfull 0 tbhits 0 time 1 pv c9a8 a0b0 a8c7 b0a0 d2d1 a0b0 c7e6
+S|PERP_R3|OUT|info depth 8 seldepth 14 multipv 1 score cp 2 nodes 4868 nps 2434000 hashfull 0 tbhits 0 time 2 pv c9a8 a0b0 a8b6 e9e8 b6d5 b0c0 d5f6 e8e7 d2d1 c0b0 f6d7
+S|PERP_R3|OUT|info depth 6 seldepth 9 multipv 1 score cp 4 nodes 2190 nps 2190000 hashfull 0 tbhits 0 time 1 pv c9a8 a0b0 a8c7 b0a0
+S|PERP_R3|OUT|info depth 9 seldepth 10 multipv 1 score cp 4 nodes 5611 nps 2805500 hashfull 0 tbhits 0 time 2 pv d2d1 a0b0 c9b7 e9e8 d1d2
+S|PERP_R3|OUT|info depth 10 seldepth 17 multipv 1 score cp 2 nodes 8134 nps 2711333 hashfull 0 tbhits 0 time 3 pv c9b7 a0b0 b7d6 b0a0 d6e4 e9e8 e4f6 e8e7 f6g8 e7e8
+S|PERP_R3|OUT|info depth 11 seldepth 14 multipv 1 score cp 3 nodes 9195 nps 3065000 hashfull 0 tbhits 0 time 3 pv c9b7 e9e8 b7d6 e8e7 d6e4 a0b0 e4f6 b0a0 f6g8 e7e8 g8i7
+S|PERP_R3|OUT|info depth 12 seldepth 17 multipv 1 score cp 3 nodes 11857 nps 2964250 hashfull 0 tbhits 0 time 4 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 f6g8 e7e8 g8h6 b0a0 h6f5 a0b0 f5d6 e8e7 d6e4 e7e8
+S|PERP_R3|OUT|info depth 13 seldepth 22 multipv 1 score cp 1 nodes 16363 nps 4090750 hashfull 0 tbhits 0 time 4 pv d2d1 a0b0 c9d7 e9e8 d7e5 e8e7 e5g4 e7e8 d1d2 b0c0 g4f6 e8e7 f6g8 e7e8 g8i7 c0b0 i7h5
+S|PERP_R3|OUT|info depth 14 seldepth 23 multipv 1 score cp 0 nodes 31807 nps 3975875 hashfull 0 tbhits 0 time 8 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 f6g4 e7e8 d1d2 b0c0 g4f6 e8e7 f6g8 e7e8 g8h6
+S|PERP_R3|OUT|info depth 15 seldepth 22 multipv 1 score cp 0 nodes 46924 nps 4265818 hashfull 0 tbhits 0 time 11 pv d2d1 a0b0 c9d7 e9e8 d7f6 e8e7 f6g4 e7e8 d1d2 b0c0 g4f6 e8e7 f6g8 e7e8 d2d1 c0b0 g8f6
+S|PERP_R3|OUT|bestmove d2d1 ponder a0b0
+S|PERP_R3|TIMEOUT
+S|PERP_R3|END|lines=20
+S|B60_M1_116|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 116 1
+S|B60_M1_116|CMD|go depth 14
+S|B60_M1_116|OUT|info string Available processors: 0-15
+S|B60_M1_116|OUT|info string Using 4 threads
+S|B60_M1_116|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M1_116|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M1_116|OUT|info depth 1 seldepth 3 multipv 1 score cp 912 nodes 99 nps 99000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8
+S|B60_M1_116|OUT|info depth 2 seldepth 4 multipv 1 score cp 984 nodes 396 nps 396000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8
+S|B60_M1_116|OUT|info depth 3 seldepth 3 multipv 1 score cp 947 nodes 548 nps 548000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8
+S|B60_M1_116|OUT|info depth 4 seldepth 7 multipv 1 score cp 988 nodes 752 nps 752000 hashfull 0 tbhits 0 time 1 pv d8e8 e9e8 f5b5
+S|B60_M1_116|OUT|info depth 5 seldepth 7 multipv 1 score cp 1004 nodes 1398 nps 699000 hashfull 0 tbhits 0 time 2 pv d8e8 e9e8 f5f2 e8e9 f2e2 e9f9
+S|B60_M1_116|OUT|info depth 6 seldepth 7 multipv 1 score cp 1008 nodes 1700 nps 850000 hashfull 0 tbhits 0 time 2 pv d8e8 e9e8 f5f4
+S|B60_M1_116|OUT|info depth 7 seldepth 12 multipv 1 score cp 1032 nodes 2161 nps 1080500 hashfull 0 tbhits 0 time 2 pv d8e8 e9e8 f5f2 e8e9 f2e2 e9f9 e2e0 f9f8 e0e1 f8f9 d0e0
+S|B60_M1_116|OUT|info depth 9 seldepth 6 multipv 1 score mate 3 nodes 3184 nps 1592000 hashfull 0 tbhits 0 time 2 pv d8e8 e9e8 f5f4 e8e9 f4f8
+S|B60_M1_116|OUT|info depth 10 seldepth 6 multipv 1 score mate 1 nodes 3705 nps 1852500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_116|OUT|info depth 8 seldepth 10 multipv 1 score mate 5 nodes 2479 nps 1239500 hashfull 0 tbhits 0 time 2 pv d8e8 e9e8 f5f2 e8e9 f2e2 e9f9 d0e0 f9f8 e2f2
+S|B60_M1_116|OUT|info depth 11 seldepth 2 multipv 1 score mate 1 nodes 4103 nps 2051500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_116|OUT|info depth 12 seldepth 2 multipv 1 score mate 1 nodes 4569 nps 2284500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_116|OUT|info depth 13 seldepth 2 multipv 1 score mate 1 nodes 4942 nps 1647333 hashfull 0 tbhits 0 time 3 pv f5f0
+S|B60_M1_116|OUT|info depth 14 seldepth 2 multipv 1 score mate 1 nodes 5362 nps 1787333 hashfull 0 tbhits 0 time 3 pv f5f0
+S|B60_M1_116|OUT|bestmove f5f0
+S|B60_M1_116|TIMEOUT
+S|B60_M1_116|END|lines=19
+S|B60_M1_117|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 117 1
+S|B60_M1_117|CMD|go depth 14
+S|B60_M1_117|OUT|info string Available processors: 0-15
+S|B60_M1_117|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M1_117|OUT|info string Using 4 threads
+S|B60_M1_117|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M1_117|OUT|info depth 1 seldepth 3 multipv 1 score mate 1 nodes 105 nps 105000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 706 nps 706000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1323 nps 1323000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1954 nps 1954000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 3127 nps 3127000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 3765 nps 3765000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2606 nps 2606000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 4294 nps 4294000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 4945 nps 4945000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 5624 nps 5624000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 11 seldepth 2 multipv 1 score mate 1 nodes 6154 nps 6154000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 12 seldepth 2 multipv 1 score mate 1 nodes 6625 nps 6625000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_117|OUT|info depth 13 seldepth 2 multipv 1 score mate 1 nodes 7186 nps 3593000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_117|OUT|info depth 14 seldepth 2 multipv 1 score mate 1 nodes 7852 nps 3926000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_117|OUT|bestmove f5f0
+S|B60_M1_117|TIMEOUT
+S|B60_M1_117|END|lines=19
+S|B60_M1_118|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 118 1
+S|B60_M1_118|CMD|go depth 14
+S|B60_M1_118|OUT|info string Available processors: 0-15
+S|B60_M1_118|OUT|info string Using 4 threads
+S|B60_M1_118|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M1_118|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 96 nps 96000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_118|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M1_118|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 939 nps 939000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_118|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1543 nps 1543000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_118|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 2126 nps 2126000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_118|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2619 nps 2619000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_118|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 3185 nps 1592500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_118|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 3875 nps 1937500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_118|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 4342 nps 2171000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_118|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 4848 nps 2424000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_118|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 5413 nps 2706500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_118|OUT|info depth 11 seldepth 2 multipv 1 score mate 1 nodes 5954 nps 2977000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_118|OUT|info depth 12 seldepth 2 multipv 1 score mate 1 nodes 6447 nps 3223500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_118|OUT|info depth 13 seldepth 2 multipv 1 score mate 1 nodes 6965 nps 3482500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_118|OUT|info depth 14 seldepth 2 multipv 1 score mate 1 nodes 7386 nps 2462000 hashfull 0 tbhits 0 time 3 pv f5f0
+S|B60_M1_118|OUT|bestmove f5f0
+S|B60_M1_118|TIMEOUT
+S|B60_M1_118|END|lines=19
+S|B60_M1_119|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 119 1
+S|B60_M1_119|CMD|go depth 14
+S|B60_M1_119|OUT|info string Available processors: 0-15
+S|B60_M1_119|OUT|info string Using 4 threads
+S|B60_M1_119|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M1_119|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M1_119|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 295 nps 295000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 890 nps 890000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1343 nps 1343000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1666 nps 1666000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2104 nps 2104000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 2541 nps 2541000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 2994 nps 2994000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 3377 nps 3377000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 3758 nps 3758000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_119|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 4239 nps 2119500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_119|OUT|info depth 11 seldepth 2 multipv 1 score mate 1 nodes 4642 nps 2321000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_119|OUT|info depth 12 seldepth 2 multipv 1 score mate 1 nodes 5085 nps 2542500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_119|OUT|info depth 13 seldepth 2 multipv 1 score mate 1 nodes 5482 nps 2741000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_119|OUT|info depth 14 seldepth 2 multipv 1 score mate 1 nodes 5937 nps 2968500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_119|OUT|bestmove f5f0
+S|B60_M1_119|TIMEOUT
+S|B60_M1_119|END|lines=19
+S|B60_M1_120|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 1
+S|B60_M1_120|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|B60_M1_120|OUT|
+DRV error unhandled: [object Object]
+S|B60_M1_120|CMD|go depth 14
+S|B60_M1_120|OUT|info string Available processors: 0-15
+S|B60_M1_120|OUT|info string Using 4 threads
+S|B60_M1_120|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M1_120|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M1_120|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 48 nps 48000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 551 nps 551000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1030 nps 1030000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1455 nps 1455000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 1856 nps 1856000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 2355 nps 2355000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 2830 nps 2830000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 3279 nps 3279000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 3673 nps 3673000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 4069 nps 4069000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 11 seldepth 2 multipv 1 score mate 1 nodes 4532 nps 4532000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 12 seldepth 2 multipv 1 score mate 1 nodes 4969 nps 4969000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 13 seldepth 2 multipv 1 score mate 1 nodes 5260 nps 5260000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|info depth 14 seldepth 2 multipv 1 score mate 1 nodes 5680 nps 5680000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_120|OUT|bestmove f5f0
+S|B60_M1_120|TIMEOUT
+S|B60_M1_120|END|lines=21
+S|B60_M1_121|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 1
+S|B60_M1_121|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|B60_M1_121|OUT|
+DRV error unhandled: [object Object]
+S|B60_M1_121|CMD|go depth 14
+S|B60_M1_121|OUT|info string Available processors: 0-15
+S|B60_M1_121|OUT|info string Using 4 threads
+S|B60_M1_121|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M1_121|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M1_121|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 1341 nps 1341000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 66 nps 66000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1876 nps 1876000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 2336 nps 2336000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2857 nps 2857000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 3534 nps 3534000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 4205 nps 4205000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 4737 nps 4737000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 5216 nps 5216000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 5654 nps 5654000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_121|OUT|info depth 11 seldepth 2 multipv 1 score mate 1 nodes 6124 nps 3062000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_121|OUT|info depth 12 seldepth 2 multipv 1 score mate 1 nodes 6516 nps 3258000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_121|OUT|info depth 13 seldepth 2 multipv 1 score mate 1 nodes 6919 nps 3459500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_121|OUT|info depth 14 seldepth 2 multipv 1 score mate 1 nodes 7314 nps 3657000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_121|OUT|bestmove f5f0
+S|B60_M1_121|TIMEOUT
+S|B60_M1_121|END|lines=21
+S|B60_M1_125|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 125 1
+S|B60_M1_125|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 125 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|B60_M1_125|OUT|
+DRV error unhandled: [object Object]
+S|B60_M1_125|CMD|go depth 14
+S|B60_M1_125|OUT|info string Available processors: 0-15
+S|B60_M1_125|OUT|info string Using 4 threads
+S|B60_M1_125|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M1_125|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M1_125|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 50 nps 50000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 602 nps 602000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1058 nps 1058000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1511 nps 1511000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 1927 nps 1927000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 2375 nps 2375000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 2859 nps 2859000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 3188 nps 3188000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 3688 nps 3688000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 4275 nps 4275000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 11 seldepth 2 multipv 1 score mate 1 nodes 4775 nps 4775000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 12 seldepth 2 multipv 1 score mate 1 nodes 5339 nps 5339000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|B60_M1_125|OUT|info depth 13 seldepth 2 multipv 1 score mate 1 nodes 5967 nps 2983500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_125|OUT|info depth 14 seldepth 2 multipv 1 score mate 1 nodes 6590 nps 3295000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|B60_M1_125|OUT|bestmove f5f0
+S|B60_M1_125|TIMEOUT
+S|B60_M1_125|END|lines=21
+S|B60_M2_116|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 116 1
+S|B60_M2_116|CMD|go depth 14
+S|B60_M2_116|OUT|info string Available processors: 0-15
+S|B60_M2_116|OUT|info string Using 4 threads
+S|B60_M2_116|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M2_116|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M2_116|OUT|info depth 1 seldepth 3 multipv 1 score cp 418 nodes 8 nps 8000 hashfull 0 tbhits 0 time 1 pv c9d7 e9e8
+S|B60_M2_116|OUT|info depth 2 seldepth 4 multipv 1 score cp 361 nodes 207 nps 207000 hashfull 0 tbhits 0 time 1 pv d2d1
+S|B60_M2_116|OUT|info depth 3 seldepth 4 multipv 1 score mate 2 nodes 604 nps 604000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 4 seldepth 4 multipv 1 score mate 2 nodes 929 nps 929000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 5 seldepth 4 multipv 1 score mate 2 nodes 1296 nps 1296000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 6 seldepth 4 multipv 1 score mate 2 nodes 1669 nps 1669000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 7 seldepth 4 multipv 1 score mate 2 nodes 2039 nps 2039000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 8 seldepth 4 multipv 1 score mate 2 nodes 2440 nps 1220000 hashfull 0 tbhits 0 time 2 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 9 seldepth 4 multipv 1 score mate 2 nodes 2773 nps 1386500 hashfull 0 tbhits 0 time 2 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 11 seldepth 4 multipv 1 score mate 2 nodes 3816 nps 1908000 hashfull 0 tbhits 0 time 2 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 10 seldepth 4 multipv 1 score mate 2 nodes 3338 nps 1669000 hashfull 0 tbhits 0 time 2 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 12 seldepth 4 multipv 1 score mate 2 nodes 4191 nps 2095500 hashfull 0 tbhits 0 time 2 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 13 seldepth 4 multipv 1 score mate 2 nodes 4521 nps 2260500 hashfull 0 tbhits 0 time 2 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|info depth 14 seldepth 4 multipv 1 score mate 2 nodes 4855 nps 2427500 hashfull 0 tbhits 0 time 2 pv d2d1 e9f9 c9d7
+S|B60_M2_116|OUT|bestmove d2d1 ponder e9f9
+S|B60_M2_116|TIMEOUT
+S|B60_M2_116|END|lines=19
+S|B60_M2_117|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 117 1
+S|B60_M2_117|CMD|go depth 14
+S|B60_M2_117|OUT|info string Available processors: 0-15
+S|B60_M2_117|OUT|info string Using 4 threads
+S|B60_M2_117|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M2_117|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M2_117|OUT|info depth 1 seldepth 3 multipv 1 score cp 430 nodes 24 nps 24000 hashfull 0 tbhits 0 time 1 pv d2d1
+S|B60_M2_117|OUT|info depth 2 seldepth 4 multipv 1 score mate 2 nodes 449 nps 449000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 3 seldepth 4 multipv 1 score mate 2 nodes 764 nps 764000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 4 seldepth 4 multipv 1 score mate 2 nodes 1553 nps 1553000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 5 seldepth 4 multipv 1 score mate 2 nodes 1892 nps 1892000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 6 seldepth 4 multipv 1 score mate 2 nodes 2191 nps 2191000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 7 seldepth 4 multipv 1 score mate 2 nodes 2466 nps 2466000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 8 seldepth 4 multipv 1 score mate 2 nodes 2802 nps 2802000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 9 seldepth 4 multipv 1 score mate 2 nodes 3173 nps 3173000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 10 seldepth 4 multipv 1 score mate 2 nodes 3510 nps 3510000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 11 seldepth 4 multipv 1 score mate 2 nodes 3817 nps 3817000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 12 seldepth 4 multipv 1 score mate 2 nodes 4151 nps 4151000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 13 seldepth 4 multipv 1 score mate 2 nodes 4524 nps 4524000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|info depth 14 seldepth 4 multipv 1 score mate 2 nodes 4857 nps 4857000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9 c9d7
+S|B60_M2_117|OUT|bestmove d2d1 ponder e9f9
+S|B60_M2_117|TIMEOUT
+S|B60_M2_117|END|lines=19
+S|B60_M2_118|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 118 1
+S|B60_M2_118|CMD|go depth 14
+S|B60_M2_118|OUT|info string Available processors: 0-15
+S|B60_M2_118|OUT|info string Using 4 threads
+S|B60_M2_118|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M2_118|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M2_118|OUT|info depth 1 seldepth 2 multipv 1 score cp 11707 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv d2d1
+S|B60_M2_118|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 444 nps 444000 hashfull 0 tbhits 0 time 1 pv d2d1
+S|B60_M2_118|OUT|info depth 3 seldepth 3 multipv 1 score cp 0 nodes 850 nps 850000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 4 seldepth 3 multipv 1 score cp 0 nodes 1229 nps 1229000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 5 seldepth 3 multipv 1 score cp 0 nodes 1623 nps 1623000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 6 seldepth 3 multipv 1 score cp 0 nodes 1949 nps 1949000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 8 seldepth 3 multipv 1 score cp 0 nodes 2982 nps 2982000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 9 seldepth 3 multipv 1 score cp 0 nodes 3447 nps 3447000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 7 seldepth 3 multipv 1 score cp 0 nodes 2520 nps 2520000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 10 seldepth 3 multipv 1 score cp 0 nodes 3984 nps 3984000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 11 seldepth 3 multipv 1 score cp 0 nodes 4353 nps 4353000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 12 seldepth 3 multipv 1 score cp 0 nodes 4693 nps 4693000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 13 seldepth 3 multipv 1 score cp 0 nodes 5092 nps 5092000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|info depth 14 seldepth 3 multipv 1 score cp 0 nodes 5409 nps 5409000 hashfull 0 tbhits 0 time 1 pv d2d1 e9f9
+S|B60_M2_118|OUT|bestmove d2d1 ponder e9f9
+S|B60_M2_118|TIMEOUT
+S|B60_M2_118|END|lines=19
+S|B60_M2_119|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 119 1
+S|B60_M2_119|CMD|go depth 14
+S|B60_M2_119|OUT|info string Available processors: 0-15
+S|B60_M2_119|OUT|info string Using 4 threads
+S|B60_M2_119|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M2_119|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M2_119|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 71 nps 71000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_119|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 551 nps 551000 hashfull 0 tbhits 0 time 1 pv d2d1
+S|B60_M2_119|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 892 nps 892000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_119|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1225 nps 1225000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_119|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 1505 nps 1505000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_119|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 2081 nps 2081000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_119|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 2330 nps 2330000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_119|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 1780 nps 1780000 hashfull 0 tbhits 0 time 1 pv c9e8
+S|B60_M2_119|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 2572 nps 2572000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_119|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 2875 nps 2875000 hashfull 0 tbhits 0 time 1 pv c9e8
+S|B60_M2_119|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 3175 nps 3175000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_119|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 3454 nps 1727000 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_119|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 3605 nps 1802500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_119|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 3692 nps 1846000 hashfull 0 tbhits 0 time 2 pv c9e8
+S|B60_M2_119|OUT|bestmove c9e8
+S|B60_M2_119|TIMEOUT
+S|B60_M2_119|END|lines=19
+S|B60_M2_120|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 120 1
+S|B60_M2_120|OUT|info string CRITICAL ERROR: Command `position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 120 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|B60_M2_120|OUT|
+DRV error unhandled: [object Object]
+S|B60_M2_120|CMD|go depth 14
+S|B60_M2_120|OUT|info string Available processors: 0-15
+S|B60_M2_120|OUT|info string Using 4 threads
+S|B60_M2_120|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M2_120|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M2_120|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 18 nps 18000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_120|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 790 nps 790000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_120|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 531 nps 531000 hashfull 0 tbhits 0 time 1 pv c9a8
+S|B60_M2_120|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1157 nps 1157000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_120|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 1470 nps 1470000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_120|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 1774 nps 1774000 hashfull 0 tbhits 0 time 1 pv c9e8
+S|B60_M2_120|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 2219 nps 2219000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_120|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 2543 nps 2543000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_120|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 2760 nps 2760000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_120|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 2966 nps 2966000 hashfull 0 tbhits 0 time 1 pv c9e8
+S|B60_M2_120|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 3223 nps 1611500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_120|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 3423 nps 1711500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_120|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 3535 nps 1767500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_120|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 3656 nps 1828000 hashfull 0 tbhits 0 time 2 pv c9e8
+S|B60_M2_120|OUT|bestmove c9e8
+S|B60_M2_120|TIMEOUT
+S|B60_M2_120|END|lines=21
+S|B60_M2_121|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 121 1
+S|B60_M2_121|OUT|info string CRITICAL ERROR: Command `position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 121 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|B60_M2_121|OUT|
+DRV error unhandled: [object Object]
+S|B60_M2_121|CMD|go depth 14
+S|B60_M2_121|OUT|info string Available processors: 0-15
+S|B60_M2_121|OUT|info string Using 4 threads
+S|B60_M2_121|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M2_121|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M2_121|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 19 nps 19000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_121|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 326 nps 326000 hashfull 0 tbhits 0 time 1 pv c9a8
+S|B60_M2_121|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 619 nps 619000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_121|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1047 nps 1047000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_121|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 1337 nps 1337000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_121|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 1657 nps 1657000 hashfull 0 tbhits 0 time 1 pv c9e8
+S|B60_M2_121|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 2078 nps 2078000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_121|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 2388 nps 1194000 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_121|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 2747 nps 1373500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_121|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 3031 nps 1515500 hashfull 0 tbhits 0 time 2 pv c9e8
+S|B60_M2_121|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 3335 nps 1667500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_121|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 3425 nps 1712500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_121|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 3535 nps 1767500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_121|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 3694 nps 1847000 hashfull 0 tbhits 0 time 2 pv c9e8
+S|B60_M2_121|OUT|bestmove c9e8
+S|B60_M2_121|TIMEOUT
+S|B60_M2_121|END|lines=21
+S|B60_M2_125|CMD|position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 125 1
+S|B60_M2_125|OUT|info string CRITICAL ERROR: Command `position fen 2N1k4/9/9/9/9/9/9/3K5/9/9 w - - 125 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|B60_M2_125|OUT|
+DRV error unhandled: [object Object]
+S|B60_M2_125|CMD|go depth 14
+S|B60_M2_125|OUT|info string Available processors: 0-15
+S|B60_M2_125|OUT|info string Using 4 threads
+S|B60_M2_125|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|B60_M2_125|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|B60_M2_125|OUT|info depth 1 seldepth 2 multipv 1 score cp 0 nodes 221 nps 221000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_125|OUT|info depth 2 seldepth 2 multipv 1 score cp 0 nodes 661 nps 661000 hashfull 0 tbhits 0 time 1 pv c9a8
+S|B60_M2_125|OUT|info depth 3 seldepth 2 multipv 1 score cp 0 nodes 996 nps 996000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_125|OUT|info depth 4 seldepth 2 multipv 1 score cp 0 nodes 1236 nps 1236000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_125|OUT|info depth 5 seldepth 2 multipv 1 score cp 0 nodes 1473 nps 1473000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_125|OUT|info depth 6 seldepth 2 multipv 1 score cp 0 nodes 1786 nps 1786000 hashfull 0 tbhits 0 time 1 pv c9e8
+S|B60_M2_125|OUT|info depth 7 seldepth 2 multipv 1 score cp 0 nodes 2086 nps 2086000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_125|OUT|info depth 8 seldepth 2 multipv 1 score cp 0 nodes 2424 nps 2424000 hashfull 0 tbhits 0 time 1 pv c9b7
+S|B60_M2_125|OUT|info depth 9 seldepth 2 multipv 1 score cp 0 nodes 2750 nps 1375000 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_125|OUT|info depth 10 seldepth 2 multipv 1 score cp 0 nodes 3006 nps 1503000 hashfull 0 tbhits 0 time 2 pv c9e8
+S|B60_M2_125|OUT|info depth 11 seldepth 2 multipv 1 score cp 0 nodes 3180 nps 1590000 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_125|OUT|info depth 12 seldepth 2 multipv 1 score cp 0 nodes 3350 nps 1675000 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_125|OUT|info depth 13 seldepth 2 multipv 1 score cp 0 nodes 3545 nps 1772500 hashfull 0 tbhits 0 time 2 pv c9b7
+S|B60_M2_125|OUT|info depth 14 seldepth 2 multipv 1 score cp 0 nodes 3718 nps 1859000 hashfull 0 tbhits 0 time 2 pv c9e8
+S|B60_M2_125|OUT|bestmove c9e8
+S|B60_M2_125|TIMEOUT
+S|B60_M2_125|END|lines=21
+S|RNG_999_999|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 999
+S|RNG_999_999|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 999` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|RNG_999_999|OUT|
+DRV error unhandled: [object Object]
+S|RNG_999_999|CMD|go depth 10
+S|RNG_999_999|OUT|info string Available processors: 0-15
+S|RNG_999_999|OUT|info string Using 4 threads
+S|RNG_999_999|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|RNG_999_999|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|RNG_999_999|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 624 nps 624000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1163 nps 1163000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1716 nps 1716000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 117 nps 117000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2123 nps 2123000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 2640 nps 2640000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 3142 nps 3142000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 3645 nps 3645000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 3999 nps 3999000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 4475 nps 4475000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_999|OUT|bestmove f5f0
+S|RNG_999_999|TIMEOUT
+S|RNG_999_999|END|lines=17
+S|RNG_999_1|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 1
+S|RNG_999_1|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 999 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|RNG_999_1|OUT|
+DRV error unhandled: [object Object]
+S|RNG_999_1|CMD|go depth 10
+S|RNG_999_1|OUT|info string Available processors: 0-15
+S|RNG_999_1|OUT|info string Using 4 threads
+S|RNG_999_1|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|RNG_999_1|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|RNG_999_1|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 187 nps 187000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 893 nps 893000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1411 nps 1411000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1983 nps 1983000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2548 nps 2548000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 3024 nps 3024000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 3485 nps 3485000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 4074 nps 4074000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 4628 nps 4628000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 5076 nps 5076000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_999_1|OUT|bestmove f5f0
+S|RNG_999_1|TIMEOUT
+S|RNG_999_1|END|lines=17
+S|RNG_1000_1|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 1000 1
+S|RNG_1000_1|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 1000 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|RNG_1000_1|OUT|
+DRV error unhandled: [object Object]
+S|RNG_1000_1|CMD|go depth 10
+S|RNG_1000_1|OUT|info string Available processors: 0-15
+S|RNG_1000_1|OUT|info string Using 4 threads
+S|RNG_1000_1|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|RNG_1000_1|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|RNG_1000_1|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 42 nps 42000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 998 nps 998000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1495 nps 1495000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 541 nps 541000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2013 nps 2013000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 2424 nps 2424000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 2876 nps 2876000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 3314 nps 3314000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 3834 nps 3834000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 4338 nps 4338000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_1000_1|OUT|bestmove f5f0
+S|RNG_1000_1|TIMEOUT
+S|RNG_1000_1|END|lines=17
+S|RNG_10000_1|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 10000 1
+S|RNG_10000_1|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 10000 1` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|RNG_10000_1|OUT|
+DRV error unhandled: [object Object]
+S|RNG_10000_1|CMD|go depth 10
+S|RNG_10000_1|OUT|info string Available processors: 0-15
+S|RNG_10000_1|OUT|info string Using 4 threads
+S|RNG_10000_1|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|RNG_10000_1|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|RNG_10000_1|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 228 nps 228000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 962 nps 962000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1495 nps 1495000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1944 nps 1944000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2387 nps 2387000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 2895 nps 2895000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 3427 nps 3427000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 3868 nps 3868000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 4317 nps 4317000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 4730 nps 4730000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_10000_1|OUT|bestmove f5f0
+S|RNG_10000_1|TIMEOUT
+S|RNG_10000_1|END|lines=17
+S|RNG_120_999|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 999
+S|RNG_120_999|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 120 999` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|RNG_120_999|OUT|
+DRV error unhandled: [object Object]
+S|RNG_120_999|CMD|go depth 10
+S|RNG_120_999|OUT|info string Available processors: 0-15
+S|RNG_120_999|OUT|info string Using 4 threads
+S|RNG_120_999|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|RNG_120_999|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|RNG_120_999|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 357 nps 357000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 1040 nps 1040000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1687 nps 1687000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 2183 nps 2183000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2705 nps 2705000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 3259 nps 3259000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 3869 nps 3869000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 4385 nps 4385000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 4920 nps 4920000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 5504 nps 5504000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_120_999|OUT|bestmove f5f0
+S|RNG_120_999|TIMEOUT
+S|RNG_120_999|END|lines=17
+S|RNG_121_999|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 999
+S|RNG_121_999|OUT|info string CRITICAL ERROR: Command `position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 121 999` failed. Reason: Unsupported position. Rule60 counter out of range.
+S|RNG_121_999|OUT|
+DRV error unhandled: [object Object]
+S|RNG_121_999|CMD|go depth 10
+S|RNG_121_999|OUT|info string Available processors: 0-15
+S|RNG_121_999|OUT|info string Using 4 threads
+S|RNG_121_999|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|RNG_121_999|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|RNG_121_999|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 42 nps 42000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_121_999|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 602 nps 602000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_121_999|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1117 nps 1117000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_121_999|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1583 nps 1583000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_121_999|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2028 nps 2028000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_121_999|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 2399 nps 2399000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_121_999|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 2821 nps 2821000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_121_999|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 3227 nps 3227000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_121_999|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 3683 nps 1841500 hashfull 0 tbhits 0 time 2 pv f5f0
+S|RNG_121_999|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 4088 nps 2044000 hashfull 0 tbhits 0 time 2 pv f5f0
+S|RNG_121_999|OUT|bestmove f5f0
+S|RNG_121_999|TIMEOUT
+S|RNG_121_999|END|lines=17
+S|RNG_0_999|CMD|position fen 4k4/3P5/9/9/5R3/9/9/9/9/3K5 w - - 0 999
+S|RNG_0_999|CMD|go depth 10
+S|RNG_0_999|OUT|info string Available processors: 0-15
+S|RNG_0_999|OUT|info string Using 4 threads
+S|RNG_0_999|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|RNG_0_999|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|RNG_0_999|OUT|info depth 1 seldepth 2 multipv 1 score mate 1 nodes 104 nps 104000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 2 seldepth 2 multipv 1 score mate 1 nodes 728 nps 728000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 3 seldepth 2 multipv 1 score mate 1 nodes 1263 nps 1263000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 4 seldepth 2 multipv 1 score mate 1 nodes 1729 nps 1729000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 5 seldepth 2 multipv 1 score mate 1 nodes 2212 nps 2212000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 6 seldepth 2 multipv 1 score mate 1 nodes 2648 nps 2648000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 7 seldepth 2 multipv 1 score mate 1 nodes 3095 nps 3095000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 8 seldepth 2 multipv 1 score mate 1 nodes 3474 nps 3474000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 10 seldepth 2 multipv 1 score mate 1 nodes 4332 nps 4332000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|info depth 9 seldepth 2 multipv 1 score mate 1 nodes 3924 nps 3924000 hashfull 0 tbhits 0 time 1 pv f5f0
+S|RNG_0_999|OUT|bestmove f5f0
+S|RNG_0_999|TIMEOUT
+S|RNG_0_999|END|lines=15
+DRV DONE steps=24

@@ -1,0 +1,27 @@
+DRV: not isolated, registering SW (try 0)
+DRV: isolated ok, task=task_rule15.json
+DRV: engine ready
+S|KR_117|CMD|position fen 3k5/9/9/9/9/9/8R/9/9/5K3 w - - 117 1
+S|KR_117|CMD|go depth 14
+S|KR_117|OUT|info string Available processors: 0-15
+S|KR_117|OUT|info string Using 4 threads
+S|KR_117|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|KR_117|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|KR_117|OUT|info depth 1 seldepth 3 multipv 1 score cp 489 nodes 233 nps 38833 hashfull 0 tbhits 0 time 6 pv i3i5
+S|KR_117|OUT|info depth 2 seldepth 4 multipv 1 score mate 2 nodes 2035 nps 290714 hashfull 0 tbhits 0 time 7 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 3 seldepth 4 multipv 1 score mate 2 nodes 2738 nps 391142 hashfull 0 tbhits 0 time 7 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 4 seldepth 4 multipv 1 score mate 2 nodes 3191 nps 398875 hashfull 0 tbhits 0 time 8 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 5 seldepth 4 multipv 1 score mate 2 nodes 3696 nps 462000 hashfull 0 tbhits 0 time 8 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 6 seldepth 4 multipv 1 score mate 2 nodes 4111 nps 513875 hashfull 0 tbhits 0 time 8 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 7 seldepth 4 multipv 1 score mate 2 nodes 4874 nps 609250 hashfull 0 tbhits 0 time 8 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 8 seldepth 4 multipv 1 score mate 2 nodes 6274 nps 697111 hashfull 0 tbhits 0 time 9 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 9 seldepth 4 multipv 1 score mate 2 nodes 7652 nps 765200 hashfull 0 tbhits 0 time 10 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 10 seldepth 4 multipv 1 score mate 2 nodes 8261 nps 826100 hashfull 0 tbhits 0 time 10 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 11 seldepth 4 multipv 1 score mate 2 nodes 9067 nps 906700 hashfull 0 tbhits 0 time 10 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 12 seldepth 4 multipv 1 score mate 2 nodes 10788 nps 980727 hashfull 0 tbhits 0 time 11 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 13 seldepth 4 multipv 1 score mate 2 nodes 13646 nps 1137166 hashfull 0 tbhits 0 time 12 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|info depth 14 seldepth 4 multipv 1 score mate 2 nodes 14621 nps 1218416 hashfull 0 tbhits 0 time 12 pv f0e0 d9d8 i3d3
+S|KR_117|OUT|bestmove f0e0 ponder d9d8
+S|KR_117|TIMEOUT
+S|KR_117|END|lines=19
+DRV DONE steps=1

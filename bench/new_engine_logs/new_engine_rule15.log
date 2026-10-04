@@ -1,0 +1,211 @@
+DRV: not isolated, registering SW (try 0)
+DRV: isolated ok, task=task_rule13.json
+DRV: engine ready
+S|MT5_0|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 0 1
+S|MT5_0|CMD|go depth 14
+S|MT5_0|OUT|info string Available processors: 0-15
+S|MT5_0|OUT|info string Using 4 threads
+S|MT5_0|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_0|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_0|OUT|info depth 1 seldepth 2 multipv 1 score cp 937 nodes 168 nps 24000 hashfull 0 tbhits 0 time 7 pv h7a7
+S|MT5_0|OUT|info depth 2 seldepth 3 multipv 1 score cp 961 nodes 1035 nps 129375 hashfull 0 tbhits 0 time 8 pv h7a7 d9d8
+S|MT5_0|OUT|info depth 3 seldepth 6 multipv 1 score cp 982 nodes 1244 nps 155500 hashfull 0 tbhits 0 time 8 pv h7d7 d9e9 d7e7 e9d9
+S|MT5_0|OUT|info depth 4 seldepth 6 multipv 1 score cp 1011 nodes 1596 nps 199500 hashfull 0 tbhits 0 time 8 pv h7d7 d9e9 d7e7 e9d9 e7a7
+S|MT5_0|OUT|info depth 5 seldepth 14 multipv 1 score mate 3 nodes 2257 nps 250777 hashfull 0 tbhits 0 time 9 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 6 seldepth 6 multipv 1 score mate 3 nodes 4264 nps 387636 hashfull 0 tbhits 0 time 11 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 7 seldepth 6 multipv 1 score mate 3 nodes 5224 nps 435333 hashfull 0 tbhits 0 time 12 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 8 seldepth 6 multipv 1 score mate 3 nodes 6012 nps 501000 hashfull 0 tbhits 0 time 12 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 9 seldepth 6 multipv 1 score mate 3 nodes 7347 nps 565153 hashfull 0 tbhits 0 time 13 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 10 seldepth 6 multipv 1 score mate 3 nodes 8350 nps 596428 hashfull 0 tbhits 0 time 14 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 12 seldepth 6 multipv 1 score mate 3 nodes 14549 nps 909312 hashfull 0 tbhits 0 time 16 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 13 seldepth 6 multipv 1 score mate 3 nodes 15888 nps 934588 hashfull 0 tbhits 0 time 17 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 11 seldepth 6 multipv 1 score mate 3 nodes 8770 nps 626428 hashfull 0 tbhits 0 time 14 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 16662 nps 980117 hashfull 0 tbhits 0 time 17 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_0|OUT|bestmove f0e0 ponder d9d8
+S|MT5_0|TIMEOUT
+S|MT5_0|END|lines=19
+S|MT5_100|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 100 1
+S|MT5_100|CMD|go depth 14
+S|MT5_100|OUT|info string Available processors: 0-15
+S|MT5_100|OUT|info string Using 4 threads
+S|MT5_100|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_100|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_100|OUT|info depth 1 seldepth 2 multipv 1 score cp 1036 nodes 87 nps 87000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_100|OUT|info depth 2 seldepth 10 multipv 1 score mate 5 nodes 1012 nps 1012000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 3 seldepth 10 multipv 1 score mate 5 nodes 1408 nps 1408000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 4 seldepth 10 multipv 1 score mate 5 nodes 1871 nps 1871000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 5 seldepth 10 multipv 1 score mate 5 nodes 2223 nps 2223000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 6 seldepth 10 multipv 1 score mate 5 nodes 2642 nps 2642000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 7 seldepth 10 multipv 1 score mate 5 nodes 3135 nps 3135000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 8 seldepth 10 multipv 1 score mate 5 nodes 3836 nps 1918000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 9 seldepth 10 multipv 1 score mate 5 nodes 4293 nps 2146500 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 10 seldepth 10 multipv 1 score mate 5 nodes 4902 nps 2451000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 11 seldepth 10 multipv 1 score mate 5 nodes 5756 nps 2878000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 12 seldepth 10 multipv 1 score mate 5 nodes 6318 nps 2106000 hashfull 0 tbhits 0 time 3 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_100|OUT|info depth 13 seldepth 10 multipv 1 score mate 3 nodes 6780 nps 2260000 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_100|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 7130 nps 2376666 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_100|OUT|bestmove f0e0 ponder d9d8
+S|MT5_100|TIMEOUT
+S|MT5_100|END|lines=19
+S|MT5_110|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 110 1
+S|MT5_110|CMD|go depth 14
+S|MT5_110|OUT|info string Available processors: 0-15
+S|MT5_110|OUT|info string Using 4 threads
+S|MT5_110|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_110|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_110|OUT|info depth 1 seldepth 2 multipv 1 score cp 1040 nodes 66 nps 66000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_110|OUT|info depth 2 seldepth 10 multipv 1 score mate 5 nodes 560 nps 560000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 3 seldepth 10 multipv 1 score mate 5 nodes 1015 nps 1015000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 4 seldepth 10 multipv 1 score mate 5 nodes 1340 nps 1340000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 5 seldepth 10 multipv 1 score mate 5 nodes 1811 nps 1811000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 6 seldepth 10 multipv 1 score mate 5 nodes 2279 nps 2279000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 7 seldepth 10 multipv 1 score mate 5 nodes 2821 nps 2821000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 8 seldepth 10 multipv 1 score mate 5 nodes 3354 nps 1677000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 9 seldepth 10 multipv 1 score mate 5 nodes 3751 nps 1875500 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 10 seldepth 10 multipv 1 score mate 5 nodes 4302 nps 2151000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 11 seldepth 10 multipv 1 score mate 5 nodes 4713 nps 2356500 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 12 seldepth 10 multipv 1 score mate 5 nodes 5180 nps 2590000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_110|OUT|info depth 13 seldepth 10 multipv 1 score mate 3 nodes 5684 nps 2842000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_110|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 6041 nps 2013666 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_110|OUT|bestmove f0e0 ponder d9d8
+S|MT5_110|TIMEOUT
+S|MT5_110|END|lines=19
+S|MT5_114|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 114 1
+S|MT5_114|CMD|go depth 14
+S|MT5_114|OUT|info string Available processors: 0-15
+S|MT5_114|OUT|info string Using 4 threads
+S|MT5_114|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_114|OUT|info depth 1 seldepth 4 multipv 1 score cp 1061 nodes 101 nps 101000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_114|OUT|info depth 2 seldepth 10 multipv 1 score mate 5 nodes 611 nps 611000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_114|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_114|OUT|info depth 3 seldepth 10 multipv 1 score mate 5 nodes 992 nps 992000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_114|OUT|info depth 4 seldepth 10 multipv 1 score mate 5 nodes 1384 nps 1384000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_114|OUT|info depth 6 seldepth 10 multipv 1 score mate 3 nodes 2555 nps 2555000 hashfull 0 tbhits 0 time 1 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|info depth 7 seldepth 6 multipv 1 score mate 3 nodes 3050 nps 1525000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|info depth 5 seldepth 10 multipv 1 score mate 5 nodes 1742 nps 1742000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_114|OUT|info depth 8 seldepth 6 multipv 1 score mate 3 nodes 3617 nps 1808500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|info depth 9 seldepth 6 multipv 1 score mate 3 nodes 4302 nps 2151000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|info depth 10 seldepth 6 multipv 1 score mate 3 nodes 5016 nps 2508000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|info depth 11 seldepth 6 multipv 1 score mate 3 nodes 5663 nps 2831500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|info depth 12 seldepth 6 multipv 1 score mate 3 nodes 6289 nps 2096333 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|info depth 13 seldepth 6 multipv 1 score mate 3 nodes 6858 nps 2286000 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 7339 nps 2446333 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_114|OUT|bestmove f0e0 ponder d9d8
+S|MT5_114|TIMEOUT
+S|MT5_114|END|lines=19
+S|MT5_115|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 115 1
+S|MT5_115|CMD|go depth 14
+S|MT5_115|OUT|info string Available processors: 0-15
+S|MT5_115|OUT|info string Using 4 threads
+S|MT5_115|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_115|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_115|OUT|info depth 1 seldepth 5 multipv 1 score cp 1043 nodes 123 nps 123000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_115|OUT|info depth 2 seldepth 10 multipv 1 score cp 1064 nodes 1007 nps 1007000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_115|OUT|info depth 3 seldepth 10 multipv 1 score mate 5 nodes 1504 nps 1504000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_115|OUT|info depth 4 seldepth 10 multipv 1 score mate 3 nodes 2049 nps 1024500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 5 seldepth 6 multipv 1 score mate 3 nodes 2485 nps 1242500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 6 seldepth 6 multipv 1 score mate 3 nodes 3053 nps 1526500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 7 seldepth 6 multipv 1 score mate 3 nodes 3649 nps 1824500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 8 seldepth 6 multipv 1 score mate 3 nodes 4246 nps 2123000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 9 seldepth 6 multipv 1 score mate 3 nodes 5026 nps 2513000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 11 seldepth 6 multipv 1 score mate 3 nodes 6357 nps 2119000 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 12 seldepth 6 multipv 1 score mate 3 nodes 6961 nps 2320333 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 13 seldepth 6 multipv 1 score mate 3 nodes 7471 nps 2490333 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 10 seldepth 6 multipv 1 score mate 3 nodes 5811 nps 1937000 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 7928 nps 2642666 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_115|OUT|bestmove f0e0 ponder d9d8
+S|MT5_115|TIMEOUT
+S|MT5_115|END|lines=19
+S|MT5_116|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 116 1
+S|MT5_116|CMD|go depth 14
+S|MT5_116|OUT|info string Available processors: 0-15
+S|MT5_116|OUT|info string Using 4 threads
+S|MT5_116|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_116|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_116|OUT|info depth 1 seldepth 4 multipv 1 score cp 11707 nodes 101 nps 101000 hashfull 0 tbhits 0 time 1 pv f0e0
+S|MT5_116|OUT|info depth 2 seldepth 2 multipv 1 score cp 1052 nodes 332 nps 332000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_116|OUT|info depth 3 seldepth 10 multipv 1 score mate 5 nodes 846 nps 846000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_116|OUT|info depth 4 seldepth 10 multipv 1 score mate 5 nodes 1295 nps 1295000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_116|OUT|info depth 5 seldepth 2 multipv 1 score cp 1059 nodes 1536 nps 1536000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_116|OUT|info depth 7 seldepth 10 multipv 1 score mate 5 nodes 2411 nps 2411000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_116|OUT|info depth 8 seldepth 10 multipv 1 score mate 5 nodes 3241 nps 3241000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_116|OUT|info depth 9 seldepth 10 multipv 1 score mate 5 nodes 3974 nps 1987000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_116|OUT|info depth 10 seldepth 10 multipv 1 score mate 5 nodes 4731 nps 2365500 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_116|OUT|info depth 6 seldepth 10 multipv 1 score mate 5 nodes 1912 nps 1912000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_116|OUT|info depth 11 seldepth 10 multipv 1 score mate 5 nodes 5561 nps 2780500 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_116|OUT|info depth 12 seldepth 10 multipv 1 score mate 3 nodes 6364 nps 3182000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_116|OUT|info depth 13 seldepth 6 multipv 1 score mate 3 nodes 6951 nps 2317000 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_116|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 7630 nps 2543333 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_116|OUT|bestmove f0e0 ponder d9d8
+S|MT5_116|TIMEOUT
+S|MT5_116|END|lines=19
+S|MT5_117|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 117 1
+S|MT5_117|CMD|go depth 14
+S|MT5_117|OUT|info string Available processors: 0-15
+S|MT5_117|OUT|info string Using 4 threads
+S|MT5_117|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_117|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_117|OUT|info depth 1 seldepth 3 multipv 1 score cp 1023 nodes 102 nps 102000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_117|OUT|info depth 2 seldepth 10 multipv 1 score mate 5 nodes 727 nps 727000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_117|OUT|info depth 3 seldepth 10 multipv 1 score mate 5 nodes 1363 nps 1363000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_117|OUT|info depth 4 seldepth 10 multipv 1 score mate 5 nodes 1909 nps 1909000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_117|OUT|info depth 5 seldepth 10 multipv 1 score mate 5 nodes 2700 nps 2700000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_117|OUT|info depth 6 seldepth 10 multipv 1 score mate 5 nodes 3362 nps 1681000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_117|OUT|info depth 7 seldepth 10 multipv 1 score mate 3 nodes 4159 nps 2079500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_117|OUT|info depth 8 seldepth 6 multipv 1 score mate 3 nodes 4708 nps 2354000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_117|OUT|info depth 9 seldepth 6 multipv 1 score mate 3 nodes 5388 nps 2694000 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_117|OUT|info depth 10 seldepth 6 multipv 1 score mate 3 nodes 6015 nps 3007500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_117|OUT|info depth 11 seldepth 6 multipv 1 score mate 3 nodes 6605 nps 3302500 hashfull 0 tbhits 0 time 2 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_117|OUT|info depth 12 seldepth 6 multipv 1 score mate 3 nodes 7292 nps 2430666 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_117|OUT|info depth 13 seldepth 6 multipv 1 score mate 3 nodes 8022 nps 2674000 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_117|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 8632 nps 2877333 hashfull 0 tbhits 0 time 3 pv f0e0 d9d8 h7a7 d8d9 a7d7
+S|MT5_117|OUT|bestmove f0e0 ponder d9d8
+S|MT5_117|TIMEOUT
+S|MT5_117|END|lines=19
+S|MT5_118|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 118 1
+S|MT5_118|CMD|go depth 14
+S|MT5_118|OUT|info string Available processors: 0-15
+S|MT5_118|OUT|info string Using 4 threads
+S|MT5_118|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_118|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_118|OUT|info depth 1 seldepth 2 multipv 1 score cp 11707 nodes 77 nps 77000 hashfull 0 tbhits 0 time 1 pv f0e0
+S|MT5_118|OUT|info depth 2 seldepth 2 multipv 1 score cp 1023 nodes 517 nps 517000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_118|OUT|info depth 3 seldepth 10 multipv 1 score mate 5 nodes 1367 nps 1367000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_118|OUT|info depth 4 seldepth 10 multipv 1 score mate 5 nodes 1944 nps 1944000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_118|OUT|info depth 5 seldepth 10 multipv 1 score mate 5 nodes 2492 nps 2492000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_118|OUT|info depth 6 seldepth 10 multipv 1 score mate 5 nodes 3185 nps 3185000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_118|OUT|info depth 7 seldepth 10 multipv 1 score mate 5 nodes 3799 nps 1899500 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_118|OUT|info depth 8 seldepth 10 multipv 1 score mate 5 nodes 4264 nps 2132000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_118|OUT|info depth 9 seldepth 10 multipv 1 score mate 5 nodes 4898 nps 2449000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_118|OUT|info depth 10 seldepth 10 multipv 1 score mate 5 nodes 5734 nps 2867000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a3 e9e8 a3e3 e8d8 f0e0 d8d9 e3d3
+S|MT5_118|OUT|info depth 11 seldepth 6 multipv 1 score mate 3 nodes 6422 nps 3211000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_118|OUT|info depth 12 seldepth 6 multipv 1 score mate 3 nodes 7142 nps 3571000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_118|OUT|info depth 13 seldepth 6 multipv 1 score mate 3 nodes 7723 nps 2574333 hashfull 0 tbhits 0 time 3 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_118|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 8275 nps 2758333 hashfull 0 tbhits 0 time 3 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_118|OUT|bestmove h7a7 ponder d9e9
+S|MT5_118|TIMEOUT
+S|MT5_118|END|lines=19
+S|MT5_119|CMD|position fen 3k5/9/b6R1/9/9/9/9/9/9/5K3 w - - 119 1
+S|MT5_119|CMD|go depth 14
+S|MT5_119|OUT|info string Available processors: 0-15
+S|MT5_119|OUT|info string Using 4 threads
+S|MT5_119|OUT|info string NNUE evaluation using pikafish.nnue (64MiB, (62083, 1024, 32, 32, 1))
+S|MT5_119|OUT|info string Network replica 1: Local memory. Shared memory not supported by the OS. Local allocation fallback.
+S|MT5_119|OUT|info depth 1 seldepth 2 multipv 1 score cp 1026 nodes 20 nps 20000 hashfull 0 tbhits 0 time 1 pv h7a7
+S|MT5_119|OUT|info depth 2 seldepth 6 multipv 1 score mate 3 nodes 563 nps 563000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 3 seldepth 6 multipv 1 score mate 3 nodes 1258 nps 1258000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 4 seldepth 6 multipv 1 score mate 3 nodes 1832 nps 1832000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 5 seldepth 6 multipv 1 score mate 3 nodes 2390 nps 2390000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 6 seldepth 6 multipv 1 score mate 3 nodes 2927 nps 2927000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 7 seldepth 6 multipv 1 score mate 3 nodes 3537 nps 3537000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 8 seldepth 6 multipv 1 score mate 3 nodes 4134 nps 4134000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 9 seldepth 6 multipv 1 score mate 3 nodes 4895 nps 4895000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 10 seldepth 6 multipv 1 score mate 3 nodes 5631 nps 5631000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 11 seldepth 6 multipv 1 score mate 3 nodes 6225 nps 6225000 hashfull 0 tbhits 0 time 1 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 12 seldepth 6 multipv 1 score mate 3 nodes 6852 nps 3426000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 13 seldepth 6 multipv 1 score mate 3 nodes 7511 nps 3755500 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|info depth 14 seldepth 6 multipv 1 score mate 3 nodes 8074 nps 4037000 hashfull 0 tbhits 0 time 2 pv h7a7 d9e9 a7a8 e9d9 f0e0
+S|MT5_119|OUT|bestmove h7a7 ponder d9e9
+S|MT5_119|TIMEOUT
+S|MT5_119|END|lines=19
+DRV DONE steps=9
