@@ -52,7 +52,15 @@
 截图：`bench/new_engine_logs/ui_visual_final/`（01 下载提示、03-loading-* 进度、02/05/06 落子高亮）；
 改前对照 `ui_visual_before/`；慢速下载全程 `ui_visual_download/`。
 
+## 线上复核（推送 904e78c 后，2026-10-05 11:07）
+- 部署一致性：`node bench/new_engine/check_pages_parity.js` → **PARITY ALL-IDENTICAL**（17/17 文件，线上与 HEAD 逐字节相同）。
+- 真部署重载实测（冷 profile、无缓存）：`bash bench/new_engine/run_pages_reload_probe.sh 9511` →
+  **GAME-PRESERVED-ACROSS-RELOAD**：第一步 兵九进一 后 coi-serviceworker 强制重载（NAVIGATIONS=2），
+  重载后对局保留（hist 仍为 兵九进一、lastMove 恢复）、引擎下载续跑（面板「正在下载引擎强度网络 49%（25.2/50.7MB）」）、coi=true。
+  日志：`bench/new_engine_logs/pages_reload_probe.log`。
+
 ## 复跑命令
 - 视觉证据：`COI=1 SLOW_KBPS=4000 bash bench/new_engine/run_ui_visual.sh 9431 ui_visual_x`
-- 重载修法：`bash bench/new_engine/run_reload_probe.sh 9381`
+- 重载修法（本地）：`bash bench/new_engine/run_reload_probe.sh 9381`
+- 重载实测（线上）：`bash bench/new_engine/run_pages_reload_probe.sh 9511`
 - 探针：`bash bench/new_engine/run_ui_probe.sh 9441` / `bash bench/new_engine/run_single_probe.sh 9461` / `bash bench/new_engine/run_single_panel_check.sh 9501`
