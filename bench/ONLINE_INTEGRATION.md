@@ -71,6 +71,8 @@ PARITY ALL-IDENTICAL
   **100 GB/月带宽、建议 1 GB 站点**（docs.github.com/pages/getting-started-with-github-pages/github-pages-limits）
   → 站点体积没问题；带宽角度 **100GB ÷ 50.7MB ≈ 1972 次完整首访/月**（缓存命中不算）。
   体积/LFS 的最终决定仍不在本卡判。
+- 本卡的工具/报告以 `a075263` 推送后**重跑了一次比对**：`HEAD=a075263… files=17 → PARITY ALL-IDENTICAL`
+  （只新增 bench/ 工具与日志，浏览器加载的 17 个文件未变）。
 
 ---
 
