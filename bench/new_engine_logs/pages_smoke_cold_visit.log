@@ -1,0 +1,82 @@
+PAGES-PROBE mode=smoke url=https://crest10086.github.io/xiangqi/online_smoke.html start=2026-10-04T23:10:29.177Z (cold: SW unregistered, coiTries cleared)
+..............................................
+=== STATE === DONE (16.5s)
+=== NAVIGATIONS (2) ===
+NAV 0.3s https://crest10086.github.io/xiangqi/online_smoke.html
+NAV 0.5s https://crest10086.github.io/xiangqi/online_smoke.html
+=== COOP/COEP RESPONSES (0) ===
+=== COOP/COEP VIA SW FETCH === {"status":200,"type":"basic","swControlled":true,"headers":{"cross-origin-embedder-policy":"require-corp","cross-origin-opener-policy":"same-origin","cross-origin-resource-policy":"cross-origin"}}
+=== PAGE ENV === "{\"coi\":true,\"sab\":true,\"coiTries\":\"2\",\"sw\":true,\"href\":\"https://crest10086.github.io/xiangqi/online_smoke.html\"}"
+=== PAGE LOG (26 lines) ===
+…
+SMOKE start coi=true sab=true
+READY=true ms=2093 env={"type":"ENV","coi":true,"sab":true,"threads":4} net={"netBytes":50706378}
+SEL|OP00|业余|move=h2f2|hit=cap|gap=13|legal=1|wall=304|depth=12|nodes=588057|mpv=8|ms=300|hash=64|cap=80|p=0.5|band=200
+SEL|OP00|进阶|move=b0c2|hit=cap|gap=16|legal=1|wall=303|depth=12|nodes=592016|mpv=8|ms=300|hash=64|cap=80|p=0|band=200
+SEL|OP00|高手|move=c0e2|hit=cap|gap=15|legal=1|wall=303|depth=13|nodes=575948|mpv=8|ms=300|hash=64|cap=25|p=0.1|band=200
+SEL|OP00|大师|move=b2e2|hit=best|gap=0|legal=1|wall=2010|depth=23|nodes=3389733|mpv=1|ms=2000|hash=256
+SEL|OP04|业余|move=b2e2|hit=bmiss|gap=16|legal=1|wall=303|depth=14|nodes=644304|mpv=8|ms=300|hash=64|cap=80|p=0.5|band=200
+SEL|OP04|进阶|move=b2e2|hit=cap|gap=21|legal=1|wall=303|depth=13|nodes=608648|mpv=8|ms=300|hash=64|cap=80|p=0|band=200
+SEL|OP04|高手|move=g3g4|hit=cap|gap=11|legal=1|wall=304|depth=12|nodes=606923|mpv=8|ms=300|hash=64|cap=25|p=0.1|band=200
+SEL|OP04|大师|move=i0h0|hit=best|gap=0|legal=1|wall=2010|depth=24|nodes=3535794|mpv=1|ms=2000|hash=256
+SEL|MG_QT01|业余|move=c7b9|hit=above|gap=0|legal=1|wall=304|depth=14|nodes=592672|mpv=8|ms=300|hash=64|cap=80|p=0.5|band=200
+SEL|MG_QT01|进阶|move=c7b9|hit=above|gap=0|legal=1|wall=304|depth=14|nodes=562868|mpv=8|ms=300|hash=64|cap=80|p=0|band=200
+SEL|MG_QT01|高手|move=c7b9|hit=above|gap=0|legal=1|wall=306|depth=14|nodes=572522|mpv=8|ms=300|hash=64|cap=25|p=0.1|band=200
+SEL|MG_QT01|大师|move=c7b9|hit=best|gap=0|legal=1|wall=2010|depth=28|nodes=3716859|mpv=1|ms=2000|hash=256
+SEL|MG_QT10|业余|move=c5c4|hit=cap|gap=49|legal=1|wall=303|depth=11|nodes=657416|mpv=8|ms=300|hash=64|cap=80|p=0.5|band=200
+SEL|MG_QT10|进阶|move=f8h9|hit=cap|gap=46|legal=1|wall=303|depth=12|nodes=604313|mpv=8|ms=300|hash=64|cap=80|p=0|band=200
+SEL|MG_QT10|高手|move=i9i7|hit=cap|gap=23|legal=1|wall=303|depth=10|nodes=609981|mpv=8|ms=300|hash=64|cap=25|p=0.1|band=200
+SEL|MG_QT10|大师|move=i9h9|hit=best|gap=0|legal=1|wall=2011|depth=23|nodes=3869551|mpv=1|ms=2000|hash=256
+CHECK|BADFEN|业余|rejected=1|err=critical:引擎报告 CRITICAL ERROR（着法会沿用上一条局面）|critical=1
+CHECK|BADFEN|进阶|rejected=1|err=critical:引擎报告 CRITICAL ERROR（着法会沿用上一条局面）|critical=1
+CHECK|BADFEN|高手|rejected=1|err=critical:引擎报告 CRITICAL ERROR（着法会沿用上一条局面）|critical=1
+CHECK|BADFEN|大师|rejected=1|err=critical:引擎报告 CRITICAL ERROR（着法会沿用上一条局面）|critical=1
+RECOVER|OP00|ok=1|move=c0e2|wall=304|lastRawLine=info depth 12 seldepth 14 multipv 8 score cp 13 nodes 571643 nps 1899146 hashfull 34 tbhits 0 time 301 pv c0e2 b7e7 b0c2 b9c7 a0b0 h7f7 h0g2 h9i7
+RECOVER|OP04|ok=1|move=b2e2|wall=304|lastRawLine=info depth 14 seldepth 20 multipv 8 score cp 1 nodes 641901 nps 2132561 hashfull 39 tbhits 0 time 301 pv b2e2 h9g7 b0c2 b9a7 a0b0 a9b9 c3c4 b7b5 i0h0 g9e7 d0e1
+SMOKE DONE
+
+=== RESOURCE TIMING === [{"url":"/xiangqi/engine.js","initiator":"script","transfer":0,"encoded":21149,"decoded":21149,"duration":2,"start":83},{"url":"/xiangqi/js/tier_rules.js","initiator":"script","transfer":0,"encoded":8475,"decoded":8475,"duration":3,"start":84},{"url":"/xiangqi/js/tier_config.js","initiator":"script","transfer":0,"encoded":1542,"decoded":1542,"duration":3,"start":84},{"url":"/xiangqi/js/pikafish_bridge.js","initiator":"script","transfer":0,"encoded":18640,"decoded":18640,"duration":3,"start":84},{"url":"/xiangqi/js/engines/pikafish/pikafish.worker.js","initiator":"other","transfer":0,"encoded":0,"decoded":0,"duration":-3,"start":101}]
+=== NAVIGATION TIMING === [{"url":"https://crest10086.github.io/xiangqi/online_smoke.html","duration":97,"domContentLoaded":97,"loadEvent":97,"transfer":0,"encoded":4937}]
+=== JS HEAP === {"jsHeapMB":2,"jsHeapLimitMB":4192}
+=== LOG ENTRIES (51) ===
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+[error] Failed to load resource: the server responded with a status of 405 ()
+PAGES-PROBE DONE

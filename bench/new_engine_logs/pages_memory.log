@@ -1,0 +1,48 @@
+PAGES-PROBE mode=ui url=https://crest10086.github.io/xiangqi/index.html start=2026-10-04T23:52:40.720Z (cold: SW unregistered, coiTries cleared)
+
+boot: {"coi":false,"sab":false,"coiTries":null,"sw":false,"href":"https://crest10086.github.io/xiangqi/index.html"}
+
+[probe start#1 @6.1s] env="{\"coi\":false,\"sab\":false,\"coiTries\":\"1\",\"sw\":false,\"href\":\"https://crest10086.github.io/xiangqi/index.html\"}"
+
+[probe start#2 @10.1s] env="{\"coi\":true,\"sab\":true,\"coiTries\":\"1\",\"sw\":true,\"href\":\"https://crest10086.github.io/xiangqi/index.html\"}"
+.....................
+=== STATE === DONE (160.1s)
+=== NAVIGATIONS (2) ===
+NAV 0.1s https://crest10086.github.io/xiangqi/index.html
+NAV 6.2s https://crest10086.github.io/xiangqi/index.html
+=== COOP/COEP RESPONSES (0) ===
+=== COOP/COEP VIA SW FETCH === {"status":200,"type":"basic","swControlled":true,"headers":{"cross-origin-embedder-policy":"require-corp","cross-origin-opener-policy":"same-origin","cross-origin-resource-policy":"cross-origin"}}
+=== PAGE ENV === null
+=== PAGE LOG (0 lines) ===
+
+=== PROBE RESULT ===
+{
+ "coi": true,
+ "threads": 16,
+ "engineReady": true,
+ "engineEnv": {
+  "type": "ENV",
+  "coi": true,
+  "sab": true,
+  "threads": 4
+ },
+ "netBytes": 50706378,
+ "searchWallMs": 2012,
+ "engineInfo": {
+  "depth": 22,
+  "score": "25cp",
+  "nodes": 3416073
+ },
+ "jsHeapMainMB": 2,
+ "hasUAMem": true,
+ "uaErr": "measureUserAgentSpecificMemory did not resolve in 60s",
+ "jsHeapMainMB_after": 2
+}
+
+=== RESOURCE TIMING === [{"url":"/xiangqi/engine.js","initiator":"script","transfer":0,"encoded":21149,"decoded":21149,"duration":3,"start":88},{"url":"/xiangqi/js/book.js","initiator":"script","transfer":0,"encoded":305699,"decoded":305699,"duration":6,"start":88},{"url":"/xiangqi/js/xqbook.js","initiator":"script","transfer":0,"encoded":4874,"decoded":4874,"duration":6,"start":88},{"url":"/xiangqi/js/tier_rules.js","initiator":"script","transfer":0,"encoded":8475,"decoded":8475,"duration":6,"start":88},{"url":"/xiangqi/js/tier_config.js","initiator":"script","transfer":0,"encoded":1542,"decoded":1542,"duration":6,"start":88},{"url":"/xiangqi/js/pikafish_bridge.js","initiator":"script","transfer":0,"encoded":18640,"decoded":18640,"duration":6,"start":88},{"url":"/xiangqi/js/engines/pikafish/pikafish.worker.js","initiator":"other","transfer":0,"encoded":0,"decoded":0,"duration":0,"start":4011}]
+=== NAVIGATION TIMING === [{"url":"https://crest10086.github.io/xiangqi/index.html","duration":153,"domContentLoaded":152,"loadEvent":153,"transfer":0,"encoded":18810}]
+=== JS HEAP === {"jsHeapMB":2,"jsHeapLimitMB":4192}
+=== UA MEMORY === null
+=== LOG ENTRIES (1) ===
+[error] Failed to load resource: the server responded with a status of 404 ()
+PAGES-PROBE DONE

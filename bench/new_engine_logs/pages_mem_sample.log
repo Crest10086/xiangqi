@@ -1,0 +1,226 @@
+PAGES-PROBE mode=ui url=https://crest10086.github.io/xiangqi/index.html start=2026-10-05T00:09:00.178Z (warm: profile kept as-is)
+
+boot: {"coi":false,"sab":false,"coiTries":null,"sw":false,"href":"https://crest10086.github.io/xiangqi/index.html"}
+
+[probe start#1 @6.1s] env="{\"coi\":false,\"sab\":false,\"coiTries\":\"1\",\"sw\":false,\"href\":\"https://crest10086.github.io/xiangqi/index.html\"}"
+
+[probe start#2 @10.1s] env="{\"coi\":true,\"sab\":true,\"coiTries\":\"1\",\"sw\":true,\"href\":\"https://crest10086.github.io/xiangqi/index.html\"}"
+...
+=== STATE === DONE (87.9s)
+=== NAVIGATIONS (2) ===
+NAV 0.1s https://crest10086.github.io/xiangqi/index.html
+NAV 6.2s https://crest10086.github.io/xiangqi/index.html
+=== COOP/COEP RESPONSES (0) ===
+=== COOP/COEP VIA SW FETCH === {"status":200,"type":"basic","swControlled":true,"headers":{"cross-origin-embedder-policy":"require-corp","cross-origin-opener-policy":"same-origin","cross-origin-resource-policy":"cross-origin"}}
+=== PAGE ENV === null
+=== PAGE LOG (0 lines) ===
+
+=== PROBE RESULT ===
+{
+ "coi": true,
+ "engineReadyBefore": false,
+ "firstLoadMs": 2199,
+ "firstLoadOk": true,
+ "env": {
+  "type": "ENV",
+  "coi": true,
+  "sab": true,
+  "threads": 4
+ },
+ "jsHeapMB": 2,
+ "rows": [
+  {
+   "level": 1,
+   "name": "业余",
+   "human": [
+    "相七进九",
+    "车九进一",
+    "相九退七",
+    "车九平二"
+   ],
+   "ai": [
+    "马8进9",
+    "砲2进7",
+    "象3进5",
+    "砲8进6"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 1600,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": {
+    "type": "ENV",
+    "coi": true,
+    "sab": true,
+    "threads": 4
+   },
+   "engineLastError": null,
+   "engineInfo": {
+    "depth": 12,
+    "score": "385cp",
+    "nodes": 543892
+   },
+   "tierParams": {
+    "cap": 80,
+    "p": 0.5,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 2,
+   "name": "进阶",
+   "human": [
+    "炮八平四",
+    "炮二进六",
+    "马八进九",
+    "兵七进一"
+   ],
+   "ai": [
+    "砲8平6",
+    "砲2平5",
+    "车1进1",
+    "砲5进4"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 1600,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": {
+    "type": "ENV",
+    "coi": true,
+    "sab": true,
+    "threads": 4
+   },
+   "engineLastError": null,
+   "engineInfo": {
+    "depth": 12,
+    "score": "381cp",
+    "nodes": 518094
+   },
+   "tierParams": {
+    "cap": 80,
+    "p": 0,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 3,
+   "name": "高手",
+   "human": [
+    "兵五进一",
+    "炮二进三",
+    "相七进九",
+    "炮二退一"
+   ],
+   "ai": [
+    "砲2平5",
+    "砲5进3",
+    "马2进1",
+    "砲8进2"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 1600,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": {
+    "type": "ENV",
+    "coi": true,
+    "sab": true,
+    "threads": 4
+   },
+   "engineLastError": null,
+   "engineInfo": {
+    "depth": 12,
+    "score": "492cp",
+    "nodes": 469886
+   },
+   "tierParams": {
+    "cap": 25,
+    "p": 0.1,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 4,
+   "name": "大师",
+   "human": [
+    "兵五进一",
+    "炮二进一",
+    "兵七进一",
+    "车九进二"
+   ],
+   "ai": [
+    "砲2平5",
+    "砲5进3",
+    "砲8进2",
+    "砲8平5"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 6800,
+   "plies": 8,
+   "over": true,
+   "engineReady": true,
+   "engineEnv": {
+    "type": "ENV",
+    "coi": true,
+    "sab": true,
+    "threads": 4
+   },
+   "engineLastError": null,
+   "engineInfo": {
+    "depth": 245,
+    "score": "#1",
+    "nodes": 41178
+   },
+   "tierParams": {
+    "mpv": 1,
+    "ms": 2000,
+    "hash": 256
+   }
+  }
+ ],
+ "status": "黑方绝杀，你赢了！🎉",
+ "logTail": [
+  "1.兵五进一砲2平52.炮二进一砲5进33.兵七进一砲8进24.车九进二砲8平5"
+ ]
+}
+
+=== RESOURCE TIMING === [{"url":"/xiangqi/engine.js","initiator":"script","transfer":0,"encoded":21149,"decoded":21149,"duration":253,"start":85},{"url":"/xiangqi/js/book.js","initiator":"script","transfer":0,"encoded":305699,"decoded":305699,"duration":5,"start":85},{"url":"/xiangqi/js/xqbook.js","initiator":"script","transfer":0,"encoded":4874,"decoded":4874,"duration":3,"start":85},{"url":"/xiangqi/js/tier_rules.js","initiator":"script","transfer":0,"encoded":8475,"decoded":8475,"duration":256,"start":85},{"url":"/xiangqi/js/tier_config.js","initiator":"script","transfer":0,"encoded":1542,"decoded":1542,"duration":263,"start":85},{"url":"/xiangqi/js/pikafish_bridge.js","initiator":"script","transfer":0,"encoded":18640,"decoded":18640,"duration":259,"start":85},{"url":"/xiangqi/js/engines/pikafish/pikafish.worker.js","initiator":"other","transfer":0,"encoded":0,"decoded":0,"duration":0,"start":4011}]
+=== NAVIGATION TIMING === [{"url":"https://crest10086.github.io/xiangqi/index.html","duration":362,"domContentLoaded":361,"loadEvent":362,"transfer":0,"encoded":18810}]
+=== JS HEAP === {"jsHeapMB":3,"jsHeapLimitMB":4192}
+=== UA MEMORY === null
+=== LOG ENTRIES (1) ===
+[error] Failed to load resource: the server responded with a status of 404 ()
+PAGES-PROBE DONE
