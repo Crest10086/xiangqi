@@ -16,6 +16,7 @@
  *
  * 对外接口：PF.isHeavyLevel / PF.load / PF.whenReady / PF.tierSearch / PF.search / PF.stop
  *          PF.boardToFen / PF.parseMove / PF.uciOf / PF.TIERS / PF.lastInfo / PF.lastCost / PF.onProgress
+ *          PF.NET_BYTES / PF.netLabel() / PF.loadText(p) —— 引擎下载提示的体积与文案（t_f51aab68 第1项）
  */
 (function (root) {
   'use strict';
@@ -32,6 +33,27 @@
   var worker = null, ready = false, seq = 0, curSeq = 0, curCb = null, curReject = null;
   var loadPromise = null, curCandidates = null, legacyMode = false, curTierIdx = null, resolveLoad = null;
   var seedBase = (Math.random() * 1e9) | 0;
+  // 完整强度构建的强度网络体积（js/engines/pikafish/pikafish.nnue）。UI 的下载提示文案只从这里
+  // 生成，别在页面里另写一份数字：改引擎网络时改这一处 + 重跑 test_ui_wiring.js（它会拿磁盘真实
+  // 字节数核对这里的常量）。
+  var NET_BYTES = 50706378;                 // = 50.7MB（十进制 MB，与仓库文档口径一致）
+  var NET_LABEL = '50.7MB';
+
+  function mb(n) { return (n / 1e6).toFixed(1); }
+
+  /* 引擎下载提示文案（t_f51aab68 第1项）：措辞只有这一份，页面侧只负责把它画进面板。
+   * p = worker 的 NET_PROGRESS {loaded,total}；p 为空表示"已决定要加载、还没开始收字节"。 */
+  function loadText(p) {
+    if (!p || !p.loaded) {
+      return '正在准备引擎：首次对局需下载 ' + NET_LABEL + ' 强度网络…';
+    }
+    var total = p.total || NET_BYTES;
+    var pct = Math.max(0, Math.min(100, Math.floor(p.loaded * 100 / total)));
+    if (p.loaded >= total) {
+      return '强度网络已下载完（' + NET_LABEL + '），正在初始化引擎…';
+    }
+    return '正在下载引擎强度网络 ' + pct + '%（' + mb(p.loaded) + '/' + mb(total) + 'MB），只需一次，之后走缓存';
+  }
 
   function tierOf(i) {
     var T = root.PF_TIERS && root.PF_TIERS.levels;
@@ -246,6 +268,9 @@
       // A 路径：先过 COOP/COEP 闸门（可能触发一次页面重载），再加载 50.7MB 网络
       ensureIsolated().then(function (iso) {
         if (!iso) { reject(new Error('浏览器未隔离，多线程引擎不可用')); return; }
+        // 下载还没开始（要等 worker 起线程、fetch 建连）也要先给 UI 一句话：
+        // 用户点"新对局"到第一个字节之间本来就有 1–2 秒空窗，没有提示就像卡死了。
+        if (typeof root.PF.onProgress === 'function') { try { root.PF.onProgress(null); } catch (e) {} }
         try { spawnNative(); } catch (e) { reject(e); return; }
         watchReady(reject);
       });
@@ -342,6 +367,12 @@
     lastError: null,
     env: null,
     onProgress: null,
+    NET_BYTES: NET_BYTES,
+    netLabel: function () { return NET_LABEL; },
+    loadText: loadText,
+    // 是否真的会发生一次 50MB 下载：file:// 单文件版把引擎内嵌在 HTML 里，不下载，
+    // 所以那一侧不该显示"正在下载 50.7MB"这种话。
+    netDownloadNeeded: function () { try { return !isBlobMode(); } catch (e) { return false; } },
     ready: function () { return ready; }
   };
 })(typeof window !== 'undefined' ? window : this);

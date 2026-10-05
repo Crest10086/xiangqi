@@ -41,6 +41,11 @@
   .log .r { color: #ff9d8a; } .log .b { color: #cfd8dc; }
   .hint { font-size: 11.5px; color: var(--dim); line-height: 1.6; }
   .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; background: #ffffff18; margin-left: 4px; }
+  /* ---- 引擎下载提示：只在真的需要下载 50.7MB 网络时出现，就绪后自动收起 ---- */
+  .engload { background: #00000033; border: 1px solid #3498db55; border-radius: 8px; padding: 8px 10px; font-size: 12.5px; color: var(--text); }
+  .engbar { height: 8px; border-radius: 5px; background: #ffffff1a; overflow: hidden; margin-top: 7px; }
+  .engbar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #3498db, #f1c40f); transition: width .18s linear; }
+  .engload.err { border-color: #e74c3c88; color: #ffb4a8; }
   /* ---- mobile: board scales to fit, panel goes full-width below ---- */
   @media (max-width: 760px) {
     body { padding: 8px; }
@@ -60,6 +65,11 @@
   <div class="board-wrap"><canvas id="cv" width="508" height="564"></canvas></div>
   <div class="panel">
     <div class="status" id="status"><span class="dot" style="background:#e74c3c"></span> 红方行棋（你）</div>
+
+    <div class="engload" id="engLoad" hidden>
+      <span id="engLoadTxt">准备引擎…</span>
+      <div class="engbar"><i id="engBarFill"></i></div>
+    </div>
 
     <div>
       <h3>对局设置</h3>
@@ -13027,7 +13037,7 @@ BOOK_DAT.pop();
   root.PF_TIERS = {
  "source": "bench/new_engine/tier_tiers.json",
  "sha256": "935013af28ac1c215c7f4e012207b1e3a9887da4cd7a9d230af9e8908957427b",
- "generated": "2026-10-04T20:58:17.161Z",
+ "generated": "2026-10-04T21:48:24.834Z",
  "levels": {
   "1": {
    "name": "业余",
@@ -13109,6 +13119,7 @@ window.PF_DATA_B64 = "UEsDBBQAAAAIAAAAIQBjD2B/jhQ/ANsxTAANAAAAcGlrYWZpc2gubm51ZW
  *
  * 对外接口：PF.isHeavyLevel / PF.load / PF.whenReady / PF.tierSearch / PF.search / PF.stop
  *          PF.boardToFen / PF.parseMove / PF.uciOf / PF.TIERS / PF.lastInfo / PF.lastCost / PF.onProgress
+ *          PF.NET_BYTES / PF.netLabel() / PF.loadText(p) —— 引擎下载提示的体积与文案（t_f51aab68 第1项）
  */
 (function (root) {
   'use strict';
@@ -13125,6 +13136,27 @@ window.PF_DATA_B64 = "UEsDBBQAAAAIAAAAIQBjD2B/jhQ/ANsxTAANAAAAcGlrYWZpc2gubm51ZW
   var worker = null, ready = false, seq = 0, curSeq = 0, curCb = null, curReject = null;
   var loadPromise = null, curCandidates = null, legacyMode = false, curTierIdx = null, resolveLoad = null;
   var seedBase = (Math.random() * 1e9) | 0;
+  // 完整强度构建的强度网络体积（js/engines/pikafish/pikafish.nnue）。UI 的下载提示文案只从这里
+  // 生成，别在页面里另写一份数字：改引擎网络时改这一处 + 重跑 test_ui_wiring.js（它会拿磁盘真实
+  // 字节数核对这里的常量）。
+  var NET_BYTES = 50706378;                 // = 50.7MB（十进制 MB，与仓库文档口径一致）
+  var NET_LABEL = '50.7MB';
+
+  function mb(n) { return (n / 1e6).toFixed(1); }
+
+  /* 引擎下载提示文案（t_f51aab68 第1项）：措辞只有这一份，页面侧只负责把它画进面板。
+   * p = worker 的 NET_PROGRESS {loaded,total}；p 为空表示"已决定要加载、还没开始收字节"。 */
+  function loadText(p) {
+    if (!p || !p.loaded) {
+      return '正在准备引擎：首次对局需下载 ' + NET_LABEL + ' 强度网络…';
+    }
+    var total = p.total || NET_BYTES;
+    var pct = Math.max(0, Math.min(100, Math.floor(p.loaded * 100 / total)));
+    if (p.loaded >= total) {
+      return '强度网络已下载完（' + NET_LABEL + '），正在初始化引擎…';
+    }
+    return '正在下载引擎强度网络 ' + pct + '%（' + mb(p.loaded) + '/' + mb(total) + 'MB），只需一次，之后走缓存';
+  }
 
   function tierOf(i) {
     var T = root.PF_TIERS && root.PF_TIERS.levels;
@@ -13339,6 +13371,9 @@ window.PF_DATA_B64 = "UEsDBBQAAAAIAAAAIQBjD2B/jhQ/ANsxTAANAAAAcGlrYWZpc2gubm51ZW
       // A 路径：先过 COOP/COEP 闸门（可能触发一次页面重载），再加载 50.7MB 网络
       ensureIsolated().then(function (iso) {
         if (!iso) { reject(new Error('浏览器未隔离，多线程引擎不可用')); return; }
+        // 下载还没开始（要等 worker 起线程、fetch 建连）也要先给 UI 一句话：
+        // 用户点"新对局"到第一个字节之间本来就有 1–2 秒空窗，没有提示就像卡死了。
+        if (typeof root.PF.onProgress === 'function') { try { root.PF.onProgress(null); } catch (e) {} }
         try { spawnNative(); } catch (e) { reject(e); return; }
         watchReady(reject);
       });
@@ -13435,6 +13470,12 @@ window.PF_DATA_B64 = "UEsDBBQAAAAIAAAAIQBjD2B/jhQ/ANsxTAANAAAAcGlrYWZpc2gubm51ZW
     lastError: null,
     env: null,
     onProgress: null,
+    NET_BYTES: NET_BYTES,
+    netLabel: function () { return NET_LABEL; },
+    loadText: loadText,
+    // 是否真的会发生一次 50MB 下载：file:// 单文件版把引擎内嵌在 HTML 里，不下载，
+    // 所以那一侧不该显示"正在下载 50.7MB"这种话。
+    netDownloadNeeded: function () { try { return !isBlobMode(); } catch (e) { return false; } },
     ready: function () { return ready; }
   };
 })(typeof window !== 'undefined' ? window : this);
@@ -13458,12 +13499,80 @@ let levelIdx = 2, handicapKey = 'none';
 
 // ---- UI setup ----
 const levelSel = document.getElementById('levelSel');
+const handSel = document.getElementById('handicapSel');
+
+// ---- 对局暂存（"下完一步变回开局"的修法，小米浏览器实测 2026-10-05，t_f51aab68）----
+// 线上 Pages 不发 COOP/COEP，多线程引擎要靠根目录 coi-serviceworker.js 注入这两个头；
+// 而头只有 SW 接管之后、重新加载页面才生效 —— 所以冷首访必然在"用户走完第一步"前后重载一次，
+// 页面状态全丢，看起来就是棋盘被打回开局。修法：重载前把对局原样存进 sessionStorage，
+// 重载后按原样恢复；恢复后若轮到 AI，照常走懒加载路径（此时 SW 已接管，不会再重载）。
+function saveGameForReload() {
+  try {
+    if (!game || over) return;
+    sessionStorage.setItem('xqRestore', JSON.stringify({
+      side: humanSide, level: levelIdx, handicap: handicapKey,
+      moves: game.history.map(h => ({ f: h.move.f, t: h.move.t })),
+      armed: engineLoadArmed,   // 重载前引擎下载是否在途：在途就重载后接着跑
+      tries: +(sessionStorage.getItem('coiTries') || 0),
+      at: Date.now(),
+    }));
+  } catch (e) { /* 隐私模式等存不进去：退回原来的行为（会丢局面） */ }
+}
+// 每一步都留一份快照：COI 重载发生在哪一步都不该丢局面（history 只有几十条，代价可忽略）。
+let snapAt = -1;
+function snapshotIfNeeded() {
+  if (!game || over) return;
+  const n = game.history.length;
+  if (n === 0 || n === snapAt) return;
+  snapAt = n;
+  saveGameForReload();
+}
+function restoreGame() {
+  let s = null;
+  try { s = sessionStorage.getItem('xqRestore'); sessionStorage.removeItem('xqRestore'); } catch (e) { return false; }
+  if (!s) return false;
+  let d;
+  try { d = JSON.parse(s); } catch (e) { return false; }
+  if (!d || !Array.isArray(d.moves) || Date.now() - (d.at || 0) > 30 * 60 * 1000) return false;
+  humanSide = d.side === -1 ? -1 : 1;
+  levelIdx = (typeof d.level === 'number' && d.level >= 0 && d.level < XQ.LEVELS.length) ? d.level : levelIdx;
+  handicapKey = (XQ.HANDICAPS && XQ.HANDICAPS[d.handicap]) ? d.handicap : 'none';
+  if (document.getElementById('sideSel')) document.getElementById('sideSel').value = String(humanSide);
+  if (levelSel) levelSel.value = String(levelIdx);
+  if (handSel) handSel.value = handicapKey;
+  game = new XQ.Game(handicapKey, -1);
+  sel = null; legalCache = []; lastMove = null; over = false; thinking = false;
+  let n = 0;
+  for (const mv of d.moves) {
+    const m = game.legalMoves().find(x => x.f === mv.f && x.t === mv.t);
+    if (!m) break;                       // 局面已不合法（存档过旧）：停在能恢复的那一步
+    if (!game.move(m)) break;
+    lastMove = game.history[game.history.length - 1].move;
+    n++;
+  }
+  rebuildSeen();
+  renderLog(); draw();
+  if (n) {
+    // 重放完后补跑一次终局判定：checkEnd 只给"当前局面"记一次重复计数，而 rebuildSeen 数的是
+    // 历史里各步之前的局面（0..n-1），两边正好拼齐，不会重复计数。存档是在 checkEnd 之前写的，
+    // 所以"绝杀/三次重复"这类终局要在这里补判，否则用户会看到一个已经结束却还在等走子的局面。
+    checkEnd();
+    if (!over) {
+      // 将军提示优先于"已恢复"（checkEnd 刚设过就保留）；否则说明一下重载后局面没丢
+      if (!game.inCheck()) setStatus('normal', '已恢复刚才的对局');
+      if (game.side !== humanSide) aiTurn();
+    }
+  }
+  // 重载前引擎下载在途（用户刚点过"新对局"）：接着把下载跑完，别让提示消失、用户干等
+  if (d.armed && !over && typeof PF !== 'undefined' && PF.isHeavyLevel(levelIdx) && !PF.ready()) ensureEngine();
+  return n > 0;
+}
+
 XQ.LEVELS.forEach((L, i) => {
   const o = document.createElement('option');
   o.value = i; o.textContent = L.name + (i === 0 ? '（随机走子）' : '');
   levelSel.appendChild(o);
 });
-const handSel = document.getElementById('handicapSel');
 for (const k of Object.keys(XQ.HANDICAPS)) {
   const o = document.createElement('option');
   o.value = k; o.textContent = XQ.HANDICAPS[k].label;
@@ -13472,16 +13581,52 @@ for (const k of Object.keys(XQ.HANDICAPS)) {
 levelSel.value = levelIdx;
 
 // 引擎懒加载：只有选到引擎档（业余~大师）并且真的要走棋时才加载（完整网络 50.7MB），
-// 入门档与不下的用户都不必付这份下载。加载进度写进状态栏（见 setStatus 的 loading 分支）。
+// 入门档与不下的用户都不必付这份下载。
+// 下载提示（t_f51aab68 第1项）：这份下载在 Pages 上冷首访要 2–4 秒（实测 2093ms），弱网更久，
+// 没有提示用户看到的就是"点了新对局没反应"。面板 #engLoad 默认 hidden，只在真的要下载时出现，
+// 就绪后收起；失败时留下原因 + 说明改用内置 AI。文案来自 PF.loadText（js/pikafish_bridge.js），
+// 页面不重复写数字和措辞。
+const engLoad = document.getElementById('engLoad');
+const engBarFill = document.getElementById('engBarFill');
+const engLoadTxt = document.getElementById('engLoadTxt');
+let engineLoadArmed = false;
+function showEngineProgress(p) {
+  if (!engLoad) return;
+  // file:// 单文件版引擎是内嵌的，不发生下载：文案要说"准备中"，不能谎称在下载 50.7MB。
+  const downloads = (typeof PF.netDownloadNeeded !== 'function') || PF.netDownloadNeeded();
+  engLoad.hidden = false;
+  engLoad.classList.remove('err');
+  if (engLoadTxt) engLoadTxt.textContent = downloads ? PF.loadText(p) : '正在准备内置引擎…（无需下载）';
+  const total = (p && p.total) || PF.NET_BYTES;
+  const pct = p ? Math.max(0, Math.min(100, Math.floor(p.loaded * 100 / total))) : 0;
+  if (engBarFill) engBarFill.style.width = (downloads ? pct : 0) + '%';
+}
+function hideEngineProgress() {
+  engineLoadArmed = false;
+  if (!engLoad) return;
+  if (engBarFill) engBarFill.style.width = '0';
+  engLoad.hidden = true;
+}
+function showEngineFailed(err) {
+  if (!engLoad) return;
+  engineLoadArmed = false;
+  engLoad.hidden = false;
+  engLoad.classList.add('err');
+  if (engBarFill) engBarFill.style.width = '0';
+  if (engLoadTxt) {
+    engLoadTxt.textContent = '引擎未能加载（' + String((err && err.message) || '未知原因') +
+      '）；本局改用内置 AI，强度会低一些。刷新页面可重试。';
+  }
+}
 function ensureEngine() {
   if (typeof PF === 'undefined' || PF.ready()) return;
-  PF.onProgress = (p) => {
-    if (thinking && game && game.side !== humanSide) {
-      const pct = p.total ? Math.floor(p.loaded * 100 / p.total) : 0;
-      setStatus('loading', p.total ? ('正在加载引擎 ' + pct + '%') : '正在加载引擎…');
-    }
-  };
-  PF.load().catch(() => {});
+  if (engineLoadArmed) return;           // 已经在下载中：不要重复挂进度回调
+  engineLoadArmed = true;
+  // COOP/COEP 闸门可能会重载页面（见 js/pikafish_bridge.js ensureIsolated）：先把对局存下来
+  saveGameForReload();
+  showEngineProgress(null);              // 先给一句"正在准备"，别让人对着静止的棋盘等
+  PF.onProgress = (p) => { if (engineLoadArmed) showEngineProgress(p); };
+  PF.load().then(() => { hideEngineProgress(); }).catch((e) => { showEngineFailed(e); });
 }
 
 function applyMove(m) {
@@ -13497,11 +13642,19 @@ function rebuildSeen() {
     if (h.gaveCheck === undefined) h.gaveCheck = XQ.inCheck(h.board, -h.side); // 兼容旧历史
   }
 }
-function newGame() {
+function newGame(fromUser) {
   game = new XQ.Game(handicapKey, -1); // handicap removed from AI side (black when human=red)
   sel = null; legalCache = []; lastMove = null; over = false; thinking = false;
   rebuildSeen();
   renderLog(); draw();
+  if (fromUser) {
+    // 用户明确要开新局：刚才那份暂存作废，别被下一次刷新捡回来
+    try { sessionStorage.removeItem('xqRestore'); } catch (e) {}
+    // 选引擎档就此刻开始下载强度网络，与用户想第一步棋的时间重叠，
+    // 而不是等用户走完第一步才发现"电脑半天不动"。页面初次自动 newGame() 不触发——保持懒加载，
+    // 只看棋盘/选入门档的用户不必付这 50.7MB（t_9c93fb06 的懒加载约定不变）。
+    if (typeof PF !== 'undefined' && PF.isHeavyLevel(levelIdx)) ensureEngine();
+  }
   if (humanSide === -1) aiTurn();
 }
 
@@ -13510,7 +13663,7 @@ document.getElementById('newBtn').onclick = () => {
   humanSide = parseInt(document.getElementById('sideSel').value);
   levelIdx = parseInt(levelSel.value);
   handicapKey = handSel.value;
-  newGame();
+  newGame(true);
 };
 document.getElementById('undoBtn').onclick = () => {
   if (thinking || !game || game.history.length === 0) return;
@@ -13564,11 +13717,14 @@ function draw() {
   // cannon / pawn positions
   const marks = [[2,1],[2,7],[7,1],[7,7],[0,0],[0,2],[0,4],[0,6],[0,8],[9,0],[9,2],[9,4],[9,6],[9,8]];
   for (const [r, c] of marks) drawPosMark(r, c);
-  // last move
+  // last move: 终点画亮环、起点画淡环（起点已经有棋子离开，淡一点就够）
+  let movedIdx = -1;
   if (lastMove) {
     const [x1, y1] = pos(lastMove.f), [x2, y2] = pos(lastMove.t);
-    ctx.strokeStyle = '#f1c40faa'; ctx.lineWidth = sc(3);
-    circle(x1, y1, sc(25)); ctx.stroke(); circle(x2, y2, sc(25)); ctx.stroke();
+    movedIdx = lastMove.t;
+    ctx.lineWidth = sc(3);
+    ctx.strokeStyle = '#f1c40f33'; circle(x1, y1, sc(25)); ctx.stroke();
+    ctx.strokeStyle = '#f1c40fcc'; circle(x2, y2, sc(25)); ctx.stroke();
   }
   // legal move hints
   if (sel !== null) {
@@ -13580,11 +13736,11 @@ function draw() {
     const [sx, sy] = pos(sel);
     ctx.strokeStyle = '#f1c40f'; ctx.lineWidth = sc(3); circle(sx, sy, sc(26)); ctx.stroke();
   }
-  // pieces
+  // pieces —— 刚被移动的那颗子带光晕 + 内圈高亮（t_f51aab68 第2项）
   for (let i = 0; i < 90; i++) {
     const c = game.board[i];
     if (c === 0) continue;
-    drawPiece(i, c);
+    drawPiece(i, c, i === movedIdx);
   }
 }
 function line(x1, y1, x2, y2) { ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke(); }
@@ -13598,18 +13754,27 @@ function drawPosMark(r, c) {
     line(x + sx*(g+d), y + sy*(g+d), x + sx*(g+2*d), y + sy*(g+2*d));
   }
 }
-function drawPiece(i, c) {
+function drawPiece(i, c, moved) {
   const [x, y] = pos(i);
   const red = c > 0;
+  ctx.save();
+  if (moved) {
+    // 刚走完的子：外发光（金色 shadowBlur）+ 稍粗的边框，肉眼一眼能认出"就是这颗子动了"。
+    // 只画在棋盘上，不动棋子尺寸/位置，不影响点击命中判定。
+    ctx.shadowColor = '#f1c40f'; ctx.shadowBlur = sc(14);
+  }
   const grad = ctx.createRadialGradient(x - sc(8), y - sc(10), sc(4), x, y, sc(26));
   grad.addColorStop(0, '#fdf6e3'); grad.addColorStop(1, '#e0cfa5');
   ctx.fillStyle = grad; circle(x, y, sc(24)); ctx.fill();
-  ctx.strokeStyle = red ? '#b03a2e' : '#1c1c1c'; ctx.lineWidth = sc(2.5); ctx.stroke();
-  ctx.strokeStyle = red ? '#d98880' : '#555'; ctx.lineWidth = sc(1); circle(x, y, sc(20)); ctx.stroke();
+  ctx.shadowBlur = 0;
+  ctx.strokeStyle = red ? '#b03a2e' : '#1c1c1c'; ctx.lineWidth = moved ? sc(3.5) : sc(2.5); ctx.stroke();
+  if (moved) { ctx.strokeStyle = '#f1c40f'; ctx.lineWidth = sc(2); circle(x, y, sc(20)); ctx.stroke(); }
+  else { ctx.strokeStyle = red ? '#d98880' : '#555'; ctx.lineWidth = sc(1); circle(x, y, sc(20)); ctx.stroke(); }
   ctx.fillStyle = red ? '#b03a2e' : '#1c1c1c';
   ctx.font = 'bold ' + sc(26) + 'px "KaiTi","STKaiti","Microsoft YaHei",serif';
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   ctx.fillText(XQ.pieceName(c), x, y + sc(1));
+  ctx.restore();
 }
 
 // ---- interaction ----
@@ -13747,6 +13912,7 @@ function setStatus(mode, text) {
 }
 
 function renderLog() {
+  snapshotIfNeeded();
   const log = document.getElementById('log');
   let html = '';
   for (let i = 0; i < game.history.length; i++) {
@@ -13769,7 +13935,8 @@ window.addEventListener('orientationchange', () => {
 });
 
 layout();
-newGame();
+// 被 COOP/COEP 闸门重载过：先把刚才的对局接回来，再考虑开新局
+if (!restoreGame()) newGame();
 </script>
 </body>
 </html>

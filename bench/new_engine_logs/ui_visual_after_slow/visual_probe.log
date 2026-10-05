@@ -1,0 +1,22 @@
+NETWORK-EMULATION down=200KB/s (50.7MB -> ~248s)
+PAGE-READY 2.1s
+HELPERS undefined
+STAGE 00-initial 2.2s status="红方行棋（你）" engVisible=false engText="准备引擎…" engBar=0.0 pfReady=false lastMove=null
+STAGE 01-after-newgame 2.2s status="红方行棋（你）" engVisible=true engText="正在准备引擎：首次对局需下载 50.7MB 强度网络…" engBar=0.0 pfReady=false lastMove=null
+AFTER-NEWGAME engineStarted=false status="红方行棋（你）"
+HUMAN-MOVE 兵九进一 2.2s
+STAGE 02-after-human-move 2.3s status="黑方行棋" engVisible=true engText="正在准备引擎：首次对局需下载 50.7MB 强度网络…" engBar=0.0 pfReady=false lastMove=[54,45]
+HILITE after-human-move {"move":[54,45],"control":0,"sq":34,"dst24_34":{"hi":552,"total":676,"ratio":0.817},"src24_34":{"hi":250,"total":676,"ratio":0.37},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":107,"total":460,"ratio":0.233},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+STAGE 03-loading-1 2.4s status="AI 思考中…" engVisible=true engText="正在下载引擎强度网络 57%（29.2/50.7MB），只需一次，之后走缓存" engBar=2.7 pfReady=false lastMove=[54,45]
+STAGE 03-loading-2 4.0s status="红方行棋（你）" engVisible=false engText="正在下载引擎强度网络 100%（50.7/50.7MB），只需一次，之后走缓存" engBar=0.0 pfReady=true lastMove=[2,22]
+ENGINE-READY=true 4.0s
+STAGE 04-engine-ready 4.0s status="红方行棋（你）" engVisible=false engText="正在下载引擎强度网络 100%（50.7/50.7MB），只需一次，之后走缓存" engBar=0.0 pfReady=true lastMove=[2,22]
+STAGE 05-after-ai-move 4.5s status="红方行棋（你）" engVisible=false engText="正在下载引擎强度网络 100%（50.7/50.7MB），只需一次，之后走缓存" engBar=0.0 pfReady=true lastMove=[2,22]
+HILITE after-ai-move {"move":[2,22],"control":7,"sq":34,"dst24_34":{"hi":512,"total":676,"ratio":0.757},"src24_34":{"hi":146,"total":676,"ratio":0.216},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":106,"total":460,"ratio":0.23},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+HUMAN-MOVE-2 车一进二 4.5s
+STAGE 06-after-human-move2 4.7s status="AI 思考中…" engVisible=false engText="正在下载引擎强度网络 100%（50.7/50.7MB），只需一次，之后走缓存" engBar=0.0 pfReady=true lastMove=[89,71]
+HILITE after-human-move2 {"move":[89,71],"control":0,"sq":34,"dst24_34":{"hi":529,"total":676,"ratio":0.783},"src24_34":{"hi":147,"total":676,"ratio":0.217},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":107,"total":460,"ratio":0.233},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+REPORT C:\Users\35165\xiangqi\bench\new_engine_logs\ui_visual_after_slow\visual_probe.json
+=== LOG ENTRIES (2) ===
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[warning] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently

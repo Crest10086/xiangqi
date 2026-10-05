@@ -1,0 +1,26 @@
+NETWORK-EMULATION down=2048KB/s (50.7MB -> ~24s)
+PAGE-READY 0.6s
+HELPERS undefined
+STAGE 00-initial 0.6s status="红方行棋（你）" engVisible=false engText="准备引擎…" engBar=0.0 pfReady=false lastMove=null
+STAGE 01-after-newgame 0.7s status="红方行棋（你）" engVisible=true engText="正在准备引擎：首次对局需下载 50.7MB 强度网络…" engBar=0.0 pfReady=false lastMove=null
+AFTER-NEWGAME engineStarted=false status="红方行棋（你）"
+HUMAN-MOVE 兵九进一 0.7s
+STAGE 02-after-human-move 0.8s status="黑方行棋" engVisible=true engText="正在下载引擎强度网络 8%（4.1/50.7MB），只需一次，之后走缓存" engBar=2.6 pfReady=false lastMove=[54,45]
+HILITE after-human-move {"move":[54,45],"control":0,"sq":34,"dst24_34":{"hi":552,"total":676,"ratio":0.817},"src24_34":{"hi":250,"total":676,"ratio":0.37},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":107,"total":460,"ratio":0.233},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+STAGE 03-loading-1 0.9s status="AI 思考中…" engVisible=true engText="正在下载引擎强度网络 8%（4.1/50.7MB），只需一次，之后走缓存" engBar=6.1 pfReady=false lastMove=[54,45]
+STAGE 03-loading-2 2.5s status="AI 思考中…" engVisible=true engText="正在下载引擎强度网络 16%（8.2/50.7MB），只需一次，之后走缓存" engBar=16.0 pfReady=false lastMove=[54,45]
+STAGE 03-loading-3 4.0s status="AI 思考中…" engVisible=true engText="正在下载引擎强度网络 32%（16.4/50.7MB），只需一次，之后走缓存" engBar=32.0 pfReady=false lastMove=[54,45]
+STAGE 03-loading-4 5.6s status="AI 思考中…" engVisible=true engText="正在下载引擎强度网络 40%（20.5/50.7MB），只需一次，之后走缓存" engBar=40.0 pfReady=false lastMove=[54,45]
+STAGE 03-loading-5 7.2s status="AI 思考中…" engVisible=true engText="正在下载引擎强度网络 56%（28.7/50.7MB），只需一次，之后走缓存" engBar=56.0 pfReady=false lastMove=[54,45]
+STAGE 03-loading-6 8.7s status="AI 思考中…" engVisible=true engText="正在下载引擎强度网络 64%（32.8/50.7MB），只需一次，之后走缓存" engBar=64.0 pfReady=false lastMove=[54,45]
+ENGINE-READY=true 13.3s
+STAGE 04-engine-ready 13.4s status="AI 思考中…" engVisible=false engText="强度网络已下载完（50.7MB），正在初始化引擎…" engBar=0.0 pfReady=true lastMove=[54,45]
+STAGE 05-after-ai-move 14.3s status="红方行棋（你）" engVisible=false engText="强度网络已下载完（50.7MB），正在初始化引擎…" engBar=0.0 pfReady=true lastMove=[25,21]
+HILITE after-ai-move {"move":[25,21],"control":0,"sq":34,"dst24_34":{"hi":524,"total":676,"ratio":0.775},"src24_34":{"hi":142,"total":676,"ratio":0.21},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":106,"total":460,"ratio":0.23},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+HUMAN-MOVE-2 车一进二 14.3s
+STAGE 06-after-human-move2 14.5s status="AI 思考中…" engVisible=false engText="强度网络已下载完（50.7MB），正在初始化引擎…" engBar=0.0 pfReady=true lastMove=[89,71]
+HILITE after-human-move2 {"move":[89,71],"control":0,"sq":34,"dst24_34":{"hi":529,"total":676,"ratio":0.783},"src24_34":{"hi":147,"total":676,"ratio":0.217},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":107,"total":460,"ratio":0.233},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+REPORT C:\Users\35165\xiangqi\bench\new_engine_logs\ui_visual_final\visual_probe.json
+=== LOG ENTRIES (2) ===
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[warning] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently

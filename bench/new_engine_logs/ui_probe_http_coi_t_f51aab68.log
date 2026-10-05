@@ -1,0 +1,220 @@
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Local Storage/leveldb/000003.log': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Local Storage/leveldb/LOG': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Local Storage/leveldb/MANIFEST-000001': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Session Storage/000003.log': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Session Storage/LOG': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Session Storage/MANIFEST-000001': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Storage/ext/nmmhkkegccagdldgiimedpiccmgmieda/def/Local Storage/leveldb/000003.log': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Storage/ext/nmmhkkegccagdldgiimedpiccmgmieda/def/Local Storage/leveldb/LOG': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Storage/ext/nmmhkkegccagdldgiimedpiccmgmieda/def/Local Storage/leveldb/MANIFEST-000001': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Storage/ext/nmmhkkegccagdldgiimedpiccmgmieda/def/Session Storage/000003.log': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Storage/ext/nmmhkkegccagdldgiimedpiccmgmieda/def/Session Storage/LOG': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/Default/Storage/ext/nmmhkkegccagdldgiimedpiccmgmieda/def/Session Storage/MANIFEST-000001': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/optimization_guide_model_store/25/63922A0C010C80A5/A22FB81F950F3331/visual_model_desktop.tflite': Device or resource busy
+rm: cannot remove 'C:/Users/35165/AppData/Local/hermes/cache/scratch/chrome-ui/optimization_guide_model_store/25/63922A0C010C80A5/E1C453AFE9CB25E9/visual_model_desktop.tflite': Device or resource busy
+boot: {"coi":true,"url":"http://127.0.0.1:9471/index.html"}
+.. done
+
+=== PROBE RESULT (15s) ===
+{
+ "coi": true,
+ "engineReadyBefore": false,
+ "firstLoadMs": 571,
+ "firstLoadOk": true,
+ "env": {
+  "type": "ENV",
+  "coi": true,
+  "sab": true,
+  "threads": 4
+ },
+ "jsHeapMB": 3,
+ "rows": [
+  {
+   "level": 1,
+   "name": "业余",
+   "human": [
+    "炮八进一",
+    "炮八进二",
+    "炮二平七",
+    "炮七平九"
+   ],
+   "ai": [
+    "马2进3",
+    "砲8平9",
+    "象7进5",
+    "卒1进1"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 1600,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": {
+    "type": "ENV",
+    "coi": true,
+    "sab": true,
+    "threads": 4
+   },
+   "engineLastError": null,
+   "engineInfo": {
+    "depth": 11,
+    "score": "144cp",
+    "nodes": 623624
+   },
+   "tierParams": {
+    "cap": 80,
+    "p": 0.5,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 2,
+   "name": "进阶",
+   "human": [
+    "马八进七",
+    "车一进一",
+    "炮二进五",
+    "炮二退三"
+   ],
+   "ai": [
+    "砲8平9",
+    "马2进1",
+    "砲2进2",
+    "卒9进1"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 1600,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": {
+    "type": "ENV",
+    "coi": true,
+    "sab": true,
+    "threads": 4
+   },
+   "engineLastError": null,
+   "engineInfo": {
+    "depth": 12,
+    "score": "-12cp",
+    "nodes": 579148
+   },
+   "tierParams": {
+    "cap": 80,
+    "p": 0,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 3,
+   "name": "高手",
+   "human": [
+    "炮二平六",
+    "炮六进五",
+    "炮八平七",
+    "炮七平八"
+   ],
+   "ai": [
+    "砲8平5",
+    "砲5进4",
+    "砲2进2",
+    "砲2平5"
+   ],
+   "src": [
+    "book",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 1400,
+   "plies": 8,
+   "over": true,
+   "engineReady": true,
+   "engineEnv": {
+    "type": "ENV",
+    "coi": true,
+    "sab": true,
+    "threads": 4
+   },
+   "engineLastError": null,
+   "engineInfo": {
+    "depth": 11,
+    "score": "547cp",
+    "nodes": 545999
+   },
+   "tierParams": {
+    "cap": 25,
+    "p": 0.1,
+    "band": 200,
+    "mpv": 8,
+    "ms": 300,
+    "hash": 64
+   }
+  },
+  {
+   "level": 4,
+   "name": "大师",
+   "human": [
+    "炮二平一",
+    "车九进二",
+    "炮八进六",
+    "车九平五"
+   ],
+   "ai": [
+    "马8进7",
+    "砲2进7",
+    "车1进1",
+    "车1平2"
+   ],
+   "src": [
+    "engine",
+    "engine",
+    "engine",
+    "engine"
+   ],
+   "waitedMs": 8800,
+   "plies": 8,
+   "over": false,
+   "engineReady": true,
+   "engineEnv": {
+    "type": "ENV",
+    "coi": true,
+    "sab": true,
+    "threads": 4
+   },
+   "engineLastError": null,
+   "engineInfo": {
+    "depth": 20,
+    "score": "615cp",
+    "nodes": 3286236
+   },
+   "tierParams": {
+    "mpv": 1,
+    "ms": 2000,
+    "hash": 256
+   }
+  }
+ ],
+ "status": "红方行棋（你）",
+ "logTail": [
+  "1.炮二平一马8进72.车九进二砲2进73.炮八进六车1进14.车九平五车1平2"
+ ]
+}
+=== LOG ENTRIES (1) ===
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)

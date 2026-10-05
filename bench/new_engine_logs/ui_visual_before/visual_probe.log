@@ -1,0 +1,22 @@
+NETWORK-EMULATION FAILED {"code":-32602,"message":"Invalid parameters","data":"Failed to deserialize params.offline - BINDINGS: mandatory field missing at position 82"}
+PAGE-READY 0.6s
+HELPERS undefined
+STAGE 00-initial 0.6s status="红方行棋（你）" engVisible=false engText=null engBar=null pfReady=false lastMove=null
+STAGE 01-after-newgame 0.7s status="红方行棋（你）" engVisible=false engText=null engBar=null pfReady=false lastMove=null
+AFTER-NEWGAME engineStarted=false status="红方行棋（你）"
+HUMAN-MOVE 兵九进一 0.7s
+STAGE 02-after-human-move 0.8s status="黑方行棋" engVisible=false engText=null engBar=null pfReady=false lastMove=[54,45]
+HILITE after-human-move {"move":[54,45],"control":0,"sq":34,"dst24_34":{"hi":130,"total":676,"ratio":0.192},"src24_34":{"hi":169,"total":676,"ratio":0.25},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":6,"total":460,"ratio":0.013},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+STAGE 03-loading-1 0.9s status="AI 思考中…" engVisible=false engText=null engBar=null pfReady=false lastMove=[54,45]
+STAGE 03-loading-2 2.4s status="红方行棋（你）" engVisible=false engText=null engBar=null pfReady=true lastMove=[25,26]
+ENGINE-READY=true 2.4s
+STAGE 04-engine-ready 2.5s status="红方行棋（你）" engVisible=false engText=null engBar=null pfReady=true lastMove=[25,26]
+STAGE 05-after-ai-move 3.0s status="红方行棋（你）" engVisible=false engText=null engBar=null pfReady=true lastMove=[25,26]
+HILITE after-ai-move {"move":[25,26],"control":0,"sq":34,"dst24_34":{"hi":125,"total":676,"ratio":0.185},"src24_34":{"hi":172,"total":676,"ratio":0.254},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":6,"total":460,"ratio":0.013},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+HUMAN-MOVE-2 车一进二 3.0s
+STAGE 06-after-human-move2 3.2s status="AI 思考中…" engVisible=false engText=null engBar=null pfReady=true lastMove=[89,71]
+HILITE after-human-move2 {"move":[89,71],"control":0,"sq":34,"dst24_34":{"hi":101,"total":676,"ratio":0.149},"src24_34":{"hi":153,"total":676,"ratio":0.226},"ctrl24_34":{"hi":0,"total":676,"ratio":0},"dst15_24":{"hi":6,"total":460,"ratio":0.013},"ctrl15_24":{"hi":0,"total":460,"ratio":0}}
+REPORT C:\Users\35165\xiangqi\bench\new_engine_logs\ui_visual_before\visual_probe.json
+=== LOG ENTRIES (2) ===
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[warning] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently

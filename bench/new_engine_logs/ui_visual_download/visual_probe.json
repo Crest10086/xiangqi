@@ -1,0 +1,492 @@
+{
+ "page": "http://127.0.0.1:9431/index.html",
+ "start": "2026-10-05T01:33:06.685Z",
+ "networkEmulationKBps": 2048,
+ "level": "1",
+ "navigations": [
+  "0.1s http://127.0.0.1:9431/index.html"
+ ],
+ "stages": [
+  {
+   "stage": "00-initial",
+   "t": "0.6s",
+   "note": "page loaded, before any interaction",
+   "ui": {
+    "status": "红方行棋（你）",
+    "engVisible": false,
+    "engText": "准备引擎…",
+    "engBarPct": "0.0",
+    "lastMove": null,
+    "historyLen": 0,
+    "side": 1,
+    "thinking": false,
+    "pfReady": false,
+    "pfNetProgress": null,
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\00-initial.png"
+  },
+  {
+   "stage": "01-after-newgame",
+   "t": "0.7s",
+   "note": "user picked tier 1 and clicked 新对局",
+   "ui": {
+    "status": "红方行棋（你）",
+    "engVisible": true,
+    "engText": "正在准备引擎：首次对局需下载 50.7MB 强度网络…",
+    "engBarPct": "0.0",
+    "lastMove": null,
+    "historyLen": 0,
+    "side": 1,
+    "thinking": false,
+    "pfReady": false,
+    "pfNetProgress": null,
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\01-after-newgame.png"
+  },
+  {
+   "stage": "02-after-human-move",
+   "t": "0.8s",
+   "note": "human moved 兵九进一; engine download should be running",
+   "ui": {
+    "status": "黑方行棋",
+    "engVisible": true,
+    "engText": "正在下载引擎强度网络 8%（4.1/50.7MB），只需一次，之后走缓存",
+    "engBarPct": "1.5",
+    "lastMove": [
+     54,
+     45
+    ],
+    "historyLen": 1,
+    "side": -1,
+    "thinking": false,
+    "pfReady": false,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 4096000,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\02-after-human-move.png"
+  },
+  {
+   "stage": "HILITE after-human-move",
+   "t": "0.8s",
+   "sample": {
+    "move": [
+     54,
+     45
+    ],
+    "control": 0,
+    "sq": 34,
+    "dst24_34": {
+     "hi": 552,
+     "total": 676,
+     "ratio": 0.817
+    },
+    "src24_34": {
+     "hi": 250,
+     "total": 676,
+     "ratio": 0.37
+    },
+    "ctrl24_34": {
+     "hi": 0,
+     "total": 676,
+     "ratio": 0
+    },
+    "dst15_24": {
+     "hi": 107,
+     "total": 460,
+     "ratio": 0.233
+    },
+    "ctrl15_24": {
+     "hi": 0,
+     "total": 460,
+     "ratio": 0
+    }
+   }
+  },
+  {
+   "stage": "03-loading-1",
+   "t": "0.9s",
+   "note": "engine download in flight (net={\"type\":\"NET_PROGRESS\",\"loaded\":4096000,\"total\":50706378})",
+   "ui": {
+    "status": "AI 思考中…",
+    "engVisible": true,
+    "engText": "正在下载引擎强度网络 8%（4.1/50.7MB），只需一次，之后走缓存",
+    "engBarPct": "5.9",
+    "lastMove": [
+     54,
+     45
+    ],
+    "historyLen": 1,
+    "side": -1,
+    "thinking": true,
+    "pfReady": false,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 4096000,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\03-loading-1.png"
+  },
+  {
+   "stage": "03-loading-2",
+   "t": "2.5s",
+   "note": "engine download in flight (net={\"type\":\"NET_PROGRESS\",\"loaded\":8192000,\"total\":50706378})",
+   "ui": {
+    "status": "AI 思考中…",
+    "engVisible": true,
+    "engText": "正在下载引擎强度网络 16%（8.2/50.7MB），只需一次，之后走缓存",
+    "engBarPct": "16.0",
+    "lastMove": [
+     54,
+     45
+    ],
+    "historyLen": 1,
+    "side": -1,
+    "thinking": true,
+    "pfReady": false,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 8192000,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\03-loading-2.png"
+  },
+  {
+   "stage": "03-loading-3",
+   "t": "4.1s",
+   "note": "engine download in flight (net={\"type\":\"NET_PROGRESS\",\"loaded\":16384000,\"total\":50706378})",
+   "ui": {
+    "status": "AI 思考中…",
+    "engVisible": true,
+    "engText": "正在下载引擎强度网络 32%（16.4/50.7MB），只需一次，之后走缓存",
+    "engBarPct": "32.0",
+    "lastMove": [
+     54,
+     45
+    ],
+    "historyLen": 1,
+    "side": -1,
+    "thinking": true,
+    "pfReady": false,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 16384000,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\03-loading-3.png"
+  },
+  {
+   "stage": "03-loading-4",
+   "t": "5.6s",
+   "note": "engine download in flight (net={\"type\":\"NET_PROGRESS\",\"loaded\":20480000,\"total\":50706378})",
+   "ui": {
+    "status": "AI 思考中…",
+    "engVisible": true,
+    "engText": "正在下载引擎强度网络 40%（20.5/50.7MB），只需一次，之后走缓存",
+    "engBarPct": "40.0",
+    "lastMove": [
+     54,
+     45
+    ],
+    "historyLen": 1,
+    "side": -1,
+    "thinking": true,
+    "pfReady": false,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 20480000,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\03-loading-4.png"
+  },
+  {
+   "stage": "03-loading-5",
+   "t": "7.2s",
+   "note": "engine download in flight (net={\"type\":\"NET_PROGRESS\",\"loaded\":28672000,\"total\":50706378})",
+   "ui": {
+    "status": "AI 思考中…",
+    "engVisible": true,
+    "engText": "正在下载引擎强度网络 56%（28.7/50.7MB），只需一次，之后走缓存",
+    "engBarPct": "56.0",
+    "lastMove": [
+     54,
+     45
+    ],
+    "historyLen": 1,
+    "side": -1,
+    "thinking": true,
+    "pfReady": false,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 28672000,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\03-loading-5.png"
+  },
+  {
+   "stage": "03-loading-6",
+   "t": "8.8s",
+   "note": "engine download in flight (net={\"type\":\"NET_PROGRESS\",\"loaded\":32768000,\"total\":50706378})",
+   "ui": {
+    "status": "AI 思考中…",
+    "engVisible": true,
+    "engText": "正在下载引擎强度网络 64%（32.8/50.7MB），只需一次，之后走缓存",
+    "engBarPct": "64.0",
+    "lastMove": [
+     54,
+     45
+    ],
+    "historyLen": 1,
+    "side": -1,
+    "thinking": true,
+    "pfReady": false,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 32768000,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\03-loading-6.png"
+  },
+  {
+   "stage": "04-engine-ready",
+   "t": "13.4s",
+   "note": "engine loaded (or failed)",
+   "ui": {
+    "status": "AI 思考中…",
+    "engVisible": false,
+    "engText": "强度网络已下载完（50.7MB），正在初始化引擎…",
+    "engBarPct": "0.0",
+    "lastMove": [
+     54,
+     45
+    ],
+    "historyLen": 1,
+    "side": -1,
+    "thinking": true,
+    "pfReady": true,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 50706378,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\04-engine-ready.png"
+  },
+  {
+   "stage": "05-after-ai-move",
+   "t": "14.3s",
+   "note": "AI replied; measure the highlight on the AI piece",
+   "ui": {
+    "status": "红方行棋（你）",
+    "engVisible": false,
+    "engText": "强度网络已下载完（50.7MB），正在初始化引擎…",
+    "engBarPct": "0.0",
+    "lastMove": [
+     2,
+     22
+    ],
+    "historyLen": 2,
+    "side": 1,
+    "thinking": false,
+    "pfReady": true,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 50706378,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\05-after-ai-move.png"
+  },
+  {
+   "stage": "HILITE after-ai-move",
+   "t": "14.3s",
+   "sample": {
+    "move": [
+     2,
+     22
+    ],
+    "control": 7,
+    "sq": 34,
+    "dst24_34": {
+     "hi": 512,
+     "total": 676,
+     "ratio": 0.757
+    },
+    "src24_34": {
+     "hi": 146,
+     "total": 676,
+     "ratio": 0.216
+    },
+    "ctrl24_34": {
+     "hi": 0,
+     "total": 676,
+     "ratio": 0
+    },
+    "dst15_24": {
+     "hi": 106,
+     "total": 460,
+     "ratio": 0.23
+    },
+    "ctrl15_24": {
+     "hi": 0,
+     "total": 460,
+     "ratio": 0
+    }
+   }
+  },
+  {
+   "stage": "06-after-human-move2",
+   "t": "14.5s",
+   "note": "human moved 车一进二",
+   "ui": {
+    "status": "AI 思考中…",
+    "engVisible": false,
+    "engText": "强度网络已下载完（50.7MB），正在初始化引擎…",
+    "engBarPct": "0.0",
+    "lastMove": [
+     89,
+     71
+    ],
+    "historyLen": 3,
+    "side": -1,
+    "thinking": true,
+    "pfReady": true,
+    "pfNetProgress": {
+     "type": "NET_PROGRESS",
+     "loaded": 50706378,
+     "total": 50706378
+    },
+    "pfError": null
+   },
+   "screenshot": "C:\\Users\\35165\\xiangqi\\bench\\new_engine_logs\\ui_visual_download\\06-after-human-move2.png"
+  },
+  {
+   "stage": "HILITE after-human-move2",
+   "t": "14.5s",
+   "sample": {
+    "move": [
+     89,
+     71
+    ],
+    "control": 0,
+    "sq": 34,
+    "dst24_34": {
+     "hi": 529,
+     "total": 676,
+     "ratio": 0.783
+    },
+    "src24_34": {
+     "hi": 147,
+     "total": 676,
+     "ratio": 0.217
+    },
+    "ctrl24_34": {
+     "hi": 0,
+     "total": 676,
+     "ratio": 0
+    },
+    "dst15_24": {
+     "hi": 107,
+     "total": 460,
+     "ratio": 0.233
+    },
+    "ctrl15_24": {
+     "hi": 0,
+     "total": 460,
+     "ratio": 0
+    }
+   }
+  }
+ ],
+ "samples": {
+  "aiMove": {
+   "move": [
+    2,
+    22
+   ],
+   "control": 7,
+   "sq": 34,
+   "dst24_34": {
+    "hi": 512,
+    "total": 676,
+    "ratio": 0.757
+   },
+   "src24_34": {
+    "hi": 146,
+    "total": 676,
+    "ratio": 0.216
+   },
+   "ctrl24_34": {
+    "hi": 0,
+    "total": 676,
+    "ratio": 0
+   },
+   "dst15_24": {
+    "hi": 106,
+    "total": 460,
+    "ratio": 0.23
+   },
+   "ctrl15_24": {
+    "hi": 0,
+    "total": 460,
+    "ratio": 0
+   }
+  },
+  "humanMove": {
+   "move": [
+    89,
+    71
+   ],
+   "control": 0,
+   "sq": 34,
+   "dst24_34": {
+    "hi": 529,
+    "total": 676,
+    "ratio": 0.783
+   },
+   "src24_34": {
+    "hi": 147,
+    "total": 676,
+    "ratio": 0.217
+   },
+   "ctrl24_34": {
+    "hi": 0,
+    "total": 676,
+    "ratio": 0
+   },
+   "dst15_24": {
+    "hi": 107,
+    "total": 460,
+    "ratio": 0.233
+   },
+   "ctrl15_24": {
+    "hi": 0,
+    "total": 460,
+    "ratio": 0
+   }
+  }
+ },
+ "logEntries": [
+  "[error] Failed to load resource: the server responded with a status of 404 (Not Found)",
+  "[warning] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+ ]
+}

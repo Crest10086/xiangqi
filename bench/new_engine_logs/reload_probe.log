@@ -1,0 +1,10 @@
+RELOAD-PROBE url=http://127.0.0.1:9381/index.html (server without COOP/COEP -> coi-serviceworker must reload the page)
+BEFORE {"href":"http://127.0.0.1:9381/index.html","coi":false,"coiTries":null,"restoreBlob":null,"hist":[],"pieces":32,"lastMove":null,"status":"红方行棋（你）","engVisible":false,"engText":"准备引擎…","pfReady":false}
+AFTER-MOVE {"href":"http://127.0.0.1:9381/index.html","coi":false,"coiTries":"1","restoreBlob":"{\"side\":1,\"level\":1,\"handicap\":\"none\",\"moves\":[{\"f\":54,\"t\":45}],\"armed\":true,\"tries\":1,\"at\":1791167300299}","hist":["兵九进一"],"pieces":32,"lastMove":[54,45],"status":"黑方行棋","engVisible":true,"engText":"正在准备引擎：首次对局需下载 50.7MB 强度网络…","pfReady":false}
+
+NAVIGATIONS (2)
+NAV http://127.0.0.1:9381/index.html
+NAV http://127.0.0.1:9381/index.html
+SAW-RELOAD true
+AFTER {"href":"http://127.0.0.1:9381/index.html","coi":true,"coiTries":"1","restoreBlob":"{\"side\":1,\"level\":1,\"handicap\":\"none\",\"moves\":[{\"f\":54,\"t\":45},{\"f\":25,\"t\":21}],\"armed\":false,\"tries\":1,\"at\":1791167301310}","hist":["兵九进一","砲8平4"],"pieces":32,"lastMove":[25,21],"status":"红方行棋（你）","engVisible":false,"engText":"强度网络已下载完（50.7MB），正在初始化引擎…","pfReady":true}
+VERDICT GAME-PRESERVED-ACROSS-RELOAD

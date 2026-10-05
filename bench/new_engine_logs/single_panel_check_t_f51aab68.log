@@ -1,0 +1,7 @@
+SINGLE-PANEL-CHECK url=file:///C:/Users/35165/xiangqi/xiangqi.html
+netDownloadNeeded=false
+FLOW-SAMPLES {"seen":["正在准备内置引擎…（无需下载）"],"ready":true}
+pfReady=true
+panelHiddenAfterReady=true
+DIRECT {"visible":true,"text":"正在准备内置引擎…（无需下载）","bar":"0%"}
+VERDICT SINGLE-FILE-PANEL-OK-NO-DOWNLOAD-CLAIM

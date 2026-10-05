@@ -6,9 +6,13 @@ pf_*.html
 cdp_*.js
 node_pf_test.js
 # 例外：跑线上/真机探针所需的 CDP 驱动脚本必须进仓库，否则新克隆跑不了
-# bench/new_engine/run_ui_probe.sh / run_pages_probe.sh（它们按文件名引用这两个脚本）。
+# bench/new_engine/run_ui_probe.sh / run_pages_probe.sh / run_ui_visual.sh / run_reload_probe.sh
+# / run_single_panel_check.sh（它们按文件名引用这些脚本）。
 !bench/new_engine/cdp_run_probe.js
 !bench/new_engine/cdp_pages_probe.js
+!bench/new_engine/cdp_visual_probe.js
+!bench/new_engine/cdp_reload_probe.js
+!bench/new_engine/cdp_single_panel_check.js
 # 基准中间产物（report.md / report.json / fixtures.json 进仓库作为验收证据）
 bench/results/
 bench/diag.js
