@@ -1,0 +1,43 @@
+PAGES-PROBE mode=smoke url=https://crest10086.github.io/xiangqi/perf_probe.html?auto=1 start=2026-10-05T04:24:03.556Z (cold: SW unregistered, coiTries cleared)
+.........................................
+=== STATE === DONE (14.7s)
+=== NAVIGATIONS (2) ===
+NAV 0.1s https://crest10086.github.io/xiangqi/perf_probe.html?auto=1
+NAV 0.4s https://crest10086.github.io/xiangqi/perf_probe.html?auto=1
+=== COOP/COEP RESPONSES (0) ===
+=== COOP/COEP VIA SW FETCH === {"status":200,"type":"basic","swControlled":true,"headers":{"cross-origin-embedder-policy":"require-corp","cross-origin-opener-policy":"same-origin","cross-origin-resource-policy":"cross-origin"}}
+=== PAGE ENV === "{\"coi\":true,\"sab\":true,\"coiTries\":\"1\",\"sw\":true,\"href\":\"https://crest10086.github.io/xiangqi/perf_probe.html?auto=1\"}"
+=== PAGE LOG (26 lines) ===
+自检中
+== 环境 ==
+UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36
+页面: https://crest10086.github.io/xiangqi/perf_probe.html?auto=1  安全上下文=true  serviceWorker=true
+crossOriginIsolated=true  SharedArrayBuffer=true  coiTries=1
+浏览器报告的 CPU 核数(navigator.hardwareConcurrency)=16  设备内存提示(navigator.deviceMemory)=32GB
+== 引擎加载（含 50.7MB 强度网络） ==
+引擎已就绪，本页等待 2151ms
+引擎侧环境: crossOriginIsolated=true SharedArrayBuffer=true 实际线程=4
+首载分阶段(累计ms | 桌面基准ms):
+importScripts = 4ms | 5ms
+wasmModule = 30ms | 42ms
+netDownload = 1730ms | 166ms
+nnueFsWrite = 1743ms | 179ms
+engineInitialize = 2092ms | 551ms
+强度网络字节数: 50706378（应为 50706378）
+引擎 WASM 内存(初始化后): 307.3MB（桌面基准 307MB）
+== 搜索量 ==
+500ms -> depth 17 节点 892108 (1770056/秒) 引擎内存 307.3MB
+2000ms -> depth 23 节点 3536839 (1764890/秒) 引擎内存 547.0MB
+6000ms -> depth 26 节点 10793215 (1798270/秒) 引擎内存 547.0MB
+引擎 WASM 内存(以上为 Hash64 搜索): 峰值 547.0MB
+== 大师档（MultiPV1 / 2000ms / Hash256，定案待真机复核项） ==
+tierSearch(大师) -> 着法 h2e2 hit=best depth 21 节点 3598669 (1789492/秒, 实际等待 2011ms) 引擎内存 547.0MB
+引擎 WASM 内存(Hash256 大师档): 547.0MB（桌面基准 初始化 307MB → 搜索中 547MB）
+自检 DONE
+
+=== RESOURCE TIMING === [{"url":"/xiangqi/js/tier_config.js","initiator":"script","transfer":0,"encoded":1542,"decoded":1542,"duration":2,"start":269},{"url":"/xiangqi/js/tier_rules.js","initiator":"script","transfer":0,"encoded":8475,"decoded":8475,"duration":2,"start":269},{"url":"/xiangqi/js/pikafish_bridge.js","initiator":"script","transfer":0,"encoded":22456,"decoded":22456,"duration":2,"start":269},{"url":"/xiangqi/js/engines/pikafish/pikafish.worker.js","initiator":"other","transfer":0,"encoded":0,"decoded":0,"duration":-10,"start":319}]
+=== NAVIGATION TIMING === [{"url":"https://crest10086.github.io/xiangqi/perf_probe.html?auto=1","duration":308,"domContentLoaded":307,"loadEvent":308,"transfer":0,"encoded":12506}]
+=== JS HEAP === {"jsHeapMB":1,"jsHeapLimitMB":4192}
+=== LOG ENTRIES (1) ===
+[error] Failed to load resource: the server responded with a status of 404 ()
+PAGES-PROBE DONE
