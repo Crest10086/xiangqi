@@ -17,6 +17,8 @@
  * 对外接口：PF.isHeavyLevel / PF.load / PF.whenReady / PF.tierSearch / PF.search / PF.stop
  *          PF.boardToFen / PF.parseMove / PF.uciOf / PF.TIERS / PF.lastInfo / PF.lastCost / PF.onProgress
  *          PF.NET_BYTES / PF.netLabel() / PF.loadText(p) —— 引擎下载提示的体积与文案（t_f51aab68 第1项）
+ *          PF.lastLoadError / PF.lastHeap / PF.requestHeap(tag) / PF.env —— 设备自检页（perf_probe.html，
+ *          t_0918db73）要的东西：加载失败的真实原因、引擎 WASM 堆、首载分阶段耗时、实际线程数。
  */
 (function (root) {
   'use strict';
@@ -186,6 +188,14 @@
         if (typeof root.PF.onProgress === 'function') { try { root.PF.onProgress(d); } catch (e) {} }
       } else if (d.type === 'NET_WRITTEN') {
         root.PF.lastCost = Object.assign({}, root.PF.lastCost, { netBytes: d.bytes });
+      } else if (d.type === 'COST') {
+        // 首载分阶段耗时（worker 侧 stamp()）：自检页要能看出慢在下载、初始化，还是引擎本身
+        var stages = (root.PF.lastCost && root.PF.lastCost.stages) || {};
+        stages[d.k] = d.ms;
+        root.PF.lastCost = Object.assign({}, root.PF.lastCost, { stages: stages });
+      } else if (d.type === 'HEAP') {
+        // 引擎 WASM 线性内存（HEAPU8.length）= 引擎真实占用，不含浏览器自身
+        root.PF.lastHeap = { tag: d.tag, bytes: d.bytes, at: Math.round(performance.now()) };
       } else if (d.type === 'INFO') {
         // 捕获搜索 INFO 行：depth / score cp|mate / nodes（供基准与设备自检页读取）
         var s = String(d.info || '');
@@ -222,6 +232,7 @@
         root.PF.lastCommands = d.cmds; // 诊断: 本次搜索实际下发的强度选项
       } else if (d.type === 'ERROR') {
         root.PF.lastError = d.message;
+        root.PF.lastLoadError = d.message; // 自检页要的是真实原因，不是笼统的"引擎加载失败"
         if (curReject && curSeq) { var r = curReject; curReject = null; curCb = null; r(new Error(d.message)); }
       } else if (d.type === 'BEST_MOVE') {
         // seq 校验：丢弃过期着法（防止旧搜索的迟到响应劫持新搜索）
@@ -236,6 +247,7 @@
     };
     w.onerror = function (ev) {
       root.PF.lastError = (ev && ev.message) || '引擎线程异常';
+      root.PF.lastLoadError = root.PF.lastError;
       if (curReject) { var r = curReject; curReject = null; curCb = null; r(new Error(root.PF.lastError)); }
     };
   }
@@ -279,7 +291,12 @@
   }
 
   function whenReady() {
-    return load().then(function () { return true; }).catch(function () { return false; });
+    // 自检页（perf_probe.html）需要知道"为什么没加载起来"：whenReady 只回 true/false，
+    // 失败原因在这里落到 lastLoadError，页面才有可复述的判据（未隔离 / 超时 / 初始化失败）。
+    return load().then(function () { return true; }).catch(function (e) {
+      if (!root.PF.lastLoadError) root.PF.lastLoadError = (e && e.message) || '引擎加载失败';
+      return false;
+    });
   }
 
   // 低层搜索（基准页 / perf_probe 用）：签名与旧版一致
@@ -348,6 +365,12 @@
     curCb = null; curReject = null;
   }
 
+  /* 向引擎要一次当前的 WASM 内存（自检页采样）。应答落在 PF.lastHeap（异步，约一个 postMessage 往返）。 */
+  function requestHeap(tag) {
+    if (!worker) return false;
+    try { worker.postMessage({ type: 'HEAPREQ', tag: tag || 'probe' }); return true; } catch (e) { return false; }
+  }
+
   root.PF = {
     HEAVY_LEVELS: HEAVY,
     MILLIS: LEGACY_MILLIS,
@@ -362,8 +385,11 @@
     tierSearch: tierSearch,
     search: search,
     stop: stop,
+    requestHeap: requestHeap,
     lastInfo: null,
     lastCost: null,
+    lastHeap: null,
+    lastLoadError: null,
     lastError: null,
     env: null,
     onProgress: null,

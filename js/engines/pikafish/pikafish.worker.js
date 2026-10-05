@@ -10,12 +10,20 @@
  *                     { type: "SEARCH", fen, movetime, multipv, hash, seq }
  *                     { type: "STOP" }
  *   Worker -> 主线程:  { type: "READY" }
- *                     { type: "ENV", coi, sab, threads }
+ *                     { type: "ENV", coi, sab, threads, hc }
  *                     { type: "INFO",  info }
  *                     { type: "CMD",   cmds }
  *                     { type: "NET_PROGRESS", loaded, total }
+ *                     { type: "NET_WRITTEN", bytes }
+ *                     { type: "COST", k, ms }          ← 首载各阶段耗时（perf_probe 自检页用）
+ *                     { type: "HEAP", tag, bytes }     ← WASM 堆（引擎真实占用），HEAPREQ 的应答
  *                     { type: "BEST_MOVE", move, seq, critical }
  *                     { type: "ERROR", message }
+ *   主线程 -> Worker:  { type: "HEAPREQ", tag }        ← 请求当前 WASM 堆大小（自检页采样用）
+ *
+ * COST/HEAP 与台架 worker_mb.js 的 stamp()/measureMem() 同一口径（HEAPU8.length），
+ * 所以 perf_probe.html 在手机上测出来的内存数字可以和 bench/NEW_ENGINE_TIER_CALIBRATION.md
+ * 里 measuredCost 的 307MB→547MB 直接对比。
  *
  * 与旧构建的三点差别（都是实测结论，见 bench/NEW_ENGINE_OPTIONS.md）：
  *   1. 驱动方式：这个构建经 cwrap('pikafish_initialize') + cwrap('pikafish_command') 下发命令，
@@ -42,8 +50,25 @@ var lastSeq = 0;
 var initStarted = false;
 var wantThreads = 1;
 var wantHash = 64;
+var tInit = 0;             // 首载计时起点（perf_probe 自检页要各阶段耗时）
 
 function post(obj) { self.postMessage(obj); }
+
+/* 首载阶段耗时（与台架 worker_mb.js 的 stamp() 同一口径：相对 initEngine 起点的累计毫秒） */
+function stamp(k, extra) {
+  if (!tInit) return;
+  post(Object.assign({ type: "COST", k: k, ms: Math.round(performance.now() - tInit) }, extra || {}));
+}
+
+/* WASM 堆 = 引擎真实占用（HEAPU8.length，与台架 tier_driver.html 的 HEAP| 行同一口径）。
+ * 实测依据：Hash 256 时初始化后 ~307MB、搜索中增长到 ~547MB，内存成本来自 Hash 不是 movetime。 */
+function postHeap(tag) {
+  try {
+    post({ type: "HEAP", tag: tag || "req", bytes: (engineModule && engineModule.HEAPU8 && engineModule.HEAPU8.length) || null });
+  } catch (e) {
+    post({ type: "HEAP", tag: tag || "req", bytes: null });
+  }
+}
 
 function sendCommand(line) {
   command(line);
@@ -99,6 +124,7 @@ function postOut(line) {
     var parts = line.split(/\s+/);
     post({ type: "BEST_MOVE", move: parts.length > 1 ? parts[1] : "", seq: lastSeq, critical: criticalFlag });
     criticalFlag = false;
+    postHeap("afterSearch"); // 搜索后的引擎内存（自检页要的是"跑起来之后"的真实占用）
     drainPending();
   } else if (line.indexOf("info ") === 0) {
     post({ type: "INFO", info: line });
@@ -142,15 +168,26 @@ function drainPending() {
 
 /* 加载 + 初始化：胶水 -> 网络(并行) -> FS 写入 -> pikafish_initialize -> uci */
 async function initEngine() {
+  tInit = performance.now();
   var base = self.location.href.substring(0, self.location.href.lastIndexOf("/") + 1);
+  var hc = (typeof navigator !== "undefined" && navigator.hardwareConcurrency) || null;
+  wantThreads = Math.max(1, Math.min(wantThreads, hc || wantThreads)); // 实际线程数，不是请求的
   post({
     type: "ENV",
     coi: typeof self.crossOriginIsolated === "boolean" ? self.crossOriginIsolated : null,
     sab: typeof SharedArrayBuffer !== "undefined",
-    threads: wantThreads
+    threads: wantThreads,
+    hc: hc
   });
-  var netPromise = fetchNet(base + "pikafish.nnue"); // 与脚本加载并行
-  importScripts("pikafish.js");
+  var netPromise = fetchNet(base + "pikafish.nnue").then(function (n) { stamp("netDownload", { bytes: n.byteLength }); return n; }); // 与脚本加载并行
+  try {
+    importScripts("pikafish.js");
+  } catch (err) {
+    // 引擎脚本取不到（404 / 离线 / 被拦截）时，浏览器只会给一条笼统的"引擎线程异常"。
+    // 这里把它说清楚：自检页和用户需要知道是"引擎脚本没加载到"，而不是引擎本身坏了。
+    throw new Error("引擎脚本加载失败（" + base + "pikafish.js）：" + (err && err.message ? err.message : err));
+  }
+  stamp("importScripts");
   var factory = self.Pikafish;
   if (typeof factory !== "function") throw new Error("pikafish.js 加载后没有 Pikafish 工厂");
   var module = await factory({
@@ -159,13 +196,17 @@ async function initEngine() {
     print: function (line) { postOut(line); },
     printErr: function () { /* 引擎警告忽略 */ }
   });
+  stamp("wasmModule");
   var net = await netPromise;
   module.FS.writeFile("/pikafish.nnue", net);
+  stamp("nnueFsWrite", { bytes: net.byteLength });
   post({ type: "NET_WRITTEN", bytes: net.byteLength });
   var initialize = module.cwrap("pikafish_initialize", null, []);
   command = module.cwrap("pikafish_command", null, ["string"]);
   initialize();
+  stamp("engineInitialize");
   engineModule = module;
+  postHeap("ready");
   sendCommand("setoption name Threads value " + wantThreads);
   sendCommand("setoption name Hash value " + wantHash);
   sendCommand("uci"); // 引擎回 id/option/uciok -> postOut 里发 READY
@@ -189,6 +230,8 @@ self.onmessage = function (e) {
     }
     return;
   }
+
+  if (type === "HEAPREQ") { postHeap(data.tag); return; }
 
   if (type === "SEARCH") {
     var req = {

@@ -1,37 +1,180 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="font:14px/1.7 system-ui;padding:16px;max-width:640px;margin:0 auto">
 <h3>设备搜索性能自检</h3>
-<p>本页用与线上 AI 相同的引擎，在不同思考时间下实测本机能搜索多少节点、到达多深。用于判断手机上的实际棋力相对桌面测试的差距。</p>
+<p>本页用与线上 AI 相同的引擎，在本机实测：引擎能否加载、加载要花多久、引擎实际吃多少内存、
+浏览器给这个页面开了几条线程，以及不同思考时间下能搜索多少节点、到达多深。
+用于判断手机上的实际棋力相对桌面测试的差距。</p>
 <button id="go" style="padding:10px 16px;font-size:16px">开始自检</button>
+<button id="copy" style="padding:10px 12px" hidden>复制结果</button>
 <pre id="log">未运行</pre>
 <p id="verdict"></p>
+<script src="js/tier_config.js"></script>
+<script src="js/tier_rules.js"></script>
 <script src="js/pikafish_bridge.js"></script>
 <script>
+/* perf_probe.html — 设备自检页（t_0918db73：新增 内存 / 线程 / 首载 自检）
+ *
+ * 输入证据（用户 2026-10-05 09:03，手机实测）：状态先「加载中…」后「引擎加载失败」。
+ * 旧页面只能说"失败了"，说不出为什么。所以本页改成：
+ *   1. 先打印环境（隔离 / SharedArrayBuffer / 设备 CPU 数 / 是否安全上下文）——加载失败时这些就是原因；
+ *   2. 失败时打印真实原因（PF.lastLoadError：未隔离 / 加载超时 / 初始化失败 + 引擎原文）并给出判据；
+ *   3. 成功时分阶段打印首载耗时（下载 / WASM / 写盘 / 初始化），内存打引擎自己的 WASM 堆，
+ *      线程打引擎实际拿到的线程数。口径与 bench 台架一致（worker stamp() / HEAPU8.length），
+ *      所以手机数字可以和 bench/NEW_ENGINE_TIER_CALIBRATION.md 里的桌面数字逐项对比。
+ * 结果可一键复制成文本，直接发给开发侧。
+ */
 const el=document.getElementById('log'); const add=(m)=>{el.textContent+='\n'+m;};
 const FEN='rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1';
 // 桌面基准（本机 Chrome 实测, 2026-10-03）
 const DESKTOP={500:{nodes:96000,depth:15},6000:{nodes:1080000,depth:20}};
-document.getElementById('go').onclick=async()=>{
-  el.textContent='加载中…';
-  const ok=await PF.whenReady();
-  if(!ok){add('引擎加载失败');return;}
-  let ratio=null;
-  for(const ms of [500,2000,6000]){
-    PF.lastInfo=null;
-    const t0=Date.now();
-    await PF.search(FEN, ms, 1, null);
-    const info=PF.lastInfo||{};
-    const nodes=info.nodes||0, real=Date.now()-t0;
-    add(ms+'ms -> depth '+(info.depth||'?')+' 节点 '+nodes+' ('+Math.round(nodes/Math.max(real,1)/1000)+'k 节点/秒)');
-    if(DESKTOP[ms]&&DESKTOP[ms].nodes) ratio=Math.min(ratio===null?1e9:ratio, nodes/DESKTOP[ms].nodes);
-  }
+// 桌面首载/内存基准（bench/NEW_ENGINE_TIER_CALIBRATION.md 的 measuredCost：Hash256, 本机 Chrome）
+const DESKTOP_FIRSTLOAD={importScripts:5,wasmModule:42,netDownload:166,nnueFsWrite:179,engineInitialize:551};
+const DESKTOP_HEAP={readyMB:307,grewToMB:547};
+const DESKTOP_ONLINE_READY_MS=2093;   // 线上 Pages 冷首访引擎就绪（bench/ONLINE_INTEGRATION.md）
+// 大师档 MultiPV1/2000ms/Hash256 的桌面基准节点数：bench r5 十位置均值 3,447,290
+// （tier_tiers.json.大师.measuredCost.nodesMeanByMovetime['2000']）；线上 Pages 实测区间 325.8–397.9 万
+// （bench/new_engine_logs/pages_smoke.log 的 SEL 行）。用均值做分母。
+const DESKTOP_MASTER_NODES_2000=3447290;
+const MB=(b)=>b?(b/1048576).toFixed(1)+'MB':'?';
+let REPORT='';
+const say=(m)=>{add(m); REPORT+='\n'+m;};
+
+function deviceInfo(){
+  const nav=navigator||{};
+  return {
+    ua:String(nav.userAgent||'?').slice(0,160),
+    hc:nav.hardwareConcurrency||null,
+    mem:(typeof nav.deviceMemory==='number')?nav.deviceMemory:null,
+    coi:!!self.crossOriginIsolated,
+    sab:typeof SharedArrayBuffer!=='undefined',
+    secure:!!(window.isSecureContext),
+    sw:!!(nav.serviceWorker),
+    coiTries:(function(){try{return sessionStorage.getItem('coiTries');}catch(e){return null;}})(),
+    page:location.href
+  };
+}
+/* 加载失败时按环境推断的可能原因（顺序=可能性）。真实原因以 PF.lastLoadError 原文为准。 */
+function diagnose(d,err){
+  const out=[], e=String(err||'');
+  if(!d.secure) out.push('页面不在安全上下文：非 https 时浏览器不给 serviceWorker/SharedArrayBuffer，多线程引擎无法加载');
+  if(!d.coi) out.push('浏览器未隔离（crossOriginIsolated=false）：这个构建未隔离时是 0 线程（DataCloneError），不会退化成单线程。'
+    +'隔离由站点根的 coi-serviceworker.js 提供，注册后需重载一次（本页已允许到 2 次，当前 coiTries='+(d.coiTries||0)+'）');
+  if(d.coi&&!d.sab) out.push('已隔离但没有 SharedArrayBuffer：这台设备的浏览器不支持多线程引擎');
+  if(/加载超时/.test(e)) out.push('引擎加载超时（90 秒内没有 uciok）：这台设备太慢或 50.7MB 网络没下载完');
+  if(/初始化失败|加载失败/.test(e)) out.push('引擎初始化失败：见上面的引擎原文，常见是 WASM 内存分配失败（这台设备内存不够）');
+  if(/HTTP/.test(e)) out.push('强度网络下载失败：见上面的 HTTP 状态');
+  if(/引擎脚本加载失败|importScripts|404/.test(e)) out.push('引擎脚本本身没取到（pikafish.js 404/被拦截/离线）：不是这台设备太弱，是资源没到位');
+  if(/线程异常/.test(e)) out.push('引擎 worker 线程异常退出：常见是 WASM 分配失败或浏览器拒绝了 pthread（见上面的引擎原文）');
+  if(!out.length) out.push('未识别的失败：请把整段结果（含引擎原文）复制给开发侧');
+  return out;
+}
+function verdict(ratio,heapMB,threads,loadMs,masterNodes){
+  const lines=[];
   if(ratio!==null){
     const pct=Math.round(ratio*100);
-    const v=document.getElementById('verdict');
-    v.textContent='本机在固定思考时间内的搜索量约为桌面基准的 '+pct+'%。'
-      + (pct>=80?' 棋力与桌面测试基本一致。'
-         : pct>=40?' 中高档棋力会低于桌面测试值，但五档之间的相对差距仍然保持。'
-         : ' 建议把高档的思考时间参数放大（例如高手 500ms→1500ms、大师 6000ms→15000ms），或改用固定节点数上限，才能在本机达到报告中的棋力。');
+    lines.push('本机在固定思考时间内的搜索量约为桌面基准的 '+pct+'%'+
+      (pct>=80?'。棋力与桌面测试基本一致。'
+       : pct>=40?'。中高档棋力会低于桌面测试值，但五档之间的相对差距仍然保持。'
+       :'。建议把高档的思考时间参数放大（例如高手 500ms→1500ms、大师 6000ms→15000ms），或改用固定节点数上限，才能在本机达到报告中的棋力。'));
   }
+  if(heapMB!==null){
+    lines.push('引擎内存 '+heapMB+'MB（桌面同参数基准：初始化 '+DESKTOP_HEAP.readyMB+'MB → 搜索中 '+DESKTOP_HEAP.grewToMB+'MB；成本来自 Hash 不是思考时间）'+
+      (heapMB<=600?'。这台设备的引擎内存占用与桌面同量级，大师档可用。'
+       :'。高于桌面基准：这台设备上大师档（Hash 256）可能分配失败或被系统杀掉，建议只在低档使用引擎。'));
+  }
+  if(masterNodes!==null&&masterNodes!==undefined){
+    const base=DESKTOP_MASTER_NODES_2000;
+    const pct=Math.round(masterNodes*100/base);
+    lines.push('大师档（MultiPV1/2000ms/Hash256）本机 2000ms 搜索 '+masterNodes+' 节点 = 桌面基准('+base+') 的 '+pct+'%。'+
+      (pct>=70?'大师档在这台设备上可用。'
+       :'大师档在这台设备上明显弱于桌面；大师档 movetime 的定案值（tier_tiers.json 里标着 pending-real-device）需要按本机重新选。'));
+  }
+  if(threads!==null) lines.push('引擎实际线程 '+threads+'（设备报告 CPU '+(deviceInfo().hc||'?')+'）'+
+    (threads<4?'：定标按 4 线程，本机拿不满，搜索量会按比例下降。':'。'));
+  if(loadMs!==null) lines.push('引擎就绪耗时 '+loadMs+'ms（线上 Pages 冷首访基准 '+DESKTOP_ONLINE_READY_MS+'ms）'+
+    (loadMs>8000?'：本机首载明显偏慢，首次对局会等较久，下载进度提示必须留着。':'。'));
+  return lines.join('\n');
+}
+document.getElementById('go').onclick=async()=>{
+  el.textContent='自检中'; REPORT='设备自检 '+new Date().toISOString();
+  const d=deviceInfo();
+  say('== 环境 ==');
+  say('UA: '+d.ua);
+  say('页面: '+d.page+'  安全上下文='+d.secure+'  serviceWorker='+d.sw);
+  say('crossOriginIsolated='+d.coi+'  SharedArrayBuffer='+d.sab+'  coiTries='+(d.coiTries||0));
+  say('浏览器报告的 CPU 核数(navigator.hardwareConcurrency)='+(d.hc||'不可用')+'  设备内存提示(navigator.deviceMemory)='+(d.mem===null?'不可用':d.mem+'GB'));
+  say('== 引擎加载（含 50.7MB 强度网络） ==');
+  const t0=Date.now();
+  const ok=await PF.whenReady();
+  const loadMs=Date.now()-t0;
+  if(!ok){
+    const err=PF.lastLoadError||PF.lastError||'(无错误信息)';
+    say('引擎加载失败（等待 '+loadMs+'ms）：'+String(err).slice(0,600));
+    say('失败原因判断：');
+    diagnose(d,err).forEach((r,i)=>say('  '+(i+1)+'. '+r));
+    document.getElementById('verdict').textContent='引擎没能加载起来——先看上面的原因判断，再把整段结果复制给开发侧。';
+    document.getElementById('copy').hidden=false;
+    say('自检 FAIL');   // 供 CDP 探针识别完成状态（run_perf_probe.sh / run_pages_probe.sh 的 FAIL_MARK）
+    return;
+  }
+  say('引擎已就绪，本页等待 '+loadMs+'ms');
+  const env=PF.env||{};
+  say('引擎侧环境: crossOriginIsolated='+env.coi+' SharedArrayBuffer='+env.sab+' 实际线程='+env.threads);
+  const stages=(PF.lastCost&&PF.lastCost.stages)||{};
+  say('首载分阶段(累计ms | 桌面基准ms):');
+  ['importScripts','wasmModule','netDownload','nnueFsWrite','engineInitialize'].forEach((k)=>{
+    say('  '+k+' = '+(stages[k]===undefined?'?':stages[k])+'ms | '+(DESKTOP_FIRSTLOAD[k]===undefined?'?':DESKTOP_FIRSTLOAD[k])+'ms');
+  });
+  say('强度网络字节数: '+((PF.lastCost&&PF.lastCost.netBytes)||'?')+'（应为 '+PF.NET_BYTES+'）');
+  let heapReady=(PF.lastHeap&&PF.lastHeap.bytes)||null;
+  if(!heapReady&&PF.requestHeap&&PF.requestHeap('probe')){ await new Promise((r)=>setTimeout(r,600)); if(PF.lastHeap) heapReady=PF.lastHeap.bytes; }
+  say('引擎 WASM 内存(初始化后): '+MB(heapReady)+'（桌面基准 '+DESKTOP_HEAP.readyMB+'MB）');
+  say('== 搜索量 ==');
+  let ratio=null,heapPeak=null,threads=env.threads||null;
+  const NPS=(nodes,ms)=>Math.round(nodes/Math.max(ms,1)*1000);   // 节点/秒（nodes/ms × 1000）
+  for(const ms of [500,2000,6000]){
+    PF.lastInfo=null;
+    const t1=Date.now();
+    await PF.search(FEN, ms, 1, null);
+    const info=PF.lastInfo||{};
+    const nodes=info.nodes||0, real=Date.now()-t1;
+    if(PF.lastHeap&&PF.lastHeap.bytes) heapPeak=Math.max(heapPeak||0,PF.lastHeap.bytes);
+    say(ms+'ms -> depth '+(info.depth||'?')+' 节点 '+nodes+' ('+NPS(nodes,real)+'/秒) 引擎内存 '+MB(PF.lastHeap&&PF.lastHeap.bytes));
+    if(DESKTOP[ms]&&DESKTOP[ms].nodes) ratio=Math.min(ratio===null?1e9:ratio, nodes/DESKTOP[ms].nodes);
+  }
+  say('引擎 WASM 内存(以上为 Hash64 搜索): 峰值 '+MB(heapPeak));
+  // 大师档自检：MultiPV1 / movetime 2000 / Hash256 —— 定案里 大师 的 movetime 标着
+  // pending-real-device，等的就是这台真机上的内存/首载/延迟数字（tier_tiers.json.大师.statusNote）。
+  say('== 大师档（MultiPV1 / 2000ms / Hash256，定案待真机复核项） ==');
+  let masterNodes=null, masterDepth=null, heapMaster=null;
+  try{
+    const t2=Date.now();
+    const r=await PF.tierSearch(4, FEN, { legal: [], ply: 20 });
+    const real2=Date.now()-t2;
+    const info2=PF.lastInfo||{};
+    masterNodes=info2.nodes||0; masterDepth=info2.depth||'?';
+    heapMaster=(PF.lastHeap&&PF.lastHeap.bytes)||null;
+    if(heapMaster) heapPeak=Math.max(heapPeak||0,heapMaster);
+    say('tierSearch(大师) -> '+(r&&r.move?('着法 '+r.move+' hit='+r.hit):'?')+' depth '+masterDepth+
+        ' 节点 '+masterNodes+' ('+NPS(masterNodes,real2)+'/秒, 实际等待 '+real2+'ms) 引擎内存 '+MB(heapMaster));
+  }catch(e){ say('tierSearch(大师) 失败：'+String(e&&e.message||e)); }
+  say('引擎 WASM 内存(Hash256 大师档): '+MB(heapMaster)+'（桌面基准 初始化 307MB → 搜索中 547MB）');
+  const v=verdict(ratio, heapMaster?Math.round(heapMaster/1048576):(heapPeak?Math.round(heapPeak/1048576):null), threads, loadMs, masterNodes);
+  REPORT=v+'\n'+REPORT;
+  document.getElementById('verdict').textContent=v;
+  document.getElementById('copy').hidden=false;
+  say('自检 DONE');   // 供 CDP 探针识别完成状态（DONE_MARK）
 };
+document.getElementById('copy').onclick=async()=>{
+  const text=REPORT||el.textContent;
+  try{ await navigator.clipboard.writeText(text); }
+  catch(e){
+    const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+    ta.select(); try{ document.execCommand('copy'); }catch(e2){} ta.remove();
+  }
+  document.getElementById('copy').textContent='已复制，可直接粘贴发给开发侧';
+};
+/* ?auto=1 时自动跑一次自检（给 headless 探针用：run_perf_probe.sh / run_pages_probe.sh 就是靠
+ * 这个把本页当作可自动化的自检来跑；人和手机访问时行为不变，仍然要按按钮）。 */
+if (/[?&]auto=1\b/.test(location.search)) { document.getElementById('go').click(); }
 </script></body></html>

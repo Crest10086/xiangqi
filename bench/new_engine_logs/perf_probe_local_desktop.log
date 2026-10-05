@@ -1,0 +1,31 @@
+PAGES-PROBE mode=smoke url=http://127.0.0.1:8797/perf_probe.html?auto=1 start=2026-10-05T04:15:41.615Z (cold: SW unregistered, coiTries cleared)
+
+=== STATE === FAIL (1.9s)
+=== NAVIGATIONS (1) ===
+NAV 0.1s http://127.0.0.1:8797/perf_probe.html?auto=1
+=== COOP/COEP RESPONSES (0) ===
+=== COOP/COEP VIA SW FETCH === {"status":200,"type":"basic","swControlled":false,"headers":{"cross-origin-embedder-policy":"require-corp","cross-origin-opener-policy":"same-origin"}}
+=== PAGE ENV === "{\"coi\":true,\"sab\":true,\"coiTries\":null,\"sw\":false,\"href\":\"http://127.0.0.1:8797/perf_probe.html?auto=1\"}"
+=== PAGE LOG (11 lines) ===
+自检中
+== 环境 ==
+UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36
+页面: http://127.0.0.1:8797/perf_probe.html?auto=1  安全上下文=true  serviceWorker=true
+crossOriginIsolated=true  SharedArrayBuffer=true  coiTries=0
+浏览器报告的 CPU 核数(navigator.hardwareConcurrency)=16  设备内存提示(navigator.deviceMemory)=32GB
+== 引擎加载（含 50.7MB 强度网络） ==
+引擎加载失败（等待 3ms）：引擎线程异常
+失败原因判断：
+1. 引擎 worker 线程异常退出：常见是 WASM 分配失败或浏览器拒绝了 pthread（见上面的引擎原文）
+自检 FAIL
+
+=== RESOURCE TIMING === [{"url":"/js/tier_config.js","initiator":"script","transfer":300,"encoded":0,"decoded":0,"duration":2,"start":5},{"url":"/js/tier_rules.js","initiator":"script","transfer":300,"encoded":0,"decoded":0,"duration":2,"start":5},{"url":"/js/pikafish_bridge.js","initiator":"script","transfer":22756,"encoded":22456,"decoded":22456,"duration":3,"start":5}]
+=== NAVIGATION TIMING === [{"url":"http://127.0.0.1:8797/perf_probe.html?auto=1","duration":10,"domContentLoaded":10,"loadEvent":10,"transfer":12806,"encoded":12506}]
+=== JS HEAP === {"jsHeapMB":1,"jsHeapLimitMB":4192}
+=== LOG ENTRIES (5) ===
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[error] Failed to load resource: the server responded with a status of 404 (Not Found)
+PAGES-PROBE INCOMPLETE:FAIL
